@@ -60,13 +60,6 @@ module.exports = function (grunt) {
 
       // Copy fonts, img, and js **FROM** /src/ **TO** /dist/
 
-      stylesheets: {
-        expand: true,
-        src: '*.css',
-        cwd: 'src/stylesheets',
-        dest: 'dist/css'
-      },
-
       fonts: {
         expand: true,
         src: '**',
@@ -104,6 +97,28 @@ module.exports = function (grunt) {
       },
     },
 
+    // Sass all the style things
+    sass: {
+      default: {
+        files: {
+          'dist/css/pcp.css': 'src/stylesheets/pcp.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'expanded'
+        },
+      },
+      minify: {
+        files: {
+          'dist/css/pcp.min.css': 'src/stylesheets/pcp.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'compressed'
+        },
+      },
+    },
+
     /// Watching chchchchanges
     watch: {
       img: {
@@ -116,7 +131,7 @@ module.exports = function (grunt) {
       },
       css: {
         files: ['src/**/*.css', 'src/**/*.scss'],
-        tasks: ['copy:stylesheets'],
+        tasks: ['sass'],
       },
       js: {
         files: ['src/**/*.js'],
@@ -151,6 +166,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean',
     'copy',
+    'sass',
     'prettify',
   ]);
   // 'watch'
