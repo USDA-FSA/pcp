@@ -119,6 +119,25 @@ module.exports = function (grunt) {
       },
     },
 
+    // PostCSS, primarily to autoprefix
+    postcss: {
+      options: {
+        map: {
+          inline: false, // save all sourcemaps as separate files...
+          annotation: 'dist/css' // ...to the specified directory
+        },
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
+          // require('postcss-quantity-queries')(), // do things like .asdf:at-least(4) {} ; https://github.com/pascalduez/postcss-quantity-queries
+          // require('cssnano')() // minify the result
+        ]
+      },
+      dist: {
+        src: 'dist/css/*.css'
+      }
+    },
+
     /// Watching chchchchanges
     watch: {
       img: {
@@ -132,6 +151,10 @@ module.exports = function (grunt) {
       css: {
         files: ['src/**/*.css', 'src/**/*.scss'],
         tasks: ['sass'],
+      },
+      cssPost: {
+        files: ['dist/**/*.css'],
+        tasks: ['postcss'],
       },
       js: {
         files: ['src/**/*.js'],
@@ -167,6 +190,7 @@ module.exports = function (grunt) {
     'clean',
     'copy',
     'sass',
+    'postcss',
     'prettify',
   ]);
   // 'watch'
