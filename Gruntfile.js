@@ -83,14 +83,23 @@ module.exports = function (grunt) {
 
     },
 
-    // Make our HTML files perfectly formatted and chucked in `dist`
+    simple_include: {
+      default_options: {
+        src: [
+          'src/*.html'
+        ],
+        dest: 'ugly/'
+      },
+    },
+
+    // Make our HTML files perfectly formatted
     prettify: {
       options: {
         config: '.prettifyrc'
       },
       all: {
         expand: true,
-        cwd: 'src/',
+        cwd: './ugly',
         ext: '.html',
         src: ['*.html'],
         dest: 'dist/'
@@ -145,8 +154,8 @@ module.exports = function (grunt) {
         tasks: ['copy:fsaStyle_img'],
       },
       html: {
-        files: ['src/*.html'],
-        tasks: ['prettify'],
+        files: ['src/**/*.html'],
+        tasks: ['simple_include','prettify'],
       },
       css: {
         files: ['src/**/*.css', 'src/**/*.scss'],
@@ -191,6 +200,7 @@ module.exports = function (grunt) {
     'copy',
     'sass',
     'postcss',
+    'simple_include',
     'prettify',
   ]);
   // 'watch'
