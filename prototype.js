@@ -1,12 +1,19 @@
+function hasNumbers(t) {
+  return /\d/.test(t);
+}
+
+// Yes, not DRY enough, refactor some day if totally fee like it,
+// but probably won't because throwaway prototype. sue me.
+
 $('body').on('blur', '[data-behavior~="validate-commodity"]', function(event) {
 
   var $self = $(this);
   var $component = $self.closest('.fsa-field');
 
   if ($self.val() == '') {
-    $component.addClass('fsa-field--error')
+    $component.addClass('fsa-field--error');
   } else {
-    $component.removeClass('fsa-field--error')
+    $component.removeClass('fsa-field--error');
   }
 
 })
@@ -16,10 +23,12 @@ $('body').on('blur', '[data-behavior~="validate-abbr"]', function(event) {
   var $self = $(this);
   var $component = $self.closest('.fsa-field');
 
-  if ($.isNumeric('$self')) {
-    $component.addClass('fsa-field--error')
+  $self.val($self.val().toUpperCase()); // a bit inceptiony, no?
+
+  if (hasNumbers($self.val())) {
+    $component.addClass('fsa-field--error');
   } else {
-    $component.removeClass('fsa-field--error')
+    $component.removeClass('fsa-field--error');
   }
 
 })
