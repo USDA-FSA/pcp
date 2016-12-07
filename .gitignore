@@ -6,3 +6,4 @@ npm-debug.log
 .ugly
 .bundle/
 scratch.html
+src/stylesheets/lib/fsa-style

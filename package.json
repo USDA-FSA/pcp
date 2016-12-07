@@ -4,10 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync start --server --files '*.css, *.html'",
+    "start": "grunt default",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Francis C. Rupert",
+  "devDependencies": {
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-prettify": "^0.4.0",
+    "grunt-sass": "^1.2.1",
+    "grunt-scss-lint": "^0.5.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^3.10.1",
+    "time-grunt": "^1.4.0"
+  },
   "dependencies": {
     "jquery": "^2.2.2",
     "fsa-style": "^2.0.1"
