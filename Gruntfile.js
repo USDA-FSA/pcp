@@ -58,13 +58,13 @@ module.exports = function (grunt) {
         dest: 'src/js/vendor'
       },
 
-      // Copy fonts, img, and js **TO** /dist/
+      // Copy fonts, img, and js **FROM** /src/ **TO** /dist/
 
       stylesheets: {
         expand: true,
-        src: '**',
+        src: '*.css',
         cwd: 'src/stylesheets',
-        dest: 'dist/stylesheets'
+        dest: 'dist/css'
       },
 
       fonts: {
@@ -104,6 +104,26 @@ module.exports = function (grunt) {
       },
     },
 
+    /// Watching chchchchanges
+    watch: {
+      img: {
+        files: 'src/img',
+        tasks: ['copy:fsaStyle_img'],
+      },
+      html: {
+        files: ['src/*.html'],
+        tasks: ['prettify'],
+      },
+      css: {
+        files: ['src/**/*.css', 'src/**/*.scss'],
+        tasks: ['copy:stylesheets'],
+      },
+      js: {
+        files: ['src/**/*.js'],
+        tasks: ['copy:js'],
+      },
+    },
+
     // Live Reload and Browser Sync'ing
     browserSync: {
 
@@ -117,21 +137,23 @@ module.exports = function (grunt) {
         },
         options: {
           watchTask: true,
-          server: 'dist'
+          server: './dist'
         }
       }
+
     },
 
   });
 
   // Register Tasks
-  grunt.registerTask('default', ['build', 'browserSync']);
+  grunt.registerTask('default', ['build', 'browserSync', 'watch']);
 
   grunt.registerTask('build', [
     'clean',
     'copy',
-    'prettify'
+    'prettify',
   ]);
+  // 'watch'
 
   grunt.registerTask('test', 'default', function () { grunt.log.writeln('Test that the app runs');});
 
