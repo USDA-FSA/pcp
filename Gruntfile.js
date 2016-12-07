@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 
     // Clear files and folders
 		clean: {
-			dist: [ 'dist' ],
+			dist: [ 'dist', 'ugly' ],
 		},
 
     // Copies templates and assets from dependencies and/or src
