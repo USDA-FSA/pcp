@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Add Commodity - Posted County Prices</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://usda-fsa.github.io/fsa-style/css/fsa-style.min.css" media="all">
+  <link rel="stylesheet" href="css/style.css" media="all">
+  <!--[if lt IE 9]>
+    <script src="node_modules/fsa-style/dist/js/vendor/html5shiv.js"></script>
+    <script src="node_modules/fsa-style/dist/js/vendor/respond.js"></script>
+    <script src="node_modules/fsa-style/dist/js/vendor/selectivizr-min.js"></script>
+    <script src="node_modules/fsa-style/dist/js/vendor/rem-min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <!--[if lt IE 10]><p class="fsa-browser-upgrade">You are using an <strong>outdated</strong> browser. Please <strong><a href="http://browsehappy.com/">upgrade your browser</a></strong> to obtain a secure and improved experience.</p><![endif]-->
+
+  <a class="skipnav" href="#main-content">Skip to main content</a>
+
+  <div class="fsa-disclaimer">
+    <div class="fsa-disclaimer__bd">
+      <span class="fsa-disclaimer__official">
+        <img class="fsa-disclaimer__flag-icon" alt="US flag signifying that this is a United States Federal Government website" src="img/us_flag_small.png">
+        An official website of the United States Government
+      </span>
+      <span class="fsa-disclaimer__stage fsa-disclaimer__stage--prototype">
+        <strong>PROTOTYPE</strong>
+      </span>
+    </div>
+  </div>
+
+  <header>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Add Commodity</h1>
+
+        <form action="commodity.asdf.html">
+          <div class="fsa-field">
+            <label class="fsa-field__label" for="commodity-name">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
+            <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="commodity-name" name="commodity-name" type="text" value="">
+            <span class="fsa-field__help">Alpha characters, no numbers or special characters</span>
+            <span class="fsa-field__message" id="commodity-name__error-message-01" role="alert">This field is required</span>
+          </div>
+          <div class="fsa-field">
+            <label class="fsa-field__label" for="abbreviation">Abbreviation <span class="fsa-field__label-desc">Required</span></label>
+            <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="abbreviation" name="abbreviation" type="text" value="" minlength="2" maxlength="3">
+            <span class="fsa-field__help">2 or 3 alpha characters, no numbers or special characters</span>
+            <span class="fsa-field__message" id="abbreviation__error-message-01" role="alert">Cannot contain numbers</span>
+          </div>
+          <div class="fsa-field">
+            <label class="fsa-field__label" for="lorem-select-field">Lorem ipsum</label>
+            <select class="fsa-select fsa-field__item" name="lorem-select-field" id="lorem-select-field">
+              <option value="-">- Select a lorem -</option>
+              <option value="Option 1">Option 1</option>
+              <option value="Option 2">Option 2</option>
+              <option value="Option 3">Option 3</option>
+              <option value="Option 4">Option 4</option>
+            </select>
+          </div>
+          <div class="fsa-field">
+            <label class="fsa-field__label" for="lorem-freeform">Notes</label>
+            <textarea class="fsa-textarea fsa-field__item" name="lorem-freeform" id="lorem-freeform" placeholder="Placeholder"></textarea>
+          </div>
+          <div class="fsa-field">
+            <input class="fsa-checkbox" id="commodity-active" type="checkbox" name="commodity-active" value="commodity-active" checked="">
+            <label for="commodity-active">Active</label>
+          </div>
+          <div class="fsa-field">
+            <button class="fsa-btn fsa-btn--primary" type="submit" name="commodity-detail">Save</button>
+            <button class="fsa-btn fsa-btn--alt" type="button" name="commodity-detail">Cancel</button>
+          </div>
+        </form>
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/prototype.js"></script>
+
+</body>
+
+</html>
