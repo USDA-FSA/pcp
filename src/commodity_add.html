@@ -22,44 +22,46 @@
         <h1>Add Commodity</h1>
 
         <form action="commodity.asdf.html">
-          <div class="fsa-field">
-            <label class="fsa-field__label" for="commodity-name">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
-            <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="commodity-name" name="commodity-name" type="text" value="">
-            <span class="fsa-field__help">Alpha characters, no numbers or special characters</span>
-            <span class="fsa-field__message" id="commodity-name__error-message-01" role="alert">This field is required</span>
-          </div>
-          <div class="fsa-field">
-            <label class="fsa-field__label" for="abbreviation">Abbreviation <span class="fsa-field__label-desc">Required</span></label>
-            <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="abbreviation" name="abbreviation" type="text" value="" minlength="2" maxlength="3">
-            <span class="fsa-field__help">2 or 3 alpha characters, no numbers or special characters</span>
-            <span class="fsa-field__message" id="abbreviation__error-message-01" role="alert">Cannot contain numbers</span>
-          </div>
-          <div class="fsa-field">
-            <label class="fsa-field__label" for="lorem-select-field">Lorem ipsum</label>
-            <select class="fsa-select fsa-field__item" name="lorem-select-field" id="lorem-select-field">
-              <option value="-">- Select a lorem -</option>
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-              <option value="Option 3">Option 3</option>
-              <option value="Option 4">Option 4</option>
-            </select>
-          </div>
-          <div class="fsa-field">
-            <label class="fsa-field__label" for="lorem-freeform">Notes</label>
-            <textarea class="fsa-textarea fsa-field__item" name="lorem-freeform" id="lorem-freeform" placeholder="Placeholder"></textarea>
-          </div>
-          <div class="fsa-field">
-            <input class="fsa-checkbox" id="commodity-active" type="checkbox" name="commodity-active" value="commodity-active" checked="">
-            <label for="commodity-active">Active</label>
-          </div>
-          <div class="fsa-field">
-            <button class="fsa-btn fsa-btn--primary" type="submit" name="commodity-detail">Save</button>
-            <button class="fsa-btn fsa-btn--alt" type="button" name="commodity-detail">Cancel</button>
-          </div>
+          <fieldset>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="commodity-name">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
+              <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="commodity-name" name="commodity-name" type="text" value="">
+              <span class="fsa-field__help">Alpha characters, no numbers or special characters</span>
+              <span class="fsa-field__message" id="commodity-name__error-message-01" role="alert">This field is required</span>
+            </div>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="abbreviation">Abbreviation <span class="fsa-field__label-desc">Required</span></label>
+              <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="abbreviation" name="abbreviation" type="text" value="" minlength="2" maxlength="3">
+              <span class="fsa-field__help">2 or 3 alpha characters, no numbers or special characters</span>
+              <span class="fsa-field__message" id="abbreviation__error-message-01" role="alert">Cannot contain numbers</span>
+            </div>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="lorem-select-field">Lorem ipsum</label>
+              <select class="fsa-select fsa-field__item" name="lorem-select-field" id="lorem-select-field">
+                <option value="-">- Select a lorem -</option>
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+                <option value="Option 4">Option 4</option>
+              </select>
+            </div>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="lorem-freeform">Notes</label>
+              <textarea class="fsa-textarea fsa-field__item" name="lorem-freeform" id="lorem-freeform" placeholder="Placeholder"></textarea>
+            </div>
+            <div class="fsa-field">
+              <input class="fsa-checkbox" id="commodity-active" type="checkbox" name="commodity-active" value="commodity-active" checked="">
+              <label for="commodity-active">Active</label>
+            </div>
+            <div class="fsa-field">
+              <button class="fsa-btn fsa-btn--primary" type="submit" name="commodity-detail">Save</button>
+              <button class="fsa-btn fsa-btn--alt" type="button" name="commodity-detail">Cancel</button>
+            </div>
+
+          </fieldset>
         </form>
 
       </div>
-
 
     </div>
 
