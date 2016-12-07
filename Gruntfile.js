@@ -60,13 +60,6 @@ module.exports = function (grunt) {
 
       // Copy fonts, img, and js **FROM** /src/ **TO** /dist/
 
-      stylesheets: {
-        expand: true,
-        src: '*.css',
-        cwd: 'src/stylesheets',
-        dest: 'dist/css'
-      },
-
       fonts: {
         expand: true,
         src: '**',
@@ -90,18 +83,68 @@ module.exports = function (grunt) {
 
     },
 
-    // Make our HTML files perfectly formatted and chucked in `dist`
+    simple_include: {
+      default_options: {
+        src: [
+          'src/*.html'
+        ],
+        dest: 'ugly/'
+      },
+    },
+
+    // Make our HTML files perfectly formatted
     prettify: {
       options: {
         config: '.prettifyrc'
       },
       all: {
         expand: true,
-        cwd: 'src/',
+        cwd: './ugly',
         ext: '.html',
         src: ['*.html'],
         dest: 'dist/'
       },
+    },
+
+    // Sass all the style things
+    sass: {
+      default: {
+        files: {
+          'dist/css/pcp.css': 'src/stylesheets/pcp.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'expanded'
+        },
+      },
+      minify: {
+        files: {
+          'dist/css/pcp.min.css': 'src/stylesheets/pcp.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'compressed'
+        },
+      },
+    },
+
+    // PostCSS, primarily to autoprefix
+    postcss: {
+      options: {
+        map: {
+          inline: false, // save all sourcemaps as separate files...
+          annotation: 'dist/css' // ...to the specified directory
+        },
+        processors: [
+          require('pixrem')(), // add fallbacks for rem units
+          require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
+          // require('postcss-quantity-queries')(), // do things like .asdf:at-least(4) {} ; https://github.com/pascalduez/postcss-quantity-queries
+          // require('cssnano')() // minify the result
+        ]
+      },
+      dist: {
+        src: 'dist/css/*.css'
+      }
     },
 
     /// Watching chchchchanges
@@ -111,12 +154,16 @@ module.exports = function (grunt) {
         tasks: ['copy:fsaStyle_img'],
       },
       html: {
-        files: ['src/*.html'],
-        tasks: ['prettify'],
+        files: ['src/**/*.html'],
+        tasks: ['simple_include','prettify'],
       },
       css: {
         files: ['src/**/*.css', 'src/**/*.scss'],
-        tasks: ['copy:stylesheets'],
+        tasks: ['sass'],
+      },
+      cssPost: {
+        files: ['dist/**/*.css'],
+        tasks: ['postcss'],
       },
       js: {
         files: ['src/**/*.js'],
@@ -151,6 +198,9 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean',
     'copy',
+    'sass',
+    'postcss',
+    'simple_include',
     'prettify',
   ]);
   // 'watch'

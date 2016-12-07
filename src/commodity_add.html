@@ -1,6 +1,6 @@
 {% include: 'includes/html.html' %}
 
-{% include: 'includes/head.html' @title:'Hard Winter Wheat, Commodity' %}
+{% include: 'includes/head.html' @title:'Add Commodity' %}
 
 <body>
 
@@ -19,18 +19,18 @@
 
       <div class="pcp-section__bd">
 
-        <h1>Edit Commodity</h1>
+        <h1>Add Commodity</h1>
 
         <form action="commodity.asdf.html">
           <div class="fsa-field">
             <label class="fsa-field__label" for="commodity-name">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
-            <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="commodity-name" name="commodity-name" type="text" value="Hard Red Winter Wheat">
+            <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="commodity-name" name="commodity-name" type="text" value="">
             <span class="fsa-field__help">Alpha characters, no numbers or special characters</span>
             <span class="fsa-field__message" id="commodity-name__error-message-01" role="alert">This field is required</span>
           </div>
           <div class="fsa-field">
             <label class="fsa-field__label" for="abbreviation">Abbreviation <span class="fsa-field__label-desc">Required</span></label>
-            <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="abbreviation" name="abbreviation" type="text" value="HRW" minlength="2" maxlength="3">
+            <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="abbreviation" name="abbreviation" type="text" value="" minlength="2" maxlength="3">
             <span class="fsa-field__help">2 or 3 alpha characters, no numbers or special characters</span>
             <span class="fsa-field__message" id="abbreviation__error-message-01" role="alert">Cannot contain numbers</span>
           </div>
@@ -46,7 +46,7 @@
           </div>
           <div class="fsa-field">
             <label class="fsa-field__label" for="lorem-freeform">Notes</label>
-            <textarea class="fsa-textarea fsa-field__item" name="lorem-freeform" id="lorem-freeform" placeholder="Placeholder">This wheat type tends to lorem ipsum on a day-to-day basis, though not predictably.</textarea>
+            <textarea class="fsa-textarea fsa-field__item" name="lorem-freeform" id="lorem-freeform" placeholder="Placeholder"></textarea>
           </div>
           <div class="fsa-field">
             <input class="fsa-checkbox" id="commodity-active" type="checkbox" name="commodity-active" value="commodity-active" checked="">
