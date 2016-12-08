@@ -48,14 +48,11 @@
         <table class="fsa-table fsa-table--borderless inq-results_table">
           <thead>
             <tr>
-              <th data-ng-class="{'is-sorted-up': sortColumn ==='name' &amp;&amp; ascending, 'is-sorted-down': sortColumn ==='name' &amp;&amp; !ascending}" class="inq-results_hd-item inq-results_hd-item--name is-sorted-up" scope="col">
-                <a ng-click="sortMarkets('name')" tabindex="0"><span class="inq-results_hd-item-label">Name</span></a>
+              <th class="inq-results_hd-item inq-results_hd-item--name is-sorted-up" scope="col">
+                <span tabindex="0" class="inq-results_hd-item-label">Name</span>
               </th>
-              <th data-ng-class="{'is-sorted-up': sortColumn ==='abbreviation' &amp;&amp; ascending, 'is-sorted-down': sortColumn ==='abbreviation' &amp;&amp; !ascending}" class="inq-results_hd-item inq-results_hd-item--abbreviation" scope="col">
-                <a ng-click="sortMarkets('abbreviation')" tabindex="0"><span class="inq-results_hd-item-label">Abbreviation</span></a>
-              </th>
-              <th data-ng-class="{'is-sorted-up': sortColumn ==='active' &amp;&amp; ascending, 'is-sorted-down': sortColumn ==='active' &amp;&amp; !ascending}" class="inq-results_hd-item inq-results_hd-item--active" scope="col">
-                <a ng-click="sortMarkets('active')" tabindex="0"><span class="inq-results_hd-item-label">Active</span></a>
+              <th class="inq-results_hd-item inq-results_hd-item--abbreviation" scope="col">
+                <span tabindex="0" class="inq-results_hd-item-label">Abbreviation</span>
               </th>
             </tr>
           </thead>
@@ -63,22 +60,18 @@
             <tr>
               <td><a href="#/market/KCM/edit">Kansas City, Missouri</a></td>
               <td>KCM</td>
-              <td><span class="ng-isolate-scope"><span>Active</span></span></td>
             </tr>
             <tr>
               <td><a href="#/market/MIN/edit">Minnesota</a></td>
               <td>MIN</td>
-              <td><span class="ng-isolate-scope"><span>Active</span></span></td>
             </tr>
             <tr>
               <td><a href="#/market/PNW/edit">Pacific Northwest</a></td>
               <td>PNW</td>
-              <td><span class="ng-isolate-scope"><span>Active</span></span></td>
             </tr>
             <tr>
               <td><a href="#/market/WCD/edit">West Coast Domestic</a></td>
               <td>WCD</td>
-              <td><span class="ng-isolate-scope"><span>Active</span></span></td>
             </tr>
           </tbody>
         </table>
@@ -88,71 +81,27 @@
         <table class="fsa-table fsa-table--borderless inq-results_table">
           <thead class="inq-results_hd">
             <tr class="inq-results_row">
-              <th class="inq-results_hd-item inq-results_hd-item--label" scope="col">
-                <a tabindex="0">
-                  <span class="inq-results_hd-item-label">Name</span>
-                </a>
+              <th class="inq-results_hd-item inq-results_hd-item--name is-sorted-down" scope="col">
+                <span tabindex="0" class="inq-results_hd-item-label">Name</span>
               </th>
               <th scope="col">
-                <a tabindex="0">
-                  <span class="inq-results_hd-item-label">FSA-13 Value</span>
-                </a>
+                <span tabindex="0" class="inq-results_hd-item-label">FSA-13 Value</span>
               </th>
               <th class="inq-results_hd-item inq-results_hd-item--description" scope="col">
-                <a tabindex="0">
-                  <span class="inq-results_hd-item-label">Description</span>
-                </a>
-              </th>
-              <th class="inq-results_hd-item inq-results_hd-item--active" scope="col">
-                <a tabindex="0">
-                  <span class="inq-results_hd-item-label">Active</span>
-                </a>
+                <span tabindex="0" class="inq-results_hd-item-label">Description</span>
               </th>
               <th scope="col">Permissions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>One Role</td>
-              <td id="anchorONE_ROLE">ONE_ROLE</td>
-              <td>The first role</td>
-              <td>
-                <span>Active</span>
-              </td>
-              <td>
-                <span aria-hidden="3">No associated permissions</span>
-                <span class="inq-results_hd-item inq-results_hd-item--active is-sorted-down" role="button" tabindex="0" aria-hidden="false">
-                  <span class="inq-results_hd-item-label ng-binding">3 permissions</span>
-                </span>
-                <ul>
-                  <li>
-                    View Map
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    View Permission
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    View Permission(Inactive)
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
               <td>Three Role</td>
               <td id="anchorTHREE_ROLE">THREE_ROLE</td>
               <td>The third role</td>
               <td>
-                <span>Active</span>
-              </td>
-              <td>
-                <span aria-hidden="0">No associated permissions</span>
-                <span class="inq-results_hd-item inq-results_hd-item--active ng-hide is-sorted-down" role="button" tabindex="0" aria-hidden="true">
-                  <span class="inq-results_hd-item-label ng-binding">0 permissions</span>
-                </span>
+                <ul class="fsa-list--inline">
+                  <li>None</li>
+                </ul>
               </td>
             </tr>
             <tr>
@@ -160,22 +109,30 @@
               <td id="anchorTWO_ROLE">TWO_ROLE</td>
               <td>The second role</td>
               <td>
-                <span>Active</span>
-              </td>
-              <td>
-                <span aria-hidden="1">No associated permissions</span>
-                <span class="inq-results_hd-item inq-results_hd-item--active is-sorted-down" role="button" tabindex="0" aria-hidden="false">
-                  <span class="inq-results_hd-item-label ng-binding">1 permissions</span>
-                </span>
-                <ul>
+                <ul class="fsa-list--inline">
                   <li>
-                    View Permission
+                    <a href="link.html">View Permission</a>
                   </li>
                 </ul>
               </td>
             </tr>
             <tr>
-              <td colspan="5" ng-hide="filteredRoles.length" aria-hidden="3">No roles found.</td>
+              <td>One Role</td>
+              <td id="anchorONE_ROLE">ONE_ROLE</td>
+              <td>The first role</td>
+              <td>
+                <ul class="fsa-list--inline">
+                  <li>
+                    <a href="link.html">View Map</a>
+                  </li>
+                  <li>
+                    <a href="link.html">View Permission</a>
+                  </li>
+                  <li>
+                    <a href="link.html">View Permission (Inactive)</a>
+                  </li>
+                </ul>
+              </td>
             </tr>
           </tbody>
         </table>
