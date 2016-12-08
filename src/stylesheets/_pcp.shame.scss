@@ -1,0 +1,32 @@
+.sr-only {
+  @include sr-only();
+}
+
+@mixin input-select-block-adj() {
+  margin-left: 0;
+}
+
+.fsa-input--block {
+
+
+  + & {
+    @include input-select-block-adj;
+  }
+
+  + .fsa-select--block {
+    @include input-select-block-adj;
+  }
+
+}
+
+.fsa-select--block {
+
+  + & {
+    @include input-select-block-adj;
+  }
+
+  + .fsa-input--block {
+    @include input-select-block-adj;
+  }
+
+}
