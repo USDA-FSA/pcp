@@ -2,7 +2,7 @@
 
 {% include: 'includes/head.html' @title:'Prototype' %}
 
-<body>
+<body class="pcp-app">
 
   {% include: 'includes/fsa-browser-upgrade.html' %}
 
@@ -10,7 +10,9 @@
 
   {% include: 'includes/fsa-disclaimer.html' %}
 
-  <header></header>
+  <header>
+    {% include: 'includes/pcp-header-TEMP.html' %}
+  </header>
 
   <main id="main-content" tabindex="-1">
 
@@ -21,6 +23,7 @@
         <h1>PCP II Prototype</h1>
         <ul>
           <li><a href="markets.html">Markets</a></li>
+          <li><a href="roles.html">Roles</a></li>
           <li><a href="commodity_add.html">Commodity, Add</a></li>
           <li><a href="commodity_detail.html">Commodity, Detail</a></li>
         </ul>
@@ -32,7 +35,9 @@
 
   </main>
 
-  <footer></footer>
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
 
   {% include: 'includes/scripts.html' %}
 
