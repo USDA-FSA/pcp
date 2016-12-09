@@ -1,3 +1,21 @@
+@keyframes growlDissmiss {
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes growlShow {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .pcp-growl-container {
 
   position: absolute;
@@ -22,6 +40,12 @@
   margin-bottom: 1em;
   background-color: $color-fsa-aqua-100;
   border: 1px solid $color-fsa-aqua;
+
+  animation: .43s growlShow ease-in-out both;
+
+  &--dismissing {
+    animation: .23s growlDissmiss both;
+  }
 
   &--error {
     background-color: $color-fsa-red-100;

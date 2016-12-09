@@ -32,3 +32,12 @@ $('body').on('blur', '[data-behavior~="validate-abbr"]', function(event) {
   }
 
 })
+
+$('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
+  var $self = $(this);
+  var $component = $self.closest('.pcp-growl');
+  $component.addClass('pcp-growl--dismissing');
+  setTimeout(function() {
+    $component.remove();
+  }, 230);
+})
