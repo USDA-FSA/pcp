@@ -1,23 +1,45 @@
 .pcp-table {
 
+  $inactive-text-color: tint($color-fsa-tertiary, 50%);
+  $inactive-bgc: $color-fsa-tertiary-100;
+
   margin-top: 1em;
 
+  th:first-child,
+  td:first-child {
+    @include breakpoint(M) {
+      padding-left: $size-default;
+    }
+  }
+
+  th:last-child,
+  td:last-child {
+    @include breakpoint(M) {
+      padding-right: $size-default;
+    }
+  }
+
   &__row {
+
+    &--inactive {
+
+      color: $inactive-text-color;
+      background-color: $inactive-bgc;
+
+      &:hover {
+        color: initial;
+      }
+
+      th:before,
+      td:before {
+        color: $inactive-text-color;
+      }
+
+    }
 
   }
 
   &__cell {
-
-    &--inactive {
-
-      color: tint($color-fsa-tertiary, 60%);
-      background-color: $color-fsa-tertiary-100;
-
-      .pcp-table__row--inactive:hover & {
-        color: initial;
-      }
-
-    }
 
   }
 

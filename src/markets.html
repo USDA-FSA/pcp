@@ -50,65 +50,7 @@
 
         <h1>Roles</h1>
 
-        <table class="fsa-table fsa-table--borderless">
-          <thead>
-            <tr>
-              <th scope="col">
-                <span tabindex="0">Name</span>
-              </th>
-              <th scope="col">
-                <span tabindex="0">FSA-13 Value</span>
-              </th>
-              <th scope="col">
-                <span tabindex="0">Description</span>
-              </th>
-              <th scope="col">Permissions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Three Role</td>
-              <td>THREE_ROLE</td>
-              <td>The third role</td>
-              <td>
-                <ul class="fsa-list--inline fsa-m-b--none">
-                  <li>None</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>Two Role</td>
-              <td>TWO_ROLE</td>
-              <td>The second role</td>
-              <td>
-                <ul class="fsa-list--inline fsa-m-b--none">
-                  <li>
-                    <a href="link.html">View Permission</a>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>One Role</td>
-              <td>ONE_ROLE</td>
-              <td>The first role</td>
-              <td>
-                <ul class="fsa-list--inline fsa-m-b--none">
-                  <li>
-                    <a href="link.html">View Map</a>
-                  </li>
-                  <li>
-                    <a href="link.html">View Permission</a>
-                  </li>
-                  <li>
-                    <a href="link.html">View Permission (Inactive)</a>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
+        {% include: 'includes/table_roles.html' %}
 
       </div>
 
