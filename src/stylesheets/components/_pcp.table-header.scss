@@ -1,0 +1,103 @@
+.pcp-table-header {
+
+  margin-top: 2em;
+
+  @include breakpoint(L) {
+    display: flex;
+  }
+
+  &__hd {
+
+    @include clearfix;
+    margin-bottom: 1em;
+
+    @include breakpoint(L) {
+      width: 40%;
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__options {
+
+    @include breakpoint(M) {
+      display: flex;
+    }
+
+    @include breakpoint(L) {
+      width: 60%;
+      padding-left: $size-medium;
+      text-align: right;
+    }
+
+  }
+
+  &__title {
+
+    margin: 0;
+    float: left;
+
+    @include breakpoint(M) {
+      float: none;
+      display: inline-block;
+    }
+  }
+
+  &__add {
+
+    float: right;
+
+    @include breakpoint(M) {
+      float: none;
+      display: inline-block;
+
+      .pcp-table-header__title + & {
+        margin-left: $size-default;
+        position: relative;
+        top: -$size-base;
+      }
+
+    }
+
+  }
+
+  &__find,
+  &__sort,
+  &__reset {
+
+    display: block;
+    width: 100%;
+    margin-bottom: .5em;
+
+    @include breakpoint(L) {
+      margin-bottom: 0;
+    }
+
+    & + & {
+      @include breakpoint(M) {
+        margin-left: $size-default;
+      }
+    }
+
+  }
+
+  &__find {
+    @include breakpoint(M) {
+      flex: 2;
+    }
+  }
+
+  &__sort {
+    @include breakpoint(M) {
+      flex: 1;
+    }
+  }
+
+  &__reset {
+    @include breakpoint(M) {
+      flex: 0;
+    }
+  }
+
+
+}

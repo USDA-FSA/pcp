@@ -20,35 +20,10 @@
 
       <div class="pcp-section__bd">
 
-        <h1>
-          Markets
-        </h1>
-        <div>
-          <div class="fsa-grid">
-            <div class="fsa-grid__1 fsa-grid__2/12@m">
-              <a class="fsa-btn fsa-btn--primary" href="commodity_add.html">Add</a>
-            </div>
-            <div class="fsa-grid__1 fsa-grid__10/12@m">
-              <div class="fsa-text-align--right">
-                <form action="">
-                  <label class="sr-only" for="searchText">Find</label>
-                  <input class="fsa-input" placeholder="Find" type="text" id="searchText">
-                  <label class="sr-only" for="active_type">Active Type</label>
-                  <select class="fsa-select" name="active_type" id="active_type">
-                    <option value="all" selected="">All</option>
-                    <option value="active">Active</option>
-                    <option value="inactive">Inactive</option>
-                  </select>
-                  <button class="fsa-btn fsa-btn--secondary" type="reset">Reset</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        {% include: 'includes/table-header_markets.html' %}
         {% include: 'includes/table_markets.html' %}
 
-        <h1>Roles</h1>
+        {% include: 'includes/table-header_roles.html' %}
 
         {% include: 'includes/table_roles.html' %}
 
