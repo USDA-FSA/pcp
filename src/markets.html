@@ -46,110 +46,11 @@
           </div>
         </div>
 
-        <table class="fsa-table fsa-table--borderless inq-results_table">
-          <thead>
-            <tr class="inq-results_row">
-              <th class="inq-results_hd-item inq-results_hd-item--name is-sorted-up" scope="col">
-                <span tabindex="0" class="inq-results_hd-item-label">Name</span>
-              </th>
-              <th class="inq-results_hd-item inq-results_hd-item--abbreviation" scope="col">
-                <span tabindex="0" class="inq-results_hd-item-label">Abbreviation</span>
-              </th>
-              <th class="inq-results_hd-item" scope="col">
-                &nbsp;
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="inq-results_row">
-              <td>Kansas City, Missouri</td>
-              <td>KCM</td>
-              <td><a href="commodity_detail.html">Edit</a></td>
-            </tr>
-            <tr class="inq-results_row inq-results_row--inactive" title="Inactive">
-              <td>Central Coast</td>
-              <td>CAC</td>
-              <td><a href="commodity_detail.html">Edit</a></td>
-            </tr>
-            <tr class="inq-results_row">
-              <td>Minnesota</td>
-              <td>MIN</td>
-              <td><a href="commodity_detail.html">Edit</a></td>
-            </tr>
-            <tr class="inq-results_row">
-              <td>Pacific Northwest</td>
-              <td>PNW</td>
-              <td><a href="commodity_detail.html">Edit</a></td>
-            </tr>
-            <tr class="inq-results_row">
-              <td>West Coast Domestic</td>
-              <td>WCD</td>
-              <td><a href="commodity_detail.html">Edit</a></td>
-            </tr>
-          </tbody>
-        </table>
+        {% include: 'includes/table_markets.html' %}
 
         <h1>Roles</h1>
 
-        <table class="fsa-table fsa-table--borderless inq-results_table">
-          <thead class="inq-results_hd">
-            <tr class="inq-results_row">
-              <th class="inq-results_hd-item inq-results_hd-item--name is-sorted-down" scope="col">
-                <span tabindex="0" class="inq-results_hd-item-label">Name</span>
-              </th>
-              <th scope="col">
-                <span tabindex="0" class="inq-results_hd-item-label">FSA-13 Value</span>
-              </th>
-              <th class="inq-results_hd-item inq-results_hd-item--description" scope="col">
-                <span tabindex="0" class="inq-results_hd-item-label">Description</span>
-              </th>
-              <th scope="col">Permissions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="inq-results_row">
-              <td>Three Role</td>
-              <td id="anchorTHREE_ROLE">THREE_ROLE</td>
-              <td>The third role</td>
-              <td>
-                <ul class="fsa-list--inline fsa-m-b--none">
-                  <li>None</li>
-                </ul>
-              </td>
-            </tr>
-            <tr class="inq-results_row">
-              <td>Two Role</td>
-              <td id="anchorTWO_ROLE">TWO_ROLE</td>
-              <td>The second role</td>
-              <td>
-                <ul class="fsa-list--inline fsa-m-b--none">
-                  <li>
-                    <a href="link.html">View Permission</a>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-            <tr class="inq-results_row">
-              <td>One Role</td>
-              <td id="anchorONE_ROLE">ONE_ROLE</td>
-              <td>The first role</td>
-              <td>
-                <ul class="fsa-list--inline fsa-m-b--none">
-                  <li>
-                    <a href="link.html">View Map</a>
-                  </li>
-                  <li>
-                    <a href="link.html">View Permission</a>
-                  </li>
-                  <li>
-                    <a href="link.html">View Permission (Inactive)</a>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
+        {% include: 'includes/table_roles.html' %}
 
       </div>
 
