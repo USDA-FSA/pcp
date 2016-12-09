@@ -1,6 +1,6 @@
 {% include: 'includes/html.html' %}
 
-{% include: 'includes/head.html' @title:'Prototype' %}
+{% include: 'includes/head.html' @title:'Markets' %}
 
 <body class="pcp-app">
 
@@ -20,17 +20,10 @@
 
       <div class="pcp-section__bd">
 
-        <h1>PCP II Prototype</h1>
-        <ul>
-          <li><a href="markets.html">Markets</a></li>
-          <li><a href="markets_add-success.html">Markets, Add Success</a></li>
-          <li><a href="roles.html">Roles</a></li>
-          <li><a href="commodity_add.html">Commodity, Add</a></li>
-          <li><a href="commodity_detail.html">Commodity, Detail</a></li>
-        </ul>
+        {% include: 'includes/table-header.html' @title:'Markets' %}
+        {% include: 'includes/table_markets.html' %}
 
       </div>
-
 
     </div>
 
