@@ -65,8 +65,6 @@
   &__sort,
   &__reset {
 
-    display: block;
-    width: 100%;
     margin-bottom: .5em;
 
     @include breakpoint(L) {
@@ -94,8 +92,9 @@
   }
 
   &__reset {
+    width: 94px;
     @include breakpoint(M) {
-      flex: 0;
+
     }
   }
 
