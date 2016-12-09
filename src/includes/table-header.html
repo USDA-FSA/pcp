@@ -1,24 +1,24 @@
 <form action="">
   <div class="pcp-table-header">
     <div class="pcp-table-header__hd">
-      <h2 class="pcp-table-header__title">Markets</h2>
+      <h2 class="pcp-table-header__title">{{ title }}</h2>
       <a class="fsa-btn fsa-btn--primary pcp-table-header__add" href="commodity_add.html">Add</a>
     </div>
     <div class="pcp-table-header__options">
       <div class="pcp-table-header__find">
-        <label class="sr-only" for="searchText">Find</label>
-        <input class="fsa-input fsa-input--block" placeholder="Find" type="text" id="searchText">
+        <label class="sr-only" for="searchText{{ title }}">Find</label>
+        <input class="fsa-input fsa-input--block" placeholder="Find" type="text" id="searchText{{ title }}">
       </div>
       <div class="pcp-table-header__sort">
-        <label class="sr-only" for="active_type">Active Type</label>
-        <select class="fsa-select fsa-select--block" name="active_type" id="active_type">
+        <label class="sr-only" for="active_type{{ title }}">Active Type</label>
+        <select class="fsa-select fsa-select--block" name="active_type{{ title }}" id="active_type{{ title }}">
           <option value="all" selected="">All</option>
           <option value="active">Active</option>
           <option value="inactive">Inactive</option>
         </select>
       </div>
       <div class="pcp-table-header__reset">
-        <button class="fsa-btn fsa-btn--secondary fsa-btn--block" type="reset">Reset</button>
+        <button class="fsa-btn fsa-btn--alt fsa-btn--block" type="reset">Reset</button>
       </div>
     </div>
   </div>

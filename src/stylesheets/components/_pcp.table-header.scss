@@ -27,7 +27,6 @@
     @include breakpoint(L) {
       width: 60%;
       padding-left: $size-medium;
-      text-align: right;
     }
 
   }
@@ -92,9 +91,8 @@
   }
 
   &__reset {
-    width: 94px;
     @include breakpoint(M) {
-
+      width: 94px;
     }
   }
 
