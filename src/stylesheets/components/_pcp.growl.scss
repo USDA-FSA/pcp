@@ -42,7 +42,6 @@
   margin-bottom: 1em;
   background-color: $color-fsa-aqua-100;
   border: 1px solid $color-fsa-aqua;
-
   animation: .43s growlShow ease-in-out both;
 
   &--dismissing {
@@ -77,7 +76,7 @@
     padding: ($size-default * 1.5);
 
     &:active {
-      opacity: .6
+      opacity: .6;
     }
 
   }
