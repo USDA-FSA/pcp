@@ -19,13 +19,15 @@
 .pcp-growl-container {
 
   position: absolute;
-  top: $size-medium;
-  right: $size-medium;
-  left: $size-medium;
+  top: $size-default;
+  right: $size-default;
+  left: $size-default;
   z-index: 2;
 
   @include breakpoint(L) {
     position: fixed;
+    top: $size-medium;
+    right: $size-medium;
     left: auto;
     width: 364px;
   }
