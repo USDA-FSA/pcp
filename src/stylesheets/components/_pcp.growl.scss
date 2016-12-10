@@ -26,8 +26,6 @@
 
   @include breakpoint(L) {
     position: fixed;
-    top: $size-medium;
-    right: $size-medium;
     left: auto;
     width: 364px;
   }
@@ -38,10 +36,11 @@
 
   padding: $size-default;
   border-radius: $size-base;
-  box-shadow: 0 0 $size-default rgba(0, 0, 0, .2);
+  box-shadow: 0 0 $size-default rgba(0, 0, 0, .5);
   margin-bottom: 1em;
   background-color: $color-fsa-aqua-100;
   border: 1px solid $color-fsa-aqua;
+  border-left-width: 4px;
   animation: .43s growlShow ease-in-out both;
 
   &--dismissing {

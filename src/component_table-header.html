@@ -1,0 +1,56 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Component' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header-TEMP.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Component: Table Header</h1>
+
+        <p class="fsa-text--lead">asdf</p>
+
+        <pre><code></code></pre>
+
+        <h2>Demo</h2>
+
+        <p>
+          <ul>
+            <li><a href="markets.html">markets.html</a></li>
+            <li><a href="roles.html">roles.html</a></li>
+          </ul>
+        </p>
+
+        <h2>Variations</h2>
+
+        {% include: 'includes/table-header.html' %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>

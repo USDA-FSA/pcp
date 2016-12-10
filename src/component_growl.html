@@ -1,0 +1,53 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Component' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header-TEMP.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Component: Growl</h1>
+
+        <p class="fsa-text--lead">Inserted into beginning of DOM, i.e. first element in <code>&lt;body&gt;</code></p>
+
+        <pre><code>&lt;div class="pcp-growl-container"&gt;
+  &lt;div class="<strong>pcp-growl pcp-growl--[variation]</strong>"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2>Demo</h2>
+
+        <p><a href="markets_add-success.html">markets_add-success.html</a></p>
+
+        <h2>Variations</h2>
+
+        {% include: 'includes/growl.html' %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>
