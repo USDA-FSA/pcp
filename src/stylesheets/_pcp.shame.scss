@@ -2,31 +2,52 @@
   @include sr-only();
 }
 
-@mixin input-select-block-adj() {
-  margin-left: 0;
-}
+.pcp-prototype-list {
 
-.fsa-input--block {
+  @include breakpoint(M) {
 
+    width: 274px;
+    position: fixed;
+    right: 0;
+    bottom: -16px;
+    background-color: white;
+    border: 2px solid $color-fsa-aqua-300;
+    border-top: 4px solid $color-fsa-aqua-900;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    margin-bottom: 0;
+    padding-right: $size-small;
+    padding-bottom: $size-small;
+    padding-left: $size-default;
 
-  + & {
-    @include input-select-block-adj;
+    &:hover {
+      bottom: 0;
+    }
+
   }
 
-  + .fsa-select--block {
-    @include input-select-block-adj;
+  @include breakpoint(M) {
+
+    li {
+      display: none;
+    }
+
+    &:hover li {
+      display: block;
+    }
+
   }
 
-}
-
-.fsa-select--block {
-
-  + & {
-    @include input-select-block-adj;
-  }
-
-  + .fsa-input--block {
-    @include input-select-block-adj;
+  &:before {
+    display: block;
+    content: attr(aria-label);
+    background-color: $color-fsa-aqua-300;
+    font-weight: $font-bold;
+    font-size: $font-size-4;
+    margin-bottom: $size-small;
+    margin-left: -$size-default;
+    margin-right: -$size-small;
+    padding: $size-small;
   }
 
 }

@@ -44,28 +44,15 @@
 
   &__sort {
 
+    @include pcp-button-reset;
+
     display: block;
     width: 100%;
     white-space: nowrap;
-    text-align: left;
-    appearance: none;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    font: inherit;
-    line-height: inherit;
-    cursor: pointer;
-    user-select: text;
 
     &:focus,
     &:hover {
       color: $color-fsa-link-hover;
-    }
-
-    &::-moz-focus-inner {
-      padding: 0;
-      border: 0;
     }
 
     &:after {

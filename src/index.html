@@ -8,10 +8,8 @@
 
   {% include: 'includes/skipnav.html' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
-
   <header>
-    {% include: 'includes/pcp-header-TEMP.html' %}
+    {% include: 'includes/pcp-header-project.html' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -20,13 +18,7 @@
 
       <div class="pcp-section__bd">
 
-        <h1>PCP II Prototype</h1>
-        <ul>
-          <li><a href="markets.html">Markets</a></li>
-          <li><a href="roles.html">Roles</a></li>
-          <li><a href="commodity_add.html">Commodity, Add</a></li>
-          <li><a href="commodity_detail.html">Commodity, Detail</a></li>
-        </ul>
+        {% include: 'includes/prototype-list.html' %}
 
       </div>
 
@@ -36,7 +28,7 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-TEMP.html' %}
+    {% include: 'includes/prototype-list.html' @class:'pcp-prototype-list' %}
   </footer>
 
   {% include: 'includes/scripts.html' %}

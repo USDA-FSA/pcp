@@ -2,6 +2,10 @@
 // Bring in fsa-style, i.e. http://usda-fsa.github.io/fsa-style/
 @import 'lib/fsa-style/fsa-style';
 
+// PCP Core
+@import 'core/pcp.variables';
+@import 'core/pcp.utilities';
+
 // PCP Layouts
 @import 'layouts/pcp.section';
 
@@ -10,6 +14,7 @@
 @import 'components/pcp.footer-TEMP';
 @import 'components/pcp.table-header';
 @import 'components/pcp.table';
+@import 'components/pcp.growl';
 
 // PCP Elements
 
