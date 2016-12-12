@@ -41,3 +41,7 @@ $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
     $component.remove();
   }, 230);
 })
+
+$('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
+  $('#pcp-whiteout').remove();
+})
