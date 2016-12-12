@@ -8,10 +8,8 @@
 
   {% include: 'includes/skipnav.html' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
-
   <header>
-    {% include: 'includes/pcp-header-TEMP.html' %}
+    {% include: 'includes/pcp-header-project.html' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -20,20 +18,20 @@
 
       <div class="pcp-section__bd">
 
-        <h1>Component: Field</h1>
+        <h1 class="fsa-font--sans">Component: Field</h1>
 
         <p><code>class="<strong style="color:black;">fsa-field</strong>"</code></p>
 
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
-            <h2>Demo</h2>
+            <h2 class="fsa-font--sans">As seen on</h2>
             <ul>
               <li><a href="commodity_add.html">commodity_add.html</a></li>
               <li><a href="commodity_detail.html">commodity_detail.html</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
-            <h2>FSA Design System References</h2>
+            <h2 class="fsa-font--sans">FSA Design System References</h2>
             <ul>
               <li><a href="http://usda-fsa.github.io/fsa-design-system/?preview">FSA Design System</a></li>
               <li><a href="http://usda-fsa.github.io/fsa-style/#components">Component: Field</a> (not yet documented in Design System)</li>
@@ -47,9 +45,9 @@
           </div>
         </div>
 
-        <h2>Sample</h2>
+        <h2 class="fsa-font--sans">Sample</h2>
 
-        <h3>Default</h3>
+        <h3 class="fsa-font--sans">Default</h3>
 
         <div class="fsa-field">
           <label class="fsa-field__label" for="commodity-name">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
@@ -58,7 +56,7 @@
           <span class="fsa-field__message" id="commodity-name__error-message-01" role="alert">This field is required</span>
         </div>
 
-        <h3>Error</h3>
+        <h3 class="fsa-font--sans">Error</h3>
         <div class="fsa-field fsa-field--error">
           <label class="fsa-field__label" for="commodity-name5855">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
           <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="commodity-name5855" name="commodity-name5855" type="text" value="">
@@ -74,7 +72,7 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-TEMP.html' %}
+    {% include: 'includes/prototype-list.html' @class:'pcp-prototype-list' %}
   </footer>
 
   {% include: 'includes/scripts.html' %}

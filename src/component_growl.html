@@ -8,10 +8,8 @@
 
   {% include: 'includes/skipnav.html' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
-
   <header>
-    {% include: 'includes/pcp-header-TEMP.html' %}
+    {% include: 'includes/pcp-header-project.html' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -20,7 +18,7 @@
 
       <div class="pcp-section__bd">
 
-        <h1>Component: Growl</h1>
+        <h1 class="fsa-font--sans">Component: Growl</h1>
 
         <p class="fsa-text--lead">Inserted into beginning of DOM, i.e. first element in <code>&lt;body&gt;</code></p>
 
@@ -30,19 +28,18 @@
 
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
-            <h2>Demo</h2>
+            <h2 class="fsa-font--sans">As seen on</h2>
             <p><a href="markets_add-success.html">markets_add-success.html</a></p>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
-            <h2>FSA Design System References</h2>
+            <h2 class="fsa-font--sans">FSA Design System References</h2>
             <ul>
               <li><a href="http://usda-fsa.github.io/fsa-design-system/?preview">FSA Design System</a></li>
             </ul>
           </div>
         </div>
 
-
-        <h2>Variations</h2>
+        <h2 class="fsa-font--sans">Variations</h2>
 
         {% include: 'includes/growl.html' %}
 
@@ -53,7 +50,7 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-TEMP.html' %}
+    {% include: 'includes/prototype-list.html' @class:'pcp-prototype-list' %}
   </footer>
 
   {% include: 'includes/scripts.html' %}
