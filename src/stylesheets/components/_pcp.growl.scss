@@ -18,16 +18,26 @@
 
 .pcp-growl-container {
 
-  position: absolute;
+  position: fixed;
   top: $size-default;
   right: $size-default;
   left: $size-default;
   z-index: 2;
 
   @include breakpoint(L) {
-    position: fixed;
     left: auto;
     width: 364px;
+  }
+
+  &--centered {
+
+    @include breakpoint(L) {
+      position: fixed;
+      left: 50%;
+      top: $size-extra-large;
+      transform: translate(-50%, 0);
+    }
+
   }
 
 }
@@ -41,6 +51,10 @@
   border: 1px solid $color-fsa-aqua;
   border-left-width: 4px;
   animation: .43s growlShow ease-in-out both;
+
+  &--centered {
+    animation: none;
+  }
 
   &--dismissing {
     animation: .23s growlDissmiss both;
