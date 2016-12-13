@@ -1,0 +1,69 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Component' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header-project.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1 class="fsa-font--sans">Component: Select Multi</h1>
+
+        <p class="fsa-text--lead">Effectively a replacement for <code>&lt;select <strong style="color:black">multiple</strong>&gt;...&lt;/select&gt;</code>, though far more user-friendly as select multiple requires users to Ctrl (or Cmd) click.</p>
+
+        <p><code>class="<strong style="color:black;">pcp-select-multi</strong>"</code></p>
+
+        <div class="fsa-grid">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="fsa-font--sans">As seen on</h2>
+            <ul>
+              <li><a href="commodity_add.html">commodity_add.html</a></li>
+              <li><a href="commodity_detail.html">commodity_detail.html</a></li>
+            </ul>
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="fsa-font--sans">FSA Design System References</h2>
+            <ul>
+              <li><a href="http://usda-fsa.github.io/fsa-design-system/?preview">FSA Design System</a></li>
+              <li><a href="http://usda-fsa.github.io/fsa-design-system/elements/checkbox/">Element: Checkbox</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="fsa-font--sans">Sample</h2>
+
+        <h3 class="fsa-font--sans">Default</h3>
+
+        {% include: 'includes/select-multi.html' %}
+
+        <h3 class="fsa-font--sans">Markets</h3>
+
+        {% include: 'includes/select-multi_markets.html' %}
+
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/prototype-list.html' @class:'pcp-prototype-list' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>
