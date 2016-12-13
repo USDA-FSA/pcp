@@ -45,3 +45,17 @@ $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
 $('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
   $('#pcp-whiteout').remove();
 })
+
+$('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.pcp-select-multi');
+  var $checks = $component.find('.pcp-select-multi__check');
+
+  if($self.is(':checked')) {
+    $checks.prop('checked', true);
+  } else {
+    $checks.prop('checked', false);
+  }
+
+})
