@@ -1,0 +1,90 @@
+$marker-color-base: $color-black;
+$marker-font-size: $font-size-1;
+$marker-radius: 2px;
+$marker-padding: $size-base;
+
+$marker-bgcolor-default: $color-white;
+$marker-bgcolor-high: $color-fsa-red;
+$marker-bgcolor-low: $color-gold-lighter; // from USWDS
+
+$marker-border-color-default: $color-white;
+$marker-border-color-high: $color-fsa-red;
+$marker-border-color-low: $color-gold-lighter; // from USWDS
+
+$marker-text-default: $color-base;
+$marker-text-high: $color-white;
+$marker-text-low: $marker-text-default;
+
+$marker-weight-default: $font-bold;
+$marker-weight-modified: $font-normal;
+
+$marker-color-modified: $color-fsa-tertiary-300;
+$marker-color-affected: #02bfe7; // from USWDS
+
+.pcp-marker {
+
+  display: inline-block;
+  background-color: $color-white;
+  border: 1px solid $marker-color-base;
+  font-size: $marker-font-size;
+  font-weight: $marker-weight-default;
+  line-height: 1;
+  color: $marker-color-base;
+  padding: $marker-padding;
+  border-radius: $marker-radius;
+  min-width: 42px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all .23s ease-in-out;
+
+  ::after {
+
+    transition: all .23s ease-in-out;
+    $size: $size-default;
+    content: '';
+    display: inline-block;
+    width: $size;
+    height: $size;
+    background-color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    margin-left: -($size / 2);
+    transform: rotate(45deg);
+    z-index: -1;
+
+  }
+
+  &--modified {
+    font-weight: $marker-weight-modified;
+    color: $marker-color-modified;
+    border-color: $marker-color-modified;
+  }
+
+  &--active {
+
+    transform: translate(0,-7px);
+
+    ::after {
+      bottom: -7px;
+    }
+
+  }
+
+  &--high {
+    background-color: $marker-bgcolor-high;
+    border-color: $marker-bgcolor-high;
+    color: $marker-text-high;
+  }
+
+  &--low {
+    background-color: $marker-bgcolor-low;
+    border-color: $marker-bgcolor-low;
+    color: $marker-text-low;
+  }
+
+  &--impacted {}
+
+
+}
