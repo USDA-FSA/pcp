@@ -28,6 +28,11 @@ $marker-color-affected: #02bfe7; // from USWDS
   cursor: pointer;
   position: relative;
   display: inline-block;
+  user-select: none;
+
+  :active {
+    transform: translate(0, 2px);
+  }
 
   &__value {
 
@@ -88,6 +93,15 @@ $marker-color-affected: #02bfe7; // from USWDS
     margin-left: -($size / 2);
     transform: rotate(45deg);
     z-index: 1;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+
+    .pcp-marker--high & {
+      background-color: $marker-bgcolor-high;
+    }
+
+    .pcp-marker--low & {
+      background-color: $marker-bgcolor-low;
+    }
 
   }
 
