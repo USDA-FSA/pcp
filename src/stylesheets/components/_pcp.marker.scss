@@ -23,6 +23,12 @@ $marker-color-affected: #02bfe7; // from USWDS
 
 // scss-lint:disable SelectorFormat
 
+@keyframes markerPulse {
+  0% { transform: scale(0, 0); }
+  50% { opacity: 1; }
+  100% { transform: scale(1.5, 1.5); opacity: 0; }
+}
+
 .pcp-marker {
 
   cursor: pointer;
@@ -80,20 +86,39 @@ $marker-color-affected: #02bfe7; // from USWDS
 
   &__pinpoint {
 
+    $pinpoint-size: $size-default;
+
     transition: all .23s ease-in-out;
-    $size: $size-default;
     content: '';
     display: inline-block;
-    width: $size;
-    height: $size;
+    width: $pinpoint-size;
+    height: $pinpoint-size;
     background-color: black;
     position: absolute;
     bottom: 2px;
     left: 50%;
-    margin-left: -($size / 2);
+    margin-left: -($pinpoint-size / 2);
     transform: rotate(45deg);
     z-index: 1;
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+
+    .pcp-marker--active & {
+
+      &:after {
+        opacity: 0;
+        content: '';
+        animation: markerPulse 2s ease-out;
+        animation-iteration-count: infinite;
+        border: 2px solid $marker-color-affected;
+        border-radius: 100%;
+        height: $size-extra-large;
+        width: $size-extra-large;
+        position: absolute;
+        left: -13px;
+        top: -13px;
+      }
+
+    }
 
     .pcp-marker--high & {
       background-color: $marker-bgcolor-high;
