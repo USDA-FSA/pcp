@@ -25,7 +25,7 @@ $marker-color-affected: #02bfe7; // from USWDS
 
 @keyframes markerPulse {
   0% { transform: scale(0, 0); }
-  50% { opacity: .5; }
+  70% { opacity: .5; }
   100% { transform: scale(1.5, 1.5); opacity: 0; }
 }
 
@@ -127,6 +127,14 @@ $marker-color-affected: #02bfe7; // from USWDS
       background-color: $marker-bgcolor-low;
     }
 
+  }
+
+  &__impact {
+    position: absolute;
+    top: -$size-medium;
+    right: -$size-medium;
+    bottom: -$size-medium;
+    left: -$size-medium;
   }
 
 }
