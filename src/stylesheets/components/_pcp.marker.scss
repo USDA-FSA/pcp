@@ -130,11 +130,23 @@ $marker-color-affected: #02bfe7; // from USWDS
   }
 
   &__impact {
+    display: none;
     position: absolute;
-    top: -$size-medium;
-    right: -$size-medium;
-    bottom: -$size-medium;
-    left: -$size-medium;
+    top: -1.5rem;
+    right: -4rem;
+    bottom: -1.5rem;
+    left: -4rem;
+    background-image: url('../img/pcp-marker__burst.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: markerPulse .5s ease-in-out;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+
+    .pcp-marker--impacted & {
+      display: block;
+    }
+
   }
 
 }
