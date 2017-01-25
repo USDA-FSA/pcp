@@ -1,5 +1,5 @@
 $marker-color-base: $color-black;
-$marker-font-size: $font-size-1;
+$marker-font-size: $font-size-3;
 $marker-radius: 2px;
 $marker-padding: $size-base;
 
@@ -81,7 +81,7 @@ $marker-color-affected: #02bfe7; // from USWDS
     color: $marker-color-base;
     padding: $marker-padding;
     border-radius: $marker-radius;
-    min-width: 42px;
+    min-width: 50px;
     text-align: center;
     transition: all .23s ease-in-out;
     position: relative;
@@ -151,8 +151,8 @@ $marker-color-affected: #02bfe7; // from USWDS
       height: $size-extra-large;
       width: $size-extra-large;
       position: absolute;
-      top: -5px;
-      left: -3px;
+      top: -3px;
+      left: 1px;
     }
 
   }
