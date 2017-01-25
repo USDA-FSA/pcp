@@ -24,9 +24,17 @@ $marker-color-affected: #02bfe7; // from USWDS
 // scss-lint:disable SelectorFormat
 
 @keyframes markerPulse {
-  0% { transform: scale(0, 0); }
-  70% { opacity: .5; }
-  100% { transform: scale(1.5, 1.5); opacity: 0; }
+  0% { transform: scale(0, 0); opacity: 0; }
+  33% { opacity: .5; }
+  66% { transform: scale(1.8, 1.8); opacity: 0; }
+  100% { transform: scale(1.8, 1.8); opacity: 0; }
+}
+
+@keyframes impactPulse {
+  0% { transform: scale(0, 0); opacity: 0; }
+  33% { transform: scale(1.5, 1.5); opacity: .33; }
+  50% { transform: scale(1.5, 1.5); opacity: .33; }
+  100% { transform: scale(0, 0); opacity: 0; }
 }
 
 .pcp-marker {
@@ -35,10 +43,12 @@ $marker-color-affected: #02bfe7; // from USWDS
   position: relative;
   display: inline-block;
   user-select: none;
+  transition: all .23s ease-in-out;
 
   &:before { // Impacted
 
     display: none;
+    opacity: 0;
     content: '';
     position: absolute;
     z-index: 10;
@@ -49,9 +59,10 @@ $marker-color-affected: #02bfe7; // from USWDS
     background-image: url('../img/pcp-marker__burst.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    animation: markerPulse .5s ease-in-out;
-    animation-iteration-count: 3;
+    animation: impactPulse 1s ease-in-out;
+    animation-iteration-count: 2;
     animation-fill-mode: forwards;
+    pointer-events: none;
 
   }
 
@@ -133,7 +144,7 @@ $marker-color-affected: #02bfe7; // from USWDS
       pointer-events: none;
       opacity: 1;
       content: '';
-      animation: markerPulse 2s ease-out;
+      animation: markerPulse 2.66s ease-out;
       animation-iteration-count: infinite;
       background-color: $marker-color-affected;
       border-radius: 100%;
