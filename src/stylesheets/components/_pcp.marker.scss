@@ -105,32 +105,33 @@ $marker-color-affected: #02bfe7; // from USWDS
 
     $pinpoint-size: $size-default;
 
-    transition: all .23s ease-in-out;
-    content: '';
-    display: inline-block;
-    width: $pinpoint-size;
-    height: $pinpoint-size;
-    background-color: black;
-    position: absolute;
-    bottom: 2px;
-    left: 50%;
-    margin-left: -($pinpoint-size / 2);
-    transform: rotate(45deg);
-    z-index: 20;
-    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
-
-    .pcp-marker--high & {
-      background-color: $marker-bgcolor-high;
+    &:before {
+      content: '';
+      transition: all .23s ease-in-out;
+      display: inline-block;
+      width: $pinpoint-size;
+      height: $pinpoint-size;
+      background-color: black;
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      margin-left: -($pinpoint-size / 2);
+      transform: rotate(45deg);
+      z-index: 20;
     }
 
-    .pcp-marker--low & {
-      background-color: $marker-bgcolor-low;
-    }
+    // .pcp-marker--high &:before {
+    //   background-color: $marker-bgcolor-high;
+    // }
+    //
+    // .pcp-marker--low &:before {
+    //   background-color: $marker-bgcolor-low;
+    // }
 
     .pcp-marker--active &:after {
       z-index: 10;
       pointer-events: none;
-      opacity: 0;
+      opacity: 1;
       content: '';
       animation: markerPulse 2s ease-out;
       animation-iteration-count: infinite;
@@ -139,10 +140,9 @@ $marker-color-affected: #02bfe7; // from USWDS
       height: $size-extra-large;
       width: $size-extra-large;
       position: absolute;
-      left: -13px;
-      top: -13px;
+      top: -5px;
+      left: -3px;
     }
-
 
   }
 
