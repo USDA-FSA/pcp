@@ -2,6 +2,10 @@
   @include sr-only();
 }
 
+.pcp-marker-demo {
+  position: relative;
+}
+
 .pcp-prototype-list {
 
   @include breakpoint(M) {
