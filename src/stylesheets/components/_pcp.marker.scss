@@ -36,8 +36,32 @@ $marker-color-affected: #02bfe7; // from USWDS
   display: inline-block;
   user-select: none;
 
+  &:before { // Impacted
+
+    display: none;
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: -1.5rem;
+    right: -4rem;
+    bottom: -1.5rem;
+    left: -4rem;
+    background-image: url('../img/pcp-marker__burst.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: markerPulse .5s ease-in-out;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+
+  }
+
+  &--impacted:before {
+    display: block;
+  }
+
   &__value {
 
+    z-index: 30;
     background-color: $color-white;
     border: 1px solid $marker-color-base;
     font-size: $marker-font-size;
@@ -50,7 +74,6 @@ $marker-color-affected: #02bfe7; // from USWDS
     text-align: center;
     transition: all .23s ease-in-out;
     position: relative;
-    z-index: 3;
 
     .pcp-marker--modified & {
       font-weight: $marker-weight-modified;
@@ -76,8 +99,6 @@ $marker-color-affected: #02bfe7; // from USWDS
       color: $marker-text-low;
     }
 
-    .pcp-marker--impacted & {}
-
   }
 
   &__pinpoint {
@@ -95,29 +116,8 @@ $marker-color-affected: #02bfe7; // from USWDS
     left: 50%;
     margin-left: -($pinpoint-size / 2);
     transform: rotate(45deg);
-    z-index: 2;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
-
-    .pcp-marker--active & {
-
-      &:after {
-        z-index: 1;
-        pointer-events: none;
-        opacity: 0;
-        content: '';
-        animation: markerPulse 2s ease-out;
-        animation-iteration-count: infinite;
-        // border: 2px solid $marker-color-affected;
-        background-color: $marker-color-affected;
-        border-radius: 100%;
-        height: $size-extra-large;
-        width: $size-extra-large;
-        position: absolute;
-        left: -13px;
-        top: -13px;
-      }
-
-    }
+    z-index: 20;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
 
     .pcp-marker--high & {
       background-color: $marker-bgcolor-high;
@@ -127,25 +127,22 @@ $marker-color-affected: #02bfe7; // from USWDS
       background-color: $marker-bgcolor-low;
     }
 
-  }
-
-  &__impact {
-    display: none;
-    position: absolute;
-    top: -1.5rem;
-    right: -4rem;
-    bottom: -1.5rem;
-    left: -4rem;
-    background-image: url('../img/pcp-marker__burst.svg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    animation: markerPulse .5s ease-in-out;
-    animation-iteration-count: 3;
-    animation-fill-mode: forwards;
-
-    .pcp-marker--impacted & {
-      display: block;
+    .pcp-marker--active &:after {
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0;
+      content: '';
+      animation: markerPulse 2s ease-out;
+      animation-iteration-count: infinite;
+      background-color: $marker-color-affected;
+      border-radius: 100%;
+      height: $size-extra-large;
+      width: $size-extra-large;
+      position: absolute;
+      left: -13px;
+      top: -13px;
     }
+
 
   }
 
