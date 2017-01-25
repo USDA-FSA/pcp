@@ -32,7 +32,7 @@ $marker-color-affected: #02bfe7; // from USWDS
 
 @keyframes impactPulse {
   0% { transform: scale(0, 0); opacity: 0; }
-  33% { transform: scale(1.5, 1.5); opacity: .33; }
+  25% { transform: scale(1.5, 1.5); opacity: .33; }
   50% { transform: scale(1.5, 1.5); opacity: .33; }
   100% { transform: scale(0, 0); opacity: 0; }
 }
