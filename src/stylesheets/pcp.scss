@@ -1,15 +1,25 @@
 
+// Bring in fsa-style, i.e. http://usda-fsa.github.io/fsa-style/
 @import 'lib/fsa-style/fsa-style';
 
-.pcp-section {
+// PCP Core
+@import 'core/pcp.variables';
+@import 'core/pcp.utilities';
 
-  padding-left: $size-default;
-  padding-right: $size-default;
+// PCP Layouts
+@import 'layouts/pcp.section';
 
-  &__bd {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $site-max-width;
-  }
+// PCP Components
+@import 'components/pcp.header-TEMP';
+@import 'components/pcp.footer-TEMP';
+@import 'components/pcp.table-header';
+@import 'components/pcp.table';
+@import 'components/pcp.growl';
+@import 'components/pcp.whiteout';
+@import 'components/pcp.select-multi';
+@import 'components/pcp.marker';
 
-}
+// PCP Elements
+
+// PCP Shame
+@import 'pcp.shame';

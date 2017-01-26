@@ -1,0 +1,68 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Component' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header-project.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1 class="fsa-font--sans">Component: Table</h1>
+
+        <p class="fsa-text--lead">Paired with <a href="component_table-header.html">Component: Table Header</a></p>
+
+        <pre class="pcp-code-block"><code>class="fsa-table fsa-table--borderless fsa-table--responsive <strong style="color:black">pcp-table</strong>"</code></pre>
+
+        <div class="fsa-grid">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="fsa-font--sans">As seen on</h2>
+            <ul>
+              <li><a href="markets.html">markets.html</a></li>
+              <li><a href="roles.html">roles.html</a></li>
+            </ul>
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="fsa-font--sans">FSA Design System References</h2>
+            <ul>
+              <li><a href="http://usda-fsa.github.io/fsa-design-system/?preview">FSA Design System</a></li>
+              <li><a href="http://usda-fsa.github.io/fsa-design-system/elements/tables/">Tables</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="fsa-font--sans">Samples</h2>
+
+        <h3 class="fsa-font--sans">Markets</h3>
+
+        {% include: 'includes/table_markets.html' %}
+
+        <h3 class="fsa-font--sans">Roles</h3>
+
+        {% include: 'includes/table_roles.html' %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/prototype-list.html' @class:'pcp-prototype-list' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>
