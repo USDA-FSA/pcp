@@ -150,8 +150,8 @@ module.exports = function (grunt) {
     /// Watching chchchchanges
     watch: {
       img: {
-        files: 'src/img',
-        tasks: ['copy:fsaStyle_img'],
+        files: 'src/img/*',
+        tasks: ['copy:img'],
       },
       html: {
         files: ['src/**/*.html'],

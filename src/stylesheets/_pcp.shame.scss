@@ -2,6 +2,13 @@
   @include sr-only();
 }
 
+// -----------------------------------------------------------------------------
+// PROJECT PROTOTYPE
+
+.pcp-marker-demo {
+  position: relative;
+}
+
 .pcp-prototype-list {
 
   @include breakpoint(M) {
@@ -51,6 +58,25 @@
   }
 
 }
+
+.pcp-code-block {
+
+  background-color: white;
+  border: 1px solid $color-fsa-tertiary-100;
+  padding: $size-medium;
+
+  &--hidden {
+    display: none;
+  }
+
+  code {
+    background-color: transparent;
+  }
+
+}
+
+// -----------------------------------------------------------------------------
+// BROWSER SYNC
 
 #__bs_notify__ {
   top: auto !important;

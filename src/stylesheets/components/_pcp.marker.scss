@@ -1,0 +1,160 @@
+$marker-color-base: $color-black;
+$marker-font-size: $font-size-3;
+$marker-radius: 2px;
+$marker-padding: $size-base;
+
+$marker-bgcolor-default: $color-white;
+$marker-bgcolor-high: $color-fsa-red;
+$marker-bgcolor-low: $color-gold-lighter; // from USWDS
+
+$marker-border-color-default: $color-white;
+$marker-border-color-high: $color-fsa-red;
+$marker-border-color-low: $color-gold-lighter; // from USWDS
+
+$marker-text-default: $color-base;
+$marker-text-high: $color-white;
+$marker-text-low: $marker-text-default;
+
+$marker-weight-default: $font-bold;
+$marker-weight-modified: $font-normal;
+
+$marker-color-modified: $color-fsa-tertiary-300;
+$marker-color-affected: #02bfe7; // from USWDS
+
+// scss-lint:disable SelectorFormat
+
+@keyframes markerPulse {
+  0% { transform: scale(0, 0); opacity: 0; }
+  33% { opacity: .5; }
+  66% { transform: scale(1.8, 1.8); opacity: 0; }
+  100% { transform: scale(1.8, 1.8); opacity: 0; }
+}
+
+@keyframes impactPulse {
+  0% { transform: scale(0, 0); opacity: 0; }
+  25% { transform: scale(1.5, 1.5); opacity: .33; }
+  50% { transform: scale(1.5, 1.5); opacity: .33; }
+  100% { transform: scale(0, 0); opacity: 0; }
+}
+
+.pcp-marker {
+
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  transition: all .23s ease-in-out;
+
+  &:before { // Impacted
+
+    display: none;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: -1.5rem;
+    right: -4rem;
+    bottom: -1.5rem;
+    left: -4rem;
+    background-image: url('../img/pcp-marker__burst.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: impactPulse 1s ease-in-out;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+
+  }
+
+  &--impacted:before {
+    display: block;
+  }
+
+  &__value {
+
+    z-index: 30;
+    background-color: $color-white;
+    border: 1px solid $marker-color-base;
+    font-size: $marker-font-size;
+    font-weight: $marker-weight-default;
+    line-height: 1;
+    color: $marker-color-base;
+    padding: $marker-padding;
+    border-radius: $marker-radius;
+    min-width: 50px;
+    text-align: center;
+    transition: all .23s ease-in-out;
+    position: relative;
+
+    .pcp-marker--modified & {
+      font-weight: $marker-weight-modified;
+      color: $marker-color-modified;
+      border-color: $marker-color-modified;
+    }
+
+    .pcp-marker--active & {
+
+      transform: translate(0, -7px);
+
+    }
+
+    .pcp-marker--high & {
+      background-color: $marker-bgcolor-high;
+      border-color: $marker-bgcolor-high;
+      color: $marker-text-high;
+    }
+
+    .pcp-marker--low & {
+      background-color: $marker-bgcolor-low;
+      border-color: $marker-bgcolor-low;
+      color: $marker-text-low;
+    }
+
+  }
+
+  &__pinpoint {
+
+    $pinpoint-size: $size-default;
+
+    &:before {
+      content: '';
+      transition: all .23s ease-in-out;
+      display: inline-block;
+      width: $pinpoint-size;
+      height: $pinpoint-size;
+      background-color: black;
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      margin-left: -($pinpoint-size / 2);
+      transform: rotate(45deg);
+      z-index: 20;
+    }
+
+    // .pcp-marker--high &:before {
+    //   background-color: $marker-bgcolor-high;
+    // }
+    //
+    // .pcp-marker--low &:before {
+    //   background-color: $marker-bgcolor-low;
+    // }
+
+    .pcp-marker--active &:after {
+      z-index: 10;
+      pointer-events: none;
+      opacity: 1;
+      content: '';
+      animation: markerPulse 2.66s ease-out;
+      animation-iteration-count: infinite;
+      background-color: $marker-color-affected;
+      border-radius: 100%;
+      height: $size-extra-large;
+      width: $size-extra-large;
+      position: absolute;
+      top: -3px;
+      left: 1px;
+    }
+
+  }
+
+}
