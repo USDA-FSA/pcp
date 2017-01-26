@@ -67,7 +67,8 @@ function markerDemoMarkup() {
 
   var $sourceContent = $source.parent().html();
 
-  // far too lazy and repetitive, but i don't feel like DRYing this
+  // far too lazy and repetitive, but i don't feel like DRYing this.
+  // Doesn't lend itself to reuse, so it's specific to the Marker Combinator
   $sourceContent = $sourceContent.replace(new RegExp('<','g'), '&lt;');
   $sourceContent = $sourceContent.replace(new RegExp('>','g'), '&gt;');
   $sourceContent = $sourceContent.replace(new RegExp('                ','g'), '');
@@ -84,9 +85,9 @@ function markerDemoMarkup() {
   $sourceContent = $sourceContent.replace(' pcp-marker--impacted', ' <strong style="color:black;">pcp-marker--impacted</strong>');
   $sourceContent = $sourceContent.replace(' pcp-marker--high', ' <strong style="color:black;">pcp-marker--high</strong>');
 
-  console.log('$sourceContent is ' + $sourceContent);
-
   $target.html($sourceContent);
+
+  $target.parent().removeClass('pcp-code-block--hidden');
 
 }
 
