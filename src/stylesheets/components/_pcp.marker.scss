@@ -1,9 +1,9 @@
-$marker-color-base: $color-black;
+$marker-color-base: $color-white;
 $marker-font-size: $font-size-3;
 $marker-radius: 2px;
 $marker-padding: $size-base;
 
-$marker-bgcolor-default: $color-white;
+$marker-bgcolor-default: $color-black;
 $marker-bgcolor-high: $color-fsa-red;
 $marker-bgcolor-low: $color-gold-lighter; // from USWDS
 
@@ -73,8 +73,8 @@ $marker-color-affected: #02bfe7; // from USWDS
   &__value {
 
     z-index: 30;
-    background-color: $color-white;
-    border: 1px solid $marker-color-base;
+    background-color: $marker-bgcolor-default;
+    border: 1px solid $marker-bgcolor-default;
     font-size: $marker-font-size;
     font-weight: $marker-weight-default;
     line-height: 1;
@@ -88,8 +88,8 @@ $marker-color-affected: #02bfe7; // from USWDS
 
     .pcp-marker--modified & {
       font-weight: $marker-weight-modified;
-      color: $marker-color-modified;
-      border-color: $marker-color-modified;
+      // color: $marker-color-modified;
+      // border-color: $marker-color-modified;
     }
 
     .pcp-marker--active & {
