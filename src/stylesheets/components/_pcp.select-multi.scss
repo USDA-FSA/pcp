@@ -12,6 +12,7 @@
   &__item {
 
     @include reset-li();
+    position: relative;
     padding: 0 $size-small;
 
     &:hover {
