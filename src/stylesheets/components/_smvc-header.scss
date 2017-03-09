@@ -1,0 +1,47 @@
+.smvc-header {
+
+  background-color: #fff;
+  padding: 1.5rem 0;
+  background-color: $color-fsa-primary;
+  text-align: left;
+
+  &__bd {
+
+    display: flex;
+
+    max-width: ($site-max-width + 24px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 $size-default;
+    text-align: left;
+    color: $color-fsa-white;
+
+  }
+
+  &__prop {
+    flex: 1;
+    padding-right: $size-small;
+  }
+
+  &__app-name {
+
+    flex: 1;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: right;
+    font-weight: $font-light;
+    align-self: flex-end;
+    color: $color-fsa-white;
+    text-decoration: none;
+
+    &:visited {
+      color: $color-fsa-white;
+    }
+
+    @include breakpoint(S) {
+      font-size: 2.3rem;
+    }
+
+  }
+
+}

@@ -1,0 +1,48 @@
+.smvc-brand {
+
+  @include clearfix;
+
+  &__logo {
+
+    display: none;
+
+    @include breakpoint(M) {
+      display: block;
+      height: ($size-base * 9);
+      float: left;
+      margin-right: $size-small;
+      height: ($size-base * 11);
+      margin-right: $size-default;
+    }
+
+  }
+
+  &__label {
+
+    white-space: nowrap;
+    display: block;
+    color: $color-fsa-white;
+
+  }
+
+  &__usda {
+
+    @include font-size(1);
+    display: block;
+
+  }
+
+  &__agency {
+
+    display: block;
+    line-height: 1;
+    font-weight: $font-bold;
+    @include font-size(4);
+
+  }
+
+  &__us-trunc {
+    outline: 7px solid red;
+  }
+
+}
