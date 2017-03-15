@@ -6,7 +6,7 @@
 
     display: none;
 
-    @include breakpoint(M) {
+    @include breakpoint(L) {
       display: block;
       height: ($size-base * 9);
       float: left;
@@ -37,23 +37,31 @@
     @include font-size(4);
     display: block;
     line-height: 1;
-    font-weight: $font-bold;
 
   }
 
-  &__us-trunc {
+  &__us {
+
     display: none;
+
+    @include breakpoint(L) {
+      display: inline;
+    }
+
   }
 
-  &__us-initial {
+  &__da {
 
-    &:after {
-      content: '.'
+    &:before {
+      content: attr(data-before);
+      margin-right: 3px;
+
+      @include breakpoint(L) {
+        display: none;
+      }
     }
 
-    & ~ & {
-      margin-left: -2px;
-    }
+
 
   }
 

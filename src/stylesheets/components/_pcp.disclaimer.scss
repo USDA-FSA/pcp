@@ -49,7 +49,7 @@
 
     text-transform: capitalize;
 
-    @include breakpoint(M) {
+    @include breakpoint(L) {
       text-transform: none;
     }
 
@@ -59,7 +59,7 @@
 
     display: none;
 
-    @include breakpoint(M) {
+    @include breakpoint(L) {
       display: inline;
     }
 
