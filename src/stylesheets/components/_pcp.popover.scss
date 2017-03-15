@@ -1,0 +1,10 @@
+.pcp-popover {
+  position: absolute;
+  color: $color-fsa-base;
+  top: 100%;
+  z-index: 10;
+  text-align: left;
+  background-color: $color-white;
+  padding: $size-default;
+  box-shadow: 0 0 $size-default rgba(0, 0, 0, .5);
+}

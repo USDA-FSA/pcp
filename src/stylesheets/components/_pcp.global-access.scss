@@ -8,6 +8,7 @@
 
       @include reset-li();
       display: inline-block;
+      position: relative;
 
       & + & {
         margin-left: $size-small;
