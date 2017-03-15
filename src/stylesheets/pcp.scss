@@ -16,8 +16,8 @@
 ///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
-@import 'components/pcp-brand';
-@import 'components/pcp-header';
+@import 'components/pcp.brand';
+@import 'components/pcp.header';
 ///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
@@ -25,6 +25,7 @@
 ///////////////////////////////////////
 @import 'components/pcp.footer-TEMP';
 @import 'components/pcp.table-header';
+@import 'components/pcp.global-access';
 @import 'components/pcp.table';
 @import 'components/pcp.growl';
 @import 'components/pcp.whiteout';
@@ -32,6 +33,7 @@
 @import 'components/pcp.marker';
 
 // PCP Elements
+@import 'elements/pcp.icon-TEMP';
 
 // PCP Shame
 @import 'pcp.shame';

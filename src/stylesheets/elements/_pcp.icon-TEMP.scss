@@ -1,0 +1,25 @@
+.pcp-icon-TEMP {
+  $icon-size: $size-large;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background-color: $color-fsa-primary-900;
+  text-indent: $icon-size * 2;
+  overflow: hidden;
+  width: $icon-size;
+  height: $icon-size;
+  position: relative;
+
+  &:hover {
+    background-color: $color-fsa-primary-300;
+  }
+
+  &::-moz-focus-inner,
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+}

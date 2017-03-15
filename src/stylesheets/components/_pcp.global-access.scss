@@ -1,0 +1,21 @@
+.pcp-global-access {
+
+  &__list {
+
+    @include reset-ul();
+
+    &-item {
+
+      @include reset-li();
+      display: inline-block;
+
+      & + & {
+        margin-left: $size-small;
+      }
+
+    }
+
+  }
+
+
+}

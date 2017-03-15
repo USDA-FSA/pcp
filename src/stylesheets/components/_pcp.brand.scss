@@ -27,16 +27,30 @@
 
   &__usda {
 
-    @include font-size(1);
+    @include font-size(0);
+    font-size: 12px;
     display: block;
+
+    @include breakpoint(M) {
+      @include font-size(0);
+    }
+
+    @include breakpoint(L) {
+      @include font-size(1);
+    }
 
   }
 
   &__agency {
 
-    @include font-size(4);
+    @include font-size(3);
     display: block;
     line-height: 1;
+    font-weight: $font-bold;
+
+    @include breakpoint(L) {
+      @include font-size(4);
+    }
 
   }
 

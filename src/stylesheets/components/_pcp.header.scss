@@ -24,9 +24,9 @@
 
   &__options {
     color: $color-fsa-white;
-    flex: 1;
-    align-self: flex-end;
     text-align: right;
+    display: flex;
+    align-items: center;
   }
 
 }
