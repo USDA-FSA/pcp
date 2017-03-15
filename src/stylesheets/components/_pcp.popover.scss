@@ -1,8 +1,9 @@
 .pcp-popover {
   position: absolute;
   color: $color-fsa-base;
-  top: 100%;
-  z-index: 10;
+  top: calc(100% + #{$size-default});
+  right: -$size-default;
+  z-index: 1;
   text-align: left;
   background-color: $color-white;
   padding: $size-default;
