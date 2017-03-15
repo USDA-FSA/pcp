@@ -1,4 +1,4 @@
-.smvc-header {
+.pcp-header {
 
   background-color: #fff;
   padding: 1.5rem 0;
@@ -8,7 +8,6 @@
   &__bd {
 
     display: flex;
-
     max-width: ($site-max-width + 24px);
     margin-left: auto;
     margin-right: auto;
@@ -23,25 +22,11 @@
     padding-right: $size-small;
   }
 
-  &__app-name {
-
-    flex: 1;
-    font-size: 2rem;
-    line-height: 1;
-    text-align: right;
-    font-weight: $font-light;
-    align-self: flex-end;
+  &__options {
     color: $color-fsa-white;
-    text-decoration: none;
-
-    &:visited {
-      color: $color-fsa-white;
-    }
-
-    @include breakpoint(S) {
-      font-size: 2.3rem;
-    }
-
+    flex: 1;
+    align-self: flex-end;
+    text-align: right;
   }
 
 }

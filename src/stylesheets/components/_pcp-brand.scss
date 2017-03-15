@@ -1,4 +1,4 @@
-.smvc-brand {
+.pcp-brand {
 
   @include clearfix;
 
@@ -34,15 +34,27 @@
 
   &__agency {
 
+    @include font-size(4);
     display: block;
     line-height: 1;
     font-weight: $font-bold;
-    @include font-size(4);
 
   }
 
   &__us-trunc {
-    outline: 7px solid red;
+    display: none;
+  }
+
+  &__us-initial {
+
+    &:after {
+      content: '.'
+    }
+
+    & ~ & {
+      margin-left: -2px;
+    }
+
   }
 
 }
