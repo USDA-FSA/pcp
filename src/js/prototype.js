@@ -60,6 +60,23 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 
 })
 
+$('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.fsa-field');
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetPeers = $('.pcp-popover');
+
+  if ($target.hasClass('pcp-popover--visible')) {
+    $targetPeers.removeClass('pcp-popover--visible');
+    $target.removeClass('pcp-popover--visible');
+  } else {
+    $targetPeers.removeClass('pcp-popover--visible');
+    $target.addClass('pcp-popover--visible');
+  }
+
+})
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
@@ -96,6 +113,7 @@ function markerDemo() {
 
     var $self = $(this);
     var $target = $('#pcp-marker-demo__target');
+
     $target
       .removeClass($self.attr('data-marker-other'))
       .addClass($self.val())

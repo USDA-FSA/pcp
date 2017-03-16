@@ -2,6 +2,11 @@
   @include sr-only();
 }
 
+.fsa-email-string {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
 // -----------------------------------------------------------------------------
 // PROJECT PROTOTYPE
 
