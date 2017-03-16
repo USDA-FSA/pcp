@@ -36,6 +36,12 @@
   }
 
   &:before {
+    @include css-triangle($arrow-size, $color-fsa-tertiary-200, bottom);
+    content: '';
+    position: absolute;
+  }
+
+  &:after {
     @include css-triangle($arrow-size, $color-white, bottom);
     content: '';
     position: absolute;
@@ -43,16 +49,23 @@
 
   // ---------------------------------------------------------------------------
 
-  &--br:before {
-    right: $size-default;
-    top: -($arrow-size * 2);
+  &--br {
+    &:before,
+    &:after {
+      right: $size-default;
+      top: -($arrow-size * 2);
+      transform: translateY(2px);
+    }
+    &:before {
+      transform: translateY(1px);
+    }
   }
 
-  &--bl:before {  }
+  &--bl {  }
 
-  &--tr:before {  }
+  &--tr {  }
 
-  &--tl:before {  }
+  &--tl {  }
 
   // ---------------------------------------------------------------------------
 
