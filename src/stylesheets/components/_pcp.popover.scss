@@ -18,8 +18,8 @@
 
   display: none;
   position: absolute;
-  top: calc(100% + #{$size-default});
-  right: -$size-small;
+  top: calc(100% + #{$size-small});
+  right: 0;
   z-index: 1;
   text-align: left;
   box-shadow: 0 0 $size-default rgba(0, 0, 0, .5);
