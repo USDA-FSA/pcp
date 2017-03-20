@@ -1,0 +1,82 @@
+.pcp-brand {
+
+  @include clearfix;
+
+  &__logo {
+
+    display: none;
+
+    @include breakpoint(L) {
+      display: block;
+      height: ($size-base * 9);
+      float: left;
+      margin-right: $size-small;
+      height: ($size-base * 11);
+      margin-right: $size-default;
+    }
+
+  }
+
+  &__label {
+
+    white-space: nowrap;
+    display: block;
+    color: $color-fsa-white;
+
+  }
+
+  &__usda {
+
+    @include font-size(0);
+    font-size: 12px;
+    display: block;
+
+    @include breakpoint(M) {
+      @include font-size(0);
+    }
+
+    @include breakpoint(L) {
+      @include font-size(1);
+    }
+
+  }
+
+  &__agency {
+
+    @include font-size(3);
+    display: block;
+    line-height: 1;
+    font-weight: $font-bold;
+
+    @include breakpoint(L) {
+      @include font-size(4);
+    }
+
+  }
+
+  &__us {
+
+    display: none;
+
+    @include breakpoint(L) {
+      display: inline;
+    }
+
+  }
+
+  &__da {
+
+    &:before {
+      content: attr(data-before);
+      margin-right: 3px;
+
+      @include breakpoint(L) {
+        display: none;
+      }
+    }
+
+
+
+  }
+
+}
