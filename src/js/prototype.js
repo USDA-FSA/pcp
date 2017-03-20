@@ -42,6 +42,12 @@ $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
   }, 230);
 })
 
+$('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
+  var $self = $(this);
+  var $component = $self.closest('.pcp-popover');
+  $component.removeClass('pcp-popover--visible');
+})
+
 $('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
   $('#pcp-whiteout').remove();
 })

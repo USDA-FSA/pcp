@@ -1,5 +1,8 @@
 .pcp-icon-TEMP {
+
   $icon-size: $size-large;
+
+  position: relative;
   appearance: none;
   border: 0;
   padding: 0;
@@ -8,9 +11,14 @@
   background-color: $color-fsa-primary-900;
   text-indent: $icon-size * 2;
   overflow: hidden;
-  width: $icon-size;
-  height: $icon-size;
-  position: relative;
+
+  width: $icon-size * .9;
+  height: $icon-size * .9;
+
+  @include breakpoint(S) {
+    width: $icon-size;
+    height: $icon-size;
+  }
 
   &:hover {
     background-color: $color-fsa-primary-300;

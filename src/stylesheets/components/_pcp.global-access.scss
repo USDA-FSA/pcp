@@ -8,7 +8,10 @@
 
       @include reset-li();
       display: inline-block;
-      position: relative;
+
+      @include breakpoint(M) {
+        position: relative;
+      }
 
       & + & {
         margin-left: $size-small;
