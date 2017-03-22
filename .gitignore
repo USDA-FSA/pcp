@@ -3,6 +3,7 @@
 node_modules
 dist
 npm-debug.log
+debug.log
 .ugly
 .bundle/
 scratch.html
