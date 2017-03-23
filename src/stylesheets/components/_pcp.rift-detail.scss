@@ -1,10 +1,146 @@
 .pcp-rift-detail {
 
-  &__hd {}
+  $padding: $size-small;
+
+  background-color: $color-white;
+  border: 1px solid $color-fsa-tertiary-300;
+  box-shadow: 0 0 $size-default rgba(0, 0, 0, .5);
+
+  // ---------------------------------------------------------------------------
+
+  &__hd {
+    background-color: $color-fsa-tertiary;
+    color: $color-white;
+  }
 
   &__bd {}
 
   &__ft {}
+
+  // ---------------------------------------------------------------------------
+
+  &__table {
+    margin: 0;
+    table-layout: fixed;
+  }
+
+  &__thead {}
+
+  &__tr {}
+
+  &__tr--rift {}
+
+  &__tr--spread {}
+
+  &__tr--moor {
+    border-top: 1px solid $color-fsa-tertiary-200;
+  }
+
+  &__th,
+  &__td {
+
+    padding: $padding;
+
+    &--first {}
+
+    &--last {
+      text-align: right;
+    }
+
+    &:last-child {
+      padding-right: $padding;
+    }
+
+    &--moor {
+      @include font-size(2);
+    }
+
+    &--moor-first {
+      text-align: left;
+    }
+
+    &--moor-last {
+      text-align: right;
+    }
+
+  }
+
+  &__th {
+
+    @include font-size(0);
+    background-color: $color-fsa-tertiary-200;
+    font-weight: $font-bold;
+
+    &--moor {
+      text-align: center;
+    }
+
+  }
+
+  &__td {
+
+    &--rift {
+      text-align: center;
+      padding-bottom: 0;
+    }
+
+  }
+
+  &__county {
+    cursor: default;
+    text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  // ---------------------------------------------------------------------------
+
+  &__markets {
+    margin: 0;
+    table-layout: fixed;
+  }
+
+  &__markets-item,
+  &__markets-value {
+
+    @include font-size(3);
+
+    padding: 0;
+    vertical-align: top;
+
+    &--first {
+      padding-right: $padding;
+    }
+
+    &--last {
+      padding-right: $padding;
+      text-align: right;
+    }
+
+    &--dominant {
+      font-weight: $font-bold;
+    }
+
+    &--interior {
+      color: $color-fsa-tertiary-300;
+    }
+
+  }
+
+  &__markets-item {
+
+    font-family: $font-serif;
+    line-height: 1.6;
+
+  }
+
+  &__markets-value {}
+
+  abbr {
+    border-bottom: 0;
+  }
 
 
 }

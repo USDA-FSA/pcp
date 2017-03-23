@@ -1,5 +1,6 @@
 $marker-color-base: $color-white;
 $marker-font-size: $font-size-3;
+$marker-font-size--large: $font-size-4;
 $marker-radius: 2px;
 $marker-padding: $size-base;
 
@@ -85,6 +86,15 @@ $marker-color-affected: #02bfe7; // from USWDS
     text-align: center;
     transition: all .23s ease-in-out;
     position: relative;
+
+    .pcp-marker--large & {
+      font-size: $marker-font-size--large;
+      // scss-lint:disable TrailingSemicolon
+      padding:
+        $marker-padding * 2
+        $marker-padding * 4
+      ;
+    }
 
     .pcp-marker--modified & {
       font-weight: $marker-weight-modified;
