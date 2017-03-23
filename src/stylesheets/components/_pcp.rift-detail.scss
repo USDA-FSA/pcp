@@ -1,6 +1,6 @@
 .pcp-rift-detail {
 
-  $padding: $size-small;
+  $padding: $size-default;
 
   background-color: $color-white;
   border: 1px solid $color-fsa-tertiary-300;
@@ -9,7 +9,7 @@
   // ---------------------------------------------------------------------------
 
   &__hd {
-    background-color: $color-fsa-tertiary;
+    background-color: $color-fsa-tertiary-300;
     color: $color-white;
   }
 
@@ -33,13 +33,30 @@
   &__tr--spread {}
 
   &__tr--moor {
+
     border-top: 1px solid $color-fsa-tertiary-200;
+
+    & + & {
+
+      border-top: 0;
+
+      .pcp-rift-detail__th--moor,
+      .pcp-rift-detail__td--moor{
+        padding-top: 0;
+      }
+
+    }
+
   }
 
   &__th,
   &__td {
 
-    padding: $padding;
+    // scss-lint:disable TrailingWhitespace
+    padding:
+      ($padding / 2)
+      ($padding)
+    ;
 
     &--first {}
 
@@ -73,6 +90,7 @@
 
     &--moor {
       text-align: center;
+      font-weight: $font-bold;
     }
 
   }
@@ -81,9 +99,16 @@
 
     &--rift {
       text-align: center;
+      // padding-top: $padding;
       padding-bottom: 0;
     }
 
+  }
+
+  &__spread-left {}
+
+  &__spread-right {
+    border-left: 1px solid $color-fsa-tertiary-200;
   }
 
   &__county {
@@ -98,7 +123,7 @@
   // ---------------------------------------------------------------------------
 
   &__markets {
-    margin: 0;
+    margin: $size-base 0 0;
     table-layout: fixed;
   }
 
@@ -124,6 +149,7 @@
     }
 
     &--interior {
+      font-weight: $font-light;
       color: $color-fsa-tertiary-300;
     }
 
@@ -138,9 +164,10 @@
 
   &__markets-value {}
 
+  // ---------------------------------------------------------------------------
+
   abbr {
     border-bottom: 0;
   }
-
 
 }
