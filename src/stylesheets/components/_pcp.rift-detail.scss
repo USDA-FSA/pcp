@@ -9,9 +9,39 @@
   // ---------------------------------------------------------------------------
 
   &__hd {
-    background-color: $color-fsa-tertiary-300;
+    background-color: $color-fsa-primary;
     color: $color-white;
+    display: table;
+    width: 100%;
   }
+
+  &__title {
+    @include font-size(2);
+    font-family: $font-sans;
+    color: inherit;
+    text-transform: uppercase;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: $padding;
+
+    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      $size-base
+      $size-base
+      $size-base
+      $padding
+    ;
+    margin: 0;
+    font-weight: $font-bold;
+  }
+
+  &__actions {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    padding: $size-base;
+  }
+
 
   &__bd {}
 
@@ -40,8 +70,9 @@
 
       border-top: 0;
 
+      // scss-lint:disable SelectorFormat
       .pcp-rift-detail__th--moor,
-      .pcp-rift-detail__td--moor{
+      .pcp-rift-detail__td--moor {
         padding-top: 0;
       }
 
@@ -52,7 +83,7 @@
   &__th,
   &__td {
 
-    // scss-lint:disable TrailingWhitespace
+    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
     padding:
       ($padding / 2)
       ($padding)
@@ -85,7 +116,7 @@
   &__th {
 
     @include font-size(0);
-    background-color: $color-fsa-tertiary-200;
+    background-color: $color-fsa-tertiary-100;
     font-weight: $font-bold;
 
     &--moor {
@@ -99,8 +130,18 @@
 
     &--rift {
       text-align: center;
-      // padding-top: $padding;
+      padding-top: $padding;
       padding-bottom: 0;
+    }
+
+  }
+
+
+  &__marker {
+
+    .pcp-marker__value {
+      padding-left: $padding * 3;
+      padding-right: $padding * 3;
     }
 
   }
@@ -168,6 +209,7 @@
 
   abbr {
     border-bottom: 0;
+    text-decoration: none;
   }
 
 }

@@ -83,6 +83,20 @@ $('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
 
 })
 
+$('body').on('click', '[data-behavior~="rift-pin"]', function(event) {
+
+  alert('Pin this!')
+
+})
+
+$('body').on('click', '[data-behavior~="rift-close"]', function(event) {
+
+  alert('Close this!')
+
+})
+
+
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
