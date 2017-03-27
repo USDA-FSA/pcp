@@ -39,9 +39,13 @@
     display: table-cell;
     text-align: right;
     vertical-align: middle;
-    padding: $size-base;
+    padding:
+      $size-base
+      $size-small
+      $size-base
+      $size-base
+    ;
   }
-
 
   &__bd {}
 
@@ -132,10 +136,14 @@
       text-align: center;
       padding-top: $padding;
       padding-bottom: 0;
+      // background-image: url(http://placehold.it/1/eee);
+      background-image: url('../img/pcp-rift-details-bg-strip.gif');
+    	background-repeat: repeat-y;
+    	background-position: 50%;
+    	background-position: calc(50% - 1px);
     }
 
   }
-
 
   &__marker {
 
