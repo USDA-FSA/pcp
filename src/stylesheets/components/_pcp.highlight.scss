@@ -1,0 +1,20 @@
+
+@keyframes pcp-highlight-fade {
+
+  $fadeColor: yellow;
+
+  from {
+    background: $fadeColor;
+    outline: $size-small solid $fadeColor;
+  }
+
+  to {
+    background: transparent;
+    outline: ($size-small / 2) solid transparent;
+  }
+
+}
+
+.pcp-highlight-text {
+  animation: pcp-highlight-fade 1.5s ease-in-out;
+}

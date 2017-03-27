@@ -40,14 +40,19 @@
           </div>
         </div>
 
+        <h2 class="fsa-font--sans">Behavior</h2>
+
+        <p>
+          <button onclick="pcpHighlightText('SAMPLE-FADE-TARGET')" type="button">Add highlight to <strong>"NE - Boone, GLF"</strong></button>
+        </p>
+
         <h2 class="fsa-font--sans">Sample</h2>
 
-
         <div class="fsa-grid">
-          <div class="fsa-grid__9/12">
+          <div class="fsa-grid__3/12">
             {% include: 'includes/rift-detail.html' %}
           </div>
-          <div class="fsa-grid__3/12">
+          <div class="fsa-grid__9/12">
             {% include: 'includes/rift-detail.html' %}
           </div>
         </div>
@@ -60,7 +65,7 @@
   </main>
 
   <footer>
-    {% include: 'includes/prototype-list.html' @class:'pcp-prototype-list' %}
+    {% include: 'includes/pcp-footer-project.html' %}
   </footer>
 
   {% include: 'includes/scripts.html' %}

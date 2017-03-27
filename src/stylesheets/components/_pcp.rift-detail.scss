@@ -1,4 +1,3 @@
-
 .pcp-RIFT-ICON-TEMP {
 
   background-color: rgba(255, 255, 255, .5) !important;
@@ -51,6 +50,7 @@
     display: table-cell;
     text-align: right;
     vertical-align: middle;
+    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
     padding:
       $size-base
       $size-small

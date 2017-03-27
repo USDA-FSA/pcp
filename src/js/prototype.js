@@ -95,6 +95,18 @@ $('body').on('click', '[data-behavior~="rift-close"]', function(event) {
 
 })
 
+function pcpHighlightText(target) {
+
+  var $target = $('#' + target);
+
+  $target.addClass('pcp-highlight-text');
+
+  setTimeout(function() {
+    $target.removeClass('pcp-highlight-text');
+  }, 2000);
+
+
+}
 
 
 function markerDemoMarkup() {
