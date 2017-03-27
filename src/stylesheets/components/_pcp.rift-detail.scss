@@ -1,15 +1,27 @@
+
+.pcp-RIFT-ICON-TEMP {
+
+  background-color: rgba(255, 255, 255, .5) !important;
+
+  & + & {
+    margin-left: 5px;
+  }
+
+}
+
 .pcp-rift-detail {
 
   $padding: $size-default;
 
   background-color: $color-white;
-  border: 1px solid $color-fsa-tertiary-300;
+  border: 1px solid $color-fsa-tertiary-200;
   box-shadow: 0 0 $size-default rgba(0, 0, 0, .5);
 
   // ---------------------------------------------------------------------------
 
   &__hd {
-    background-color: $color-fsa-primary;
+    // background-color: $color-fsa-primary;
+    background-color: $color-fsa-tertiary;
     color: $color-white;
     display: table;
     width: 100%;
@@ -120,7 +132,7 @@
   &__th {
 
     @include font-size(0);
-    background-color: $color-fsa-tertiary-100;
+    background-color: $color-fsa-tertiary-200;
     font-weight: $font-bold;
 
     &--moor {
