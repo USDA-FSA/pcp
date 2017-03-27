@@ -71,6 +71,10 @@ $marker-color-affected: #02bfe7; // from USWDS
     display: block;
   }
 
+  &--static {
+    cursor: text;
+  }
+
   &__value {
 
     z-index: 30;
@@ -89,7 +93,7 @@ $marker-color-affected: #02bfe7; // from USWDS
 
     .pcp-marker--large & {
       font-size: $marker-font-size--large;
-      // scss-lint:disable TrailingSemicolon
+      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
       padding:
         $marker-padding * 2
         $marker-padding * 4
