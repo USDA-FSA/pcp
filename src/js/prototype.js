@@ -136,6 +136,8 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
   var $market_2_val = $('#' + market_2);
   var $market_2_val_text = $market_2_val.text();
 
+  var $titleSecondMarketLameVariableNameSorryNotSorry = $('#UNIQUE-ID-999999');
+
   console.log($market_1_text + ": " + $market_1_val_text + "\n" + $market_2_text + ": " + $market_2_val_text);
 
   $market_1.text($market_2_text);
@@ -159,6 +161,14 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
 
     $market_2.removeClass('pcp-rift-detail__swapped--down');
     $market_2_val.removeClass('pcp-rift-detail__swapped--down');
+
+    $titleSecondMarketLameVariableNameSorryNotSorry
+      .text($market_2_text)
+      .addClass('pcp-highlight-text pcp-highlight-text--inverse')
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-highlight-text pcp-highlight-text--inverse');
+      });
+    ;
 
   });
 
