@@ -1,21 +1,49 @@
+$highlightTextColorInverse: $color-fsa-base;
+$highlightFadeColor: yellow;
+$highlightFadeOutlineSize: $size-base;
 
 @keyframes pcp-highlight-fade {
 
-  $fadeColor: yellow;
-  $fadeOutlineSize: $size-base;
-
   from {
-    background-color: $fadeColor;
-    box-shadow: 0 0 0 $fadeOutlineSize $fadeColor;
+    background-color: $highlightFadeColor;
+    box-shadow: 0 0 0 $highlightFadeOutlineSize $highlightFadeColor;
   }
 
   to {
     background-color: transparent;
-    box-shadow: 0 0 0 ($fadeOutlineSize / 2) transparent;
+    box-shadow: 0 0 0 ($highlightFadeOutlineSize / 2) transparent;
+  }
+
+}
+
+@keyframes pcp-highlight-fade--inverse {
+
+  0% {
+    color: $highlightTextColorInverse;
+    background-color: $highlightFadeColor;
+    box-shadow: 0 0 0 $highlightFadeOutlineSize $highlightFadeColor;
+  }
+
+  75% {
+    color: inherit;
+  }
+
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 ($highlightFadeOutlineSize / 2) transparent;
   }
 
 }
 
 .pcp-highlight-text {
+
+  color: inherit;
   animation: pcp-highlight-fade 1.23s ease-in-out;
+
+  &--inverse {
+
+    animation-name: pcp-highlight-fade--inverse;
+
+  }
+
 }
