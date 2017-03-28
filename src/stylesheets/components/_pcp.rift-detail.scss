@@ -1,7 +1,9 @@
+$swapDistance: 2.8rem;
+
 @keyframes pcp_swapDown {
   from {
-    opacity: 0;
-    transform: translateY(-$size-default);
+    // opacity: 0;
+    transform: translateY(-$swapDistance);
   }
   to {
     opacity: 1;
@@ -11,8 +13,8 @@
 
 @keyframes pcp_swapUp {
   from {
-    opacity: 0;
-    transform: translateY($size-default);
+    // opacity: 0;
+    transform: translateY($swapDistance);
   }
   to {
     opacity: 1;
@@ -259,12 +261,12 @@
 
     &--up {
       display: inline-block;
-      animation: pcp_swapUp .5s ease-in-out;
+      animation: pcp_swapUp .3s;
     }
 
     &--down {
       display: inline-block;
-      animation: pcp_swapDown .5s ease-in-out;
+      animation: pcp_swapDown .3s;
     }
 
   }

@@ -128,12 +128,21 @@ function pcpDemoMarkerModified(target) {
 function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_val) {
 
   var $market_1 = $('#' + market_1_val);
+  var $market_1_text = $market_1.text();
   var $market_1_val = $('#' + market_1);
+  var $market_1_val_text = $('#' + market_1).text();
 
   var $market_2 = $('#' + market_2_val);
+  var $market_2_text = $market_2.text();
   var $market_2_val = $('#' + market_2);
+  var $market_2_val_text = $market_2_val.text();
 
-  // console.log($market_1.text() + ': ' + $market_1_val.text() + '\n' + $market_2.text() + ': ' + $market_2_val.text());
+  console.log($market_1_text + ": " + $market_1_val_text + "\n" + $market_2_text + ": " + $market_2_val_text);
+
+  $market_1.text($market_2_text);
+  $market_2.text($market_1_text);
+  $market_1_val.text($market_2_val_text);
+  $market_2_val.text($market_1_val_text);
 
   $market_1.addClass('pcp-rift-detail__swapped--up');
   $market_1_val.addClass('pcp-rift-detail__swapped--up');
@@ -142,8 +151,9 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
   $market_2_val.addClass('pcp-rift-detail__swapped--down');
 
   setTimeout(function() {
-    pcpDemoHighlightText('UNIQUE-ID-09524')
-  }, 500);
+    pcpDemoHighlightText('UNIQUE-ID-09524');
+    pcpDemoHighlightText('UNIQUE-ID-74851')
+  }, 400);
 
   setTimeout(function() {
 
