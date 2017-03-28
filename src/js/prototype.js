@@ -125,6 +125,39 @@ function pcpDemoMarkerModified(target) {
 
 }
 
+function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_val) {
+
+  var $market_1 = $('#' + market_1_val);
+  var $market_1_val = $('#' + market_1);
+
+  var $market_2 = $('#' + market_2_val);
+  var $market_2_val = $('#' + market_2);
+
+  // console.log($market_1.text() + ': ' + $market_1_val.text() + '\n' + $market_2.text() + ': ' + $market_2_val.text());
+
+  $market_1.addClass('pcp-rift-detail__swapped--up');
+  $market_1_val.addClass('pcp-rift-detail__swapped--up');
+
+  $market_2.addClass('pcp-rift-detail__swapped--down');
+  $market_2_val.addClass('pcp-rift-detail__swapped--down');
+
+  setTimeout(function() {
+    pcpDemoHighlightText('UNIQUE-ID-09524')
+  }, 500);
+
+  setTimeout(function() {
+
+    $market_1.removeClass('pcp-rift-detail__swapped--up');
+    $market_1_val.removeClass('pcp-rift-detail__swapped--up');
+
+    $market_2.removeClass('pcp-rift-detail__swapped--down');
+    $market_2_val.removeClass('pcp-rift-detail__swapped--down');
+
+  }, 1010);
+
+}
+
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
@@ -171,5 +204,7 @@ function markerDemo() {
 
   });
 }
+
+
 
 markerDemo();
