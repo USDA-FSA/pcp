@@ -101,10 +101,9 @@ function pcpDemoHighlightText(target) {
 
   $target.addClass('pcp-highlight-text');
 
-  setTimeout(function() {
+  $target.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
     $target.removeClass('pcp-highlight-text');
-  }, 2000);
-
+  });
 
 }
 
@@ -150,12 +149,10 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
   $market_2.addClass('pcp-rift-detail__swapped--down');
   $market_2_val.addClass('pcp-rift-detail__swapped--down');
 
-  setTimeout(function() {
-    pcpDemoHighlightText('UNIQUE-ID-09524');
-    pcpDemoHighlightText('UNIQUE-ID-74851')
-  }, 400);
+  $market_2_val.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
 
-  setTimeout(function() {
+    pcpDemoHighlightText('UNIQUE-ID-09524');
+    pcpDemoHighlightText('UNIQUE-ID-74851');
 
     $market_1.removeClass('pcp-rift-detail__swapped--up');
     $market_1_val.removeClass('pcp-rift-detail__swapped--up');
@@ -163,10 +160,9 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
     $market_2.removeClass('pcp-rift-detail__swapped--down');
     $market_2_val.removeClass('pcp-rift-detail__swapped--down');
 
-  }, 1010);
+  });
 
 }
-
 
 function markerDemoMarkup() {
 
@@ -214,7 +210,5 @@ function markerDemo() {
 
   });
 }
-
-
 
 markerDemo();

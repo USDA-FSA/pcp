@@ -5,17 +5,17 @@
   $fadeOutlineSize: $size-base;
 
   from {
-    background: $fadeColor;
-    outline: $fadeOutlineSize solid $fadeColor;
+    background-color: $fadeColor;
+    box-shadow: 0 0 0 $fadeOutlineSize $fadeColor;
   }
 
   to {
-    background: transparent;
-    outline: ($fadeOutlineSize / 2) solid transparent;
+    background-color: transparent;
+    box-shadow: 0 0 0 ($fadeOutlineSize / 2) transparent;
   }
 
 }
 
 .pcp-highlight-text {
-  animation: pcp-highlight-fade 1s ease-in-out;
+  animation: pcp-highlight-fade 1.23s ease-in-out;
 }
