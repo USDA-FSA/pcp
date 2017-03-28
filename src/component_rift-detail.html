@@ -40,12 +40,6 @@
           </div>
         </div>
 
-        <h2 class="fsa-font--sans">Behavior</h2>
-
-        <p>
-          <button onclick="pcpHighlightText('SAMPLE-FADE-TARGET')" type="button">Add highlight to <strong>"NE - Boone, GLF"</strong></button>
-        </p>
-
         <h2 class="fsa-font--sans">Sample</h2>
 
         <div class="fsa-grid">
@@ -53,7 +47,27 @@
             {% include: 'includes/rift-detail.html' %}
           </div>
           <div class="fsa-grid__9/12">
-            {% include: 'includes/rift-detail.html' %}
+
+            <p>
+              <button class="fsa-btn fsa-btn--primary fsa-btn--small" onclick="pcpDemoHighlightText('SAMPLE-FADE-TARGET')" type="button">Highlight to <strong>"NE - Boone, GLF"</strong></button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--primary fsa-btn--small" onclick="pcpDemoDominantInteriorSwap()" type="button">Swap Dominant/Interior for <strong>"NE - Boone, GLF"</strong></button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--primary fsa-btn--small" onclick="pcpDemoMarker('UNIQUE-ID-12346', false)" type="button">Change to <strong>Normal</strong></button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--primary fsa-btn--small" onclick="pcpDemoMarker('UNIQUE-ID-12346','pcp-marker--high')" type="button">Change to <strong>High</strong></button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--primary fsa-btn--small" onclick="pcpDemoMarker('UNIQUE-ID-12346','pcp-marker--low')" type="button">Change to <strong>Low</strong></button>
+            </p>
+            <p>
+              <button class="fsa-btn fsa-btn--primary fsa-btn--small" onclick="pcpDemoMarkerModified('UNIQUE-ID-12346')" type="button">Toggle Modified</button>
+
+            </p>
+
           </div>
         </div>
 

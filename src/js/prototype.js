@@ -95,7 +95,7 @@ $('body').on('click', '[data-behavior~="rift-close"]', function(event) {
 
 })
 
-function pcpHighlightText(target) {
+function pcpDemoHighlightText(target) {
 
   var $target = $('#' + target);
 
@@ -108,6 +108,22 @@ function pcpHighlightText(target) {
 
 }
 
+function pcpDemoMarker(target, className) {
+
+  var $target = $('#' + target);
+
+  $target.removeClass('pcp-marker--high pcp-marker--low');
+  $target.addClass(className);
+
+}
+
+function pcpDemoMarkerModified(target) {
+
+  var $target = $('#' + target);
+
+  $target.toggleClass('pcp-marker--modified');
+
+}
 
 function markerDemoMarkup() {
 
