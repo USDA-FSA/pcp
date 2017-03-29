@@ -1,3 +1,58 @@
+// -----------------------------------------------------------------------------
+// PROJECT PROTOTYPE
+
+.pcp-TEMP-MAP-FRAME {
+
+  margin: $size-medium 0;
+
+  &__HD {}
+
+  &__BD {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__FT {}
+
+	&__TABS {
+    border: 1px solid $color-fsa-tertiary-200;
+    background-color: $color-white;
+    padding: $size-small;
+    text-align: center;
+  }
+
+  &__PANEL {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 220px;
+    padding: $size-large;
+    background-color: $color-fsa-site-bg;
+    text-align: center;
+    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+  }
+
+  &__MAP {
+    border: 1px solid $color-fsa-tertiary-200;
+    border-top: 0;
+    background-color: $color-white;
+    height: 540px;
+  }
+
+  &__MARKER {
+    position: absolute;
+  }
+
+  &__RIFT-DETAIL {
+    position: absolute;
+    left: 246px;
+    bottom: $size-medium;
+    width: 220px;
+  }
+
+}
+
 .sr-only {
   @include sr-only();
 }
