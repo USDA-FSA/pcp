@@ -1,0 +1,40 @@
+.pcp-stepped-tabs {
+}
+
+.pcp-stepped-tabs {
+
+  margin: $size-large 0;
+  background-color: $color-white;
+  border: 1px solid $color-fsa-tertiary-200;
+
+	&__bd {}
+
+  &__list {
+    margin: 0;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  &__item {
+
+    display: table-cell;
+
+    &--active {}
+
+  }
+
+  &__label {
+
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: $size-small;
+
+    &--active {
+      font-weight: $font-bold;
+    }
+
+  }
+
+}

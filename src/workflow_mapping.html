@@ -1,0 +1,50 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Mapping' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <div class="pcp-stepped-tabs">
+          <div class="pcp-stepped-tabs__bd">
+            <ol class="pcp-stepped-tabs__list">
+              <li class="pcp-stepped-tabs__item"><a class="pcp-stepped-tabs__label" href="workflow_price-discovery.html">Price Discovery</a></li>
+              <li class="pcp-stepped-tabs__item"><a class="pcp-stepped-tabs__label" href="workflow_closing.html">Closing</a></li>
+              <li class="pcp-stepped-tabs__item pcp-stepped-tabs__item--active"><a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--active" href="workflow_mapping.html">Mapping</a></li>
+              <li class="pcp-stepped-tabs__item"><span class="pcp-stepped-tabs__label">Publish</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <h2>Adjustments</h2>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>
