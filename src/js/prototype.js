@@ -240,6 +240,15 @@ $('body').on('click', '[data-behavior~="DEMO-CLOSE-RIFT-DETAILS"]', function(eve
 
 })
 
+$('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-TEMP-MAP-FRAME');
+
+  $component.toggleClass('pcp-TEMP-MAP-FRAME--FULLSCREEN');
+
+})
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
