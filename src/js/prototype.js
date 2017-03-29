@@ -212,8 +212,24 @@ $('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event
   var $self = $(this);
   var $target = $('#' + $self.attr('data-target'));
 
-  $self.toggleClass('pcp-marker--active');
-  $target.toggleClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+  if ($self.hasClass('pcp-marker--active')) {
+
+    console.log('yep, should be visible');
+
+    $self.removeClass('pcp-marker--active');
+    $target.removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+
+  } else {
+
+    console.log('nope, should NOT be visible');
+
+    $('.pcp-marker--active').removeClass('pcp-marker--active');
+    $('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE').removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+
+    $self.addClass('pcp-marker--active');
+    $target.addClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+
+  }
 
 })
 

@@ -47,14 +47,14 @@
           <div class="pcp-TEMP-MAP-FRAME__HD">
             <div class="pcp-TEMP-MAP-FRAME__TABS">
               <div class="pcp-TEMP-MAP-FRAME__TABS-LIST">
-                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#BRL">BRL</a></li>
-                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#YC">YC</a></li>
-                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#HAD">HAD</a></li>
+                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL pcp-TEMP-MAP-FRAME__TABS-LABEL--UNSAVED" href="#BRL">BRL</a></li>
+                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL pcp-TEMP-MAP-FRAME__TABS-LABEL--UNSAVED" href="#YC">YC</a></li>
                 <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#OAT">OAT</a></li>
+                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#HAD">HAD</a></li>
                 <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#SOR">SOR</a></li>
                 <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#YSB">YSB</a></li>
                 <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#HRS">HRS</a></li>
-                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM pcp-TEMP-MAP-FRAME__TABS-ITEM--ACTIVE"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL pcp-TEMP-MAP-FRAME__TABS-LABEL--ACTIVE" href="#HRW">HRW</a></li>
+                <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM pcp-TEMP-MAP-FRAME__TABS-ITEM--ACTIVE"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL pcp-TEMP-MAP-FRAME__TABS-LABEL--ACTIVE pcp-TEMP-MAP-FRAME__TABS-LABEL--UNSAVED" href="#HRW">HRW</a></li>
                 <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#SRW">SRW</a></li>
                 <li class="pcp-TEMP-MAP-FRAME__TABS-ITEM"><a class="pcp-TEMP-MAP-FRAME__TABS-LABEL" href="#WHI">WHI</a></li>
               </div>
@@ -84,21 +84,29 @@
                 <div class="pcp-marker__pinpoint"></div>
               </div>
             </div>
-            <div class="pcp-TEMP-MAP-FRAME__MARKER" style="top: 390px; left: 865px;">
-              <div class="pcp-marker">
-                <div class="pcp-marker__value">-0.08</div>
+            <div class="pcp-TEMP-MAP-FRAME__MARKER" style="top: 130px; left: 805px;">
+              <div class="pcp-marker pcp-marker--low" data-behavior="DEMO-MAP-RIFT-DETAILS" data-target="UNIQUE-ID-76883776994975">
+                <div class="pcp-marker__value">-0.76</div>
                 <div class="pcp-marker__pinpoint"></div>
               </div>
             </div>
-            <div class="pcp-TEMP-MAP-FRAME__MARKER" style="top: 130px; left: 805px;">
-              <div class="pcp-marker pcp-marker--low">
-                <div class="pcp-marker__value">-0.76</div>
+            <div class="pcp-TEMP-MAP-FRAME__MARKER" style="top: 390px; left: 865px;">
+              <div class="pcp-marker" data-behavior="DEMO-MAP-RIFT-DETAILS" data-target="UNIQUE-ID-445S5545545558">
+                <div class="pcp-marker__value">-0.08</div>
                 <div class="pcp-marker__pinpoint"></div>
               </div>
             </div>
 
             <div class="pcp-TEMP-MAP-FRAME__RIFT-DETAIL" id="UNIQUE-ID-88893887672562">
               {% include: 'includes/rift-detail.html' %}
+            </div>
+
+            <div class="pcp-TEMP-MAP-FRAME__RIFT-DETAIL" id="UNIQUE-ID-76883776994975">
+              {% include: 'includes/rift-detail__example-76883776994975.html' %}
+            </div>
+
+            <div class="pcp-TEMP-MAP-FRAME__RIFT-DETAIL" id="UNIQUE-ID-445S5545545558">
+              {% include: 'includes/rift-detail__example-445S5545545558.html' %}
             </div>
 
           </div>
