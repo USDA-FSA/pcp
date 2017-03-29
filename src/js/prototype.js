@@ -207,6 +207,23 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
 
 }
 
+$('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  $self.toggleClass('pcp-marker--active');
+  $target.toggleClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+
+})
+
+$('body').on('click', '[data-behavior~="DEMO-CLOSE-RIFT-DETAILS"]', function(event) {
+
+  $('.pcp-marker--active').removeClass('pcp-marker--active');
+  $('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE').removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+
+})
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
