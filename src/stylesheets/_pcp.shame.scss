@@ -42,61 +42,6 @@
 
   &__FT {}
 
-  &__TABS {
-
-    &-LIST {
-      background-color: $color-fsa-site-bg;
-      width: 100%;
-      display: table;
-      table-layout: fixed;
-      list-style: none;
-      border-right: 1px solid $color-fsa-tertiary-200;
-    }
-
-    &-ITEM {
-      display: table-cell;
-    }
-
-    &-LABEL {
-
-      // @include font-size(3);
-      display: block;
-      text-decoration: none;
-      padding: $size-small $size-default;
-      border: 1px solid $color-fsa-tertiary-200;
-      border-width: 1px 0 1px 1px;
-      color: $color-fsa-base;
-
-      &:visited {
-        color: inherit;
-      }
-
-      &:hover {
-        background-color: $color-white;
-        color: inherit;
-      }
-
-      &--ACTIVE {
-        font-weight: $font-bold;
-        background-color: $color-white;
-        border-bottom-color: $color-white;
-      }
-
-      &--UNSAVED {
-        &:after {
-          // content: '•';
-          content: '\2022';
-          float: right;
-          color: $color-fsa-red;
-          font-size: 24px;
-          line-height: 1;
-        }
-      }
-
-    }
-
-  }
-
   &__PANEL {
     position: absolute;
     left: 1px;
