@@ -20,16 +20,7 @@
 
       <div class="pcp-section__bd">
 
-        <div class="pcp-stepped-tabs">
-          <div class="pcp-stepped-tabs__bd">
-            <ol class="pcp-stepped-tabs__list">
-              <li class="pcp-stepped-tabs__item"><a class="pcp-stepped-tabs__label" href="workflow_price-discovery.html">Price Discovery</a></li>
-              <li class="pcp-stepped-tabs__item"><a class="pcp-stepped-tabs__label" href="workflow_closing.html">Closing</a></li>
-              <li class="pcp-stepped-tabs__item pcp-stepped-tabs__item--active"><a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--active" href="workflow_mapping.html">Mapping</a></li>
-              <li class="pcp-stepped-tabs__item"><span class="pcp-stepped-tabs__label">Publish</span></li>
-            </ol>
-          </div>
-        </div>
+        {% include: 'includes/pcp-stepped-tabs__mapping.html' %}
 
         <div class="fsa-grid">
           <div class="fsa-grid__1 fsa-grid__8/12@l">
