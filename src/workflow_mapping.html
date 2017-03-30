@@ -22,17 +22,7 @@
 
         {% include: 'includes/pcp-stepped-tabs__mapping.html' %}
 
-        <div class="fsa-grid">
-          <div class="fsa-grid__1 fsa-grid__8/12@l">
-            <h2 class="fsa-m--none">Adjustments</h2>
-          </div>
-          <div class="fsa-grid__1 fsa-grid__4/12@l">
-            <div class="fsa-text-align--right">
-              <button class="fsa-btn fsa-btn--primary" disabled="disabled" type="button">Finalize Adjustments</button>
-              <button class="fsa-btn fsa-btn--alt" type="button">Reset</button>
-            </div>
-          </div>
-        </div>
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Adjustments' @action:'Finalize' %}
 
         <div class="pcp-TEMP-MAP-FRAME">
           <div class="pcp-TEMP-MAP-FRAME__HD">
