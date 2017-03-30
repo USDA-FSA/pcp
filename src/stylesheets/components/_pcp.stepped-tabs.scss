@@ -70,6 +70,7 @@
     &--complete {
 
       background-color: $color-fsa-secondary;
+      text-shadow: 1px 1px 0 $color-black;
 
       &:link,
       &:focus,
@@ -90,6 +91,7 @@
     &--active {
 
       background-color: $color-fsa-secondary-300;
+      text-shadow: 1px 1px 0 $color-black;
 
       &:link,
       &:focus,
