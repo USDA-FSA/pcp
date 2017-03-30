@@ -40,11 +40,13 @@ $swapDistance: 2.8rem;
   border: 1px solid $color-fsa-tertiary-200;
   box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
 
+  &--pinned {}
+
   // ---------------------------------------------------------------------------
 
   &__hd {
     // background-color: $color-fsa-primary;
-    background-color: $color-fsa-tertiary;
+    background-color: $color-fsa-tertiary-300;
     color: $color-white;
     display: table;
     width: 100%;
@@ -156,7 +158,7 @@ $swapDistance: 2.8rem;
   &__th {
 
     @include font-size(0);
-    background-color: $color-fsa-tertiary-200;
+    background-color: $color-fsa-tertiary-100;
     font-weight: $font-bold;
 
     &--moor {

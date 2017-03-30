@@ -42,7 +42,7 @@
 
   &__FT {}
 
-	&__TABS {
+  &__TABS {
 
     &-LIST {
       background-color: $color-fsa-site-bg;
@@ -84,9 +84,12 @@
 
       &--UNSAVED {
         &:after {
-          content: '•';
+          // content: '•';
+          content: '\2022';
           float: right;
-          color: $color-fsa-aqua-900;
+          color: $color-fsa-red;
+          font-size: 24px;
+          line-height: 1;
         }
       }
 
@@ -113,6 +116,7 @@
     background-color: $color-white;
     height: 540px;
 
+    // scss-lint:disable SelectorFormat
     .pcp-TEMP-MAP-FRAME--FULLSCREEN & {
       border: 0;
       height: calc(100vh - 44px);

@@ -28,8 +28,7 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="fsa-font--sans">As seen on</h2>
             <ul>
-              <li><a href="asdfasdf">asdfasdf</a></li>
-              <li><a href="asdfasdfqwerqwer">asdfasdfqwerqwer</a></li>
+              <li><a href="workflow_mapping.html">Workflow > Mapping</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -40,32 +39,37 @@
           </div>
         </div>
 
-        <h2 class="fsa-font--sans">Sample</h2>
+        <h2 class="fsa-font--sans">Samples</h2>
 
         <div class="fsa-grid">
-          <div class="fsa-grid__1 fsa-grid__3/12@l">
+          <div class="fsa-grid__1 fsa-grid__4/12@m fsa-grid__3/12@l">
             {% include: 'includes/rift-detail.html' %}
           </div>
-          <div class="fsa-grid__1 fsa-grid__9/12@l">
-
-            <p>
-              <button onclick="pcpDemoHighlightText('UNIQUE-ID-74851')" type="button">Highlight <strong>"Co - Phillips..., KCM"</strong></button>
-              <button onclick="pcpDemoHighlightText('UNIQUE-ID-09524')" type="button">Highlight <strong>"NE - Boone, GLF"</strong></button>
-            </p>
-            <p>
-              <button onclick="pcpDemoDominantInteriorSwap('UNIQUE-ID-885452', 'UNIQUE-ID-356458', 'UNIQUE-ID-09524', 'UNIQUE-ID-3235687')" type="button">Swap Dominant/Interior for <strong>"NE - Boone, GLF"</strong></button>
-            </p>
-            <p>
-              <button onclick="pcpDemoMarker('UNIQUE-ID-12346', false)" type="button">Normal</button>
-              <button onclick="pcpDemoMarker('UNIQUE-ID-12346','pcp-marker--high')" type="button">High</button>
-              <button onclick="pcpDemoMarker('UNIQUE-ID-12346','pcp-marker--low')" type="button">Low</button>
-            </p>
-            <p>
-              <button onclick="pcpDemoMarkerModified('UNIQUE-ID-12346')" type="button">Toggle Modified</button>
-            </p>
-
+          <div class="fsa-grid__1 fsa-grid__4/12@m fsa-grid__3/12@l">
+            {% include: 'includes/rift-detail__example-76883776994975.html' %}
+          </div>
+          <div class="fsa-grid__1 fsa-grid__4/12@m fsa-grid__3/12@l">
+            {% include: 'includes/rift-detail__example-445S5545545558.html' %}
           </div>
         </div>
+
+        <h3 class="fsa-font--sans">Behavior</h3>
+
+        <p>
+          <button onclick="pcpDemoHighlightText('UNIQUE-ID-74851')" type="button">Highlight <strong>"Co - Phillips..., KCM"</strong></button>
+          <button onclick="pcpDemoHighlightText('UNIQUE-ID-09524')" type="button">Highlight <strong>"NE - Boone, GLF"</strong></button>
+        </p>
+        <p>
+          <button onclick="pcpDemoDominantInteriorSwap('UNIQUE-ID-885452', 'UNIQUE-ID-356458', 'UNIQUE-ID-09524', 'UNIQUE-ID-3235687')" type="button">Swap Dominant/Interior for <strong>"NE - Boone, GLF"</strong></button>
+        </p>
+        <p>
+          <button onclick="pcpDemoMarker('UNIQUE-ID-12346', false)" type="button">Normal</button>
+          <button onclick="pcpDemoMarker('UNIQUE-ID-12346','pcp-marker--high')" type="button">High</button>
+          <button onclick="pcpDemoMarker('UNIQUE-ID-12346','pcp-marker--low')" type="button">Low</button>
+        </p>
+        <p>
+          <button onclick="pcpDemoMarkerModified('UNIQUE-ID-12346')" type="button">Toggle Modified</button>
+        </p>
 
 
       </div>

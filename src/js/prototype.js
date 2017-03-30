@@ -29,8 +29,6 @@
 // None of this is production-quality.
 // None of this is production-quality.
 
-
-
 function hasNumbers(t) {
   return /\d/.test(t);
 }
@@ -214,14 +212,10 @@ $('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event
 
   if ($self.hasClass('pcp-marker--active')) {
 
-    console.log('yep, should be visible');
-
     $self.removeClass('pcp-marker--active');
     $target.removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
 
   } else {
-
-    console.log('nope, should NOT be visible');
 
     $('.pcp-marker--active').removeClass('pcp-marker--active');
     $('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE').removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
@@ -237,6 +231,22 @@ $('body').on('click', '[data-behavior~="DEMO-CLOSE-RIFT-DETAILS"]', function(eve
 
   $('.pcp-marker--active').removeClass('pcp-marker--active');
   $('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE').removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+
+})
+
+$('body').on('click', '[data-behavior~="DEMO-PIN-RIFT-DETAILS"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-rift-detail')
+  $componentFramed = $self.closest('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL')
+
+  if ($component.hasClass('pcp-rift-detail--pinned')) {
+    $component.removeClass('pcp-rift-detail--pinned');
+    $componentFramed.removeAttr('style');
+  } else {
+    $component.addClass('pcp-rift-detail--pinned')
+    $componentFramed.css('bottom', '0');
+  }
 
 })
 
