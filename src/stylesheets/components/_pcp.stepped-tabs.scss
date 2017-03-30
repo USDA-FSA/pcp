@@ -1,8 +1,6 @@
 .pcp-stepped-tabs {
 
   margin: $size-large 0;
-  background-color: $color-white;
-  border: 1px solid $color-fsa-tertiary-200;
 
   &__bd {}
 
@@ -26,55 +24,77 @@
     display: block;
     text-align: center;
     text-decoration: none;
-    padding: $size-small;
+    padding: $size-small $size-small ($size-small - .1rem);
+    background-color: $color-fsa-tertiary-100;
+    font-weight: $font-bold;
+    color: $color-fsa-base;
 
-    border-right: 15px solid transparent;
-    border-left: 15px solid transparent;
     position: relative;
 
-    &:first-child {
-      border-left: 0;
-    }
-
-    &:last-child {
-      border-right: 0;
+    &:before,
+    &:after {
+      pointer-events: none;
+      position: absolute;
+      content: '';
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 20px 20px;
+      z-index: 150;
     }
 
     &:before {
-      position: absolute;
-      content: '';
-      top: 0;
+
       left: -20px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 20px 0 20px 20px;
-      border-color: #eee #eee #eee transparent;
-      z-index: 150;
+      border-color: $color-fsa-site-bg $color-fsa-site-bg $color-fsa-site-bg transparent;
+
+      .pcp-stepped-tabs__item:first-child & {
+        display: none;
+      }
+
     }
 
     &:after {
-      position: absolute;
-      content: '';
-      top: 0;
+
       right: -20px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 20px 0 20px 20px;
-      border-color: transparent transparent transparent #eee;
-      z-index: 150;
+      border-color: transparent transparent transparent $color-fsa-site-bg;
+
+      .pcp-stepped-tabs__item:last-child & {
+        display: none;
+      }
+
     }
 
+    &--complete {
 
-    &--complete {}
+      background-color: $color-fsa-secondary;
+
+      &:focus,
+      &:visited,
+      &:active,
+      &:hover {
+        color: $color-fsa-white;
+      }
+
+    }
 
     &--active {
-      font-weight: $font-bold;
+
+      background-color: $color-fsa-secondary-900;
+
+      &:focus,
+      &:visited,
+      &:active,
+      &:hover {
+        color: $color-fsa-white;
+      }
+
     }
 
     &--incomplete {
-      color: $color-fsa-tertiary-300;
+      background-color: $color-fsa-secondary-200;
+      // color: $color-fsa-tertiary-300;
     }
 
   }
