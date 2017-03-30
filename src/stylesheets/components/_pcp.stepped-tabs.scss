@@ -40,14 +40,15 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 20px 0 20px 20px;
+      border-width: 20px 0 20px 12px;
       z-index: 150;
     }
 
     &:before {
 
-      left: -20px;
+      left: -12px;
       border-color: $color-fsa-site-bg $color-fsa-site-bg $color-fsa-site-bg transparent;
+      // border-color: red blue green transparent;
 
       .pcp-stepped-tabs__item:first-child & {
         display: none;
@@ -57,7 +58,7 @@
 
     &:after {
 
-      right: -20px;
+      right: -12px;
       border-color: transparent transparent transparent $color-fsa-site-bg;
 
       .pcp-stepped-tabs__item:last-child & {
@@ -70,31 +71,43 @@
 
       background-color: $color-fsa-secondary;
 
+      &:link,
       &:focus,
       &:visited,
       &:active,
       &:hover {
-        color: $color-fsa-white;
+        color: $color-fsa-white !important;
+      }
+
+      &:focus,
+      &:hover {
+        outline: 0;
+        background-color: $color-fsa-secondary-900;
       }
 
     }
 
     &--active {
 
-      background-color: $color-fsa-secondary-900;
+      background-color: $color-fsa-secondary-300;
 
+      &:link,
       &:focus,
       &:visited,
       &:active,
       &:hover {
-        color: $color-fsa-white;
+        color: $color-fsa-white !important;
+      }
+
+      &:hover {
+        background-color: $color-fsa-secondary-900;
       }
 
     }
 
     &--incomplete {
-      background-color: $color-fsa-secondary-200;
-      // color: $color-fsa-tertiary-300;
+      background-color: $color-fsa-secondary-100;
+      color: $color-fsa-secondary-900;
     }
 
   }
