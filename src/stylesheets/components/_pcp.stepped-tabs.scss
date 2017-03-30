@@ -1,16 +1,14 @@
 .pcp-stepped-tabs {
-}
-
-.pcp-stepped-tabs {
 
   margin: $size-large 0;
   background-color: $color-white;
   border: 1px solid $color-fsa-tertiary-200;
 
-	&__bd {}
+  &__bd {}
 
   &__list {
     margin: 0;
+    padding: 0;
     display: table;
     width: 100%;
     table-layout: fixed;
@@ -21,8 +19,6 @@
 
     display: table-cell;
 
-    &--active {}
-
   }
 
   &__label {
@@ -32,8 +28,53 @@
     text-decoration: none;
     padding: $size-small;
 
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: relative;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: -20px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 20px 20px;
+      border-color: #eee #eee #eee transparent;
+      z-index: 150;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: -20px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 20px 20px;
+      border-color: transparent transparent transparent #eee;
+      z-index: 150;
+    }
+
+
+    &--complete {}
+
     &--active {
       font-weight: $font-bold;
+    }
+
+    &--incomplete {
+      color: $color-fsa-tertiary-300;
     }
 
   }
