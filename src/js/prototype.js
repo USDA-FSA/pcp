@@ -255,7 +255,18 @@ $('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
   $self = $(this);
   $component = $self.closest('.pcp-mapping');
 
+  $self.toggleClass('pcp-mapping__zoom--toggled');
   $component.toggleClass('pcp-mapping--fullscreen');
+
+})
+
+$('body').on('click', '[data-behavior~="panel-toggle"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-mapping__panel');
+
+  $self.toggleClass('pcp-mapping__panel-btn--toggled');
+  $component.toggleClass('pcp-mapping__panel--visible');
 
 })
 

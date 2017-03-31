@@ -44,7 +44,6 @@
   &__agency {
 
     @include font-size(3);
-    display: block;
     line-height: 1;
     font-weight: $font-bold;
     text-decoration: none;

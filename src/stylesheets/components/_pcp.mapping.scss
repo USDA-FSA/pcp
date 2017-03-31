@@ -13,6 +13,8 @@
 
   margin: $size-medium 0;
 
+  // ---------------------------------------------------------------------------
+
   &--fullscreen {
     margin: 0;
     position: fixed;
@@ -23,41 +25,75 @@
     background-color: $color-fsa-site-bg;
   }
 
-  &__fullscreen-btn {
-
-    position: absolute;
-    top: $size-small;
-    right: $size-small;
-
-  }
+  // ---------------------------------------------------------------------------
 
   &__hd {}
 
   &__bd {
     position: relative;
     overflow: hidden;
+    border: 1px solid $color-fsa-tertiary-200;
+    border-top: 0;
+    background-color: $color-white;
   }
 
   &__ft {}
 
+  // ---------------------------------------------------------------------------
+
+  $mapPanelWidth: 26.4rem;
+  $mapPanelIconHeight: $size-large;
+  $mapPanelIconWidth: $size-medium;
+
   &__panel {
+
     position: absolute;
-    left: 1px;
-    top: 1px;
-    bottom: 1px;
-    width: 264px;
-    padding: $size-default;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: $mapPanelWidth;
     background-color: $color-fsa-site-bg;
-    text-align: center;
-    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+    border-right: 1px solid $color-fsa-tertiary-200;
+    transform: translateX(-100%);
+    transition: all .23s ease-in-out;
+
+    &--visible {
+      box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+      transform: translateX(0);
+    }
+
+  }
+
+  &__panel-toggle {
+    position: absolute;
+    right: -$mapPanelIconWidth;
+    top: $mapPanelIconHeight / 2;
+  }
+
+  &__panel-btn {
+
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-indent: -($mapPanelIconWidth * 10);
+    overflow: hidden;
+    width: $mapPanelIconWidth;
+    height: $mapPanelIconHeight;
+    background-color: $color-fsa-site-bg;
+    border: 1px solid $color-fsa-tertiary-200;
+    border-left-width: 0;
+
+    &--toggled {
+      // outline: 1px solid red;
+    }
+
   }
 
   &__map {
 
-    border: 1px solid $color-fsa-tertiary-200;
-    border-top: 0;
-    background-color: $color-white;
-    height: 540px;
+    min-height: 540px;
 
     // scss-lint:disable SelectorFormat
     .pcp-mapping--fullscreen & {
@@ -66,6 +102,51 @@
     }
 
   }
+
+  // ---------------------------------------------------------------------------
+
+  &__tools-primary {
+
+    position: absolute;
+    top: $size-small;
+    right: $size-small;
+
+  }
+
+  &__tools-secondary {
+
+    position: absolute;
+    bottom: $size-small;
+    right: $size-small;
+    background-color: $color-fsa-tertiary-100;
+    padding: $size-base;
+    border: 1px solid $color-fsa-tertiary-200;
+
+  }
+
+  &__zoom {
+
+    $icon-size: $size-large;
+
+    position: relative;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    text-indent: $icon-size * 5;
+    overflow: hidden;
+    width: $icon-size;
+    height: $icon-size;
+    background-color: $color-fsa-tertiary-200;
+
+    &--toggled {
+      outline: 1px solid red;
+    }
+
+  }
+
+  // ---------------------------------------------------------------------------
 
   &__marker {
     position: absolute;

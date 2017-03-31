@@ -4,7 +4,13 @@
   </div>
   <div class="pcp-mapping__bd">
 
-    <div class="pcp-mapping__panel">
+    <div class="pcp-mapping__map" data-behavior="DEMO-CLOSE-RIFT-DETAILS"></div>
+
+    <div class="pcp-mapping__panel pcp-mapping__panel--visible">
+
+      <div class="pcp-mapping__panel-toggle">
+        <button class="pcp-mapping__panel-btn" type="button" data-behavior="panel-toggle" title="Toggle Panel">Toggle Panel</button>
+      </div>
 
       <p>(panel)</p>
       <p>
@@ -18,8 +24,6 @@
       </p>
 
     </div>
-
-    <div class="pcp-mapping__map" data-behavior="DEMO-CLOSE-RIFT-DETAILS"></div>
 
     <div class="pcp-mapping__marker" style="top: 40px; left: 405px;">
       <div class="pcp-marker pcp-marker--high pcp-marker--modified" data-behavior="DEMO-MAP-RIFT-DETAILS" data-target="UNIQUE-ID-88893887672562">
@@ -52,8 +56,12 @@
       {% include: 'includes/rift-detail__example-445S5545545558.html' %}
     </div>
 
-    <div class="pcp-mapping__fullscreen-btn">
-      <button type="button" data-behavior="fullscreen-toggle" title="Fullscreen">[O]</button>
+    <div class="pcp-mapping__tools-primary">
+      <button class="pcp-mapping__zoom" type="button" data-behavior="fullscreen-toggle" title="Fullscreen">[O]</button>
+    </div>
+
+    <div class="pcp-mapping__tools-secondary">
+      (zoom, threshold, layers, etc)
     </div>
 
   </div>
