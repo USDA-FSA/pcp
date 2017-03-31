@@ -213,15 +213,15 @@ $('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event
   if ($self.hasClass('pcp-marker--active')) {
 
     $self.removeClass('pcp-marker--active');
-    $target.removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+    $target.removeClass('pcp-mapping__rift-detail--visible');
 
   } else {
 
     $('.pcp-marker--active').removeClass('pcp-marker--active');
-    $('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE').removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+    $('.pcp-mapping__rift-detail--visible').removeClass('pcp-mapping__rift-detail--visible');
 
     $self.addClass('pcp-marker--active');
-    $target.addClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+    $target.addClass('pcp-mapping__rift-detail--visible');
 
   }
 
@@ -230,7 +230,7 @@ $('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event
 $('body').on('click', '[data-behavior~="DEMO-CLOSE-RIFT-DETAILS"]', function(event) {
 
   $('.pcp-marker--active').removeClass('pcp-marker--active');
-  $('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE').removeClass('pcp-TEMP-MAP-FRAME__RIFT-DETAIL--VISIBLE');
+  $('.pcp-mapping__rift-detail--visible').removeClass('pcp-mapping__rift-detail--visible');
 
 })
 
@@ -238,7 +238,7 @@ $('body').on('click', '[data-behavior~="DEMO-PIN-RIFT-DETAILS"]', function(event
 
   $self = $(this);
   $component = $self.closest('.pcp-rift-detail')
-  $componentFramed = $self.closest('.pcp-TEMP-MAP-FRAME__RIFT-DETAIL')
+  $componentFramed = $self.closest('.pcp-mapping__rift-detail')
 
   if ($component.hasClass('pcp-rift-detail--pinned')) {
     $component.removeClass('pcp-rift-detail--pinned');
@@ -253,9 +253,9 @@ $('body').on('click', '[data-behavior~="DEMO-PIN-RIFT-DETAILS"]', function(event
 $('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
 
   $self = $(this);
-  $component = $self.closest('.pcp-TEMP-MAP-FRAME');
+  $component = $self.closest('.pcp-mapping');
 
-  $component.toggleClass('pcp-TEMP-MAP-FRAME--FULLSCREEN');
+  $component.toggleClass('pcp-mapping--fullscreen');
 
 })
 

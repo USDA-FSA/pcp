@@ -1,4 +1,4 @@
-@keyframes RIFT-DETAIL-SHOW {
+@keyframes rift-detail-show {
   from {
     opacity: 0;
     transform: translateY($size-default);
@@ -9,11 +9,11 @@
   }
 }
 
-.pcp-TEMP-MAP-FRAME {
+.pcp-mapping {
 
   margin: $size-medium 0;
 
-  &--FULLSCREEN {
+  &--fullscreen {
     margin: 0;
     position: fixed;
     top: 0;
@@ -23,7 +23,7 @@
     background-color: $color-fsa-site-bg;
   }
 
-  &__FULLSCREEN-BTN {
+  &__fullscreen-btn {
 
     position: absolute;
     top: $size-small;
@@ -31,18 +31,16 @@
 
   }
 
-  &__HD {
+  &__hd {}
 
-  }
-
-  &__BD {
+  &__bd {
     position: relative;
     overflow: hidden;
   }
 
-  &__FT {}
+  &__ft {}
 
-  &__PANEL {
+  &__panel {
     position: absolute;
     left: 1px;
     top: 1px;
@@ -54,7 +52,7 @@
     box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
   }
 
-  &__MAP {
+  &__map {
 
     border: 1px solid $color-fsa-tertiary-200;
     border-top: 0;
@@ -62,18 +60,18 @@
     height: 540px;
 
     // scss-lint:disable SelectorFormat
-    .pcp-TEMP-MAP-FRAME--FULLSCREEN & {
+    .pcp-mapping--fullscreen & {
       border: 0;
-      height: calc(100vh - 44px);
+      height: calc(100vh - 4.6px); // magic number
     }
 
   }
 
-  &__MARKER {
+  &__marker {
     position: absolute;
   }
 
-  &__RIFT-DETAIL {
+  &__rift-detail {
 
     display: none;
     position: absolute;
@@ -81,9 +79,9 @@
     bottom: $size-medium;
     width: 220px;
 
-    &--VISIBLE {
+    &--visible {
       display: block;
-      animation: RIFT-DETAIL-SHOW 230ms ease-in-out;
+      animation: rift-detail-show 230ms ease-in-out;
     }
 
   }
