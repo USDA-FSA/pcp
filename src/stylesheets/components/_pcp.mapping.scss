@@ -52,7 +52,7 @@
     top: 0;
     bottom: 0;
     width: $mapPanelWidth;
-    background-color: $color-fsa-site-bg;
+    background-color: $color-white;
     border-right: 1px solid $color-fsa-tertiary-200;
     transform: translateX(-100%);
     transition: all .23s ease-in-out;
@@ -84,6 +84,7 @@
     background-color: $color-fsa-site-bg;
     border: 1px solid $color-fsa-tertiary-200;
     border-left-width: 0;
+    border-radius: 0 2px 2px 0;
 
     &--toggled {
       // outline: 1px solid red;
@@ -94,6 +95,7 @@
   &__map {
 
     min-height: 540px;
+    height: 50vh;
 
     // scss-lint:disable SelectorFormat
     .pcp-mapping--fullscreen & {

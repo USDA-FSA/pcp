@@ -1,0 +1,78 @@
+.pcp-adjust {
+
+  &__hd {}
+
+  &__title {
+    @include font-size(2);
+    text-transform: uppercase;
+    margin: 0;
+    padding: $size-small $size-default;
+    background-color: $color-fsa-tertiary-100;
+    font-weight: $font-bold;
+    font-family: $font-sans;
+    color: $color-fsa-tertiary;
+  }
+
+  // ---------------------------------------------------------------------------
+
+  &__bd {}
+
+  &__table {}
+
+  // ---------------------------------------------------------------------------
+
+  &__ft {}
+
+  // ---------------------------------------------------------------------------
+
+  abbr {
+    border-bottom: 0;
+    text-decoration: none;
+  }
+
+}
+
+// SPINBOX INSPIRATION
+// http://codepen.io/bowaxwing/pen/dpaORk
+// http://codepen.io/bryanjvolz/pen/LtEru
+// http://codepen.io/nobuti/pen/yGhxd
+
+.PCP-TEMP-ADJUSTMENT-TABLE {
+
+  margin: 0;
+  table-layout: fixed;
+
+  &__hd {
+    @include font-size(1);
+  }
+
+
+  &__row {}
+
+  &__th,
+  &__td {
+
+    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
+    padding:
+      ($form-padding - .1rem) // to achieve vertical alignment
+      ($form-padding)
+      ($form-padding)
+    ;
+
+    &:first-child {
+      padding-left: $size-default;
+    }
+
+  }
+
+  &__th {}
+
+  &__td {
+
+    &--editable {
+      padding: 0;
+    }
+
+  }
+
+}
