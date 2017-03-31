@@ -1,34 +1,36 @@
 .pcp-content-tabs {
 
-  &--shrink {
+  display: flex;
 
-    display: flex;
-
-  }
+  &--justified {}
 
   &__list {
 
-    width: 100%;
     display: table;
     list-style: none;
+    width: auto;
+    flex: 1;
 
-    &--shrink {
-      width: auto;
-      flex: 1;
+    // scss-lint:disable SelectorFormat
+    .pcp-content-tabs--justified & {
+      width: 100%;
+      table-layout: fixed;
     }
 
   }
 
   &__aside {
 
-    display: none;
+    display: block;
+    flex: 2;
+    content: '';
+    border-bottom: 1px solid $color-fsa-tertiary-200;
 
-    &--shrink {
-      display: block;
-      flex: 2;
-      content: '';
-      border-bottom: 1px solid $color-fsa-tertiary-200;
+    // scss-lint:disable SelectorFormat
+    .pcp-content-tabs--justified & {
+      display: none;
     }
+
 
   }
 

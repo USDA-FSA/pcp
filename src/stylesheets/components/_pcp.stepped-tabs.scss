@@ -1,3 +1,4 @@
+
 .pcp-stepped-tabs {
 
   $colorComplete: $color-fsa-secondary-300;
@@ -19,6 +20,7 @@
     width: 100%;
     list-style: none;
 
+    // scss-lint:disable SelectorFormat
     .pcp-stepped-tabs--justified & {
       table-layout: fixed;
     }
@@ -88,6 +90,7 @@
       &:visited,
       &:active,
       &:hover {
+        // scss-lint:disable ImportantRule
         color: $color-fsa-white !important;
       }
 
@@ -109,6 +112,7 @@
       &:visited,
       &:active,
       &:hover {
+        // scss-lint:disable ImportantRule
         color: $color-fsa-white !important;
       }
 
