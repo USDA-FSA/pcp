@@ -1,16 +1,28 @@
 .pcp-stepped-tabs {
 
+  $colorComplete: $color-fsa-secondary-300;
+  $colorActive: $color-fsa-secondary;
+  $colorFuture: $color-fsa-secondary-100;
+  $colorDark: $color-fsa-secondary-900;
+
+  $arrowMagicNumber: 2.1rem;
+
   margin: $size-large 0;
 
   &__bd {}
 
   &__list {
+
     margin: 0;
     padding: 0;
     display: table;
     width: 100%;
-    table-layout: fixed;
     list-style: none;
+
+    .pcp-stepped-tabs--justified & {
+      table-layout: fixed;
+    }
+
   }
 
   &__item {
@@ -40,7 +52,7 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 20px 0 20px 12px;
+      border-width: $arrowMagicNumber 0 $arrowMagicNumber ($arrowMagicNumber - .9rem); // super magical number
       z-index: 150;
     }
 
@@ -48,7 +60,6 @@
 
       left: -12px;
       border-color: $color-fsa-site-bg $color-fsa-site-bg $color-fsa-site-bg transparent;
-      // border-color: red blue green transparent;
 
       .pcp-stepped-tabs__item:first-child & {
         display: none;
@@ -69,7 +80,7 @@
 
     &--complete {
 
-      background-color: $color-fsa-secondary;
+      background-color: $colorComplete;
       text-shadow: 1px 1px 0 $color-black;
 
       &:link,
@@ -83,14 +94,14 @@
       &:focus,
       &:hover {
         outline: 0;
-        background-color: $color-fsa-secondary-900;
+        background-color: $colorDark;
       }
 
     }
 
     &--active {
 
-      background-color: $color-fsa-secondary-300;
+      background-color: $colorActive;
       text-shadow: 1px 1px 0 $color-black;
 
       &:link,
@@ -102,15 +113,45 @@
       }
 
       &:hover {
-        background-color: $color-fsa-secondary-900;
+        background-color: $colorDark;
       }
 
     }
 
     &--incomplete {
-      background-color: $color-fsa-secondary-100;
-      color: $color-fsa-secondary-900;
+      background-color: $colorFuture;
+      color: $colorDark;
     }
+
+  }
+
+  &__status {
+
+    $icon-size: $size-default;
+
+    position: relative;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0 $size-base 0 0;
+    display: inline-block;
+    text-indent: $icon-size * 5;
+    overflow: hidden;
+    width: $icon-size;
+    height: $icon-size;
+
+    &--complete {
+      background-color: rgba(255, 255, 255, .3);
+    }
+
+    &--current {
+      background-color: rgba(255, 255, 255, .6);
+    }
+
+    &--incomplete {
+      background-color: rgba(0, 0, 0, .3);
+    }
+
 
   }
 

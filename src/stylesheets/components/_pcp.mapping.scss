@@ -1,0 +1,91 @@
+@keyframes RIFT-DETAIL-SHOW {
+  from {
+    opacity: 0;
+    transform: translateY($size-default);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.pcp-TEMP-MAP-FRAME {
+
+  margin: $size-medium 0;
+
+  &--FULLSCREEN {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-fsa-site-bg;
+  }
+
+  &__FULLSCREEN-BTN {
+
+    position: absolute;
+    top: $size-small;
+    right: $size-small;
+
+  }
+
+  &__HD {
+
+  }
+
+  &__BD {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__FT {}
+
+  &__PANEL {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 264px;
+    padding: $size-default;
+    background-color: $color-fsa-site-bg;
+    text-align: center;
+    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+  }
+
+  &__MAP {
+
+    border: 1px solid $color-fsa-tertiary-200;
+    border-top: 0;
+    background-color: $color-white;
+    height: 540px;
+
+    // scss-lint:disable SelectorFormat
+    .pcp-TEMP-MAP-FRAME--FULLSCREEN & {
+      border: 0;
+      height: calc(100vh - 44px);
+    }
+
+  }
+
+  &__MARKER {
+    position: absolute;
+  }
+
+  &__RIFT-DETAIL {
+
+    display: none;
+    position: absolute;
+    left: 292px;
+    bottom: $size-medium;
+    width: 220px;
+
+    &--VISIBLE {
+      display: block;
+      animation: RIFT-DETAIL-SHOW 230ms ease-in-out;
+    }
+
+  }
+
+}
