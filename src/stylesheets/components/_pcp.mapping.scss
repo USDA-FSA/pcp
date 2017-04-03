@@ -30,11 +30,14 @@
   &__hd {}
 
   &__bd {
+
     position: relative;
     overflow: hidden;
     border: 1px solid $color-fsa-tertiary-200;
     border-top: 0;
     background-color: $color-white;
+
+
   }
 
   &__ft {}
@@ -57,11 +60,31 @@
     transform: translateX(-100%);
     transition: all .23s ease-in-out;
 
+    display: flex;
+    flex-direction: column;
+
     &--visible {
       box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
       transform: translateX(0);
     }
 
+  }
+
+  &__panel-bd {
+
+    display: flex;
+    flex-direction: column;
+
+    &--scrollable {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+    }
+
+  }
+
+  &__panel-bd-scroll-item {
+    overflow: auto;
   }
 
   &__panel-toggle {

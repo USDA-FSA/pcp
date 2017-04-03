@@ -1,6 +1,9 @@
 .pcp-adjust {
 
-  &__hd {}
+  &__hd {
+    position: sticky;
+    top: 0;
+  }
 
   &__title {
     @include font-size(2);
