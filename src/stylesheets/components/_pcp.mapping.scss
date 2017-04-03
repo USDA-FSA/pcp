@@ -85,6 +85,13 @@
 
   &__panel-bd-scroll-item {
     overflow: auto;
+
+    border-top: 1px solid $color-fsa-tertiary-200;
+
+    @supports (position: sticky) {
+      border-top: 0;
+    }
+
   }
 
   &__panel-toggle {
