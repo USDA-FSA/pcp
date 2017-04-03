@@ -1,66 +1,107 @@
 <div class="pcp-adjust">
   <div class="pcp-adjust__hd">
-    <h3 class="pcp-adjust__title">Terminal Adjustments</h3>
+    <h3 class="pcp-adjust__title">{{ title }}</h3>
   </div>
   <div class="pcp-adjust__bd">
-    <div class="pcp-adjust__table">
-      <table class="PCP-TEMP-ADJUSTMENT-TABLE">
-        <thead>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__hd">
-            <th class="PCP-TEMP-ADJUSTMENT-TABLE__th" scope="col">Mkt</th>
-            <th class="PCP-TEMP-ADJUSTMENT-TABLE__th" scope="col">Adj</th>
-            <th class="PCP-TEMP-ADJUSTMENT-TABLE__th" scope="col">Chg</th>
-            <th class="PCP-TEMP-ADJUSTMENT-TABLE__th" scope="col">Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__row">
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"><abbr title="Amarillo, TX">AMA</abbr></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td PCP-TEMP-ADJUSTMENT-TABLE__td--editable">
-              <input class="fsa-input" name="some_name2" placeholder="Placeholder" value="-0.04" type="number">
-            </td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">3.54</td>
-          </tr>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__row">
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">0.00</td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">3.08</td>
-          </tr>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__row">
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"><abbr title="Gulf of Mexico Ports, TX / LA / MS">GLF</abbr></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">-0.33</td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">3.49</td>
-          </tr>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__row">
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"><abbr title="Gulf of Mexico Ports, TX / LA / MS">GLF</abbr></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">-0.33</td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">3.49</td>
-          </tr>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__row">
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"><abbr title="Gulf of Mexico Ports, TX / LA / MS">GLF</abbr></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">-0.33</td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">3.49</td>
-          </tr>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__row">
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"><abbr title="Gulf of Mexico Ports, TX / LA / MS">GLF</abbr></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">-0.33</td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">3.49</td>
-          </tr>
-          <tr class="PCP-TEMP-ADJUSTMENT-TABLE__row">
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"><abbr title="Gulf of Mexico Ports, TX / LA / MS">GLF</abbr></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">-0.33</td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td"></td>
-            <td class="PCP-TEMP-ADJUSTMENT-TABLE__td">3.49</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="pcp-adjust__table">
+      <thead>
+        <tr>
+          <th colspan="4" class="pcp-adjust__th" scope="col" title="Market">Mkt</th>
+          <th colspan="4" class="pcp-adjust__th" scope="col" title="Flat Price">Price</th>
+          <th colspan="4" class="pcp-adjust__th" scope="col" title="Market Change">Chg</th>
+          <th colspan="6" class="pcp-adjust__th pcp-adjust__th--adj" scope="col" title="Adjustment">Adj</th>
+          <th colspan="5" class="pcp-adjust__th pcp-adjust__th--adj" scope="col" title="Adjustment Change">Chg</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Amarillo, TX">AMA</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj pcp-adjust__td--editable">
+            <input class="fsa-input pcp-adjust__spinner" name="some_name2" placeholder="Placeholder" value="-0.04" type="number">
+          </td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.08</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">-0.04</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+          <td colspan="4" class="pcp-adjust__td">3.64</td>
+          <td colspan="4" class="pcp-adjust__td">0.01</td>
+          <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+          <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+        </tr>
+        <tr>
+        </tr>
+        <td colspan="4" class="pcp-adjust__td"><abbr title="Kansas City, MO / KS">KCM</abbr></td>
+        <td colspan="4" class="pcp-adjust__td">3.64</td>
+        <td colspan="4" class="pcp-adjust__td">0.01</td>
+        <td colspan="6" class="pcp-adjust__td pcp-adjust__td--adj">0.00</td>
+        <td colspan="5" class="pcp-adjust__td pcp-adjust__td--adj">-0.02</td>
+      </tbody>
+    </table>
   </div>
   <div class="pcp-adjust__ft"></div>
 </div>
