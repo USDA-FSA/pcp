@@ -5,31 +5,48 @@
 
 .pcp-spinbox {
 
-  $button-width: $size-medium;
+  $button-width: $size-medium + .1rem;
+  $button-width-large: $size-large + .1rem;
+  $button-width-small: ($size-large / 2) + .1rem;
   $button-bgc: $color-fsa-white;
   $button-bgc-focus: $color-fsa-tertiary-100;
   $button-border-color: $form-outline-color;
   $button-arrow-color: $form-focus-color;
   $button-arrow-size: 5px;
+  $button-arrow-size-large: 7px;
+  $button-arrow-size-small: 4px;
 
   position: relative;
 
   &__number {
+
     width: 90%;
     width: calc(100% - #{$button-width});
+
+    .pcp-spinbox--small & {
+      width: calc(100% - #{$button-width-small});
+    }
+
+    .pcp-spinbox--large & {
+      width: calc(100% - #{$button-width-large});
+    }
+
   }
 
   &__input {
 
     display: block;
     width: 100%;
-    padding-right: $button-width;
     -moz-appearance: textfield;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+
+    .pcp-spinbox--right & {
+      text-align: right;
     }
 
   }
@@ -49,12 +66,20 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
-    width: $button-width;
     height: 50%;
     background-color: $button-bgc;
     border: 1px solid $button-border-color;
     border-left: 0;
     line-height: 1;
+    width: $button-width;
+
+    .pcp-spinbox--small & {
+      width: $button-width-small;
+    }
+
+    .pcp-spinbox--large & {
+      width: $button-width-large;
+    }
 
     &:hover,
     &:active {
@@ -62,8 +87,12 @@
       outline: 0;
     }
 
+    &:active {
+      color: black;
+      background-color: $color-fsa-secondary-200;
+    }
+
     &:focus {
-      // outline: 0;
       border-color: $form-focus-color;
       box-shadow: 0 0 0 1px $form-focus-color inset;
     }
@@ -78,6 +107,20 @@
       border-right: $button-arrow-size solid transparent;
       line-height: 1;
       margin-top: -($size-base / 2);
+
+      // scss-lint:disable SelectorFormat
+      .pcp-spinbox--small & {
+        border-left: $button-arrow-size-small solid transparent;
+        border-right: $button-arrow-size-small solid transparent;
+        margin-top: -($size-base + 0.3rem);
+      }
+
+      // scss-lint:disable SelectorFormat
+      .pcp-spinbox--large & {
+        border-left: $button-arrow-size-large solid transparent;
+        border-right: $button-arrow-size-large solid transparent;
+      }
+
     }
 
     &--decrement {
@@ -85,11 +128,31 @@
     }
 
     &--increment:before {
+
       border-bottom: $button-arrow-size solid $button-arrow-color;
+
+      .pcp-spinbox--small & {
+        border-bottom-width: $button-arrow-size-small;
+      }
+
+      .pcp-spinbox--large & {
+        border-bottom-width: $button-arrow-size-large;
+      }
+
     }
 
     &--decrement:before {
+
       border-top: $button-arrow-size solid $button-arrow-color;
+
+      .pcp-spinbox--small & {
+        border-top-width: $button-arrow-size-small;
+      }
+
+      .pcp-spinbox--large & {
+        border-top-width: $button-arrow-size-large;
+      }
+
     }
 
   }
