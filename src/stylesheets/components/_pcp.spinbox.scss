@@ -1,0 +1,97 @@
+// SPINBOX INSPIRATION
+// http://codepen.io/bowaxwing/pen/dpaORk
+// http://codepen.io/bryanjvolz/pen/LtEru
+// http://codepen.io/nobuti/pen/yGhxd
+
+.pcp-spinbox {
+
+  $button-width: $size-medium;
+  $button-bgc: $color-fsa-white;
+  $button-bgc-focus: $color-fsa-tertiary-100;
+  $button-border-color: $form-outline-color;
+  $button-arrow-color: $form-focus-color;
+  $button-arrow-size: 5px;
+
+  position: relative;
+
+  &__number {
+    width: 90%;
+    width: calc(100% - #{$button-width});
+  }
+
+  &__input {
+
+    display: block;
+    width: 100%;
+    padding-right: $button-width;
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+  }
+
+  &__actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__btn {
+
+    display: block;
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: $button-width;
+    height: 50%;
+    background-color: $button-bgc;
+    border: 1px solid $button-border-color;
+    border-left: 0;
+    line-height: 1;
+
+    &:hover,
+    &:active {
+      background-color: $button-bgc-focus;
+      outline: 0;
+    }
+
+    &:focus {
+      // outline: 0;
+      border-color: $form-focus-color;
+      box-shadow: 0 0 0 1px $form-focus-color inset;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 0;
+      border-left: $button-arrow-size solid transparent;
+      border-right: $button-arrow-size solid transparent;
+      line-height: 1;
+      margin-top: -($size-base / 2);
+    }
+
+    &--decrement {
+      border-top: 0;
+    }
+
+    &--increment:before {
+      border-bottom: $button-arrow-size solid $button-arrow-color;
+    }
+
+    &--decrement:before {
+      border-top: $button-arrow-size solid $button-arrow-color;
+    }
+
+  }
+
+}
