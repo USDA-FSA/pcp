@@ -279,9 +279,12 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
   currentValue = parseFloat($target.val());
   stepAmt = parseFloat($target.attr('step'));
 
-  // console.log('"currentValue" is ' + currentValue + ' and "stepAmt" is ' + stepAmt);
+  console.log('"currentValue" is ' + currentValue + ' and "stepAmt" is ' + stepAmt);
 
-  $target.val(currentValue + stepAmt);
+  // It better be  a valid number. I didn't get around do doing this
+  // if (isNaN(number)){
+  //   ...
+  // }
 
   if ($self.hasClass('pcp-spinbox__btn--increment')) {
     $target.val(currentValue + stepAmt);
