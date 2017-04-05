@@ -1,8 +1,3 @@
-// SPINBOX INSPIRATION
-// http://codepen.io/bowaxwing/pen/dpaORk
-// http://codepen.io/bryanjvolz/pen/LtEru
-// http://codepen.io/nobuti/pen/yGhxd
-
 .pcp-spinbox {
 
   $button-width: $size-medium + .1rem;
@@ -23,6 +18,7 @@
     width: 90%;
     width: calc(100% - #{$button-width});
 
+    // scss-lint:disable SelectorFormat
     .pcp-spinbox--small & {
       width: calc(100% - #{$button-width-small});
     }
@@ -37,6 +33,7 @@
 
     display: block;
     width: 100%;
+    appearance: initial;
     -moz-appearance: textfield;
 
     &::-webkit-inner-spin-button,
@@ -45,6 +42,11 @@
       margin: 0;
     }
 
+    &:focus {
+      outline: 0;
+    }
+
+    // scss-lint:disable SelectorFormat
     .pcp-spinbox--right & {
       text-align: right;
     }
@@ -73,10 +75,12 @@
     line-height: 1;
     width: $button-width;
 
+    // scss-lint:disable SelectorFormat
     .pcp-spinbox--small & {
       width: $button-width-small;
     }
 
+    // scss-lint:disable SelectorFormat
     .pcp-spinbox--large & {
       width: $button-width-large;
     }
@@ -94,7 +98,8 @@
 
     &:focus {
       border-color: $form-focus-color;
-      box-shadow: 0 0 0 1px $form-focus-color inset;
+      box-shadow: 0 0 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
+      outline: 0;
     }
 
     &:before {
@@ -112,7 +117,7 @@
       .pcp-spinbox--small & {
         border-left: $button-arrow-size-small solid transparent;
         border-right: $button-arrow-size-small solid transparent;
-        margin-top: -($size-base + 0.3rem);
+        margin-top: -($size-base + .3rem);
       }
 
       // scss-lint:disable SelectorFormat
@@ -124,7 +129,13 @@
     }
 
     &--decrement {
+
       border-top: 0;
+
+      &:focus {
+        box-shadow: 0 0 0 1px $form-focus-color inset, 0 1px 0 1px $form-focus-color inset, 1px 0 0 1px $form-focus-color inset;
+      }
+
     }
 
     &--increment:before {
