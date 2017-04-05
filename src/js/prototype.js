@@ -171,35 +171,36 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
 
   console.log($market_1_text + ": " + $market_1_val_text + "\n" + $market_2_text + ": " + $market_2_val_text);
 
-  $market_1.text($market_2_text);
-  $market_2.text($market_1_text);
-  $market_1_val.text($market_2_val_text);
-  $market_2_val.text($market_1_val_text);
+  pcpDemoHighlightText('UNIQUE-ID-09524');
+  pcpDemoHighlightText('UNIQUE-ID-74851');
 
-  $market_1.addClass('pcp-rift-detail__swapped--up');
-  $market_1_val.addClass('pcp-rift-detail__swapped--up');
+  $market_1.removeClass('pcp-rift-detail__swapped--up');
+  $market_1_val.removeClass('pcp-rift-detail__swapped--up');
 
-  $market_2.addClass('pcp-rift-detail__swapped--down');
-  $market_2_val.addClass('pcp-rift-detail__swapped--down');
+  $market_2.removeClass('pcp-rift-detail__swapped--down');
+  $market_2_val.removeClass('pcp-rift-detail__swapped--down');
+
+  $titleSecondMarketLameVariableNameSorryNotSorry
+    .text($market_2_text)
+    .addClass('pcp-highlight-text pcp-highlight-text--inverse')
+    .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $(this).removeClass('pcp-highlight-text pcp-highlight-text--inverse');
+    });
+  ;
 
   $market_2_val.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
 
-    pcpDemoHighlightText('UNIQUE-ID-09524');
-    pcpDemoHighlightText('UNIQUE-ID-74851');
+    $market_1.text($market_2_text);
+    $market_2.text($market_1_text);
+    $market_1_val.text($market_2_val_text);
+    $market_2_val.text($market_1_val_text);
 
-    $market_1.removeClass('pcp-rift-detail__swapped--up');
-    $market_1_val.removeClass('pcp-rift-detail__swapped--up');
+    $market_1.addClass('pcp-rift-detail__swapped--up');
+    $market_1_val.addClass('pcp-rift-detail__swapped--up');
 
-    $market_2.removeClass('pcp-rift-detail__swapped--down');
-    $market_2_val.removeClass('pcp-rift-detail__swapped--down');
+    $market_2.addClass('pcp-rift-detail__swapped--down');
+    $market_2_val.addClass('pcp-rift-detail__swapped--down');
 
-    $titleSecondMarketLameVariableNameSorryNotSorry
-      .text($market_2_text)
-      .addClass('pcp-highlight-text pcp-highlight-text--inverse')
-      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-        $(this).removeClass('pcp-highlight-text pcp-highlight-text--inverse');
-      });
-    ;
 
   });
 
