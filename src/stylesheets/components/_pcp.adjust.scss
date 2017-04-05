@@ -1,5 +1,7 @@
 .pcp-adjust {
 
+  $padding: $size-base;
+
   &__hd {
     position: sticky;
     top: 0;
@@ -9,7 +11,7 @@
     @include font-size(2);
     text-transform: uppercase;
     margin: 0;
-    padding: $size-small $size-default;
+    padding: $size-small;
     background-color: $color-fsa-tertiary-100;
     font-weight: $font-bold;
     font-family: $font-sans;
@@ -20,7 +22,62 @@
 
   &__bd {}
 
-  &__table {}
+  // ---------------------------------------------------------------------------
+
+  &__table {
+    margin: 0;
+    table-layout: fixed;
+  }
+
+  &__th,
+  &__td {
+
+    @include font-size(2);
+
+    padding: $padding;
+
+    &--adj {
+
+      background-color: $color-fsa-site-bg;
+      border-left: 1px solid $color-fsa-tertiary-100;
+      padding-left: ($padding * 2);
+
+      & + & {
+        border-left-color: transparent;
+        padding-left: $padding;
+      }
+
+    }
+
+    &:first-child {
+      padding-left: $size-small;
+    }
+
+    &:last-child {
+      padding-right: $padding;
+    }
+
+  }
+
+  &__th {
+    padding-top: $padding * 2;
+    @include font-size(0);
+    text-transform: uppercase;
+  }
+
+  &__td {
+
+    &--editable {
+      padding: 0;
+    }
+
+  }
+
+  &__spinbox {
+    font-size: 15px;
+    padding: $padding;
+    height: auto;
+  }
 
   // ---------------------------------------------------------------------------
 
@@ -31,51 +88,6 @@
   abbr {
     border-bottom: 0;
     text-decoration: none;
-  }
-
-}
-
-// SPINBOX INSPIRATION
-// http://codepen.io/bowaxwing/pen/dpaORk
-// http://codepen.io/bryanjvolz/pen/LtEru
-// http://codepen.io/nobuti/pen/yGhxd
-
-.PCP-TEMP-ADJUSTMENT-TABLE {
-
-  margin: 0;
-  table-layout: fixed;
-
-  &__hd {
-    @include font-size(1);
-  }
-
-
-  &__row {}
-
-  &__th,
-  &__td {
-
-    // scss-lint:disable SpaceAfterPropertyColon TrailingSemicolon
-    padding:
-      ($form-padding - .1rem) // to achieve vertical alignment
-      ($form-padding)
-      ($form-padding)
-    ;
-
-    &:first-child {
-      padding-left: $size-default;
-    }
-
-  }
-
-  &__th {}
-
-  &__td {
-
-    &--editable {
-      padding: 0;
-    }
-
   }
 
 }
