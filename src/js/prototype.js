@@ -1,3 +1,34 @@
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+
 function hasNumbers(t) {
   return /\d/.test(t);
 }
@@ -173,6 +204,95 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
   });
 
 }
+
+$('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  if ($self.hasClass('pcp-marker--active')) {
+
+    $self.removeClass('pcp-marker--active');
+    $target.removeClass('pcp-mapping__rift-detail--visible');
+
+  } else {
+
+    $('.pcp-marker--active').removeClass('pcp-marker--active');
+    $('.pcp-mapping__rift-detail--visible').removeClass('pcp-mapping__rift-detail--visible');
+
+    $self.addClass('pcp-marker--active');
+    $target.addClass('pcp-mapping__rift-detail--visible');
+
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="DEMO-CLOSE-RIFT-DETAILS"]', function(event) {
+
+  $('.pcp-marker--active').removeClass('pcp-marker--active');
+  $('.pcp-mapping__rift-detail--visible').removeClass('pcp-mapping__rift-detail--visible');
+
+})
+
+$('body').on('click', '[data-behavior~="DEMO-PIN-RIFT-DETAILS"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-rift-detail')
+  $componentFramed = $self.closest('.pcp-mapping__rift-detail')
+
+  if ($component.hasClass('pcp-rift-detail--pinned')) {
+    $component.removeClass('pcp-rift-detail--pinned');
+    $componentFramed.removeAttr('style');
+  } else {
+    $component.addClass('pcp-rift-detail--pinned')
+    $componentFramed.css('bottom', '0');
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-mapping');
+
+  $self.toggleClass('pcp-mapping__zoom--toggled');
+  $component.toggleClass('pcp-mapping--fullscreen');
+
+})
+
+$('body').on('click', '[data-behavior~="panel-toggle"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-mapping__panel');
+
+  $self.toggleClass('pcp-mapping__panel-btn--toggled');
+  $component.toggleClass('pcp-mapping__panel--visible');
+
+})
+
+$('body').on('click', '[data-behavior~="spinbox"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-spinbox');
+  $target = $component.find('.pcp-spinbox__input');
+
+  currentValue = parseFloat($target.val());
+  stepAmt = parseFloat($target.attr('step'));
+
+  console.log('"currentValue" is ' + currentValue + ' and "stepAmt" is ' + stepAmt);
+
+  // It better be  a valid number. I didn't get around do doing this
+  // if (isNaN(number)){
+  //   ...
+  // }
+
+  if ($self.hasClass('pcp-spinbox__btn--increment')) {
+    $target.val(currentValue + stepAmt);
+  } else {
+    $target.val(currentValue - stepAmt);
+  }
+
+})
 
 function markerDemoMarkup() {
 

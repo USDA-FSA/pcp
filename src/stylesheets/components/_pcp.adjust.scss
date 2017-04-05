@@ -1,0 +1,93 @@
+.pcp-adjust {
+
+  $padding: $size-base;
+
+  &__hd {
+    position: sticky;
+    top: 0;
+  }
+
+  &__title {
+    @include font-size(2);
+    text-transform: uppercase;
+    margin: 0;
+    padding: $size-small;
+    background-color: $color-fsa-tertiary-100;
+    font-weight: $font-bold;
+    font-family: $font-sans;
+    color: $color-fsa-tertiary;
+  }
+
+  // ---------------------------------------------------------------------------
+
+  &__bd {}
+
+  // ---------------------------------------------------------------------------
+
+  &__table {
+    margin: 0;
+    table-layout: fixed;
+  }
+
+  &__th,
+  &__td {
+
+    @include font-size(2);
+
+    padding: $padding;
+
+    &--adj {
+
+      background-color: $color-fsa-site-bg;
+      border-left: 1px solid $color-fsa-tertiary-100;
+      padding-left: ($padding * 2);
+
+      & + & {
+        border-left-color: transparent;
+        padding-left: $padding;
+      }
+
+    }
+
+    &:first-child {
+      padding-left: $size-small;
+    }
+
+    &:last-child {
+      padding-right: $padding;
+    }
+
+  }
+
+  &__th {
+    padding-top: $padding * 2;
+    @include font-size(0);
+    text-transform: uppercase;
+  }
+
+  &__td {
+
+    &--editable {
+      padding: 0;
+    }
+
+  }
+
+  &__spinbox {
+    font-size: 15px;
+    padding: $padding;
+    height: auto;
+  }
+
+  // ---------------------------------------------------------------------------
+
+  &__ft {}
+
+  // ---------------------------------------------------------------------------
+
+  abbr {
+    border-bottom: 0;
+    text-decoration: none;
+  }
+
+}

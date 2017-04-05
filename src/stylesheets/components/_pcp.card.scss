@@ -1,0 +1,21 @@
+.pcp-card {
+
+  padding:
+    $size-default
+    $size-default
+    ($size-default * 1.5)
+  ;
+  background-color: $color-fsa-site-bg;
+
+  &__hd {}
+
+  &__title {
+    @include font-size(4);
+    margin: 0 0 .5em;
+  }
+
+  &__bd {}
+
+  &__ft {}
+
+}
