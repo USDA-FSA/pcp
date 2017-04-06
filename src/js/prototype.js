@@ -1,3 +1,34 @@
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+// None of this is production-quality.
+
 function hasNumbers(t) {
   return /\d/.test(t);
 }
@@ -42,6 +73,12 @@ $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
   }, 230);
 })
 
+$('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
+  var $self = $(this);
+  var $component = $self.closest('.pcp-popover');
+  $component.removeClass('pcp-popover--visible');
+})
+
 $('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
   $('#pcp-whiteout').remove();
 })
@@ -56,6 +93,203 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
     $checks.prop('checked', true);
   } else {
     $checks.prop('checked', false);
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.fsa-field');
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetPeers = $('.pcp-popover');
+
+  if ($target.hasClass('pcp-popover--visible')) {
+    $targetPeers.removeClass('pcp-popover--visible');
+    $target.removeClass('pcp-popover--visible');
+  } else {
+    $targetPeers.removeClass('pcp-popover--visible');
+    $target.addClass('pcp-popover--visible');
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="rift-pin"]', function(event) {
+
+  alert('Pin this!')
+
+})
+
+$('body').on('click', '[data-behavior~="rift-close"]', function(event) {
+
+  alert('Close this!')
+
+})
+
+function pcpDemoHighlightText(target) {
+
+  var $target = $('#' + target);
+
+  $target.addClass('pcp-highlight-text');
+
+  $target.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+    $target.removeClass('pcp-highlight-text');
+  });
+
+}
+
+function pcpDemoMarker(target, className) {
+
+  var $target = $('#' + target);
+
+  $target.removeClass('pcp-marker--high pcp-marker--low');
+  $target.addClass(className);
+
+}
+
+function pcpDemoMarkerModified(target) {
+
+  var $target = $('#' + target);
+
+  $target.toggleClass('pcp-marker--modified');
+
+}
+
+function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_val) {
+
+  var $market_1 = $('#' + market_1_val);
+  var $market_1_text = $market_1.text();
+  var $market_1_val = $('#' + market_1);
+  var $market_1_val_text = $('#' + market_1).text();
+
+  var $market_2 = $('#' + market_2_val);
+  var $market_2_text = $market_2.text();
+  var $market_2_val = $('#' + market_2);
+  var $market_2_val_text = $market_2_val.text();
+
+  var $titleSecondMarketLameVariableNameSorryNotSorry = $('#UNIQUE-ID-999999');
+
+  console.log($market_1_text + ": " + $market_1_val_text + "\n" + $market_2_text + ": " + $market_2_val_text);
+
+  $market_1.text($market_2_text);
+  $market_2.text($market_1_text);
+  $market_1_val.text($market_2_val_text);
+  $market_2_val.text($market_1_val_text);
+
+  $market_1.addClass('pcp-rift-detail__swapped--up');
+  $market_1_val.addClass('pcp-rift-detail__swapped--up');
+
+  $market_2.addClass('pcp-rift-detail__swapped--down');
+  $market_2_val.addClass('pcp-rift-detail__swapped--down');
+
+  $market_2_val.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+
+    pcpDemoHighlightText('UNIQUE-ID-09524');
+    pcpDemoHighlightText('UNIQUE-ID-74851');
+
+    $market_1.removeClass('pcp-rift-detail__swapped--up');
+    $market_1_val.removeClass('pcp-rift-detail__swapped--up');
+
+    $market_2.removeClass('pcp-rift-detail__swapped--down');
+    $market_2_val.removeClass('pcp-rift-detail__swapped--down');
+
+    $titleSecondMarketLameVariableNameSorryNotSorry
+      .text($market_2_text)
+      .addClass('pcp-highlight-text pcp-highlight-text--inverse')
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-highlight-text pcp-highlight-text--inverse');
+      });
+    ;
+
+  });
+
+}
+
+$('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  if ($self.hasClass('pcp-marker--active')) {
+
+    $self.removeClass('pcp-marker--active');
+    $target.removeClass('pcp-mapping__rift-detail--visible');
+
+  } else {
+
+    $('.pcp-marker--active').removeClass('pcp-marker--active');
+    $('.pcp-mapping__rift-detail--visible').removeClass('pcp-mapping__rift-detail--visible');
+
+    $self.addClass('pcp-marker--active');
+    $target.addClass('pcp-mapping__rift-detail--visible');
+
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="DEMO-CLOSE-RIFT-DETAILS"]', function(event) {
+
+  $('.pcp-marker--active').removeClass('pcp-marker--active');
+  $('.pcp-mapping__rift-detail--visible').removeClass('pcp-mapping__rift-detail--visible');
+
+})
+
+$('body').on('click', '[data-behavior~="DEMO-PIN-RIFT-DETAILS"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-rift-detail')
+  $componentFramed = $self.closest('.pcp-mapping__rift-detail')
+
+  if ($component.hasClass('pcp-rift-detail--pinned')) {
+    $component.removeClass('pcp-rift-detail--pinned');
+    $componentFramed.removeAttr('style');
+  } else {
+    $component.addClass('pcp-rift-detail--pinned')
+    $componentFramed.css('bottom', '0');
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-mapping');
+
+  $self.toggleClass('pcp-mapping__zoom--toggled');
+  $component.toggleClass('pcp-mapping--fullscreen');
+
+})
+
+$('body').on('click', '[data-behavior~="panel-toggle"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-mapping__panel');
+
+  $self.toggleClass('pcp-mapping__panel-btn--toggled');
+  $component.toggleClass('pcp-mapping__panel--visible');
+
+})
+
+$('body').on('click', '[data-behavior~="spinbox"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-spinbox');
+  $target = $component.find('.pcp-spinbox__input');
+
+  currentValue = parseFloat($target.val());
+  stepAmt = parseFloat($target.attr('step'));
+
+  console.log('"currentValue" is ' + currentValue + ' and "stepAmt" is ' + stepAmt);
+
+  // It better be  a valid number. I didn't get around do doing this
+  // if (isNaN(number)){
+  //   ...
+  // }
+
+  if ($self.hasClass('pcp-spinbox__btn--increment')) {
+    $target.val(currentValue + stepAmt);
+  } else {
+    $target.val(currentValue - stepAmt);
   }
 
 })
@@ -96,6 +330,7 @@ function markerDemo() {
 
     var $self = $(this);
     var $target = $('#pcp-marker-demo__target');
+
     $target
       .removeClass($self.attr('data-marker-other'))
       .addClass($self.val())

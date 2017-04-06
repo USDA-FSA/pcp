@@ -1,0 +1,48 @@
+.pcp-icon-TEMP {
+
+  $icon-size: $size-large;
+
+  position: relative;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background-color: $color-fsa-primary-900;
+  text-indent: $icon-size * 2;
+  overflow: hidden;
+  line-height: 1;
+
+  width: $icon-size * .9;
+  height: $icon-size * .9;
+
+  @include breakpoint(S) {
+    width: $icon-size;
+    height: $icon-size;
+  }
+
+  &:hover {
+    background-color: $color-fsa-primary-300;
+  }
+
+  &::-moz-focus-inner,
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  // ---------------------------------------------------------------------------
+
+  &--small {
+
+    width: $icon-size * .5;
+    height: $icon-size * .5;
+
+    @include breakpoint(S) {
+      width: $icon-size * .5;
+      height: $icon-size * .5;
+    }
+
+  }
+
+}

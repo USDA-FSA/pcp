@@ -1,0 +1,32 @@
+.pcp-header {
+
+  background-color: #fff;
+  padding: 1.5rem 0;
+  background-color: $color-fsa-primary;
+  text-align: left;
+
+  &__bd {
+
+    display: flex;
+    max-width: ($site-max-width + 24px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 $size-default;
+    text-align: left;
+    color: $color-fsa-white;
+
+  }
+
+  &__prop {
+    flex: 1;
+    padding-right: $size-small;
+  }
+
+  &__options {
+    color: $color-fsa-white;
+    text-align: right;
+    display: flex;
+    align-items: center;
+  }
+
+}
