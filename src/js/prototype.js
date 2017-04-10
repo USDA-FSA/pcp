@@ -295,6 +295,15 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
 })
 
+$('body').on('focus', '[data-behavior~="spinbox-focus"]', function(event) {
+
+  $self = $(this);
+  $component = $self.closest('.pcp-adjust__spinbox');
+
+  $component.addClass('pcp-adjust__spinbox--focused');
+
+})
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');

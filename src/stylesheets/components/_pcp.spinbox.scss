@@ -51,13 +51,41 @@
       text-align: right;
     }
 
+    .pcp-adjust__spinbox & {
+
+      background-color: transparent;
+      border-color: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: $color-white;
+        border-color: $form-outline-color;
+      }
+
+      &:focus {
+        border-color: $form-focus-color;
+      }
+
+    }
+
   }
 
   &__actions {
+
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
+
+    .pcp-adjust__spinbox & {
+      display: none;
+    }
+
+    .pcp-adjust__spinbox--focused & {
+      display: block;
+      outline: 1px solid red;
+    }
+
   }
 
   &__btn {
