@@ -44,7 +44,7 @@
 
   // ---------------------------------------------------------------------------
 
-  $mapPanelWidth: 26.4rem;
+  $mapPanelWidth: ($size-base * 66);
   $mapPanelIconHeight: $size-large;
   $mapPanelIconWidth: $size-medium;
 

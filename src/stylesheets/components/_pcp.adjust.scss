@@ -5,6 +5,7 @@
   &__hd {
     position: sticky;
     top: 0;
+    z-index: 1;
   }
 
   &__title {
@@ -60,15 +61,23 @@
   }
 
   &__th {
-    padding-top: $padding * 2;
+
     @include font-size(0);
+    padding-top: $padding * 2;
     text-transform: uppercase;
+
+    &--adj {
+    }
+
   }
 
   &__td {
 
+    &--adj {
+    }
+
     &--editable {
-      padding: 0;
+      padding-left: $padding;
     }
 
   }
