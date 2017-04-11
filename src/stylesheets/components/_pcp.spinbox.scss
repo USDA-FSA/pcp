@@ -68,6 +68,11 @@
 
     }
 
+    .pcp-adjust__spinbox--focused & {
+      border-color: $color-fsa-tertiary-200;
+      background-color: $color-white;
+    }
+
   }
 
   &__actions {
@@ -83,7 +88,6 @@
 
     .pcp-adjust__spinbox--focused & {
       display: block;
-      outline: 1px solid red;
     }
 
   }

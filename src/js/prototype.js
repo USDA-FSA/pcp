@@ -295,12 +295,41 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
 })
 
+$('body').on('focus', '.pcp-adjust__spinbox', function(event) {
+
+  var $self = $(this);
+
+  $self.addClass('pcp-adjust__spinbox--focused');
+
+})
+
+$('body').on('blur', '.pcp-adjust__spinbox', function(event) {
+
+  var $self = $(this);
+
+  $self.removeClass('pcp-adjust__spinbox--focused');
+
+})
+
 $('body').on('focus', '[data-behavior~="spinbox-focus"]', function(event) {
 
-  $self = $(this);
-  $component = $self.closest('.pcp-adjust__spinbox');
+  // var $self = $(this);
+  // var $component = $self.closest('.pcp-adjust__spinbox');
+  //
+  // $component.addClass('pcp-adjust__spinbox--focused');
 
-  $component.addClass('pcp-adjust__spinbox--focused');
+  // $('body').on('blur', '[data-behavior~="spinbox-focus"]', function(event) {
+  //
+  //   if ($self.hasClass('pcp-spinbox__input')) {
+  //     console.log('you left spinbox textfield');
+  //     $component.addClass('pcp-adjust__spinbox--focused');
+  //   } else {
+  //     console.log('you left spinbox buttons');
+  //     $component.removeClass('pcp-adjust__spinbox--focused');
+  //   }
+  //
+  // })
+
 
 })
 
