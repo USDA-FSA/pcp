@@ -295,14 +295,6 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
 })
 
-
-
-
-
-
-
-
-
 $('body').on('focus', '.pcp-spinbox__input', function(event) {
 
   var $self = $(this);
@@ -314,40 +306,26 @@ $('body').on('focus', '.pcp-spinbox__input', function(event) {
 
 })
 
-$('body').on('blur', '.pcp-spinbox__input', function(event) {
+$('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
 
   var $self = $(this);
   var $component = $self.closest('.pcp-adjust__spinbox');
-  var $buttonDecrement = $component.find('.pcp-spinbox__btn--decrement');
-  var $buttonIncrement = $component.find('.pcp-spinbox__btn--increment');
+  var $spinButtons = $component.find('.pcp-spinbox__btn');
 
-  if ($buttonDecrement.is(':focus')) {
-    console.log('DECrement button is focused');
-  }
-  else if ($buttonIncrement.is(':focus')) {
-    console.log('INCrement button is focused');
-  }
-  else {
-    console.log('NEITHER spinbox button is focused');
-    // $component.removeClass('pcp-adjust__spinbox--focused');
-  }
+  // This use of setTimeoutis definitely a hack, you'll want to make it smarter.
+  setTimeout(function() {
+    if ($spinButtons.is(':focus')) {
+      console.log('button is focused');
+      $component.addClass('pcp-adjust__spinbox--focused');
+    }
+    else {
+      console.log('NEITHER spinbox button is focused');
+      $component.removeClass('pcp-adjust__spinbox--focused');
+    }
+  }, 10);
+
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function markerDemoMarkup() {
 
