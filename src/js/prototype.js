@@ -295,43 +295,59 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
 })
 
-$('body').on('focus', '.pcp-adjust__spinbox', function(event) {
+
+
+
+
+
+
+
+
+$('body').on('focus', '.pcp-spinbox__input', function(event) {
 
   var $self = $(this);
+  var $component = $self.closest('.pcp-adjust__spinbox');
 
-  $self.addClass('pcp-adjust__spinbox--focused');
+  $component.addClass('pcp-adjust__spinbox--focused');
+
+  console.log('focused ON something inside editable cell');
 
 })
 
-$('body').on('blur', '.pcp-adjust__spinbox', function(event) {
+$('body').on('blur', '.pcp-spinbox__input', function(event) {
 
   var $self = $(this);
+  var $component = $self.closest('.pcp-adjust__spinbox');
+  var $buttonDecrement = $component.find('.pcp-spinbox__btn--decrement');
+  var $buttonIncrement = $component.find('.pcp-spinbox__btn--increment');
 
-  $self.removeClass('pcp-adjust__spinbox--focused');
-
-})
-
-$('body').on('focus', '[data-behavior~="spinbox-focus"]', function(event) {
-
-  // var $self = $(this);
-  // var $component = $self.closest('.pcp-adjust__spinbox');
-  //
-  // $component.addClass('pcp-adjust__spinbox--focused');
-
-  // $('body').on('blur', '[data-behavior~="spinbox-focus"]', function(event) {
-  //
-  //   if ($self.hasClass('pcp-spinbox__input')) {
-  //     console.log('you left spinbox textfield');
-  //     $component.addClass('pcp-adjust__spinbox--focused');
-  //   } else {
-  //     console.log('you left spinbox buttons');
-  //     $component.removeClass('pcp-adjust__spinbox--focused');
-  //   }
-  //
-  // })
-
+  if ($buttonDecrement.is(':focus')) {
+    console.log('DECrement button is focused');
+  }
+  else if ($buttonIncrement.is(':focus')) {
+    console.log('INCrement button is focused');
+  }
+  else {
+    console.log('NEITHER spinbox button is focused');
+    // $component.removeClass('pcp-adjust__spinbox--focused');
+  }
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function markerDemoMarkup() {
 
