@@ -83,8 +83,42 @@
 
   }
 
+  &__panel-bd--splitter {
+
+    $splitter-height: $size-base;
+
+    height: ($splitter-height * 3);
+    margin-top: -($splitter-height + ($splitter-height / 2));
+    margin-bottom: -($splitter-height + ($splitter-height / 2));
+    cursor: row-resize;
+    z-index: 2;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      height: $splitter-height;
+    }
+
+    i {
+      display: block;
+      height: $splitter-height;
+    }
+
+    &:active,
+    &:hover {
+      i {
+        background-color: $color-fsa-aqua;
+      }
+    }
+
+
+  }
+
   &__panel-bd-scroll-item {
+
     overflow: auto;
+    min-height: 124px;
 
     border-top: 1px solid $color-fsa-tertiary-200;
 

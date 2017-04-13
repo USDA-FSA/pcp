@@ -375,3 +375,8 @@ function markerDemo() {
 }
 
 markerDemo();
+
+$('.pcp-mapping__panel-bd-scroll-item--top').resizable({
+  handleSelector: '.pcp-mapping__panel-bd--splitter',
+  resizeWidth: false
+});
