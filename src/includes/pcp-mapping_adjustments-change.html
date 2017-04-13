@@ -12,14 +12,17 @@
         <button class="pcp-mapping__panel-btn" type="button" data-behavior="panel-toggle" title="Toggle Panel">Toggle Panel</button>
       </div>
 
+      <div class="pcp-mapping__panel-splitter"><i></i></div>
+
       <div class="pcp-mapping__panel-hd">
         {% include: 'includes/pcp-card__hrw.html' %}
       </div>
       <div class="pcp-mapping__panel-bd pcp-mapping__panel-bd--scrollable">
-        <div class="pcp-mapping__panel-bd-scroll-item">
+        <div class="pcp-mapping__panel-bd-scroll-item pcp-mapping__panel-bd-scroll-item--top">
           {% include: 'includes/pcp-adjust__terminal__adjustments-change.html' @title:'Terminal Adjustments' %}
         </div>
-        <div class="pcp-mapping__panel-bd-scroll-item">
+        <div class="pcp-mapping__panel-bd--splitter"><i></i></div>
+        <div class="pcp-mapping__panel-bd-scroll-item pcp-mapping__panel-bd-scroll-item--bottom">
           {% include: 'includes/pcp-adjust__state__adjustments-change.html' @title:'State Adjustments' %}
         </div>
       </div>

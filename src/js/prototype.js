@@ -380,3 +380,18 @@ $('.pcp-mapping__panel-bd-scroll-item--top').resizable({
   handleSelector: '.pcp-mapping__panel-bd--splitter',
   resizeWidth: false
 });
+
+$('.pcp-mapping__panel').resizable({
+  handleSelector: '.pcp-mapping__panel-splitter',
+  resizeHeight: false
+});
+
+$('body').on('dblclick', '.pcp-mapping__panel-splitter', function(event) {
+  // REVERT panel to initial width
+  $('.pcp-mapping__panel').css('width', '');
+})
+
+$('body').on('dblclick', '.pcp-mapping__panel-bd--splitter', function(event) {
+  // REVERT adjustment panes to initial height
+  $('.pcp-mapping__panel-bd-scroll-item--top').css('height', '');
+})
