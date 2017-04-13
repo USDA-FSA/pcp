@@ -28,6 +28,7 @@
   &__table {
     margin: 0;
     table-layout: fixed;
+    min-width: ($mapPanelWidth * .9);
   }
 
   &__th,
