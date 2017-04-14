@@ -91,6 +91,23 @@ $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
   }, 230);
 })
 
+$('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  setTimeout(function() {
+    $target.addClass('pcp-growl--dismissing');
+
+    setTimeout(function() {
+      $target.removeClass('pcp-growl--dismissing');
+      $target.addClass('pcp-growl--hidden');
+    }, 500);
+
+  }, 3500);
+
+})
+
 $('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
   $('#pcp-whiteout').addClass('pcp-whiteout--hidden');
 })
