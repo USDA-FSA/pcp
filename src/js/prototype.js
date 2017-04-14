@@ -345,6 +345,18 @@ $('body').on('focus', '.pcp-spinbox__input', function(event) {
 
 })
 
+$('body').on('keydown', '.pcp-spinbox__input[data-behavior~="spinbox-kill-keypress"]', function(e) {
+
+  if (event.which == 38) {
+    console.log('You pressed up arrow');
+  } else if (event.which == 40) {
+    console.log('You pressed down arrow');
+  } else {
+    e.preventDefault();
+  }
+
+})
+
 $('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
 
   var $self = $(this);
