@@ -341,16 +341,20 @@ $('body').on('focus', '.pcp-spinbox__input', function(event) {
 
   $component.addClass('pcp-adjust__spinbox--focused');
 
-  console.log('focused ON SOMETHING inside editable cell');
+  console.log('spinbox focused');
 
 })
 
 $('body').on('keydown', '.pcp-spinbox__input[data-behavior~="spinbox-kill-keypress"]', function(e) {
 
-  if (event.which == 38) {
-    console.log('You pressed up arrow');
+  if (event.which == 39) {
+    console.log('You pressed RIGHT arrow key');
+  } else if (event.which == 37) {
+    console.log('You pressed LEFT arrow key');
+  } else if (event.which == 38) {
+    console.log('You pressed UP arrow key');
   } else if (event.which == 40) {
-    console.log('You pressed down arrow');
+    console.log('You pressed DOWN arrow key');
   } else {
     e.preventDefault();
   }
