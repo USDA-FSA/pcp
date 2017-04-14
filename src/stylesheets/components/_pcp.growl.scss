@@ -40,6 +40,10 @@
 
   }
 
+  &--hidden {
+    display: none;
+  }
+
 }
 
 .pcp-growl {
@@ -73,6 +77,10 @@
   &--success {
     background-color: $color-fsa-primary-100;
     border-color: $color-fsa-primary;
+  }
+
+  &--hidden {
+    display: none;
   }
 
   &__hd {
