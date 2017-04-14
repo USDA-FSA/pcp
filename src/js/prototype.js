@@ -341,7 +341,7 @@ $('body').on('focus', '.pcp-spinbox__input', function(event) {
 
   $component.addClass('pcp-adjust__spinbox--focused');
 
-  console.log('focused ON something inside editable cell');
+  console.log('focused ON SOMETHING inside editable cell');
 
 })
 
@@ -354,11 +354,9 @@ $('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
   // This use of setTimeoutis definitely a hack, you'll want to make it smarter.
   setTimeout(function() {
     if ($spinButtons.is(':focus')) {
-      console.log('button is focused');
       $component.addClass('pcp-adjust__spinbox--focused');
     }
     else {
-      console.log('NEITHER spinbox button is focused');
       $component.removeClass('pcp-adjust__spinbox--focused');
     }
   }, 10);
