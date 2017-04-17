@@ -34,6 +34,7 @@
     padding-right: $size-small;
     padding-bottom: $size-small;
     padding-left: $size-default;
+    z-index: 9999999;
 
     &:hover {
       bottom: 0;
