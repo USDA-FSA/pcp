@@ -1,0 +1,40 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Markets' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        {% include: 'includes/table-header.html' @title:'Markets' %}
+        {% include: 'includes/table_markets.html' %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>

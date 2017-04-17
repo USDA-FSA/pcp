@@ -1,0 +1,35 @@
+.pcp-header-TEMP {
+
+  padding-left: $size-default;
+  padding-right: $size-default;
+  background-color: $color-fsa-primary;
+  color: white;
+  text-align: center;
+
+  &--project {
+    border-top: 4px solid $color-fsa-tertiary;
+    background-color: $color-fsa-tertiary-200;
+    color: $color-fsa-tertiary;
+    text-align: left;
+    font-size: $font-size-5;
+  }
+
+  &__bd {
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-max-width;
+    padding: $size-medium 0;
+
+    .pcp-header-TEMP--project & {
+      padding: $size-base 0;
+    }
+
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+}

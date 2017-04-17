@@ -1,0 +1,100 @@
+.pcp-brand {
+
+  @include clearfix;
+
+  &__logo {
+
+    display: none;
+
+    @include breakpoint(L) {
+      display: block;
+      height: ($size-base * 9);
+      float: left;
+      margin-right: $size-small;
+      height: ($size-base * 11);
+      margin-right: $size-default;
+    }
+
+  }
+
+  &__label {
+
+    white-space: nowrap;
+    display: block;
+    color: $color-fsa-white;
+
+  }
+
+  &__usda {
+
+    @include font-size(0);
+    font-size: 12px;
+    display: block;
+
+    @include breakpoint(M) {
+      @include font-size(0);
+    }
+
+    @include breakpoint(L) {
+      @include font-size(1);
+    }
+
+  }
+
+  &__agency {
+
+    @include font-size(3);
+    line-height: 1;
+    font-weight: $font-bold;
+    text-decoration: none;
+    color: $color-fsa-white;
+
+    @include breakpoint(L) {
+      @include font-size(4);
+    }
+
+    &:active,
+    &:hover {
+      color: $color-fsa-white;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: $color-fsa-white;
+    }
+
+  }
+
+  &__us {
+
+    display: none;
+
+    @include breakpoint(L) {
+      display: inline;
+    }
+
+  }
+
+  &__da {
+
+    &:before {
+      content: attr(data-before);
+      margin-right: 3px;
+
+      @include breakpoint(L) {
+        display: none;
+      }
+    }
+
+
+
+  }
+
+}
+
+// scss-lint:disable QualifyingElement
+a.pcp-brand__agency:hover,
+a.pcp-brand__agency:active,
+a.pcp-brand__agency:focus {
+  color: $color-fsa-white;
+}

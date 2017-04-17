@@ -1,0 +1,69 @@
+.pcp-disclaimer {
+
+  &__stage {
+
+    display: block;
+    margin: 0;
+
+    a {
+
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;;
+      }
+
+    }
+
+  }
+
+  &__app-name {
+
+    font-weight: $font-bold;
+    text-transform: uppercase;
+
+    &:before {
+      .pcp-disclaimer__abbr + & {
+        content: '-';
+        margin-left: ($size-base / 2);
+        margin-right: $size-base;
+      }
+    }
+
+  }
+
+  &__abbr {
+
+    &:before {
+      .pcp-disclaimer__app-name + & {
+        content: '-';
+        margin-left: ($size-base / 2);
+        margin-right: $size-base;
+      }
+    }
+
+  }
+
+  &__official {
+
+    text-transform: capitalize;
+
+    @include breakpoint(L) {
+      text-transform: none;
+    }
+
+  }
+
+  &__hide-on-mobile {
+
+    display: none;
+
+    @include breakpoint(L) {
+      display: inline;
+    }
+
+
+  }
+
+}

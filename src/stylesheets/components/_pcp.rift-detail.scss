@@ -1,0 +1,285 @@
+$swapDistance: 2.8rem;
+
+@keyframes pcp_swapDown {
+  from {
+    // opacity: 0;
+    transform: translateY(-$swapDistance);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes pcp_swapUp {
+  from {
+    // opacity: 0;
+    transform: translateY($swapDistance);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+// scss-lint:disable all
+.pcp-RIFT-ICON-TEMP {
+
+  background-color: rgba(255, 255, 255, .5) !important;
+
+  & + & {
+    margin-left: 5px;
+  }
+
+}
+
+.pcp-rift-detail {
+
+  $padding: $size-default;
+
+  background-color: $color-white;
+  border: 1px solid $color-fsa-tertiary-200;
+  box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+
+  &--pinned {}
+
+  // ---------------------------------------------------------------------------
+
+  &__hd {
+    // background-color: $color-fsa-primary;
+    background-color: $color-fsa-secondary;
+    color: $color-white;
+    display: table;
+    width: 100%;
+  }
+
+  &__title {
+    @include font-size(2);
+    font-family: $font-sans;
+    color: inherit;
+    text-transform: uppercase;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: $padding;
+
+    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      $size-base
+      $size-base
+      $size-base
+      $padding
+    ;
+    margin: 0;
+    font-weight: $font-bold;
+  }
+
+  &__actions {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      $size-base
+      $size-small
+      $size-base
+      $size-base
+    ;
+  }
+
+  &__bd {}
+
+  &__ft {}
+
+  // ---------------------------------------------------------------------------
+
+  &__table {
+    margin: 0;
+    table-layout: fixed;
+  }
+
+  &__thead {}
+
+  &__tr {}
+
+  &__tr--rift {}
+
+  &__tr--spread {}
+
+  &__tr--moor {
+
+    border-top: 1px solid $color-fsa-tertiary-200;
+
+    & + & {
+
+      border-top: 0;
+
+      // scss-lint:disable SelectorFormat
+      .pcp-rift-detail__th--moor,
+      .pcp-rift-detail__td--moor {
+        padding-top: 0;
+      }
+
+    }
+
+  }
+
+  &__th,
+  &__td {
+
+    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      ($padding / 2)
+      ($padding)
+    ;
+
+    &--first {}
+
+    &--last {
+      text-align: right;
+    }
+
+    &:last-child {
+      padding-right: $padding;
+    }
+
+    &--moor {
+      @include font-size(2);
+    }
+
+    &--moor-first {
+      text-align: left;
+    }
+
+    &--moor-last {
+      text-align: right;
+    }
+
+  }
+
+  &__th {
+
+    @include font-size(0);
+    background-color: $color-fsa-tertiary-100;
+    font-weight: $font-bold;
+
+    &--moor {
+      text-align: center;
+      font-weight: $font-bold;
+    }
+
+  }
+
+  &__td {
+
+    vertical-align: top;
+
+    &--rift {
+      text-align: center;
+      padding-top: $padding;
+      padding-bottom: 0;
+      background-image: url('../img/pcp-rift-details-bg-strip.gif');
+      background-repeat: repeat-y;
+      background-position: 50%;
+      background-position: calc(50% - 1px);
+    }
+
+  }
+
+  &__marker {
+
+    .pcp-marker__value {
+
+      padding-left: $padding * 3;
+      padding-right: $padding * 3;
+
+      @include breakpoint(L) {
+        min-width: 12rem;
+      }
+
+    }
+
+  }
+
+  &__spread-left {}
+
+  &__spread-right {
+    border-left: 1px solid $color-fsa-tertiary-200;
+  }
+
+  &__county {
+    cursor: default;
+    text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  // ---------------------------------------------------------------------------
+
+  &__markets {
+    margin: $size-base 0 0;
+    table-layout: fixed;
+  }
+
+  &__markets-item,
+  &__markets-value {
+
+    @include font-size(3);
+
+    padding: 0;
+    vertical-align: top;
+
+    &--first {
+      padding-right: $padding;
+    }
+
+    &--last {
+      padding-right: $padding;
+      text-align: right;
+    }
+
+    &--dominant {
+      font-weight: $font-bold;
+    }
+
+    &--interior {
+      font-weight: $font-light;
+      color: $color-fsa-tertiary-300;
+    }
+
+  }
+
+  &__markets-item {
+
+    font-family: $font-serif;
+    line-height: 1.6;
+
+  }
+
+  &__markets-value {}
+
+  // ---------------------------------------------------------------------------
+
+  &__swapped {
+
+    &--up {
+      display: inline-block;
+      animation: pcp_swapUp .3s;
+    }
+
+    &--down {
+      display: inline-block;
+      animation: pcp_swapDown .3s;
+    }
+
+  }
+
+  // ---------------------------------------------------------------------------
+
+  abbr {
+    border-bottom: 0;
+    text-decoration: none;
+  }
+
+}
