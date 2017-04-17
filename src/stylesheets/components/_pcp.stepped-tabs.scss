@@ -53,7 +53,7 @@
       height: 0;
       border-style: solid;
       border-width: $arrowMagicNumber 0 $arrowMagicNumber ($arrowMagicNumber - .9rem); // super magical number
-      z-index: 150;
+      z-index: 1;
     }
 
     &:before {

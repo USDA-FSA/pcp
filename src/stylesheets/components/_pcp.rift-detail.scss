@@ -22,6 +22,7 @@ $swapDistance: 2.8rem;
   }
 }
 
+// scss-lint:disable all
 .pcp-RIFT-ICON-TEMP {
 
   background-color: rgba(255, 255, 255, .5) !important;
@@ -170,15 +171,16 @@ $swapDistance: 2.8rem;
 
   &__td {
 
+    vertical-align: top;
+
     &--rift {
       text-align: center;
       padding-top: $padding;
       padding-bottom: 0;
-      // background-image: url(http://placehold.it/1/eee);
       background-image: url('../img/pcp-rift-details-bg-strip.gif');
-    	background-repeat: repeat-y;
-    	background-position: 50%;
-    	background-position: calc(50% - 1px);
+      background-repeat: repeat-y;
+      background-position: 50%;
+      background-position: calc(50% - 1px);
     }
 
   }

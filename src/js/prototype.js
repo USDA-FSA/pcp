@@ -64,13 +64,52 @@ $('body').on('blur', '[data-behavior~="validate-abbr"]', function(event) {
 
 })
 
+$('body').on('click', '[data-behavior~="growl-show"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  console.log('showing ' + $self.attr('data-target'));
+
+  $target
+    .removeClass('pcp-growl--hidden')
+    .closest('.pcp-growl-container--hidden')
+    .removeClass('pcp-growl-container--hidden')
+  ;
+
+  $target.removeClass('pcp-growl--hidden');
+
+})
+
 $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
   var $self = $(this);
   var $component = $self.closest('.pcp-growl');
   $component.addClass('pcp-growl--dismissing');
   setTimeout(function() {
-    $component.remove();
+    $component.removeClass('pcp-growl--dismissing');
+    $component.addClass('pcp-growl--hidden');
   }, 230);
+})
+
+$('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  setTimeout(function() {
+    $target.addClass('pcp-growl--dismissing');
+
+    setTimeout(function() {
+      $target.removeClass('pcp-growl--dismissing');
+      $target.addClass('pcp-growl--hidden');
+    }, 500);
+
+  }, 3500);
+
+})
+
+$('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
+  $('#pcp-whiteout').addClass('pcp-whiteout--hidden');
 })
 
 $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
@@ -79,8 +118,8 @@ $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
   $component.removeClass('pcp-popover--visible');
 })
 
-$('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
-  $('#pcp-whiteout').remove();
+$('body').on('click', '[data-behavior~="whiteout-show"]', function(event) {
+  $('#pcp-whiteout').removeClass('pcp-whiteout--hidden');
 })
 
 $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
@@ -171,35 +210,36 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
 
   console.log($market_1_text + ": " + $market_1_val_text + "\n" + $market_2_text + ": " + $market_2_val_text);
 
-  $market_1.text($market_2_text);
-  $market_2.text($market_1_text);
-  $market_1_val.text($market_2_val_text);
-  $market_2_val.text($market_1_val_text);
+  pcpDemoHighlightText('UNIQUE-ID-09524');
+  pcpDemoHighlightText('UNIQUE-ID-74851');
 
-  $market_1.addClass('pcp-rift-detail__swapped--up');
-  $market_1_val.addClass('pcp-rift-detail__swapped--up');
+  $market_1.removeClass('pcp-rift-detail__swapped--up');
+  $market_1_val.removeClass('pcp-rift-detail__swapped--up');
 
-  $market_2.addClass('pcp-rift-detail__swapped--down');
-  $market_2_val.addClass('pcp-rift-detail__swapped--down');
+  $market_2.removeClass('pcp-rift-detail__swapped--down');
+  $market_2_val.removeClass('pcp-rift-detail__swapped--down');
+
+  $titleSecondMarketLameVariableNameSorryNotSorry
+    .text($market_2_text)
+    .addClass('pcp-highlight-text pcp-highlight-text--inverse')
+    .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $(this).removeClass('pcp-highlight-text pcp-highlight-text--inverse');
+    });
+  ;
 
   $market_2_val.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
 
-    pcpDemoHighlightText('UNIQUE-ID-09524');
-    pcpDemoHighlightText('UNIQUE-ID-74851');
+    $market_1.text($market_2_text);
+    $market_2.text($market_1_text);
+    $market_1_val.text($market_2_val_text);
+    $market_2_val.text($market_1_val_text);
 
-    $market_1.removeClass('pcp-rift-detail__swapped--up');
-    $market_1_val.removeClass('pcp-rift-detail__swapped--up');
+    $market_1.addClass('pcp-rift-detail__swapped--up');
+    $market_1_val.addClass('pcp-rift-detail__swapped--up');
 
-    $market_2.removeClass('pcp-rift-detail__swapped--down');
-    $market_2_val.removeClass('pcp-rift-detail__swapped--down');
+    $market_2.addClass('pcp-rift-detail__swapped--down');
+    $market_2_val.addClass('pcp-rift-detail__swapped--down');
 
-    $titleSecondMarketLameVariableNameSorryNotSorry
-      .text($market_2_text)
-      .addClass('pcp-highlight-text pcp-highlight-text--inverse')
-      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-        $(this).removeClass('pcp-highlight-text pcp-highlight-text--inverse');
-      });
-    ;
 
   });
 
@@ -294,6 +334,64 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
 })
 
+$('body').on('focus', '.pcp-spinbox__input', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.pcp-adjust__spinbox');
+
+  $component.addClass('pcp-adjust__spinbox--focused');
+
+  console.log('spinbox focused');
+
+})
+
+$('body').on('keydown', '.pcp-spinbox__input[data-behavior~="spinbox-kill-keypress"]', function(e) {
+
+  if (event.which == 39) {
+    console.log('You pressed RIGHT arrow key');
+  } else if (event.which == 37) {
+    console.log('You pressed LEFT arrow key');
+  } else if (event.which == 38) {
+    console.log('You pressed UP arrow key');
+  } else if (event.which == 40) {
+    console.log('You pressed DOWN arrow key');
+  } else if (event.which == 9) {
+    console.log('You pressed TAB key');
+  } else {
+    e.preventDefault();
+  }
+
+})
+
+$('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.pcp-adjust__spinbox');
+  var $spinButtons = $component.find('.pcp-spinbox__btn');
+
+  // This use of setTimeoutis definitely a hack, you'll want to make it smarter.
+  setTimeout(function() {
+    if ($spinButtons.is(':focus')) {
+      $component.addClass('pcp-adjust__spinbox--focused');
+    }
+    else {
+      $component.removeClass('pcp-adjust__spinbox--focused');
+    }
+  }, 10);
+
+})
+
+$('body').on('change', '[data-behavior~="spinbox-demo-change"]', function() {
+
+  var $self = $(this);
+  thisAmt = parseFloat($self.val());
+
+  if (thisAmt == '0') {
+    $self.val('0.00');
+  }
+
+});
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
@@ -342,3 +440,23 @@ function markerDemo() {
 }
 
 markerDemo();
+
+$('.pcp-mapping__panel-bd-scroll-item--top').resizable({
+  handleSelector: '.pcp-mapping__panel-bd--splitter',
+  resizeWidth: false
+});
+
+$('.pcp-mapping__panel').resizable({
+  handleSelector: '.pcp-mapping__panel-splitter',
+  resizeHeight: false
+});
+
+$('body').on('dblclick', '.pcp-mapping__panel-splitter', function(event) {
+  // REVERT panel to initial width
+  $('.pcp-mapping__panel').css('width', '');
+})
+
+$('body').on('dblclick', '.pcp-mapping__panel-bd--splitter', function(event) {
+  // REVERT adjustment panes to initial height
+  $('.pcp-mapping__panel-bd-scroll-item--top').css('height', '');
+})

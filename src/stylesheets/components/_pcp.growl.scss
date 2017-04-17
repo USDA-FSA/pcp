@@ -22,7 +22,7 @@
   top: $size-default;
   right: $size-default;
   left: $size-default;
-  z-index: 2;
+  z-index: 101;
 
   @include breakpoint(L) {
     left: auto;
@@ -38,6 +38,10 @@
       transform: translate(-50%, 0);
     }
 
+  }
+
+  &--hidden {
+    display: none;
   }
 
 }
@@ -73,6 +77,10 @@
   &--success {
     background-color: $color-fsa-primary-100;
     border-color: $color-fsa-primary;
+  }
+
+  &--hidden {
+    display: none;
   }
 
   &__hd {
