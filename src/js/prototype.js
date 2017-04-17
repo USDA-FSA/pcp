@@ -379,8 +379,18 @@ $('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
     }
   }, 10);
 
-
 })
+
+$('body').on('change', '[data-behavior~="spinbox-demo-change"]', function() {
+
+  var $self = $(this);
+  thisAmt = parseFloat($self.val());
+
+  if (thisAmt == '0') {
+    $self.val('0.00');
+  }
+
+});
 
 function markerDemoMarkup() {
 
