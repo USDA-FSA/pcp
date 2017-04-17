@@ -355,6 +355,8 @@ $('body').on('keydown', '.pcp-spinbox__input[data-behavior~="spinbox-kill-keypre
     console.log('You pressed UP arrow key');
   } else if (event.which == 40) {
     console.log('You pressed DOWN arrow key');
+  } else if (event.which == 9) {
+    console.log('You pressed TAB key');
   } else {
     e.preventDefault();
   }
