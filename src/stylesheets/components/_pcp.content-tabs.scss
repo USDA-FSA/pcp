@@ -16,6 +16,10 @@
     // scss-lint:disable SelectorFormat
     .pcp-content-tabs--justified & {
       width: 100%;
+    }
+
+    .pcp-content-tabs--justified-equal & {
+      width: 100%;
       table-layout: fixed;
     }
 
@@ -24,12 +28,13 @@
   &__aside {
 
     display: block;
-    flex: 2;
+    flex: 10;
     content: '';
     border-bottom: 1px solid $color-fsa-tertiary-200;
 
     // scss-lint:disable SelectorFormat
-    .pcp-content-tabs--justified & {
+    .pcp-content-tabs--justified &,
+    .pcp-content-tabs--justified-equal & {
       display: none;
     }
 
