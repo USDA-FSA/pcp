@@ -37,7 +37,7 @@
 
     @include font-size(2);
 
-    padding: $padding;
+    padding: $padding ($padding * 2);
 
     &--first {
       padding-left: ($padding * 3);
@@ -54,8 +54,8 @@
 
       &.pcp-adjust__th--last,
       &.pcp-adjust__td--last {
-        padding-left: $padding;
-        padding-right: $padding;
+        padding-left: 0;
+        padding-right: ($padding * 2);
       }
 
       &.pcp-adjust__th--last {
@@ -70,6 +70,7 @@
     &--bisect {
       border-right: 1px solid $color-fsa-tertiary-200;
       padding-right: ($padding * 3);
+      padding-left: 0;
     }
 
   }

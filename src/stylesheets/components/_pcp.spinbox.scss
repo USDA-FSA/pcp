@@ -55,6 +55,7 @@
     .pcp-adjust__spinbox & {
 
       background-color: transparent;
+      border-color: transparentize($form-outline-color, .5);
 
       &:hover,
       &:focus {
@@ -83,10 +84,6 @@
       pointer-events: none;
     }
 
-    // .pcp-adjust__spinbox:hover & {
-    //   opacity: 1;
-    // }
-    //
     .pcp-adjust__spinbox--focused & {
       opacity: 1;
       pointer-events: initial;
