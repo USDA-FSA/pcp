@@ -37,11 +37,9 @@
 
     @include font-size(2);
 
-    text-align: right;
     padding: $padding;
 
     &--first {
-      text-align: left;
       padding-left: ($padding * 3);
     }
 
@@ -53,19 +51,20 @@
 
       background-color: $color-fsa-site-bg;
       padding-left: ($padding * 3);
-      text-align: left;
 
       &.pcp-adjust__th--last,
       &.pcp-adjust__td--last {
         padding-left: $padding;
-        text-align: right;
         padding-right: $padding;
       }
 
       &.pcp-adjust__th--last {
-        text-align: center;
       }
 
+    }
+
+    &--number {
+      text-align: right;
     }
 
     &--bisect {
