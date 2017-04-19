@@ -1,5 +1,7 @@
 .pcp-content-tabs {
 
+  $tab-padding: $size-small;
+
   display: flex;
 
   &--justified {}
@@ -14,6 +16,10 @@
     // scss-lint:disable SelectorFormat
     .pcp-content-tabs--justified & {
       width: 100%;
+    }
+
+    .pcp-content-tabs--justified-equal & {
+      width: 100%;
       table-layout: fixed;
     }
 
@@ -22,12 +28,13 @@
   &__aside {
 
     display: block;
-    flex: 2;
+    flex: 10;
     content: '';
     border-bottom: 1px solid $color-fsa-tertiary-200;
 
     // scss-lint:disable SelectorFormat
-    .pcp-content-tabs--justified & {
+    .pcp-content-tabs--justified &,
+    .pcp-content-tabs--justified-equal & {
       display: none;
     }
 
@@ -43,7 +50,7 @@
     @include font-size(4);
     display: block;
     text-decoration: none;
-    padding: $size-small $size-medium;
+    padding: $tab-padding ($tab-padding * 2);
     border: solid transparent;
     border-bottom-color: $color-fsa-tertiary-200;
     border-width: $size-base 1px 1px;
@@ -70,20 +77,33 @@
         color: $color-fsa-tertiary-300;
         font-size: 24px;
         line-height: 1;
-        margin-left: $size-small;
+        margin-left: $tab-padding;
       }
     }
 
     &--small {
+
       @include font-size(3);
+      padding-left: ($tab-padding + $size-base);
+      padding-right: ($tab-padding + $size-base);
+
     }
 
     &--large {
+
       @include font-size(5);
+      padding-left: ($tab-padding * 3);
+      padding-right: ($tab-padding * 3);
+
     }
 
     &--contrast {
       background-color: $color-fsa-white;
+    }
+
+    .pcp-content-tabs--justified & {
+      padding-left: ($tab-padding / 2);
+      padding-right: ($tab-padding / 2);
     }
 
   }
