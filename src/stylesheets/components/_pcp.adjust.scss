@@ -1,3 +1,4 @@
+
 .pcp-adjust {
 
   $padding: $size-base;
@@ -36,11 +37,9 @@
 
     @include font-size(2);
 
-    text-align: right;
-    padding: $padding;
+    padding: $padding ($padding * 2);
 
     &--first {
-      text-align: left;
       padding-left: ($padding * 3);
     }
 
@@ -52,36 +51,33 @@
 
       background-color: $color-fsa-site-bg;
       padding-left: ($padding * 3);
-      text-align: left;
 
       &.pcp-adjust__th--last,
       &.pcp-adjust__td--last {
-        padding-left: $padding;
-        text-align: right;
-        padding-right: $padding;
+        padding-left: 0;
+        padding-right: ($padding * 2);
       }
 
       &.pcp-adjust__th--last {
-        text-align: center;
       }
 
-      & + & {
-        padding-left: 0;
-        padding-right: ($padding * 3);
-      }
+    }
 
+    &--number {
+      text-align: right;
     }
 
     &--bisect {
       border-right: 1px solid $color-fsa-tertiary-200;
       padding-right: ($padding * 3);
+      padding-left: 0;
     }
 
   }
 
   &__th {
 
-    @include font-size(0);
+    font-size: $font-size-0 - .1rem;
     padding-top: $padding * 2;
     text-transform: uppercase;
 
@@ -94,7 +90,7 @@
     &--adj {}
 
     &--editable {
-      padding-left: $padding;
+      padding-left: ($padding * 2);
     }
 
   }

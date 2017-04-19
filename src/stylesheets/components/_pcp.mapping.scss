@@ -9,7 +9,7 @@
   }
 }
 
-$mapPanelWidth: ($size-base * 66);
+$mapPanelWidth: ($size-base * 75);
 $mapPanelIconHeight: $size-large;
 $mapPanelIconWidth: $size-medium;
 
@@ -256,7 +256,7 @@ $mapPanelIconWidth: $size-medium;
 
     display: none;
     position: absolute;
-    left: 292px;
+    left: $mapPanelWidth + $size-medium;
     bottom: $size-medium;
     width: 220px;
 
