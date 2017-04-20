@@ -323,10 +323,10 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
   if ($self.hasClass('pcp-spinbox__btn--increment')) {
     newAdjAmt = currentValue + stepAmt;
-    $target.val(newAdjAmt.toFixed(2));
+    $target.val(newAdjAmt.toFixed(2)).trigger('change');
   } else { // pcp-spinbox__btn--decrement
     newAdjAmt = currentValue - stepAmt;
-    $target.val(newAdjAmt.toFixed(2));
+    $target.val(newAdjAmt.toFixed(2)).trigger('change');
   }
 
 })
