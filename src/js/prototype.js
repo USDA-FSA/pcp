@@ -402,10 +402,14 @@ $('body').on('change', '[data-behavior~="spinbox-demo-change"]', function(event)
   }
 
   // ---------------------------------------------------------------------------
-  thisAmt = parseFloat($self.val());
+  thisAmt = parseFloat($self.val()).toFixed(2);
 
-  if (thisAmt == '0') {
+  if ($.isNumeric(thisAmt)) {
+    $self.val(thisAmt);
+    console.log('yup, IS a number');
+  } else {
     $self.val('0.00');
+    console.log('nope, NOT a number');
   }
 
 });
