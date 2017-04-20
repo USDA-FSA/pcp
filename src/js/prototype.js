@@ -321,15 +321,12 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
   console.log('"currentValue" is ' + currentValue + ' and "stepAmt" is ' + stepAmt);
 
-  // It better be  a valid number. I didn't get around do doing this
-  // if (isNaN(number)){
-  //   ...
-  // }
-
   if ($self.hasClass('pcp-spinbox__btn--increment')) {
-    $target.val(currentValue + stepAmt);
-  } else {
-    $target.val(currentValue - stepAmt);
+    newAdjAmt = currentValue + stepAmt;
+    $target.val(newAdjAmt.toFixed(2)).trigger('change');
+  } else { // pcp-spinbox__btn--decrement
+    newAdjAmt = currentValue - stepAmt;
+    $target.val(newAdjAmt.toFixed(2)).trigger('change');
   }
 
 })
@@ -381,13 +378,38 @@ $('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
 
 })
 
-$('body').on('change', '[data-behavior~="spinbox-demo-change"]', function() {
+$('body').on('change', '[data-behavior~="spinbox-demo-change"]', function(event) {
 
+  // ---------------------------------------------------------------------------
   var $self = $(this);
-  thisAmt = parseFloat($self.val());
+  var $row = $self.closest('tr');
 
-  if (thisAmt == '0') {
+  // ---------------------------------------------------------------------------
+  currentChg = $row.find('.pcp-adjust__change-value');
+  stepAmt = parseFloat($self.attr('step'));
+  currentChgAmt = parseFloat(currentChg.html());
+
+  if ($.isNumeric(currentChgAmt)) {
+    newChgAmt = currentChgAmt + stepAmt;
+  } else {
+    newChgAmt = 0 + stepAmt;
+  }
+
+  if (newChgAmt == '0') {
+    currentChg.html('');
+  } else {
+    currentChg.html(newChgAmt.toFixed(2));
+  }
+
+  // ---------------------------------------------------------------------------
+  thisAmt = parseFloat($self.val()).toFixed(2);
+
+  if ($.isNumeric(thisAmt)) {
+    $self.val(thisAmt);
+    console.log('yup, IS a number');
+  } else {
     $self.val('0.00');
+    console.log('nope, NOT a number');
   }
 
 });
