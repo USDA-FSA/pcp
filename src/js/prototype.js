@@ -245,6 +245,27 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
 
 }
 
+function pcpDemoChangeChange(target) {
+
+  var $self = $(this);
+  var $component = $self.closest('.pcp-spinbox');
+  var $target = $('#' + target);
+  var $row = $target.closest('tr')
+
+  currentValue = parseFloat($target.html());
+  stepAmt = parseFloat($component.find('.pcp-spinbox__input').attr('step'));
+
+  $self.addClass('SADASDFASDFASDF');
+
+  // $row
+  //   .find($target)
+  //   .addClass('AASDFASDFASDFQWER')
+  // ;
+
+  // alert('currentValue is ' + currentValue + ' and stepAmt is ' + stepAmt);
+
+}
+
 $('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event) {
 
   var $self = $(this);
