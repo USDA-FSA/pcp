@@ -245,27 +245,6 @@ function pcpDemoDominantInteriorSwap(market_1, market_1_val, market_2, market_2_
 
 }
 
-function pcpDemoChangeChange(target) {
-
-  var $self = $(this);
-  var $component = $self.closest('.pcp-spinbox');
-  var $target = $('#' + target);
-  var $row = $target.closest('tr')
-
-  currentValue = parseFloat($target.html());
-  stepAmt = parseFloat($component.find('.pcp-spinbox__input').attr('step'));
-
-  $self.addClass('SADASDFASDFASDF');
-
-  // $row
-  //   .find($target)
-  //   .addClass('AASDFASDFASDFQWER')
-  // ;
-
-  alert('currentValue is ' + currentValue + ' and stepAmt is ' + stepAmt);
-
-}
-
 $('body').on('click', '[data-behavior~="DEMO-MAP-RIFT-DETAILS"]', function(event) {
 
   var $self = $(this);
@@ -342,15 +321,12 @@ $('body').on('click', '[data-behavior~="spinbox"]', function(event) {
 
   console.log('"currentValue" is ' + currentValue + ' and "stepAmt" is ' + stepAmt);
 
-  // It better be  a valid number. I didn't get around do doing this
-  // if (isNaN(number)){
-  //   ...
-  // }
-
   if ($self.hasClass('pcp-spinbox__btn--increment')) {
-    $target.val(currentValue + stepAmt);
-  } else {
-    $target.val(currentValue - stepAmt);
+    newAdjAmt = currentValue + stepAmt;
+    $target.val(newAdjAmt.toFixed(2));
+  } else { // pcp-spinbox__btn--decrement
+    newAdjAmt = currentValue - stepAmt;
+    $target.val(newAdjAmt.toFixed(2));
   }
 
 })
@@ -409,26 +385,20 @@ $('body').on('change', '[data-behavior~="spinbox-demo-change"]', function(event)
   var $row = $self.closest('tr');
 
   // ---------------------------------------------------------------------------
-  currentChg = $row.find('.pcp-adjust__td--editable span')
-  currentChgAmt = parseFloat(currentChg.html())
+  currentChg = $row.find('.pcp-adjust__change-value');
   stepAmt = parseFloat($self.attr('step'));
+  currentChgAmt = parseFloat(currentChg.html());
 
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  // IF currentChgAmt IS NaN, MAKE IT ZERO
-  currentChg.html(currentChgAmt - stepAmt);
+  if ($.isNumeric(currentChgAmt)) {
+    newChgAmt = currentChgAmt + stepAmt;
+  } else {
+    newChgAmt = 0 + stepAmt;
+  }
 
-  if (event.which == 38) {
-    // currentChg.html(currentChgAmt + stepAmt);
-    // console.log('You pressed UP arrow key');
-  } else if (event.which == 40) {
-    // currentChg.html(currentChgAmt - stepAmt);
-    // console.log('You pressed DOWN arrow key');
+  if (newChgAmt == '0') {
+    currentChg.html('');
+  } else {
+    currentChg.html(newChgAmt.toFixed(2));
   }
 
   // ---------------------------------------------------------------------------
