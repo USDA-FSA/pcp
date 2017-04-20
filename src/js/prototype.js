@@ -262,7 +262,7 @@ function pcpDemoChangeChange(target) {
   //   .addClass('AASDFASDFASDFQWER')
   // ;
 
-  // alert('currentValue is ' + currentValue + ' and stepAmt is ' + stepAmt);
+  alert('currentValue is ' + currentValue + ' and stepAmt is ' + stepAmt);
 
 }
 
@@ -402,9 +402,36 @@ $('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
 
 })
 
-$('body').on('change', '[data-behavior~="spinbox-demo-change"]', function() {
+$('body').on('change', '[data-behavior~="spinbox-demo-change"]', function(event) {
 
+  // ---------------------------------------------------------------------------
   var $self = $(this);
+  var $row = $self.closest('tr');
+
+  // ---------------------------------------------------------------------------
+  currentChg = $row.find('.pcp-adjust__td--editable span')
+  currentChgAmt = parseFloat(currentChg.html())
+  stepAmt = parseFloat($self.attr('step'));
+
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  // IF currentChgAmt IS NaN, MAKE IT ZERO
+  currentChg.html(currentChgAmt - stepAmt);
+
+  if (event.which == 38) {
+    // currentChg.html(currentChgAmt + stepAmt);
+    // console.log('You pressed UP arrow key');
+  } else if (event.which == 40) {
+    // currentChg.html(currentChgAmt - stepAmt);
+    // console.log('You pressed DOWN arrow key');
+  }
+
+  // ---------------------------------------------------------------------------
   thisAmt = parseFloat($self.val());
 
   if (thisAmt == '0') {
