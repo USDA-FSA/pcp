@@ -19,6 +19,14 @@
     }
   }
 
+  &--fixed {
+    table-layout: fixed;
+  }
+
+  &--middle td {
+    vertical-align: middle;
+  }
+
   &__row {
 
     &--inactive {
