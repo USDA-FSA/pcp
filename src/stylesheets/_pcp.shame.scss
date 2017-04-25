@@ -17,6 +17,13 @@
 // -----------------------------------------------------------------------------
 // PROJECT PROTOTYPE
 
+.TBD {
+  background-color: white;
+  border: 1px solid $color-fsa-tertiary-200;
+  padding: $size-default;
+  text-align: center;
+}
+
 .pcp-marker-demo {
   position: relative;
 }
@@ -27,18 +34,19 @@
 
     width: 30rem;
     position: fixed;
-    right: 0;
+    right: $size-default;
     bottom: -16px;
     background-color: white;
     border: 2px solid $color-fsa-tertiary-200;
     border-top: 4px solid $color-fsa-tertiary;
-    border-right-width: 0;
     border-bottom-width: 0;
     margin-bottom: 0;
     padding-right: $size-small;
     padding-bottom: $size-small;
     padding-left: $size-default;
     z-index: 9999999;
+    max-height: 80vh;
+    overflow: auto;
 
     &:hover {
       bottom: 0;
