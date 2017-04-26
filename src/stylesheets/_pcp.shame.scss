@@ -119,10 +119,13 @@
   @include reset-ul();
 
   @include breakpoint(M) {
-    columns: 4;
+
+    columns: 5;
+
     .pcp-prototype-index--docked & {
       columns: 1;
     }
+
   }
 
   &--go-home {
