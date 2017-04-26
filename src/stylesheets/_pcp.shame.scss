@@ -49,13 +49,21 @@
 .pcp-prototype-index {
 
   &__title {
+
     line-height: 1;
-    font-size: $font-size-4;
+    font-size: $font-size-3;
     font-family: $font-sans;
     font-weight: $font-bold;
-    background-color: $color-fsa-tertiary-100;
+    background-color: $color-fsa-secondary-100;
     margin: (-$size-small) (-$size-small) $size-default;
     padding: $size-small;
+    position: sticky;
+    top: (-$size-small);
+
+    .pcp-prototype-home & {
+      display: none;
+    }
+
   }
 
   &--docked {
@@ -67,7 +75,7 @@
     @include breakpoint(L) {
 
       background-color: white;
-      border: 1px solid $color-fsa-tertiary;
+      border: 1px solid $color-fsa-secondary;
       border-top-width: $size-base;
       border-bottom-width: 0;
       padding: $size-small;
@@ -77,7 +85,7 @@
       right: $size-medium;
       max-height: 70vh;
       overflow: auto;
-      top: calc(100% - 40px);
+      top: calc(100% - 36px);
       z-index: 9999999;
 
       &:hover {
@@ -94,7 +102,8 @@
 .pcp-prototype-title {
 
   font-family: $font-sans;
-  border-top: 2px solid $color-fsa-tertiary-200;
+  border-top: 2px solid $color-fsa-secondary-900;
+  font-weight: $font-normal;
 
   .pcp-prototype-index--docked & {
     @include h3();
