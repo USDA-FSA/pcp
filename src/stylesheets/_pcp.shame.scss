@@ -78,6 +78,7 @@
       max-height: 70vh;
       overflow: auto;
       top: calc(100% - 40px);
+      z-index: 9999999;
 
       &:hover {
         top: auto;
