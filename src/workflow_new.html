@@ -1,0 +1,92 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Mapping' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Start a new workflow</h1>
+
+        <form action="markets_edit-error.html">
+          <fieldset>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="lorem_effective-date">Effective Date</label>
+              <select class="fsa-select fsa-field__item" name="lorem_effective-date" id="lorem_effective-date">
+                <option selected="selected">April 28, 2017</option>
+                <option>May 1, 2017</option>
+                <option>May 2, 2017</option>
+                <option>May 3, 2017</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="lorem_organizer">Organizer</label>
+              <select class="fsa-select fsa-field__item" name="lorem_organizer" id="lorem_organizer">
+                <optgroup label="Approvers">
+                  <option selected="">Diane Chambers</option>
+                  <option>Rebecca Howe</option>
+                </optgroup>
+                <optgroup label="Marketing Specialists">
+                  <option>Woody Boyd</option>
+                  <option>Ernie Pantusso</option>
+                  <option>Sam Malone</option>
+                  <option>Carla Tortelli</option>
+                  <option>Norm Peterson</option>
+                  <option>Cliff Clavin</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="fsa-field">
+              <label class="fsa-field__label" for="lorem_notices">Notes</label>
+              <textarea class="fsa-textarea fsa-field__item" name="lorem_notices" id="lorem_notices" placeholder="Placeholder">Mapping meeting may be earlier today due to possible inclement weather may. Closing most likely begins at 10am.</textarea>
+            </div>
+
+            <div class="fsa-field">
+              <button class="fsa-btn fsa-btn--primary" type="submit">Save</button>
+              <button class="fsa-btn fsa-btn--alt" type="button">Cancel</button>
+            </div>
+
+          </fieldset>
+        </form>
+
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+  {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
+
+  <div class="pcp-growl-container pcp-growl-container--hidden">
+    {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
+    {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
+  </div>
+  <div class="pcp-growl-container pcp-growl-container--centered pcp-growl-container--hidden">
+    {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+  </div>
+
+</body>
+
+</html>

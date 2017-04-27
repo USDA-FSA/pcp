@@ -84,11 +84,12 @@
       position: fixed;
       right: $size-medium;
       max-height: 70vh;
-      overflow: auto;
+      overflow: hidden;
       top: calc(100% - 36px);
       z-index: 9999999;
 
       &:hover {
+        overflow: auto;
         top: auto;
         bottom: 0;
       }
@@ -106,7 +107,8 @@
   font-weight: $font-normal;
 
   .pcp-prototype-index--docked & {
-    @include h3();
+    @include h4();
+    text-transform: uppercase;
     margin-top: .5em;
     bottom: 0;
     font-weight: $font-bold;
