@@ -50,7 +50,7 @@
 
     &:hover {
       span {
-        box-shadow: 0 -6px 0 0 $color-fsa-secondary inset;
+        box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
       }
     }
 
@@ -58,11 +58,11 @@
 
       &:link,
       &:visited {
-        color: $color-fsa-primary-900;
+        color: $color-fsa-secondary-900;
       }
 
       span {
-        box-shadow: 0 -6px 0 0 $color-fsa-primary-900 inset;
+        box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
       }
 
     }

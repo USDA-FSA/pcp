@@ -12,6 +12,7 @@
 
   <header>
     {% include: 'includes/pcp-header.html' %}
+    {% include: 'includes/pcp-nav-global__settings.html' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -20,9 +21,9 @@
 
       <div class="pcp-section__bd">
 
-        <h1>Add Commodity</h1>
+        <h1>Add [market || commodity]</h1>
 
-        <form action="markets_add-success.html">
+        <form action="settings_markets__add-success.html">
           <fieldset>
             <div class="fsa-field">
               <label class="fsa-field__label" for="commodity-name">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
