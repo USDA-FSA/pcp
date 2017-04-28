@@ -1,6 +1,6 @@
 {% include: 'includes/html.html' %}
 
-{% include: 'includes/head.html' @title:'Mapping' %}
+{% include: 'includes/head.html' @title:'Discovery > GLF' %}
 
 <body class="pcp-app">
 
@@ -27,7 +27,19 @@
 
         {% include: 'includes/pcp-title-action-bar__no-action.html' @title:'GLF' %}
 
-        {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
+        <div class="fsa-field">
+          <label class="fsa-field__label" for="sample-field">[label] <span class="fsa-field__label-desc">Required</span></label>
+          <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="sample-field" name="sample-field" type="text" value="">
+          <span class="fsa-field__help">[helpful message]</span>
+          <span class="fsa-field__message" id="sample-field__error-message-01" role="alert">[helpful error message]</span>
+        </div>
+
+        <div class="fsa-field">
+          <a class="fsa-btn fsa-btn--primary" href="workflow_discovery.html">Save</a>
+          <a type="button" class="fsa-btn fsa-btn--alt" type="reset" href="workflow_discovery.html">Cancel</a>
+        </div>
+
+        {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 10vh; padding-bottom: 10vh;' %}
 
       </div>
 
