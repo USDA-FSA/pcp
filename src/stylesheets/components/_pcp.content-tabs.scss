@@ -49,7 +49,7 @@
     @include font-size(4);
     display: block;
     text-decoration: none;
-    padding: $tab-padding ($tab-padding * 2);
+    padding: $tab-padding ($tab-padding * 2) ($tab-padding + $size-base) ;
     border: solid transparent;
     border-bottom-color: $color-fsa-tertiary-200;
     border-width: $size-base 1px 1px;
@@ -83,8 +83,9 @@
     &--small {
 
       @include font-size(3);
-      padding-left: ($tab-padding + $size-base);
-      padding-right: ($tab-padding + $size-base);
+
+      padding: ($tab-padding - $size-base) ($tab-padding + $size-base) $tab-padding ;
+
 
     }
 
