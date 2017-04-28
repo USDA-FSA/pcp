@@ -133,6 +133,8 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
     .attr('aria-hidden','false')
   ;
 
+  return false;
+
 })
 
 $('body').on('click', '[data-behavior~="close-modal"]', function(event) {

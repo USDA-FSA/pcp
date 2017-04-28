@@ -44,11 +44,32 @@
       <div class="fsa-modal__content">
         <button class="fsa-modal__close" data-behavior="close-modal"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
         <h1 class="fsa-modal__title">Add [thing]</h1>
-        <p class="fsa-text--lead">Lorem ipsum dolor sit amet, nesciunt perferendis fugiat ipsam cam, officiis perspiciatis uidem accusamus earum.</p>
+        <p class="fsa-text--lead">Lorem ipsum dolor sit amet perferendis fugiat ipsam cam, officiis perspiciatis uidem accusamus earum.</p>
         {% include: 'includes/settings__add-thing.html' %}
       </div>
     </div>
   </div>
+
+  <div id="UNIQUE-ID-125DGYU85" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
+    <div class="fsa-modal__dialog">
+      <div class="fsa-modal__content">
+        <button class="fsa-modal__close" data-behavior="close-modal"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
+        <h1 class="fsa-modal__title">Edit [thing]</h1>
+        <p class="fsa-text--lead">Lorem ipsum dolor sit amet perferendis fugiat ipsam cam, officiis perspiciatis uidem accusamus earum.</p>
+        {% include: 'includes/settings__edit-thing.html' %}
+      </div>
+    </div>
+  </div>
+
+  {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
+
+  <div class="pcp-growl-container pcp-growl-container--hidden">
+    {% include: 'includes/growl_add-success.html' @ID:'unique-id-6367838372389' %}
+  </div>
+  <div class="pcp-growl-container pcp-growl-container--hidden pcp-growl-container--centered">
+    {% include: 'includes/growl_edit-error.html' @ID:'unique-id-HSHHS73737732' %}
+  </div>
+
 
 </body>
 
