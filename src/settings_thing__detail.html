@@ -11,7 +11,7 @@
   {% include: 'includes/fsa-disclaimer.html' %}
 
   <header>
-    {% include: 'includes/pcp-header.html' %}
+    {% include: 'includes/pcp-header__profile-only.html' %}
     {% include: 'includes/pcp-nav-global__settings.html' %}
   </header>
 
@@ -44,7 +44,7 @@
             <div class="fsa-field">
               <span class="fsa-field__label">Markets <span class="fsa-field__label-desc">Required</span></span>
               <div class="fsa-field__item">
-                {% include: 'includes/select-multi_markets--checked.html' %}
+                {% include: 'includes/select-multi_markets--checked.html' @UNIQUE_ID:'thingathinga' %}
               </div>
             </div>
             <div class="fsa-field">

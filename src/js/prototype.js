@@ -122,6 +122,33 @@ $('body').on('click', '[data-behavior~="whiteout-show"]', function(event) {
   $('#pcp-whiteout').removeClass('pcp-whiteout--hidden');
 })
 
+$('body').on('click', '[data-behavior~="open-modal"]', function(event) {
+
+  var $self = $(this)
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetClose = $target.find('.fsa-modal__close');
+
+  $target
+    .addClass('fsa-modal--active')
+    .attr('aria-hidden','false')
+  ;
+
+  return false;
+
+})
+
+$('body').on('click', '[data-behavior~="close-modal"]', function(event) {
+
+  var $self = $(this)
+  var $component = $self.closest('.fsa-modal')
+
+  $component
+    .removeClass('fsa-modal--active')
+    .attr('aria-hidden','true')
+  ;
+
+})
+
 $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 
   var $self = $(this);
