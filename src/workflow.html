@@ -1,6 +1,6 @@
 {% include: 'includes/html.html' %}
 
-{% include: 'includes/head.html' @title:'Posted County Prices' %}
+{% include: 'includes/head.html' @title:'Mapping' %}
 
 <body class="pcp-app">
 
@@ -12,7 +12,7 @@
 
   <header>
     {% include: 'includes/pcp-header.html' %}
-    {% include: 'includes/pcp-nav-global__home.html' %}
+    {% include: 'includes/pcp-nav-global__workflow.html' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -21,9 +21,12 @@
 
       <div class="pcp-section__bd">
 
-        <h1>[home]</h1>
+        <h1>[title]</h1>
+
+        <p><a href="workflow_new.html">Start a new workflow</a></p>
 
         {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
+
 
       </div>
 

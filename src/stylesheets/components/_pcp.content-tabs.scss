@@ -11,7 +11,6 @@
     display: table;
     list-style: none;
     width: auto;
-    flex: 1;
 
     // scss-lint:disable SelectorFormat
     .pcp-content-tabs--justified & {
@@ -28,7 +27,7 @@
   &__aside {
 
     display: block;
-    flex: 10;
+    flex: 1;
     content: '';
     border-bottom: 1px solid $color-fsa-tertiary-200;
 

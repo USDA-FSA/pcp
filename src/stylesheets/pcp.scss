@@ -9,11 +9,16 @@
 // PCP Layouts
 @import 'layouts/pcp.section';
 
+// PCP Elements
+@import 'elements/pcp.typography';
+@import 'elements/pcp.icon-TEMP';
+
 // PCP Components
 @import 'components/pcp.disclaimer';
 ///////////////////////////////////////
 @import 'components/pcp.brand';
 @import 'components/pcp.header';
+@import 'components/pcp.nav-global';
 @import 'components/pcp.popover';
 ///////////////////////////////////////
 @import 'components/pcp.footer-TEMP';
@@ -33,9 +38,6 @@
 @import 'components/pcp.content-tabs';
 @import 'components/pcp.stepped-tabs';
 @import 'components/pcp.highlight';
-
-// PCP Elements
-@import 'elements/pcp.icon-TEMP';
 
 // PCP Shame
 @import 'pcp.shame';
