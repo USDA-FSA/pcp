@@ -405,6 +405,19 @@ $('body').on('blur', '.pcp-spinbox__input, .pcp-spinbox__btn', function(event) {
 
 })
 
+$('body').on('change', '[data-behavior~="other-effective-date"]', function(event) {
+
+  var $self = $(this);
+  var $otherDate = $self.find('[data-other-date]');
+
+  if ($otherDate.is(':selected')) {
+    alert('other is selected');
+  } else {
+    alert('one of the actual dates is selected');
+  }
+
+});
+
 $('body').on('change', '[data-behavior~="spinbox-demo-change"]', function(event) {
 
   // ---------------------------------------------------------------------------
