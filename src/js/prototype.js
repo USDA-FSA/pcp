@@ -126,10 +126,10 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
 
   var $self = $(this)
   var $target = $('#' + $self.attr('data-target'));
-  var $targetClose = $target.find('.fsa-modal__close');
+  var $targetClose = $target.find('.pcp-modal__close');
 
   $target
-    .addClass('fsa-modal--active')
+    .addClass('pcp-modal--active')
     .attr('aria-hidden','false')
   ;
 
@@ -140,10 +140,10 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
 $('body').on('click', '[data-behavior~="close-modal"]', function(event) {
 
   var $self = $(this)
-  var $component = $self.closest('.fsa-modal')
+  var $component = $self.closest('.pcp-modal')
 
   $component
-    .removeClass('fsa-modal--active')
+    .removeClass('pcp-modal--active')
     .attr('aria-hidden','true')
   ;
 
