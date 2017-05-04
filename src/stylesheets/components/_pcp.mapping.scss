@@ -27,6 +27,7 @@ $mapPanelIconWidth: $size-medium;
     bottom: 0;
     left: 0;
     background-color: $color-fsa-site-bg;
+    z-index: 2;
   }
 
   // ---------------------------------------------------------------------------
@@ -181,8 +182,6 @@ $mapPanelIconWidth: $size-medium;
 
     overflow: auto;
     min-height: 124px;
-
-    border-top: 1px solid $color-fsa-tertiary-200;
 
     @supports (position: sticky) {
       border-top: 0;

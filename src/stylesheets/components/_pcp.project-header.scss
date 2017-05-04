@@ -7,11 +7,12 @@
   text-align: center;
 
   &--project {
-    border-top: 4px solid $color-fsa-tertiary;
-    background-color: $color-fsa-tertiary-200;
-    color: $color-fsa-tertiary;
+    border-top: 4px solid $color-fsa-secondary-300;
+    background-color: $color-fsa-secondary-100;
+    color: $color-fsa-secondary;
     text-align: left;
-    font-size: $font-size-5;
+    font-size: $font-size-3;
+    font-weight: $font-bold;
   }
 
   &__bd {
@@ -22,7 +23,7 @@
     padding: $size-medium 0;
 
     .pcp-header-TEMP--project & {
-      padding: $size-base 0;
+      padding: $size-small 0;
     }
 
   }

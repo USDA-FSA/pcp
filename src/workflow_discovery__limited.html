@@ -1,0 +1,54 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Mapping' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header__profile-only.html' %}
+    {% include: 'includes/pcp-nav-global__workflow.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        {% include: 'includes/pcp-stepped-tabs__discovery.html' %}
+
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' %}
+
+        {% include: 'includes/table_assignments__limited.html' %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+  {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
+
+  <div class="pcp-growl-container pcp-growl-container--hidden">
+    {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
+    {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
+  </div>
+  <div class="pcp-growl-container pcp-growl-container--centered pcp-growl-container--hidden">
+    {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+  </div>
+
+</body>
+
+</html>

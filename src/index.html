@@ -2,7 +2,7 @@
 
 {% include: 'includes/head.html' @title:'Prototype' %}
 
-<body class="pcp-app">
+<body class="pcp-app pcp-prototype-home">
 
   {% include: 'includes/fsa-browser-upgrade.html' %}
 
@@ -18,9 +18,49 @@
 
       <div class="pcp-section__bd">
 
-        <!--  -->
-        {% include: 'includes/prototype-list.html' %}
-        <!--  -->
+        <h1>PCP-II</h1>
+
+        <p class="fsa-text--lead">UX Design and Prototyping for <strong>Posted County Prices - II</strong>.</p>
+
+        <div class="fsa-grid">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <dl>
+              <dt>Download</dt>
+              <dd>
+                <a href="https://sharepoint.fsa.usda.net/mgr/itsd/architecture/EA_Team/Shared Documents/ARCHITECTURE DOMAINS/LOB - Commodity Ops/PCP II Project/UX/Design/prototypes">
+                  [Sharepoint] / PCP II Project / UX / Design / prototypes /
+                </a>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Wireframes</dt>
+              <dd>
+                <a href="https://sharepoint.fsa.usda.net/mgr/itsd/architecture/EA_Team/Shared Documents/ARCHITECTURE DOMAINS/LOB - Commodity Ops/PCP II Project/UX/Design/deliverables/_published">
+                  [Sharepoint] / PCP II Project / UX / Design / deliverables / _published /
+                </a>
+              </dd>
+            </dl>
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <dl>
+              <dt>FSA Design System</dt>
+              <dd>
+                <a href="http://usda-fsa.github.io/fsa-design-system/?preview">http://usda-fsa.github.io/fsa-design-system/</a>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Architecture Office Contacts</dt>
+              <dd>
+                <ul class="fsa-list--unstyled">
+                  <li><a href="mailto:Francis.Rupert@kcc.usda.gov">Francis C. Rupert</a> - Lead UX Architect, <abbr title="Architecture Office">AO</abbr></li>
+                  <li><a href="mailto:Joseph.Pallucca@kcc.usda.gov">Joe Pallucca</a> - Project Manager, <abbr title="Architecture Office">AO</abbr></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+
+        {% include: 'includes/prototype-list.html' @class:' ' %}
 
       </div>
 

@@ -1,0 +1,54 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Mapping' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header__profile-only.html' %}
+    {% include: 'includes/pcp-nav-global__settings.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Settings</h1>
+
+        {% include: 'includes/pcp-content-tabs__settings__market-combos.html' %}
+        {% include: 'includes/table-header_no-header.html' @title:'Combos' @link:'settings_thing__add.html' %}
+        {% include: 'includes/table_markets.html' %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-TEMP.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+  {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
+
+  <div class="pcp-growl-container pcp-growl-container--hidden">
+    {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
+    {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
+  </div>
+  <div class="pcp-growl-container pcp-growl-container--centered pcp-growl-container--hidden">
+    {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+  </div>
+
+</body>
+
+</html>

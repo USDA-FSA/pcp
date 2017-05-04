@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// PROJECT PROTOTYPE
+// TO BE SORTED
 
 .sr-only {
   @include sr-only();
@@ -10,62 +10,26 @@
   overflow-wrap: break-word;
 }
 
+.pcp-text--300 {
+  color: $color-fsa-tertiary-300;
+}
+
 // -----------------------------------------------------------------------------
 // PROJECT PROTOTYPE
 
-.pcp-marker-demo {
-  position: relative;
+.TBD {
+  background-color: white;
+  border: 1px solid $color-fsa-tertiary-200;
+  padding: $size-default;
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+  color: $color-fsa-tertiary-100;
+  text-shadow: -1px -1px 0 $color-fsa-tertiary-200;
 }
 
-.pcp-prototype-list {
-
-  @include breakpoint(M) {
-
-    width: 274px;
-    position: fixed;
-    right: 0;
-    bottom: -16px;
-    background-color: white;
-    border: 2px solid $color-fsa-tertiary-200;
-    border-top: 4px solid $color-fsa-tertiary;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    margin-bottom: 0;
-    padding-right: $size-small;
-    padding-bottom: $size-small;
-    padding-left: $size-default;
-    z-index: 9999999;
-
-    &:hover {
-      bottom: 0;
-    }
-
-  }
-
-  @include breakpoint(M) {
-
-    li {
-      display: none;
-    }
-
-    &:hover li {
-      display: block;
-    }
-
-  }
-
-  &:before {
-    display: block;
-    content: attr(aria-label);
-    background-color: $color-fsa-tertiary-200;
-    font-weight: $font-bold;
-    font-size: $font-size-4;
-    margin-bottom: $size-small;
-    margin-left: -$size-default;
-    margin-right: -$size-small;
-    padding: $size-small;
-  }
-
+.pcp-marker-demo {
+  position: relative;
 }
 
 .pcp-code-block {
@@ -83,6 +47,120 @@
   }
 
 }
+
+.pcp-prototype-home {}
+
+.pcp-prototype-index {
+
+  &__title {
+
+    line-height: 1;
+    font-size: $font-size-3;
+    font-family: $font-sans;
+    font-weight: $font-bold;
+    background-color: $color-fsa-secondary-100;
+    margin: (-$size-small) (-$size-small) $size-default;
+    padding: $size-small;
+    position: sticky;
+    top: (-$size-small);
+
+    .pcp-prototype-home & {
+      display: none;
+    }
+
+  }
+
+  &--docked {
+
+    .pcp-prototype-home & {
+      display: none;
+    }
+
+    @include breakpoint(L) {
+
+      background-color: white;
+      border: 1px solid $color-fsa-secondary;
+      border-top-width: $size-base;
+      border-bottom-width: 0;
+      padding: $size-small;
+
+      width: 320px;
+      position: fixed;
+      right: $size-medium;
+      max-height: 70vh;
+      overflow: hidden;
+      top: calc(100% - 36px);
+      z-index: 9999999;
+
+      &:hover {
+        overflow: auto;
+        top: auto;
+        bottom: 0;
+      }
+
+    }
+
+  }
+
+}
+
+.pcp-prototype-title {
+
+  font-family: $font-sans;
+  border-top: 2px solid $color-fsa-secondary-900;
+  font-weight: $font-normal;
+
+  .pcp-prototype-index--docked & {
+    @include h4();
+    text-transform: uppercase;
+    margin-top: .5em;
+    bottom: 0;
+    font-weight: $font-bold;
+  }
+
+}
+
+.pcp-prototype-listing {
+
+  @include reset-ul();
+
+  @include breakpoint(M) {
+
+    columns: 4;
+
+    .pcp-prototype-index--docked & {
+      columns: 1;
+    }
+
+  }
+
+  &--go-home {
+
+    display: none;
+
+    .pcp-prototype-index--docked & {
+      display: block;
+    }
+
+  }
+
+  &__u {
+
+    @include reset-li();
+    margin-bottom: $size-small;
+
+    @include breakpoint(M) {
+      display: inline-block;
+      width: 100%;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+  }
+
+}
+
 
 // -----------------------------------------------------------------------------
 // BROWSER SYNC

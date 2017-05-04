@@ -11,7 +11,8 @@
   {% include: 'includes/fsa-disclaimer.html' %}
 
   <header>
-    {% include: 'includes/pcp-header.html' %}
+    {% include: 'includes/pcp-header__profile-only.html' %}
+    {% include: 'includes/pcp-nav-global__workflow.html' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -22,7 +23,7 @@
 
         {% include: 'includes/pcp-stepped-tabs__mapping.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Adjustments' @action:'Finalize' %}
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Adjustments' @action:'Finalize' @link:'workflow_publish.html' %}
 
         {% include: 'includes/pcp-mapping.html' %}
 

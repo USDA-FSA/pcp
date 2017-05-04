@@ -1,33 +1,33 @@
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
-// None of this is production-quality.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
+// None of this is production-quality. Do not use for production. Use as inspiration and guidance for yours.
 
 function hasNumbers(t) {
   return /\d/.test(t);
@@ -120,6 +120,44 @@ $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
 
 $('body').on('click', '[data-behavior~="whiteout-show"]', function(event) {
   $('#pcp-whiteout').removeClass('pcp-whiteout--hidden');
+})
+
+$('body').on('click', '[data-behavior~="open-modal"]', function(event) {
+
+  var $self = $(this)
+  var $target = $('#' + $self.attr('data-target'));
+
+  $self.attr('data-modal-origin','');
+
+  $target
+    .addClass('pcp-modal--active')
+    .attr('aria-hidden','false')
+  ;
+
+  setTimeout(function() {
+    $target.focus();
+  }, 200);
+
+  return false;
+
+})
+
+$('body').on('click', '[data-behavior~="close-modal"]', function(event) {
+
+  var $self = $(this)
+  var $component = $self.closest('.pcp-modal')
+  var $origin = $('body').find('[data-modal-origin]');
+
+  $component
+    .removeClass('pcp-modal--active')
+    .attr('aria-hidden','true')
+  ;
+
+  $origin
+    .focus()
+    .removeAttr('data-modal-origin')
+  ;
+
 })
 
 $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {

@@ -1,0 +1,64 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Component' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header-project.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Component: Modal</h1>
+
+        <pre class="pcp-code-block"><code>class="<strong style="color:black">pcp-modal pcp-modal--[variation]</strong>"</code></pre>
+
+        <div class="fsa-grid">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="pcp-prototype-title">Variations</h2>
+            <p>
+              <button data-behavior="open-modal" data-target="UNIQUE-ID-GGFD36765SSSGH" type="button">Default</button>
+              <button data-behavior="open-modal" data-target="UNIQUE-ID-2345SFGER99786" type="button">Top</button>
+              <button data-behavior="open-modal" data-target="UNIQUE-ID-23458CF9J99DIS" type="button">Small</button>
+              <button data-behavior="open-modal" data-target="UNIQUE-ID-23458CF77S77S7" type="button">Large</button>
+              <button data-behavior="open-modal" data-target="UNIQUE-ID-23451CF80S77S9" type="button">Fullscreen</button>
+            </p>
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="pcp-prototype-title">As seen on</h2>
+            <ul>
+              <li><a href="settings_commodities.html">Settings</a> (Click "Add" or "California Central Coast")</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-project.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+  {% include: 'includes/pcp-modal_doc__default.html' %}
+  {% include: 'includes/pcp-modal_doc__top.html' %}
+  {% include: 'includes/pcp-modal_doc__small.html' %}
+  {% include: 'includes/pcp-modal_doc__large.html' %}
+  {% include: 'includes/pcp-modal_doc__fullscreen.html' %}
+
+</body>
+
+</html>
