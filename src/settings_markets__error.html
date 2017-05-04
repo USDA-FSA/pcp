@@ -4,8 +4,10 @@
 
 <body class="pcp-app">
 
-  <div class="pcp-growl-container">
-    {% include: 'includes/growl_add-success.html' %}
+  {% include: 'includes/whiteout.html' @CLASS:' ' %}
+
+  <div class="pcp-growl-container pcp-growl-container--centered">
+    {% include: 'includes/growl_edit-error.html' %}
   </div>
 
   {% include: 'includes/fsa-browser-upgrade.html' %}
@@ -15,7 +17,8 @@
   {% include: 'includes/fsa-disclaimer.html' %}
 
   <header>
-    {% include: 'includes/pcp-header.html' %}
+    {% include: 'includes/pcp-header__profile-only.html' %}
+    {% include: 'includes/pcp-nav-global__settings.html' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -24,7 +27,10 @@
 
       <div class="pcp-section__bd">
 
-        {% include: 'includes/table-header.html' @title:'Markets' %}
+        <h1>Settings</h1>
+
+        {% include: 'includes/pcp-content-tabs__settings__markets.html' %}
+        {% include: 'includes/table-header_no-header.html' @title:'Markets' @link:'settings_thing__add.html' %}
         {% include: 'includes/table_markets.html' %}
 
       </div>
