@@ -48,10 +48,13 @@
 
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
+
       span {
         box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
       }
+
     }
 
     &--active {

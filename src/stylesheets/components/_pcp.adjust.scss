@@ -30,6 +30,7 @@
     margin: 0;
     table-layout: fixed;
     min-width: ($mapPanelWidth * .9);
+    border-bottom: 1px solid $color-fsa-tertiary-200;
   }
 
   &__th,

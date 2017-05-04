@@ -1,5 +1,5 @@
 
-.fsa-modal {
+.pcp-modal {
 
   will-change: visibility, opacity;
   display: flex;
@@ -24,7 +24,8 @@
     opacity: 1;
   }
 
-  &--top {
+  &--top,
+  &--fullscreen {
     align-items: flex-start;
   }
 
@@ -39,8 +40,30 @@
     }
 
     @include breakpoint(L) {
-      padding: ($size-extra-large * 2) $size-medium;
+      padding: ($size-large * 2) $size-medium;
       max-width: 640px;
+    }
+
+    .pcp-modal--small & {
+
+      @include breakpoint(M) {
+        max-width: 400px;
+      }
+
+    }
+
+    .pcp-modal--large & {
+      max-width: $site-max-width;
+    }
+
+    .pcp-modal--fullscreen & {
+
+      padding-top: $size-medium;
+
+      @include breakpoint(L) {
+        max-width: 100%;
+      }
+
     }
 
   }
