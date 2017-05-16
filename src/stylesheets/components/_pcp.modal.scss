@@ -34,6 +34,7 @@
     padding: $size-default;
     position: relative;
     width: 100%;
+    max-height: 100%;
 
     @include breakpoint(M) {
       padding: $size-medium;
@@ -44,6 +45,7 @@
       max-width: 640px;
     }
 
+    // scss-lint:disable SelectorFormat
     .pcp-modal--small & {
 
       @include breakpoint(M) {
