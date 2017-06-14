@@ -104,7 +104,10 @@
 
 }
 
+// scss-lint:disable QualifyingElement SelectorFormat
 td.pcp-table__cell--bisect,
 th.pcp-table__cell--bisect {
-  border-right: 1px solid $color-fsa-tertiary-200;
+  @include breakpoint(M) {
+    border-right: 1px solid $color-fsa-tertiary-200;
+  }
 }
