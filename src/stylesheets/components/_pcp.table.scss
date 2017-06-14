@@ -23,6 +23,7 @@
     table-layout: fixed;
   }
 
+  &--middle th,
   &--middle td {
     vertical-align: middle;
   }
@@ -48,7 +49,21 @@
 
   }
 
-  &__cell {}
+  &__th {
+
+    font-weight: $font-bold;
+
+    &--pair {
+      // scss-lint:disable ImportantRule
+      border-bottom: 0 !important; // refactor to remove important
+      padding-bottom: 0 !important; // refactor to remove important
+    }
+
+    &--sub {
+      font-weight: $font-normal;
+    }
+
+  }
 
   &__sort {
 
@@ -75,24 +90,21 @@
       margin-left: 4px;
     }
 
-    &--up {}
-
-    &--down {}
-
-    &--up {
-      &:after {
-        background-image: url('../img/chevron-up.png');
-        background-image: url('../img/chevron-up.svg');
-      }
+    &--up:after {
+      background-image: url('../img/chevron-up.png');
+      background-image: url('../img/chevron-up.svg');
     }
 
-    &--down {
-      &:after {
-        background-image: url('../img/chevron-down.png');
-        background-image: url('../img/chevron-down.svg');
-      }
+    &--down:after {
+      background-image: url('../img/chevron-down.png');
+      background-image: url('../img/chevron-down.svg');
     }
 
   }
 
+}
+
+td.pcp-table__cell--bisect,
+th.pcp-table__cell--bisect {
+  border-right: 1px solid $color-fsa-tertiary-200;
 }
