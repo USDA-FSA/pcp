@@ -49,12 +49,17 @@
     @include font-size(4);
     display: block;
     text-decoration: none;
-    padding: $tab-padding ($tab-padding * 2) ($tab-padding + $size-base) ;
-    border: solid transparent;
-    border-bottom-color: $color-fsa-tertiary-200;
-    border-width: $size-base 1px 1px;
+    padding: $tab-padding ($tab-padding * 2) ($tab-padding + $size-base);
+    border-bottom: 1px solid $color-fsa-tertiary-200;
     color: $color-fsa-base;
     text-align: center;
+    outline: 1px solid red;
+
+    span {
+      display: inline-block;
+      box-shadow: 0 $size-base 0 0 $color-fsa-secondary inset;
+      outline: 1px solid red;
+    }
 
     &:visited {
       color: inherit;
@@ -62,10 +67,6 @@
 
     &:hover {
       color: inherit;
-    }
-
-    &--active {
-      border-color: $color-fsa-secondary $color-fsa-tertiary-200 transparent;
     }
 
     &--unsaved {
@@ -84,7 +85,7 @@
 
       @include font-size(3);
 
-      padding: ($tab-padding - $size-base) ($tab-padding + $size-base) $tab-padding ;
+      padding: ($tab-padding - $size-base) ($tab-padding + $size-base) $tab-padding;
 
 
     }
@@ -101,6 +102,7 @@
       background-color: $color-fsa-white;
     }
 
+    // scss-lint:disable SelectorFormat
     .pcp-content-tabs--justified & {
       padding-left: ($tab-padding / 2);
       padding-right: ($tab-padding / 2);
