@@ -167,6 +167,21 @@ abbr[title], acronym[title], dfn[title] {
 
 }
 
+// -----------------------------------------------------------------------------
+// FAKING TAB CONTENT SWAP
+
+.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION {
+
+	&__ITEM {
+    display: none;
+	}
+
+	&__ITEM--ACTIVE {
+    display: block;
+	}
+
+}
+
 
 // -----------------------------------------------------------------------------
 // BROWSER SYNC

@@ -41,20 +41,8 @@
 
   {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
 
-  <div tabindex="0" id="UNIQUE-ID-415s5s4g5s4gf" class="pcp-modal pcp-modal--large pcp-modal--active" role="dialog" aria-hidden="true">
-    <div class="pcp-modal__dialog">
-      <div class="pcp-modal__content">
-        <button class="pcp-modal__close" data-behavior="close-modal"><img class="pcp-modal__close-icon" src="img/close.svg" alt="close"></button>
-        <h1 class="pcp-modal__title">Pacific Northwest - PNW</h1>
-        {% include: 'includes/pcp-content-tabs__price-discovery__pnw.html' %}
-        <p>
-          <button type="button" class="fsa-btn fsa-btn--primary fsa-btn--small">Save</button>
-          <button type="reset" class="fsa-btn fsa-btn--alt fsa-btn--small">Reset</button>
-        </p>
-        {% include: 'includes/program-entry__pnw.html' %}
-      </div>
-    </div>
-  </div>
+  {% include: 'includes/pcp-modal__entry-pnw.html' %}
+  {% include: 'includes/pcp-modal__entry-glf.html' %}
 
   <div class="pcp-growl-container pcp-growl-container--hidden">
     {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}

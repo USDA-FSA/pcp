@@ -108,6 +108,23 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
 
 })
 
+$('body').on('click', '[data-behavior~="button-to-disable"]', function(event) {
+
+  var $self = $(this);
+  $self.attr('disabled', true);
+
+})
+
+$('body').on('change', '[data-behavior~="modified-form"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('[data-component~="modified-form-target"]');
+  var $buttons = $component.find('[data-behavior~="button-to-disable"]')
+
+  $buttons.removeAttr('disabled');
+
+})
+
 $('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
   $('#pcp-whiteout').addClass('pcp-whiteout--hidden');
 })
@@ -188,6 +205,23 @@ $('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
     $targetPeers.removeClass('pcp-popover--visible');
     $target.addClass('pcp-popover--visible');
   }
+
+})
+
+$('body').on('click', '[data-behavior~="DEMO-FAKING-TAB-CONTENT-SWAP"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.pcp-content-tabs');
+  var $target = $($self.attr('href'));
+  var $selfPeers = $component.find('.pcp-content-tabs__label');
+  var $targetPeers = $target.siblings('.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM');
+
+  $selfPeers.removeClass('pcp-content-tabs__label--active');
+  $self.addClass('pcp-content-tabs__label--active');
+  $target.addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE');
+  $targetPeers.removeClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE');
+
+  return false;
 
 })
 
