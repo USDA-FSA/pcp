@@ -43,6 +43,7 @@
   &__item {
     display: table-cell;
     border-bottom: 1px solid $color-fsa-tertiary-200;
+    vertical-align: bottom;
   }
 
   &__label {
