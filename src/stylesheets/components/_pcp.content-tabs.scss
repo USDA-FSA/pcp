@@ -42,6 +42,7 @@
 
   &__item {
     display: table-cell;
+    border-bottom: 1px solid $color-fsa-tertiary-200;
   }
 
   &__label {
@@ -49,61 +50,80 @@
     @include font-size(4);
     display: block;
     text-decoration: none;
-    padding: $tab-padding ($tab-padding * 2) ($tab-padding + $size-base) ;
-    border: solid transparent;
-    border-bottom-color: $color-fsa-tertiary-200;
-    border-width: $size-base 1px 1px;
-    color: $color-fsa-base;
+    // color: $color-fsa-base;
     text-align: center;
+    color: $color-fsa-tertiary-300;
+    padding-right: ($tab-padding * 2);
+    padding-left: ($tab-padding * 2);
 
+    .pcp-content-tabs__item:first-child & {
+      padding-left: 0;
+    }
+
+    .pcp-content-tabs__item:last-child & {
+      padding-right: 0;
+    }
+
+    &:link,
     &:visited {
-      color: inherit;
+      color: $color-fsa-tertiary;
     }
 
     &:hover {
       color: inherit;
     }
 
-    &--active {
-      border-color: $color-fsa-secondary $color-fsa-tertiary-200 transparent;
-    }
-
-    &--unsaved {
-      &:after {
-        // content: '•';
-        content: '\2022';
-        // float: right;
-        color: $color-fsa-tertiary-300;
-        font-size: 24px;
-        line-height: 1;
-        margin-left: $tab-padding;
-      }
-    }
-
     &--small {
 
       @include font-size(3);
-
-      padding: ($tab-padding - $size-base) ($tab-padding + $size-base) $tab-padding ;
-
+      padding-left: ($tab-padding + $size-base);
+      padding-right: ($tab-padding + $size-base);
 
     }
 
     &--large {
 
       @include font-size(5);
-      padding-left: ($tab-padding * 3);
-      padding-right: ($tab-padding * 3);
 
     }
 
-    &--contrast {
-      background-color: $color-fsa-white;
-    }
-
+    // scss-lint:disable SelectorFormat
     .pcp-content-tabs--justified & {
       padding-left: ($tab-padding / 2);
       padding-right: ($tab-padding / 2);
+    }
+
+  }
+
+  &__label-text {
+
+    display: block;
+    padding-top: $tab-padding;
+    padding-bottom: ($tab-padding + $size-base);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 (-$size-base / 2) 0 0 $color-fsa-tertiary-300 inset;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .pcp-content-tabs__label--active & {
+      box-shadow: 0 (-$size-base) 0 0 $color-fsa-secondary inset;
+    }
+
+    .pcp-content-tabs__label--small & {
+      padding-top: ($tab-padding - $size-base);
+      padding-bottom: $tab-padding;
+    }
+
+    .pcp-content-tabs__label--unsaved &:after {
+      // content: '•';
+      content: '\2022';
+      // float: right;
+      color: $color-fsa-tertiary-300;
+      font-size: 24px;
+      line-height: 1;
+      margin-left: ($tab-padding * 2);
     }
 
   }
