@@ -20,8 +20,6 @@
 
         <h1>Component: Table</h1>
 
-        <p class="fsa-text--lead">Paired with <a href="component_table-header.html">Component: Table Header</a></p>
-
         <pre class="pcp-code-block"><code>class="fsa-table fsa-table--borderless fsa-table--responsive <strong style="color:black">pcp-table</strong>"</code></pre>
 
         <div class="fsa-grid">
@@ -30,6 +28,7 @@
             <ul>
               <li><a href="settings_commodities.html">settings_commodities.html</a></li>
               <li><a href="settings_roles.html">settings_roles.html</a></li>
+              <li><a href="workflow_discovery.html">workflow_discovery.html</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -50,6 +49,65 @@
         <h3 class="fsa-font--sans">Roles</h3>
 
         {% include: 'includes/table_roles.html' %}
+
+        <h3 class="fsa-font--sans">Assignments</h3>
+
+        {% include: 'includes/table_assignments.html' %}
+
+        <h3 class="fsa-font--sans">Entry</h3>
+
+        {% include: 'includes/program-entry__pnw.html' %}
+        {% include: 'includes/program-entry__glf.html' %}
+
+        <h2 class="pcp-prototype-title">Controlling column widths</h2>
+
+        <div style="max-width: 68ch;">
+          <p>Rather than styling specific widths (fixed or percentage values), use <code>&lt;colspan&gt;</code> to dictate column <strong>proportions</strong>. While <code>&lt;colspan&gt;</code> is primarily known for combining table cells, it's also a perfect tool for this purpose. The  most common reason for using this technique is when you want to align columns across multiple tables. </p>
+
+          <p>It's actually a very rarely known method, and I've only ever seen it at <a href="https://csswizardry.com/2013/11/taming-data-tables/">Taming data tables</a>. The below is an edited excerpt of that article.</p>
+
+          <p>The short version of this section is basically: <strong>we are setting up a grid system for our tables</strong>.</p>
+        </div>
+
+
+        <h3 class="fsa-font--sans">Taming data tables' columns</h3>
+
+        <div style="max-width: 68ch;">
+          <p>Think about page layouts that adhere to a grid system; you might have a 24 column grid, but your page might only have two main columns which span, say, 16 and 8 columns respectively (adding up to 24). You can’t <em>see</em> the 24 columns, but they’re there. You might then have a large footer broken into three columns of eight (again, adding up to 24).</p>
+
+          <p>We need to apply this model to <code>table</code>s; we shall give all <code>table</code>s 24 columns, and then use a generous amount of <code>colspan</code>s to knock our cells through into each other, into more useful layouts. Now every <code>table</code> we build will be based on a 24 column grid which will, firstly, make everything more consistent, and, secondly, it will make our maths <em>much</em> simpler. We just need to make sure every row’s <code>colspan</code> values add up to 24 every time.</p>
+
+          <p>This does mean that <em>every</em> cell in the <code>table</code> now has to carry a <code>colspan</code>, but as I said, this solution is a pragmatic one.</p>
+
+          <p>The reason we pick 24 is because it can take halves, thirds, quarters, sixths, eighths and twelfths; we can make a <em>lot</em> of layouts if we have 24 columns to play with.</p>
+
+          <p>Now, we would write this snippet:</p>
+        </div>
+
+        <pre class="pcp-code-block"><code> ...<br> &lt;tr&gt;<br> &nbsp;&nbsp;&lt;th&gt;Column one&lt;/th&gt;<br> &nbsp;&nbsp;&lt;th&gt;Column two&lt;/th&gt;<br> &nbsp;&nbsp;&lt;th&gt;Column three&lt;/th&gt;<br> &lt;/tr&gt;<br> &lt;tr&gt;<br> &nbsp;&nbsp;&lt;td&gt;A&lt;/td&gt;<br> &nbsp;&nbsp;&lt;td&gt;B&lt;/td&gt;<br> &nbsp;&nbsp;&lt;td&gt;C&lt;/td&gt;<br> &lt;/tr&gt;<br> ... </code></pre>
+
+        <pre class="pcp-code-block"><code> ...<br> &lt;tr&gt;<br> &nbsp;&nbsp;&lt;th <strong style="color: black;">colspan="8"</strong>&gt;Column one&lt;/th&gt;<br> &nbsp;&nbsp;&lt;th <strong style="color: black;">colspan="8"</strong>&gt;Column two&lt;/th&gt;<br> &nbsp;&nbsp;&lt;th <strong style="color: black;">colspan="8"</strong>&gt;Column three&lt;/th&gt;<br> &lt;/tr&gt;<br> &lt;tr&gt;<br> &nbsp;&nbsp;&lt;td <strong style="color: black;">colspan="8"</strong>&gt;A&lt;/td&gt;<br> &nbsp;&nbsp;&lt;td <strong style="color: black;">colspan="8"</strong>&gt;B&lt;/td&gt;<br> &nbsp;&nbsp;&lt;td <strong style="color: black;">colspan="8"</strong>&gt;C&lt;/td&gt;<br> &lt;/tr&gt;<br> ... </code></pre>
+
+        <div style="max-width: 68ch;">
+          <p>Which within <code>fsa-table</code> renders <strong>3 perfectly distributed columns</strong>...</p>
+        </div>
+
+        <table class="fsa-table fsa-table--borderless pcp-table pcp-table--fixed">
+          <thead>
+            <tr class="pcp-table__row">
+              <th class="pcp-table__cell" scope="col" colspan="8">Column one</th>
+              <th class="pcp-table__cell" scope="col" colspan="8">Column two</th>
+              <th class="pcp-table__cell" scope="col" colspan="8">Column three</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pcp-table__row">
+              <td class="pcp-table__cell" scope="col" colspan="8" colspan="8">Allorem ipsum dolor sit amet</td>
+              <td class="pcp-table__cell" scope="col" colspan="8" colspan="8">Bexx numquam aspernatur eligendi consectetur esse eius ab eum laudantium eaque dolorum, natus</td>
+              <td class="pcp-table__cell" scope="col" colspan="8" colspan="8">Cvoluptatibus.</td>
+            </tr>
+          </tbody>
+        </table>
 
       </div>
 

@@ -37,6 +37,8 @@
     appearance: initial;
     -moz-appearance: textfield;
 
+    &[disabled] {}
+
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
       -webkit-appearance: none;
@@ -84,6 +86,7 @@
       pointer-events: none;
     }
 
+    // scss-lint:disable SelectorFormat
     .pcp-adjust__spinbox--focused & {
       opacity: 1;
       pointer-events: initial;
@@ -114,6 +117,12 @@
     // scss-lint:disable SelectorFormat
     .pcp-spinbox--large & {
       width: $button-width-large;
+    }
+
+    &[disabled] {
+      opacity: .5;
+      background-color: $form-disabled-bg-color;
+      cursor: not-allowed;
     }
 
     &:hover,

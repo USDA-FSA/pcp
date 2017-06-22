@@ -1,6 +1,12 @@
 // -----------------------------------------------------------------------------
 // TO BE SORTED
 
+abbr[title], acronym[title], dfn[title] {
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
 .sr-only {
   @include sr-only();
 }
@@ -158,6 +164,21 @@
     }
 
   }
+
+}
+
+// -----------------------------------------------------------------------------
+// FAKING TAB CONTENT SWAP
+
+.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION {
+
+	&__ITEM {
+    display: none;
+	}
+
+	&__ITEM--ACTIVE {
+    display: block;
+	}
 
 }
 
