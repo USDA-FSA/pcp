@@ -31,6 +31,8 @@
 
   &--centered {
 
+    z-index: 1002;
+
     @include breakpoint(L) {
       position: fixed;
       left: 50%;
