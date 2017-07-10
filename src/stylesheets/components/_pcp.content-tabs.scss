@@ -11,6 +11,8 @@
     display: table;
     list-style: none;
     width: auto;
+    padding: 0;
+    margin-bottom: 0;
 
     // scss-lint:disable SelectorFormat
     .pcp-content-tabs--justified & {
