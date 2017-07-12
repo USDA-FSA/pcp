@@ -9,7 +9,7 @@
   }
 }
 
-$mapPanelWidth: ($size-base * 75);
+$mapPanelWidth: ($size-base * 85);
 $mapPanelIconHeight: $size-large;
 $mapPanelIconWidth: $size-medium;
 
@@ -192,7 +192,7 @@ $mapPanelIconWidth: $size-medium;
   &__map {
 
     min-height: 540px;
-    height: 50vh;
+    height: 70vh;
 
     // scss-lint:disable SelectorFormat
     .pcp-mapping--fullscreen & {
