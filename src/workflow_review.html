@@ -23,9 +23,11 @@
 
         {% include: 'includes/pcp-stepped-tabs__review.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Review Adjustments' @action:'Complete Review' @link:'workflow_publish.html' %}
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Review' @action:'Complete Review' @link:'workflow_publish.html' %}
 
-        {% include: 'includes/pcp-content-tabs__review.html' %}
+        <div class="fsa-m-t--m">
+          {% include: 'includes/pcp-content-tabs__review.html' %}
+        </div>
 
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
