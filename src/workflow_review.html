@@ -23,18 +23,24 @@
 
         {% include: 'includes/pcp-stepped-tabs__review.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Review' @action:'Complete Review' @link:'workflow_publish.html' %}
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Review Adjustments' @action:'Complete Review' @link:'workflow_publish.html' %}
 
         <div class="fsa-m-t--m">
           {% include: 'includes/pcp-content-tabs__review.html' %}
         </div>
 
         <div class="fsa-grid">
-          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
+            <h2>Terminal</h2>
             {% include: 'includes/pcp-adjust__terminal-review.html' %}
           </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
+            <h2>State</h2>
             {% include: 'includes/pcp-adjust__state-review.html' %}
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
+            <h2>Protein Discounts</h2>
+            {% include: 'includes/pcp-adjust__protein-review.html' %}
           </div>
         </div>
 
