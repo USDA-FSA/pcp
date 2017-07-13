@@ -3,6 +3,9 @@
 
   $padding: $size-base;
 
+  // ---------------------------------------------------------------------------
+
+
   &__hd {
     position: sticky;
     top: 0;
@@ -27,10 +30,21 @@
   // ---------------------------------------------------------------------------
 
   &__table {
+
     margin: 0;
     table-layout: fixed;
     min-width: ($mapPanelWidth * .9);
     border-bottom: 1px solid $color-fsa-tertiary-200;
+
+    &--auto {
+      table-layout: auto;
+    }
+
+    &--contrast {
+      background-color: $color-white;
+      border: 1px solid $color-fsa-tertiary-200;
+    }
+
   }
 
   &__th,
@@ -53,6 +67,7 @@
       background-color: $color-fsa-site-bg;
       padding-left: ($padding * 3);
 
+      // scss-lint:disable SelectorFormat
       &.pcp-adjust__th--last,
       &.pcp-adjust__td--last {
         padding-left: 0;
@@ -69,9 +84,16 @@
     }
 
     &--bisect {
+
       border-right: 1px solid $color-fsa-tertiary-200;
       padding-right: ($padding * 3);
       padding-left: 0;
+
+    }
+
+    &--bisect.pcp-adjust__td--first,
+    &--bisect.pcp-adjust__th--first{
+      padding-left: ($padding * 3);
     }
 
   }

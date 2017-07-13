@@ -540,6 +540,11 @@ $('.pcp-mapping__panel-bd-scroll-item--top').resizable({
   resizeWidth: false
 });
 
+$('.pcp-mapping__panel-bd-scroll-item--middle').resizable({
+  handleSelector: '.pcp-mapping__panel-bd--splitter-middle',
+  resizeWidth: false
+});
+
 $('.pcp-mapping__panel').resizable({
   handleSelector: '.pcp-mapping__panel-splitter',
   resizeHeight: false
