@@ -42,7 +42,7 @@
 
     @include breakpoint(L) {
       padding: ($size-large * 2) $size-medium;
-      max-width: 640px;
+      max-width: 800px;
     }
 
     // scss-lint:disable SelectorFormat
