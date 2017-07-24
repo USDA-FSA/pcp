@@ -1,15 +1,40 @@
-<div class="pcp-header">
-  <div class="pcp-header__bd">
-    <div class="pcp-header__prop">
-      {% include: 'includes/pcp-brand.html' %}
-    </div>
-    <div class="pcp-header__options">
-      <div style="position: relative;">
-        <a data-behavior="toggle-popover" data-target="popover-profile" role="button" href="#profile-info" style="color: white; text-decoration: none;">
-          Sam Malone <span style="font-size: 65%;">▼</span>
+<div class="fsa-tophat">
+  <div class="fsa-tophat__bd">
+    <div class="fsa-tophat__primary">
+      <span class="fsa-tophat__agency">
+        <a class="fsa-tophat__link" href="//usda.gov" title="Link to USDA homepage">
+          <img role="presentation" class="fsa-tophat__agency-logo" src="img/usda-logo--white.svg" alt="">
+          <abbr class="fsa-tophat__agency-abbr" title="United States Department of Agriculture">USDA</abbr>
+          <span class="fsa-tophat__agency-fullname">United States Department of Agriculture</span>
         </a>
-        {% include: 'includes/pcp-popover.profile.html' %}
-      </div>
+      </span>
+    </div>
+    <div class="fsa-tophat__secondary">
+      <span class="fsa-tophat__subagency">
+        <a class="fsa-tophat__link" href="//fsa.usda.gov" title="Link to FSA homepage">Farm Service Agency</a>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="fsa-header-app">
+  <div class="fsa-header-app__bd">
+    <div class="fsa-header-app__primary">
+      <a class="fsa-header-app__home-link" href="link.html" title="Link to PCP Home">
+        <span class="fsa-header-app__app-name">
+          <abbr class="fsa-header-app__app-abbr" title="Posted Country Prices">PCP</abbr>
+          <span class="fsa-header-app__app-full">Posted Country Prices</span>
+        </span>
+      </a>
+    </div>
+    <div class="fsa-header-app__secondary">
+      <span class="fsa-header-app__profile">
+        <a data-behavior="toggle-popover" data-target="popover-profile" role="button" href="#profile-info" class="fsa-header-app__profile-link">
+          <span class="fsa-header-app__profile-name" title="Sam Malone">Sam Malone</span>
+          <span class="fsa-header-app__profile-expand"></span>
+        </a>
+      </span>
+      {% include: 'includes/pcp-popover.profile.html' %}
     </div>
   </div>
 </div>

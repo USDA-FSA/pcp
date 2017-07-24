@@ -1,11 +1,15 @@
 {
   "name": "pcp-design",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "grunt default",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usda-fsa/pcp.git"
   },
   "author": "Francis C. Rupert",
   "devDependencies": {
@@ -29,6 +33,6 @@
   },
   "dependencies": {
     "jquery": "^2.2.2",
-    "fsa-style": "^2.0.3"
+    "fsa-style": "^2.0.4"
   }
 }
