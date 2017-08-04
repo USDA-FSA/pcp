@@ -21,6 +21,8 @@
 
       <div class="pcp-section__bd">
 
+        {% include: 'includes/pcp-info-bar.html' %}
+
         {% include: 'includes/pcp-stepped-tabs__discovery.html' %}
 
         {% include: 'includes/pcp-title-action-bar.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' %}
@@ -38,6 +40,8 @@
   </footer>
 
   {% include: 'includes/scripts.html' %}
+
+  {% include: 'includes/pcp-modal__edit-workflow.html' %}
 
   {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
 
