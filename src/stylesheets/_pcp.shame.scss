@@ -1,7 +1,10 @@
 // -----------------------------------------------------------------------------
 // TO BE SORTED
 
-abbr[title], acronym[title], dfn[title] {
+// scss-lint:disable QualifyingElement
+abbr[title],
+acronym[title],
+dfn[title] {
   border: 0;
   outline: 0;
   text-decoration: none;
@@ -16,6 +19,7 @@ abbr[title], acronym[title], dfn[title] {
   overflow-wrap: break-word;
 }
 
+// scss-lint:disable SelectorFormat
 .pcp-text--300 {
   color: $color-fsa-tertiary-300;
 }
