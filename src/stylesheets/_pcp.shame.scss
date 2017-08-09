@@ -20,6 +20,10 @@ abbr[title], acronym[title], dfn[title] {
   color: $color-fsa-tertiary-300;
 }
 
+.fsa-select[readonly] {
+  background-color: $color-fsa-site-bg;
+}
+
 // -----------------------------------------------------------------------------
 // PROJECT PROTOTYPE
 
