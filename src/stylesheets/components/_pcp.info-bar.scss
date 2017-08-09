@@ -1,0 +1,42 @@
+.pcp-info-bar {
+
+  margin-top: 1em;
+
+  &__bd {
+
+    @include font-size(2);
+
+    @include breakpoint(L) {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
+  &__item {
+
+    &--truncate {
+      @include breakpoint(L) {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+      }
+    }
+
+    @include breakpoint(L) {
+
+      white-space: nowrap;
+      margin-right: $size-medium;
+
+      &:last-child {
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+}
