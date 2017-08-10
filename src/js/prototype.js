@@ -492,7 +492,7 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
   var $self = $(this);
   var $scope = $(this).closest('.pcp-modal');
   var $target = $scope.find('[data-complete-target]');
-  var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox');
+  var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox, .pcp-file-upload__input');
   var $targetReadonly = $target.find('.fsa-input, .fsa-textarea');
 
   if ($targetDisable.is(':disabled')) {
@@ -506,6 +506,21 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
   } else {
     $targetReadonly.attr('readonly', true);
   }
+
+});
+
+$('body').on('change', '[data-behavior="attach-upload"]', function(event) {
+
+  var $self = $(this);
+  var $input = this;
+  var $component = $self.closest('.pcp-file-upload');
+  var $target = $component.find('.pcp-file-upload__attachment');
+
+  var filepath = $input.value;
+  var filematch = filepath.match(/([^\/\\]+)$/);
+  var filename = filematch[1];
+
+  $target.html(filename);
 
 });
 

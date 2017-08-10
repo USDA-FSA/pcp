@@ -1,0 +1,47 @@
+.pcp-file-upload {
+
+  position: relative;
+  display: inline-block;
+
+  &__label {}
+
+  &__btn {
+
+    .pcp-file-upload__input[disabled] + & {
+      opacity: .4;
+      cursor: not-allowed;
+      pointer-events: none;
+      color: rgba(255,255,255,0.65);
+    }
+
+    .pcp-file-upload__input:focus + & {
+      background-color: #282523;
+    }
+
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__attachment {
+
+    display: inline-block;
+    margin-left: $size-default;
+    font-family: monospace;
+    display: inline-block;
+
+    &:empty {
+      display: none;
+    }
+
+  }
+
+}
