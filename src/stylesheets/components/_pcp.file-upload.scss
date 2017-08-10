@@ -35,13 +35,23 @@
 
     display: inline-block;
     margin-left: $size-default;
-    font-family: monospace;
+    font-family: $font-mono;
     display: inline-block;
 
     &:empty {
       display: none;
     }
 
+  }
+
+}
+
+.pcp-upload-preview {
+
+  font-family: $font-mono;
+
+  &[readonly] {
+    background-color: $color-white;
   }
 
 }

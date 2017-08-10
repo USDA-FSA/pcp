@@ -493,7 +493,7 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
   var $scope = $(this).closest('.pcp-modal');
   var $target = $scope.find('[data-complete-target]');
   var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox, .pcp-file-upload__input');
-  var $targetReadonly = $target.find('.fsa-input, .fsa-textarea');
+  var $targetReadonly = $target.find('.fsa-input');
 
   if ($targetDisable.is(':disabled')) {
     $targetDisable.removeAttr('disabled');
