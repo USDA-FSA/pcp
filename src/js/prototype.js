@@ -486,6 +486,31 @@ $('body').on('change', '[data-behavior~="spinbox-demo-change"]', function(event)
 
 });
 
+$('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
+
+  // ---------------------------------------------------------------------------
+  var $self = $(this);
+  var $scope = $(this).closest('.pcp-modal');
+  var $target = $scope.find('[data-complete-target]');
+  var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox');
+  var $targetReadonly = $target.find('.fsa-input, .fsa-textarea');
+
+  $target.toggleClass('OUTLINE');
+
+  if ($targetDisable.is(':disabled')) {
+    $targetDisable.removeAttr('disabled');
+  } else {
+    $targetDisable.attr('disabled', true);
+  }
+
+  if ($targetReadonly.is('[readonly]')) {
+    $targetReadonly.removeAttr('readonly');
+  } else {
+    $targetReadonly.attr('readonly', true);
+  }
+
+});
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
