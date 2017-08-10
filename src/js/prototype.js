@@ -495,8 +495,6 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
   var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox');
   var $targetReadonly = $target.find('.fsa-input, .fsa-textarea');
 
-  $target.toggleClass('OUTLINE');
-
   if ($targetDisable.is(':disabled')) {
     $targetDisable.removeAttr('disabled');
   } else {
