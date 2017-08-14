@@ -509,7 +509,30 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
 
 });
 
-$('body').on('change', '[data-behavior="attach-upload"]', function(event) {
+function handleFileSelect(evt) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var files = evt.target.files; // FileList object
+
+  // use the 1st file from the list
+  f = files[0];
+
+  var reader = new FileReader();
+
+  // Closure to capture the file information.
+  reader.onload = (function(theFile) {
+    return function(e) {
+      $target.val(e.target.result);
+    };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsText(f);
+
+}
+
+$('body').on('change', '[data-behavior~="attach-upload"]', function(event) {
 
   var $self = $(this);
   var $input = this;
@@ -523,6 +546,8 @@ $('body').on('change', '[data-behavior="attach-upload"]', function(event) {
   $target.html(filename);
 
 });
+
+document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
 
 $('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
 
@@ -552,7 +577,6 @@ $('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) 
   $target.html('');
 
 });
-
 
 
 function markerDemoMarkup() {
