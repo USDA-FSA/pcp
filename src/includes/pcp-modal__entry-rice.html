@@ -1,4 +1,4 @@
-<div data-component="modified-form-target" tabindex="0" id="UNIQUE-ID-ss551s5s4gf" class="pcp-modal pcp-modal--top pcp-modal--large" role="dialog" aria-hidden="true" data-component="modified-form-target">
+<div data-component="modified-form-target" tabindex="0" id="UNIQUE-ID-ss551s5s4gf" class="pcp-modal pcp-modal--top pcp-modal--large pcp-modal--active" role="dialog" aria-hidden="true" data-component="modified-form-target">
   <div class="pcp-modal__dialog">
     <div class="pcp-modal__content">
       <button class="pcp-modal__close" data-behavior="close-modal"><img class="pcp-modal__close-icon" src="img/close.svg" alt="close"></button>
@@ -8,21 +8,22 @@
         <div id="UNIQUE-ID-sasdfhshh3hw7" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
           <ul class="fsa-list--inline fsa-m-t--m">
             <li>
-              <input class="fsa-radio" id="UNIQUE-ID-asdff2345dfghh" type="radio" name="rice-use-current__market-prices" value="UNIQUE-ID-asdff2345dfghh" checked="checked">
+              <input data-behavior="use-current-or-new" data-target="UNIQUE-ID-8555S55S2" class="fsa-radio" id="UNIQUE-ID-asdff2345dfghh" type="radio" name="rice-use-current__market-prices" value="current" checked="checked">
               <label for="UNIQUE-ID-asdff2345dfghh">Use Current</label>
             </li>
             <li>
-              <input class="fsa-radio" id="UNIQUE-ID-awhackoo" type="radio" name="rice-use-current__market-prices" value="UNIQUE-ID-awhackoo">
+              <input data-behavior="use-current-or-new" data-target="UNIQUE-ID-8555S55S2" class="fsa-radio" id="UNIQUE-ID-awhackoo" type="radio" name="rice-use-current__market-prices" value="new">
               <label for="UNIQUE-ID-awhackoo">Use New</label>
             </li>
           </ul>
-          <p>
-            <span class="pcp-file-upload" hidden>
+          <p id="UNIQUE-ID-8555S55S2" hidden>
+            <span class="pcp-file-upload">
               <label class="pcp-file-upload__label" for="UNIQUE-ID-1234">
                 <input class="pcp-file-upload__input" data-behavior="attach-upload" type="file" id="UNIQUE-ID-1234">
                 <span class="pcp-file-upload__btn fsa-btn fsa-btn--secondary">Attach file</span>
               </label>
               <span class="pcp-file-upload__attachment" id="attachment" for="UNIQUE-ID-1234"></span>
+              <button class="fsa-btn fsa-btn--flat pcp-file-upload__clear" data-behavior="attach-upload__clear">Clear</button>
             </span>
           </p>
           <textarea class="fsa-textarea pcp-upload-preview" rows="20" readonly="readonly" name="UNIQUE-ID-99S99SHhjs" id="UNIQUE-ID-99S99SHhjs" placeholder="Placeholder">{% include: 'includes/rice-markets__080917.txt' %}</textarea>

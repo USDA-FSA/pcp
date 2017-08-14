@@ -44,6 +44,16 @@
 
   }
 
+  &__clear {
+
+    margin-left: $size-default;
+
+    .pcp-file-upload__attachment:empty + & {
+      display: none;
+    }
+
+  }
+
 }
 
 .pcp-upload-preview {

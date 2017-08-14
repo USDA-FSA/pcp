@@ -524,6 +524,31 @@ $('body').on('change', '[data-behavior="attach-upload"]', function(event) {
 
 });
 
+$('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
+
+  var $self = $(this);
+  var $which = $self.val();
+  var $target = $('#' + $self.attr('data-target'));
+
+  if ($which == 'new') {
+    $target.removeAttr('hidden');
+  } else {
+    $target.attr('hidden', true);
+  }
+
+});
+
+$('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) {
+
+  var $self = $(this);
+  var $target = $self.siblings('.pcp-file-upload__attachment');
+
+  $target.html('');
+
+});
+
+
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
