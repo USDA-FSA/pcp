@@ -529,11 +529,17 @@ $('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
   var $self = $(this);
   var $which = $self.val();
   var $target = $('#' + $self.attr('data-target'));
+  var $targetCurrent = $('#' + $self.attr('data-target') + '__current');
+  var $targetNew = $('#' + $self.attr('data-target') + '__new');
 
   if ($which == 'new') {
     $target.removeAttr('hidden');
+    $targetNew.removeAttr('hidden');
+    $targetCurrent.attr('hidden', true);
   } else {
     $target.attr('hidden', true);
+    $targetCurrent.removeAttr('hidden');
+    $targetNew.attr('hidden', true);
   }
 
 });
