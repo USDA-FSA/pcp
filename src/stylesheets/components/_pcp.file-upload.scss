@@ -1,0 +1,102 @@
+.pcp-file-upload {
+
+  position: relative;
+  display: inline-block;
+
+  &__label {}
+
+  &__result {}
+
+  &__btn {
+
+    .pcp-file-upload__input[disabled] + & {
+      opacity: .4;
+      cursor: not-allowed;
+      pointer-events: none;
+      color: transparentize($button-default-text, .35);
+    }
+
+    .pcp-file-upload__input:focus + & {
+      background-color: #282523;
+    }
+
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__attachment {
+
+    @include font-size(2);
+    display: inline-block;
+    margin-left: $size-default;
+    font-family: $font-mono;
+    display: inline-block;
+
+    &:empty {
+      display: none;
+    }
+
+  }
+
+  &__clear {
+
+    margin-left: $size-default;
+
+    .pcp-file-upload__attachment:empty + & {
+      display: none;
+    }
+
+  }
+
+}
+
+.pcp-upload-options {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.pcp-upload-preview {
+
+  font-family: $font-mono;
+
+  @include placeholder {
+
+    @include breakpoint(M) {
+      padding-top: 15rem;
+      font-family: $font-sans;
+      font-weight: $font-light;
+      display: block;
+      text-align: center;
+      padding-top: 20rem;
+      font-size: $font-size-6;
+    }
+
+    @include breakpoint(L) {
+      padding-top: 20rem;
+      font-size: $font-size-7;
+    }
+
+  }
+
+  &[readonly] {
+
+    background-color: $color-white;
+
+    &:focus {
+      box-shadow: none;
+      border-color: $form-outline-color;
+      outline: 0;
+    }
+
+  }
+
+}

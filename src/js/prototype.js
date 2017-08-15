@@ -486,6 +486,101 @@ $('body').on('change', '[data-behavior~="spinbox-demo-change"]', function(event)
 
 });
 
+$('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
+
+  // ---------------------------------------------------------------------------
+  var $self = $(this);
+  var $scope = $(this).closest('.pcp-modal');
+  var $target = $scope.find('[data-complete-target]');
+  var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox, .pcp-file-upload__input, .pcp-file-upload__clear');
+  var $targetReadonly = $target.find('.fsa-input');
+
+  if ($targetDisable.is(':disabled')) {
+    $targetDisable.removeAttr('disabled');
+  } else {
+    $targetDisable.attr('disabled', true);
+  }
+
+  if ($targetReadonly.is('[readonly]')) {
+    $targetReadonly.removeAttr('readonly');
+  } else {
+    $targetReadonly.attr('readonly', true);
+  }
+
+});
+
+function handleFileSelect(evt) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var files = evt.target.files; // FileList object
+
+  // use the 1st file from the list
+  f = files[0];
+
+  var reader = new FileReader();
+
+  // Closure to capture the file information.
+  reader.onload = (function(theFile) {
+    return function(e) {
+      $target.val(e.target.result);
+    };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsText(f);
+
+}
+
+$('body').on('change', '[data-behavior~="attach-upload"]', function(event) {
+
+  var $self = $(this);
+  var $input = this;
+  var $component = $self.closest('.pcp-file-upload');
+  var $target = $component.find('.pcp-file-upload__attachment');
+
+  var filepath = $input.value;
+  var filematch = filepath.match(/([^\/\\]+)$/);
+  var filename = filematch[1];
+
+  $target.html(filename);
+
+});
+
+document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
+
+$('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
+
+  var $self = $(this);
+  var $which = $self.val();
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetCurrent = $('#' + $self.attr('data-target') + '__current');
+  var $targetNew = $('#' + $self.attr('data-target') + '__new');
+
+  if ($which == 'new') {
+    $target.removeAttr('hidden');
+    $targetNew.removeAttr('hidden');
+    $targetCurrent.attr('hidden', true);
+  } else {
+    $target.attr('hidden', true);
+    $targetCurrent.removeAttr('hidden');
+    $targetNew.attr('hidden', true);
+  }
+
+});
+
+$('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) {
+
+  var $self = $(this);
+  var $target = $self.siblings('.pcp-file-upload__attachment');
+  var $targetPreview = $('#' + $self.attr('data-target'));
+
+  $target.html('');
+  $targetPreview.val('');
+
+});
+
+
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');

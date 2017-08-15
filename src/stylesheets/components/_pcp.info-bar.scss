@@ -30,7 +30,7 @@
       white-space: nowrap;
       margin-right: $size-medium;
 
-      &:last-child {
+      &:last-child:not(.pcp-info-bar__item--truncate) {
         margin-left: auto;
         margin-right: 0;
       }
