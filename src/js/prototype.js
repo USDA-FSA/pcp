@@ -573,8 +573,10 @@ $('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) 
 
   var $self = $(this);
   var $target = $self.siblings('.pcp-file-upload__attachment');
+  var $targetPreview = $('#' + $self.attr('data-target'));
 
   $target.html('');
+  $targetPreview.val('');
 
 });
 

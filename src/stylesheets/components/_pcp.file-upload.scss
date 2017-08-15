@@ -33,6 +33,7 @@
 
   &__attachment {
 
+    @include font-size(2);
     display: inline-block;
     margin-left: $size-default;
     font-family: $font-mono;
@@ -54,6 +55,11 @@
 
   }
 
+}
+
+.pcp-upload-options {
+  display: inline-block;
+  margin-top: 1em;
 }
 
 .pcp-upload-preview {
