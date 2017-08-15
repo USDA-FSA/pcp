@@ -1,0 +1,18 @@
+<ul class="fsa-list--inline pcp-upload-options">
+  <li>
+    <input data-behavior="use-current-or-new" data-target="{{TARGET}}" class="fsa-radio" id="{{OPTION_1_ID}}" type="radio" name="{{NAME}}" value="current" checked="checked">
+    <label for="{{OPTION_1_ID}}">Use Current</label>
+  </li>
+  <li>
+    <input data-behavior="use-current-or-new" data-target="{{TARGET}}" class="fsa-radio" id="{{OPTION_2_ID}}" type="radio" name="{{NAME}}" value="new">
+    <label for="{{OPTION_2_ID}}">Use New</label>
+  </li>
+</ul>
+<span class="pcp-file-upload" id="{{TARGET}}" hidden="hidden">
+  <label class="pcp-file-upload__label" for="{{UPLOAD_ID}}">
+    <input class="pcp-file-upload__input" data-behavior="attach-upload" data-target="{{TARGET}}__new" type="file" id="{{UPLOAD_ID}}">
+    <span class="pcp-file-upload__btn fsa-btn fsa-btn--secondary fsa-btn--small">Attach file</span>
+  </label>
+  <span class="pcp-file-upload__attachment" for="{{UPLOAD_ID}}"></span>
+  <button class="fsa-btn fsa-btn--small fsa-btn--flat pcp-file-upload__clear" data-behavior="attach-upload__clear" data-target="{{TARGET}}__new">Clear</button>
+</span>

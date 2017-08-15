@@ -6,49 +6,14 @@
       {% include: 'includes/pcp-content-tabs__price-discovery__rice.html' %}
       <div data-complete-target class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION">
         <div id="UNIQUE-ID-sasdfhshh3hw7" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
-          <ul class="fsa-list--inline pcp-upload-options">
-            <li>
-              <input data-behavior="use-current-or-new" data-target="UNIQUE-ID-8555S55S2" class="fsa-radio" id="UNIQUE-ID-asdff2345dfghh" type="radio" name="rice-use-current__market-prices" value="current" checked="checked">
-              <label for="UNIQUE-ID-asdff2345dfghh">Use Current</label>
-            </li>
-            <li>
-              <input data-behavior="use-current-or-new" data-target="UNIQUE-ID-8555S55S2" class="fsa-radio" id="UNIQUE-ID-awhackoo" type="radio" name="rice-use-current__market-prices" value="new">
-              <label for="UNIQUE-ID-awhackoo">Use New</label>
-            </li>
-          </ul>
-          <span class="pcp-file-upload" id="UNIQUE-ID-8555S55S2" hidden="hidden">
-            <label class="pcp-file-upload__label" for="UNIQUE-ID-1234">
-              <input class="pcp-file-upload__input" data-behavior="attach-upload" data-target="UNIQUE-ID-8555S55S2__new" type="file" id="UNIQUE-ID-1234">
-              <span class="pcp-file-upload__btn fsa-btn fsa-btn--secondary fsa-btn--small">Attach file</span>
-            </label>
-            <span class="pcp-file-upload__attachment" for="UNIQUE-ID-1234"></span>
-            <button class="fsa-btn fsa-btn--small fsa-btn--flat pcp-file-upload__clear" data-behavior="attach-upload__clear" data-target="UNIQUE-ID-8555S55S2__new">Clear</button>
-          </span>
+          {% include: 'includes/upload-options.html' @NAME:'rice-use-current__market-prices' @TARGET:'UNIQUE-ID-8555S55S2' @OPTION_1_ID:'UNIQUE-ID-wRRGa' @OPTION_2_ID:'UNIQUE-ID-awhackoo' @UPLOAD_ID:'UNIQUE-ID-GEMIN20QUIS' %}
           <textarea placeholder="Attach a file to preview it here" class="fsa-textarea pcp-upload-preview" rows="20" readonly="readonly" name="UNIQUE-ID-8555S55S2__current" id="UNIQUE-ID-8555S55S2__current">{% include: 'includes/rice-markets__080917.txt' %}</textarea>
           <textarea placeholder="Attach a file to preview it here" class="fsa-textarea pcp-upload-preview" rows="20" readonly="readonly" name="UNIQUE-ID-8555S55S2__new" id="UNIQUE-ID-8555S55S2__new" hidden="hidden"></textarea>
         </div>
         <div id="UNIQUE-ID-sasdfh46j9ow7" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
-          <ul class="fsa-list--inline fsa-m-t--m">
-            <li>
-              <input data-behavior="use-current-or-new" data-target="UNIQUE-ID-8555570S2" class="fsa-radio" id="UNIQUE-ID-asdgf5555d" type="radio" name="rice-use-current__ldp" value="current" checked="checked">
-              <label for="UNIQUE-ID-asdgf5555d">Use Current</label>
-            </li>
-            <li>
-              <input data-behavior="use-current-or-new" data-target="UNIQUE-ID-8555570S2" class="fsa-radio" id="UNIQUE-ID-awloreo" type="radio" name="rice-use-current__ldp" value="new">
-              <label for="UNIQUE-ID-awloreo">Use New</label>
-            </li>
-          </ul>
-          <p id="UNIQUE-ID-8555570S2" hidden>
-            <span class="pcp-file-upload">
-              <label class="pcp-file-upload__label" for="UNIQUE-ID-ttgg5">
-                <input class="pcp-file-upload__input" data-behavior="attach-upload" type="file" id="UNIQUE-ID-ttgg5">
-                <span class="pcp-file-upload__btn fsa-btn fsa-btn--secondary">Attach file</span>
-              </label>
-              <span class="pcp-file-upload__attachment" for="UNIQUE-ID-ttgg5"></span>
-              <button class="fsa-btn fsa-btn--flat pcp-file-upload__clear" data-behavior="attach-upload__clear">Clear</button>
-            </span>
-          </p>
-          <textarea placeholder="Attach a file to preview it here" class="fsa-textarea pcp-upload-preview" rows="20" readonly="readonly" name="UNIQUE-ID-99468SHajs" id="UNIQUE-ID-99468SHajs">{% include: 'includes/rice-ldp__080917.txt' %}</textarea>
+          {% include: 'includes/upload-options.html' @NAME:'rice-use-current__ldp' @TARGET:'UNIQUE-ID-33HHD7h' @OPTION_1_ID:'UNIQUE-ID-H5sd' @OPTION_2_ID:'UNIQUE-ID-ahacka2oo' @UPLOAD_ID:'UNIQUE-ID-IN20QgekUIS' %}
+          <textarea placeholder="Attach a file to preview it here" class="fsa-textarea pcp-upload-preview" rows="20" readonly="readonly" name="UNIQUE-ID-33HHD7h__current" id="UNIQUE-ID-33HHD7h__current">{% include: 'includes/rice-ldp__080917.txt' %}</textarea>
+          <textarea placeholder="Attach a file to preview it here" class="fsa-textarea pcp-upload-preview" rows="20" readonly="readonly" name="UNIQUE-ID-33HHD7h__new" id="UNIQUE-ID-33HHD7h__new" hidden="hidden"></textarea>
         </div>
       </div>
     </div>
