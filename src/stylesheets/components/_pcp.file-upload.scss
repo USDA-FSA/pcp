@@ -5,13 +5,15 @@
 
   &__label {}
 
+  &__result {}
+
   &__btn {
 
     .pcp-file-upload__input[disabled] + & {
       opacity: .4;
       cursor: not-allowed;
       pointer-events: none;
-      color: rgba(255,255,255,0.65);
+      color: transparentize($button-default-text, .35);
     }
 
     .pcp-file-upload__input:focus + & {
@@ -67,12 +69,22 @@
   font-family: $font-mono;
 
   @include placeholder {
-    font-family: $font-sans;
-    font-size: $font-size-7;
-    font-weight: $font-light;
-    display: block;
-    text-align: center;
-    padding-top: 20rem;
+
+    @include breakpoint(M) {
+      padding-top: 15rem;
+      font-family: $font-sans;
+      font-weight: $font-light;
+      display: block;
+      text-align: center;
+      padding-top: 20rem;
+      font-size: $font-size-6;
+    }
+
+    @include breakpoint(L) {
+      padding-top: 20rem;
+      font-size: $font-size-7;
+    }
+
   }
 
   &[readonly] {
