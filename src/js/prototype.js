@@ -509,6 +509,22 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
 
 });
 
+$('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
+
+  // ---------------------------------------------------------------------------
+  var $self = $(this);
+  var $scope = $(this).closest('.pcp-mapping');
+  var $scopeNarrow = $scope.find('.pcp-mapping__panel-bd');
+  var $targetsDisable  = $scopeNarrow.find('input, button');
+
+  if ($targetsDisable.is(':disabled')) {
+    $targetsDisable.removeAttr('disabled');
+  } else {
+    $targetsDisable.attr('disabled', true);
+  }
+
+});
+
 function handleFileSelect(evt) {
 
   var $self = $(this);
