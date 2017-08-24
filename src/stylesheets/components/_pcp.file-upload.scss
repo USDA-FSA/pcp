@@ -68,9 +68,8 @@
 
   font-family: $font-mono;
 
-  @include placeholder {
-
-    @include breakpoint(M) {
+  @include breakpoint(M) {
+    @include placeholder {
       padding-top: 15rem;
       font-family: $font-sans;
       font-weight: $font-light;
@@ -79,12 +78,13 @@
       padding-top: 20rem;
       font-size: $font-size-6;
     }
+  }
 
-    @include breakpoint(L) {
+  @include breakpoint(L) {
+    @include placeholder {
       padding-top: 20rem;
       font-size: $font-size-7;
     }
-
   }
 
   &[readonly] {
@@ -99,4 +99,16 @@
 
   }
 
+}
+
+// IE workaround
+@media screen and (min-width:0\0) {
+  .pcp-upload-preview {
+    @include placeholder {
+      padding-top: $size-small;
+      font-size: $font-size-3;
+      font-weight: $font-normal;
+      text-align: left;
+    }
+  }
 }
