@@ -517,13 +517,16 @@ $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
   var $scopeNarrow = $scope.find('.pcp-mapping__panel-bd');
   var $targetsDisable  = $scopeNarrow.find('input, button');
   var $targetReset = $('#' + $self.attr('data-reset-target'));
+  var $targetSave = $('#' + $self.attr('data-save-target'));
 
   if ($targetsDisable.is(':disabled')) {
     $targetsDisable.removeAttr('disabled');
     $targetReset.removeAttr('disabled');
+    $targetSave.addClass('pcp-content-tabs__label--unsaved')
   } else {
     $targetReset.attr('disabled', true);
     $targetsDisable.attr('disabled', true);
+    $targetSave.removeClass('pcp-content-tabs__label--unsaved');
   }
 
 });
