@@ -516,10 +516,13 @@ $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
   var $scope = $(this).closest('.pcp-mapping');
   var $scopeNarrow = $scope.find('.pcp-mapping__panel-bd');
   var $targetsDisable  = $scopeNarrow.find('input, button');
+  var $targetReset = $('#' + $self.attr('data-reset-target'));
 
   if ($targetsDisable.is(':disabled')) {
     $targetsDisable.removeAttr('disabled');
+    $targetReset.removeAttr('disabled');
   } else {
+    $targetReset.attr('disabled', true);
     $targetsDisable.attr('disabled', true);
   }
 
