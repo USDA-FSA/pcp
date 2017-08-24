@@ -21,6 +21,8 @@
 
       <div class="pcp-section__bd">
 
+        {% include: 'includes/pcp-info-bar.html' %}
+
         {% include: 'includes/pcp-stepped-tabs__discovery.html' %}
 
         {% include: 'includes/pcp-title-action-bar.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' %}
@@ -37,11 +39,10 @@
     {% include: 'includes/pcp-footer-TEMP.html' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
-
-
   {% include: 'includes/pcp-modal__entry-pnw.html' %}
   {% include: 'includes/pcp-modal__entry-glf.html' %}
+  {% include: 'includes/pcp-modal__entry-rice.html' %}
+  {% include: 'includes/pcp-modal__edit-workflow.html' %}
 
   {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
 
@@ -52,6 +53,8 @@
   <div class="pcp-growl-container pcp-growl-container--centered pcp-growl-container--hidden">
     {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
   </div>
+
+  {% include: 'includes/scripts.html' %}
 
 </body>
 
