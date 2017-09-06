@@ -607,6 +607,7 @@ $('body').on('click', '[data-behavior~="attach-upload__clear"]', function(event)
 $('body').on('change', '[data-behavior~="choose-commodity-class"]', function(event) {
 
   var $self = $(this);
+  var $component = $self.closest('.fsa-field');
   var $targetSubClass = $('#' + $self.attr('data-target-subclass'));
   var $targetAdder = $('#' + $self.attr('data-target-adder'));
   var selectedValue = $self.val();
@@ -619,6 +620,8 @@ $('body').on('change', '[data-behavior~="choose-commodity-class"]', function(eve
   } else if (selectedValue == 'Add') {
     $targetSubClass.attr('hidden', true);
     $targetAdder.removeAttr('hidden');
+    $targetAdder.find('.fsa-input').addClass('OUTLINE').focus();
+    $component.attr('hidden', true);
   } else {
     $targetAdder.attr('hidden', true);
     $targetSubClass.attr('hidden', true);
