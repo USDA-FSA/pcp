@@ -569,9 +569,11 @@ $('body').on('change', '[data-behavior~="attach-upload"]', function(event) {
 
 });
 
-document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
+if (document.querySelector('[data-behavior~="attach-upload"]')) {
+  document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
+}
 
-$('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
+$('body').on('change', '[data-behavior~="use-current-or-new"]', function(event) {
 
   var $self = $(this);
   var $which = $self.val();
@@ -591,7 +593,7 @@ $('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
 
 });
 
-$('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) {
+$('body').on('click', '[data-behavior~="attach-upload__clear"]', function(event) {
 
   var $self = $(this);
   var $target = $self.siblings('.pcp-file-upload__attachment');
@@ -602,6 +604,27 @@ $('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) 
 
 });
 
+$('body').on('change', '[data-behavior~="choose-commodity-class"]', function(event) {
+
+  var $self = $(this);
+  var $targetSubClass = $('#' + $self.attr('data-target-subclass'));
+  var $targetAdder = $('#' + $self.attr('data-target-adder'));
+  var selectedValue = $self.val();
+
+  console.log(selectedValue);
+
+  if (selectedValue == 'Durum') {
+    $targetSubClass.removeAttr('hidden');
+    $targetAdder.attr('hidden', true);
+  } else if (selectedValue == 'Add') {
+    $targetSubClass.attr('hidden', true);
+    $targetAdder.removeAttr('hidden');
+  } else {
+    $targetAdder.attr('hidden', true);
+    $targetSubClass.attr('hidden', true);
+  }
+
+});
 
 function markerDemoMarkup() {
 
