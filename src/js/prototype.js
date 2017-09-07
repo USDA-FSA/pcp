@@ -620,7 +620,7 @@ $('body').on('change', '[data-behavior~="choose-commodity-class"]', function(eve
   } else if (selectedValue == 'Add') {
     $targetSubClass.attr('hidden', true);
     $targetAdder.removeAttr('hidden');
-    $targetAdder.find('.fsa-input').addClass('OUTLINE').focus();
+    $targetAdder.find('.fsa-input').focus();
     $component.attr('hidden', true);
   } else {
     $targetAdder.attr('hidden', true);
@@ -628,6 +628,25 @@ $('body').on('change', '[data-behavior~="choose-commodity-class"]', function(eve
   }
 
 });
+
+$('body').on('click', '[data-behavior~="choose-commodity-class__reset"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.fsa-field');
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetSelect = $target.find('.fsa-field__item')
+  var $textField = $component.find('.fsa-field__item')
+
+  $textField.val('');
+  $component.attr('hidden', true);
+  $target.removeAttr('hidden');
+  $targetSelect
+    .val('None')
+    .focus()
+  ;
+
+});
+
 
 function markerDemoMarkup() {
 
