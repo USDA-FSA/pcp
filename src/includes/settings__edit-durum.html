@@ -2,11 +2,17 @@
   <fieldset>
     <div class="fsa-field">
       <label class="fsa-field__label" for="thingthing-name_887sh">Class Name <span class="fsa-field__label-desc">Required</span></label>
-      <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="thingthing-name_887sh" name="thingthing-name_887sh" type="text" value="Durum">
+      <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="thingthing-name_887sh" name="thingthing-name_887sh" type="text" value="Barley">
       <span class="fsa-field__help">Alpha characters, no numbers or special characters</span>
       <span class="fsa-field__message" id="thingthing-name__error_887sh-message-01" role="alert">This field is required</span>
     </div>
     <div class="fsa-field">
+      <span class="fsa-field__label">Commodities</span>
+      <div class="fsa-field__item">
+        {% include: 'includes/select-multi_commodities.html' @UNIQUE_ID:'class-commodities' %}
+      </div>
+    </div>
+    <div class="fsa-field" hidden>
       <span class="fsa-field__label">Sub-class</span>
       <div class="fsa-field__item">
         {% include: 'includes/select-multi_classes.html' @UNIQUE_ID:'thingieth4FXX9' %}
