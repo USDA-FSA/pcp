@@ -1,0 +1,24 @@
+<form action="settings_markets__error.html">
+  <fieldset>
+    <div class="fsa-field">
+      <label class="fsa-field__label" for="thingthing-name_887sh">Class Name <span class="fsa-field__label-desc">Required</span></label>
+      <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="thingthing-name_887sh" name="thingthing-name_887sh" type="text" value="Durum">
+      <span class="fsa-field__help">Alpha characters, no numbers or special characters</span>
+      <span class="fsa-field__message" id="thingthing-name__error_887sh-message-01" role="alert">This field is required</span>
+    </div>
+    <div class="fsa-field">
+      <span class="fsa-field__label">Sub-class</span>
+      <div class="fsa-field__item">
+        {% include: 'includes/select-multi_classes.html' @UNIQUE_ID:'thingieth4FXX9' %}
+      </div>
+    </div>
+    <div class="fsa-field">
+      <input class="fsa-checkbox" id="thingthing-active" type="checkbox" name="thingthing-active" value="thingthing-active" checked="checked">
+      <label for="thingthing-active">Active</label>
+    </div>
+    <div class="fsa-field">
+      <button class="fsa-btn fsa-btn--primary" type="button" data-behavior="close-modal whiteout-show growl-show" data-target="unique-id-HSHHS73737732">Save</button>
+      <button class="fsa-btn fsa-btn--flat" type="button" data-behavior="close-modal">Cancel</button>
+    </div>
+  </fieldset>
+</form>
