@@ -27,15 +27,15 @@
         <option value="YC - Yellow Corn">YC - Yellow Corn</option>
       </select>
     </div>
-    <div class="fsa-field" hidden>
-      <span class="fsa-field__label">Sub-class</span>
-      <div class="fsa-field__item">
-        {% include: 'includes/select-multi_classes.html' @UNIQUE_ID:'thingieth4FXX9' %}
-      </div>
-    </div>
     <div class="fsa-field">
       <input class="fsa-checkbox" id="thingthing-active" type="checkbox" name="thingthing-active" value="thingthing-active" checked="checked">
       <label for="thingthing-active">Active</label>
+    </div>
+    <div class="fsa-field">
+      <span class="fsa-field__label">Markets</span>
+      <div class="fsa-field__item">
+        {% include: 'includes/select-multi_markets--disabled.html' @UNIQUE_ID:'thingie_ggs9' %}
+      </div>
     </div>
     <div class="fsa-field">
       <button class="fsa-btn fsa-btn--primary" type="button" data-behavior="close-modal whiteout-show growl-show" data-target="unique-id-HSHHS73737732">Save</button>
