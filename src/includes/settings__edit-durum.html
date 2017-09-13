@@ -7,10 +7,19 @@
       <span class="fsa-field__message" id="thingthing-name__error_887sh-message-01" role="alert">This field is required</span>
     </div>
     <div class="fsa-field">
-      <span class="fsa-field__label">Commodities</span>
-      <div class="fsa-field__item">
-        {% include: 'includes/select-multi_commodities.html' @UNIQUE_ID:'class-commodities' %}
-      </div>
+      <label class="fsa-field__label" for="UNIQUE-ID-sdfger">Commodity <span class="fsa-field__label-desc">Required</span></label>
+      <select class="fsa-select fsa-field__item" id="UNIQUE-ID-sdfger" name="UNIQUE-ID-sdfger">
+        <option value="None" disabled="disabled"></option>
+        <option value="BRL - Barley" selected="selected">BRL - Barley</option>
+        <option value="CTN - Cotton">CTN - Cotton</option>
+        <option value="HRW - Hard Red Winter Wheat">HRW - Hard Red Winter Wheat</option>
+        <option value="JB - Jelly Bean">JB - Jelly Bean</option>
+        <option value="PBS - Pork Bellies">PBS - Pork Bellies</option>
+        <option value="RR - Rice">RR - Rice</option>
+        <option value="SOR - Sorghum">SOR - Sorghum</option>
+        <option value="YSB - Soybean">YSB - Soybean</option>
+        <option value="YC - Yellow Corn">YC - Yellow Corn</option>
+      </select>
     </div>
     <div class="fsa-field" hidden>
       <span class="fsa-field__label">Sub-class</span>
