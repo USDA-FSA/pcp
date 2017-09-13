@@ -1,5 +1,5 @@
 <form action="settings_markets__error.html">
-  <fieldset class="OUTLINE">
+  <fieldset>
     <div class="fsa-field">
       <label class="fsa-field__label" for="thingthing-name_887sh">Class Name <span class="fsa-field__label-desc">Required</span></label>
       <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="thingthing-name_887sh" name="thingthing-name_887sh" type="text" value="Barley">
@@ -32,12 +32,6 @@
       <label for="thingthing-active">Active</label>
     </div>
     <div class="fsa-field">
-      <span class="fsa-field__label">Markets</span>
-      <div class="fsa-field__item">
-        {% include: 'includes/select-multi_markets--disabled.html' @UNIQUE_ID:'thingie_ggs9' %}
-      </div>
-    </div>
-    <div class="fsa-field">
       <label class="fsa-field__label" for="UNIQUE-ID-HH4Jd">Sub-class</label>
       <select class="fsa-select fsa-field__item" id="UNIQUE-ID-HH4Jd" name="UNIQUE-ID-HH4Jd" disabled="disabled">
         <option value="None" selected="selected">None</option>
@@ -46,6 +40,12 @@
         <option value="Amber Durum">XYZ - Amber Durum</option>
         <option value="Hard Amber Durum">XCD - Hard Amber Durum</option>
       </select>
+    </div>
+    <div class="fsa-field">
+      <span class="fsa-field__label">Markets</span>
+      <div class="fsa-field__item">
+        {% include: 'includes/select-multi_markets--disabled.html' @UNIQUE_ID:'thingie_ggs9' %}
+      </div>
     </div>
     <div class="fsa-field">
       <button class="fsa-btn fsa-btn--primary" type="button" data-behavior="close-modal whiteout-show growl-show" data-target="unique-id-HSHHS73737732">Save</button>
