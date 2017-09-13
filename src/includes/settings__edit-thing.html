@@ -7,26 +7,14 @@
       <span class="fsa-field__message" id="thingthing-name__error-message-01" role="alert">This field is required</span>
     </div>
     <div class="fsa-field">
-      <label class="fsa-field__label" for="thingthing-abbreviation">Abbreviation <span class="fsa-field__label-desc">Required</span></label>
-      <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="thingthing-abbreviation" name="thingthing-abbreviation" type="text" value="HRW" minlength="2" maxlength="3" disabled="disabled">
-      <span class="fsa-field__help">2 or 3 alpha characters, no numbers or special characters</span>
-      <span class="fsa-field__message" id="thingthing-abbreviation__error-message-01" role="alert">Cannot contain numbers</span>
+      <label class="fsa-field__label" for="thingthing-abbreviation">Abbreviation</label>
+      <input class="fsa-input fsa-field__item" id="thingthing-abbreviation" name="thingthing-abbreviation" type="text" value="HRW" minlength="2" maxlength="3" disabled="disabled">
     </div>
     <div class="fsa-field">
       <span class="fsa-field__label">Class <span class="fsa-field__label-desc">Required</span></span>
       <div class="fsa-field__item">
         {% include: 'includes/select-multi_classes--checked.html' @UNIQUE_ID:'UNIQUE-ID-NNVBLOrEMS' %}
       </div>
-    </div>
-    <div class="fsa-field">
-      <label class="fsa-field__label" for="UNIQUE-ID-agag">Sub-class</label>
-      <select class="fsa-select fsa-field__item" id="UNIQUE-ID-agag" name="UNIQUE-ID-agag" disabled="disabled">
-        <option value="None" selected="selected">None</option>
-        <option value="----------" disabled="disabled">----------</option>
-        <option value="Durum">ABC - Durum</option>
-        <option value="Amber Durum">XYZ - Amber Durum</option>
-        <option value="Hard Amber Durum">XCD - Hard Amber Durum</option>
-      </select>
     </div>
     <div class="fsa-field" id="UNIQUE-ID-ssgg555dd" hidden>
       <label class="fsa-field__label" for="UNIQUE-ID-rrr6552000">Class</label>
