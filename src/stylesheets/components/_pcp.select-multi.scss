@@ -1,12 +1,23 @@
 .pcp-select-multi {
 
+  &--disabled {
+    background-color: $form-disabled-bg-color;
+  }
+
   &__list {
+
     @include reset-ul();
     overflow: auto;
     max-height: 190px;
     padding: $size-base 0;
     border: 1px solid $color-fsa-tertiary-200;
     background-color: $color-fsa-white;
+
+    // scss-lint:disable SelectorFormat
+    .pcp-select-multi--disabled & {
+      background-color: transparent;
+    }
+
   }
 
   &__item {

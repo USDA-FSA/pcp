@@ -67,10 +67,20 @@
       </select>
     </div>
     <div class="fsa-field">
-      <span class="fsa-field__label">Markets <span class="fsa-field__label-desc">Required</span></span>
+      <span class="fsa-field__label">Class</span>
       <div class="fsa-field__item">
-        {% include: 'includes/select-multi_markets.html' %}
+        {% include: 'includes/select-multi_classes--disabled.html' @UNIQUE_ID:'UNIQUE-ID-uushYHJISH6' %}
       </div>
+    </div>
+    <div class="fsa-field">
+      <label class="fsa-field__label" for="UNIQUE-ID-hhtr">Sub-class</label>
+      <select class="fsa-select fsa-field__item" id="UNIQUE-ID-hhtr" name="UNIQUE-ID-hhtr" disabled="disabled">
+        <option value="None" selected="selected">None</option>
+        <option value="----------" disabled="disabled">----------</option>
+        <option value="Durum">ABC - Durum</option>
+        <option value="Amber Durum">XYZ - Amber Durum</option>
+        <option value="Hard Amber Durum">XCD - Hard Amber Durum</option>
+      </select>
     </div>
     <div class="fsa-field">
       <input class="fsa-checkbox" id="commodity-active" type="checkbox" name="commodity-active" value="commodity-active" checked="">
