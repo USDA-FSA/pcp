@@ -31,13 +31,7 @@
     </div>
     <div class="fsa-field">
       <label class="fsa-field__label" for="UNIQUE-ID-HH4Jd">Sub-class</label>
-      <select class="fsa-select fsa-field__item" id="UNIQUE-ID-HH4Jd" name="UNIQUE-ID-HH4Jd" disabled="disabled">
-        <option value="None" selected="selected">None</option>
-        <option value="----------" disabled="disabled">----------</option>
-        <option value="Durum">ABC - Durum</option>
-        <option value="Amber Durum">XYZ - Amber Durum</option>
-        <option value="Hard Amber Durum">XCD - Hard Amber Durum</option>
-      </select>
+      {% include: 'includes/select-multi_sub-classes--disabled.html' @UNIQUE_ID:'thingie_ssg' %}
     </div>
     <div class="fsa-field">
       <span class="fsa-field__label">Markets</span>
