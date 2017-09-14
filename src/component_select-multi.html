@@ -41,15 +41,25 @@
           </div>
         </div>
 
-        <h2 class="pcp-prototype-title">Sample</h2>
+        <h2 class="pcp-prototype-title">Variations / States</h2>
 
         <h3 class="fsa-font--sans">Default</h3>
 
         {% include: 'includes/select-multi.html' %}
 
+        <h3 class="fsa-font--sans">Disabled</h3>
+
+        {% include: 'includes/select-multi_classes--disabled.html' @UNIQUE_ID:'UNIQUE-ID-eh5s' %}
+
+        <h2 class="pcp-prototype-title">Samples</h2>
+
         <h3 class="fsa-font--sans">Markets</h3>
 
         {% include: 'includes/select-multi_markets.html' %}
+
+        <h3 class="fsa-font--sans">Classes</h3>
+
+        {% include: 'includes/select-multi_classes.html' @UNIQUE_ID:'UNIQUE-ID-asfw' %}
 
 
       </div>

@@ -569,9 +569,11 @@ $('body').on('change', '[data-behavior~="attach-upload"]', function(event) {
 
 });
 
-document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
+if (document.querySelector('[data-behavior~="attach-upload"]')) {
+  document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
+}
 
-$('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
+$('body').on('change', '[data-behavior~="use-current-or-new"]', function(event) {
 
   var $self = $(this);
   var $which = $self.val();
@@ -591,7 +593,7 @@ $('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
 
 });
 
-$('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) {
+$('body').on('click', '[data-behavior~="attach-upload__clear"]', function(event) {
 
   var $self = $(this);
   var $target = $self.siblings('.pcp-file-upload__attachment');
@@ -599,6 +601,49 @@ $('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) 
 
   $target.html('');
   $targetPreview.val('');
+
+});
+
+$('body').on('change', '[data-behavior~="choose-commodity-class"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.fsa-field');
+  var $targetSubClass = $('#' + $self.attr('data-target-subclass'));
+  var $targetAdder = $('#' + $self.attr('data-target-adder'));
+  var selectedValue = $self.val();
+
+  console.log(selectedValue);
+
+  if (selectedValue == 'Durum') {
+    $targetSubClass.removeAttr('hidden');
+    $targetAdder.attr('hidden', true);
+  } else if (selectedValue == 'Add') {
+    $targetSubClass.attr('hidden', true);
+    $targetAdder.removeAttr('hidden');
+    $targetAdder.find('.fsa-input').focus();
+    $component.attr('hidden', true);
+  } else {
+    $targetAdder.attr('hidden', true);
+    $targetSubClass.attr('hidden', true);
+  }
+
+});
+
+$('body').on('click', '[data-behavior~="choose-commodity-class__reset"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.fsa-field');
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetSelect = $target.find('.fsa-field__item')
+  var $textField = $component.find('.fsa-field__item')
+
+  $textField.val('');
+  $component.attr('hidden', true);
+  $target.removeAttr('hidden');
+  $targetSelect
+    .val('None')
+    .focus()
+  ;
 
 });
 
