@@ -1,11 +1,17 @@
 <form action="settings_markets__add-success.html">
   <fieldset>
+    <p class="HINT HINT--HIDDEN-BLOCK">
+      Focus <strong>Commodity Name</strong> field, leave it empty to demo error state of <em>"can't be empty"</em>
+    </p>
     <div class="fsa-field">
       <label class="fsa-field__label" for="commodity-name">Commodity Name <span class="fsa-field__label-desc">Required</span></label>
       <input data-behavior="validate-commodity" class="fsa-input fsa-field__item" id="commodity-name" name="commodity-name" type="text" value="">
       <span class="fsa-field__help">Alpha characters, no numbers or special characters</span>
       <span class="fsa-field__message" id="commodity-name__error-message-01" role="alert">This field is required</span>
     </div>
+    <p class="HINT HINT--HIDDEN-BLOCK">
+      Enter a number in <strong>Abbreviation</strong> field, and blur to demo error state of <em>"can't be numeric"</em>
+    </p>
     <div class="fsa-field">
       <label class="fsa-field__label" for="abbreviation">Abbreviation <span class="fsa-field__label-desc">Required</span></label>
       <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="abbreviation" name="abbreviation" type="text" value="" minlength="2" maxlength="3">
@@ -77,7 +83,7 @@
       <label for="commodity-active">Active</label>
     </div>
     <div class="fsa-field">
-      <button class="fsa-btn fsa-btn--primary" type="button" data-behavior="close-modal growl-show" data-target="unique-id-6367838372389">Add</button>
+      <button class="fsa-btn fsa-btn--primary HINT" type="button" data-behavior="close-modal growl-show" data-target="unique-id-6367838372389">Add</button>
       <button class="fsa-btn fsa-btn--flat" type="button" data-behavior="close-modal">Cancel</button>
     </div>
   </fieldset>

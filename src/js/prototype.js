@@ -721,3 +721,20 @@ $('body').on('dblclick', '.pcp-mapping__panel-bd--splitter', function(event) {
   // REVERT adjustment panes to initial height
   $('.pcp-mapping__panel-bd-scroll-item--top').css('height', '');
 })
+
+function ToggleHint() {
+  $('body').toggleClass('HINT-SHOW');
+  $('.ds-home').css({"display":"block"});
+}
+
+$('body').keydown(function(event) {
+  if(event.which == 112) { // F1
+    ToggleHint();
+    return false;
+  }
+});
+
+
+$('body').on('change', '[data-behavior~="toggle-prototype-hints"]', function(event) {
+  ToggleHint()
+})
