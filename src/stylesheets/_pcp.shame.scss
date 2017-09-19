@@ -11,6 +11,7 @@
   $hint-color: rgba(255, 69, 0, .8);
 
   .HINT-SHOW & {
+
     // scss-lint:disable all
     box-shadow:
       0 5000px 0 0 transparentize($hint-color, .7) inset,
@@ -19,6 +20,19 @@
     ;
     outline: 2px solid orangered;
     outline-offset: 5px;
+
+    &.pcp-content-tabs__label--active {
+      box-shadow: none;
+      outline: none;
+    }
+
+  }
+
+  .fsa-radio:checked + &,
+  .fsa-radio:disabled + &,
+  .fsa-checkbox:disabled + & {
+    box-shadow: none;
+    outline: none;
   }
 
   &--HIDDEN-BLOCK {
