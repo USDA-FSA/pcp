@@ -729,7 +729,17 @@ function ToggleHint() {
 
 $('body').keydown(function(event) {
   if(event.which == 112) { // F1
+
+    var $hintCheckbox = $('#show-hints');
+
+    if($hintCheckbox.is(':checked')) {
+      $hintCheckbox.prop('checked', false);
+    } else {
+      $hintCheckbox.prop('checked', true);
+    }
+
     ToggleHint();
+
     return false;
   }
 });

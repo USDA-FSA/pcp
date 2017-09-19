@@ -18,6 +18,7 @@
       0 5000px 0 0 transparentize($hint-color, .7) inset
     ;
   }
+
   &--HIDDEN-BLOCK {
 
     @include font-size(2);
@@ -29,7 +30,6 @@
     }
 
   }
-
 
 }
 
@@ -122,10 +122,6 @@ textarea[rows] {
 
   &--docked {
 
-    .pcp-prototype-home & {
-      display: none;
-    }
-
     @include breakpoint(L) {
 
       background-color: white;
@@ -150,6 +146,16 @@ textarea[rows] {
 
     }
 
+    .pcp-prototype-home & {
+      display: none;
+    }
+
+  }
+
+  &__hints {
+    .pcp-prototype-home & {
+      display: none;
+    }
   }
 
 }
