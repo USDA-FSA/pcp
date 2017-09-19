@@ -11,12 +11,14 @@
   $hint-color: rgba(255, 69, 0, .8);
 
   .HINT-SHOW & {
-    outline: 3px solid $hint-color;
     // scss-lint:disable all
     box-shadow:
       0 5000px 0 0 transparentize($hint-color, .7) inset,
-      0 5000px 0 0 transparentize($hint-color, .7) inset
+      0 5000px 0 0 transparentize($hint-color, .7) inset,
+      0 0px 0 8px transparentize($hint-color, .6)
     ;
+    outline: 2px solid orangered;
+    outline-offset: 5px;
   }
 
   &--HIDDEN-BLOCK {
@@ -27,6 +29,9 @@
 
     .HINT-SHOW & {
       display: block;
+      outline-offset: 0;
+      box-shadow: none;
+      background-color: transparentize($hint-color, .7);
     }
 
   }
