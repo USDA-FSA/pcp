@@ -1,6 +1,6 @@
 {% include: 'includes/html.html' %}
 
-{% include: 'includes/head.html' @title:'Settings' %}
+{% include: 'includes/head.html' @title:'Settings > Roles' %}
 
 <body class="pcp-app">
 
@@ -23,9 +23,9 @@
 
         <h1>Settings</h1>
 
-        {% include: 'includes/pcp-content-tabs__settings__market-combos.html' %}
-        {% include: 'includes/table-header_no-header.html' @title:'Programs' @link:'settings_thing__add.html' @STATE:'disabled' %}
-        {% include: 'includes/table_programs.html' %}
+        {% include: 'includes/pcp-content-tabs__settings__subclasses.html' %}
+        {% include: 'includes/table-header_no-header.html' @title:'Subclasses' @link:'settings_thing__add.html' @STATE:' ' %}
+        {% include: 'includes/table_subclasses.html' %}
 
       </div>
 
@@ -36,6 +36,16 @@
   <footer>
     {% include: 'includes/pcp-footer-TEMP.html' %}
   </footer>
+
+  <div tabindex="0" id="UNIQUE-ID-edit-subclass" class="pcp-modal pcp-modal--top" role="dialog" aria-hidden="true">
+    <div class="pcp-modal__dialog">
+      <div class="pcp-modal__content">
+        <button class="pcp-modal__close HINT" data-behavior="close-modal"><img class="pcp-modal__close-icon" src="img/close.svg" alt="close"></button>
+        <h1 class="pcp-modal__title">Edit Sub-class</h1>
+        {% include: 'includes/settings__edit-subclass.html' %}
+      </div>
+    </div>
+  </div>
 
   {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
 

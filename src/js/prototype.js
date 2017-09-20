@@ -569,9 +569,11 @@ $('body').on('change', '[data-behavior~="attach-upload"]', function(event) {
 
 });
 
-document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
+if (document.querySelector('[data-behavior~="attach-upload"]')) {
+  document.querySelector('[data-behavior~="attach-upload"]').addEventListener('change', handleFileSelect, false);
+}
 
-$('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
+$('body').on('change', '[data-behavior~="use-current-or-new"]', function(event) {
 
   var $self = $(this);
   var $which = $self.val();
@@ -591,7 +593,7 @@ $('body').on('change', '[data-behavior="use-current-or-new"]', function(event) {
 
 });
 
-$('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) {
+$('body').on('click', '[data-behavior~="attach-upload__clear"]', function(event) {
 
   var $self = $(this);
   var $target = $self.siblings('.pcp-file-upload__attachment');
@@ -599,6 +601,49 @@ $('body').on('click', '[data-behavior="attach-upload__clear"]', function(event) 
 
   $target.html('');
   $targetPreview.val('');
+
+});
+
+$('body').on('change', '[data-behavior~="choose-commodity-class"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.fsa-field');
+  var $targetSubClass = $('#' + $self.attr('data-target-subclass'));
+  var $targetAdder = $('#' + $self.attr('data-target-adder'));
+  var selectedValue = $self.val();
+
+  console.log(selectedValue);
+
+  if (selectedValue == 'Durum') {
+    $targetSubClass.removeAttr('hidden');
+    $targetAdder.attr('hidden', true);
+  } else if (selectedValue == 'Add') {
+    $targetSubClass.attr('hidden', true);
+    $targetAdder.removeAttr('hidden');
+    $targetAdder.find('.fsa-input').focus();
+    $component.attr('hidden', true);
+  } else {
+    $targetAdder.attr('hidden', true);
+    $targetSubClass.attr('hidden', true);
+  }
+
+});
+
+$('body').on('click', '[data-behavior~="choose-commodity-class__reset"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('.fsa-field');
+  var $target = $('#' + $self.attr('data-target'));
+  var $targetSelect = $target.find('.fsa-field__item')
+  var $textField = $component.find('.fsa-field__item')
+
+  $textField.val('');
+  $component.attr('hidden', true);
+  $target.removeAttr('hidden');
+  $targetSelect
+    .val('None')
+    .focus()
+  ;
 
 });
 
@@ -676,3 +721,58 @@ $('body').on('dblclick', '.pcp-mapping__panel-bd--splitter', function(event) {
   // REVERT adjustment panes to initial height
   $('.pcp-mapping__panel-bd-scroll-item--top').css('height', '');
 })
+
+function ToggleHint() {
+
+  $('body').toggleClass('HINT-SHOW');
+  $('.ds-home').css({"display":"block"});
+
+  var hintStatus = Cookies.get('hints');
+
+  if (hintStatus) {
+    Cookies.remove('hints');
+  } else {
+    Cookies.set('hints', true, { expires: 365 });
+  }
+
+}
+
+function HintStatus() {
+
+  var hintStatus = Cookies.get('hints');
+  var $hintCheckbox = $('#show-hints');
+
+  if (hintStatus) {
+    console.log('There IS a "hints" cookie');
+    $('body').addClass('HINT-SHOW');
+    $hintCheckbox.prop('checked', true);
+  } else {
+    console.log('There is NO "hints" cookie');
+  }
+
+}
+
+$('body').keydown(function(event) {
+
+  if(event.which == 112) { // F1
+
+    var $hintCheckbox = $('#show-hints');
+
+    if($hintCheckbox.is(':checked')) {
+      $hintCheckbox.prop('checked', false);
+    } else {
+      $hintCheckbox.prop('checked', true);
+    }
+
+    ToggleHint();
+
+    return false;
+  }
+
+});
+
+$('body').on('change', '[data-behavior~="toggle-prototype-hints"]', function(event) {
+  ToggleHint()
+})
+
+HintStatus();

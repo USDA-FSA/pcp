@@ -1,8 +1,55 @@
 // -----------------------------------------------------------------------------
 // TO BE SORTED
 
+// scss-lint:disable SelectorFormat
 .OUTLINE {
   outline: 1px solid orangered;
+}
+
+.HINT {
+
+  $hint-color: rgba(255, 69, 0, .8);
+
+  .HINT-SHOW & {
+
+    // scss-lint:disable all
+    box-shadow:
+      0 5000px 0 0 transparentize($hint-color, .7) inset,
+      0 5000px 0 0 transparentize($hint-color, .7) inset,
+      0 0px 0 8px transparentize($hint-color, .6)
+    ;
+    outline: 2px solid orangered;
+    outline-offset: 5px;
+
+    &.pcp-content-tabs__label--active {
+      box-shadow: none;
+      outline: none;
+    }
+
+  }
+
+  .fsa-radio:checked + &,
+  .fsa-radio:disabled + &,
+  .fsa-checkbox:disabled + & {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &--HIDDEN-BLOCK {
+
+    @include font-size(2);
+    display: none;
+    padding: $size-small;
+
+    .HINT-SHOW & {
+      display: block;
+      outline-offset: 0;
+      box-shadow: none;
+      background-color: transparentize($hint-color, .7);
+    }
+
+  }
+
 }
 
 // scss-lint:disable QualifyingElement
@@ -94,10 +141,6 @@ textarea[rows] {
 
   &--docked {
 
-    .pcp-prototype-home & {
-      display: none;
-    }
-
     @include breakpoint(L) {
 
       background-color: white;
@@ -120,6 +163,10 @@ textarea[rows] {
         bottom: 0;
       }
 
+    }
+
+    .pcp-prototype-home & {
+      display: none;
     }
 
   }

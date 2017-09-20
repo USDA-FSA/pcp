@@ -46,7 +46,8 @@ $marker-color-affected: #02bfe7; // from USWDS
   user-select: none;
   transition: all .23s ease-in-out;
 
-  &:before { // Impacted
+  &:before {
+    // Impacted
 
     display: none;
     opacity: 0;

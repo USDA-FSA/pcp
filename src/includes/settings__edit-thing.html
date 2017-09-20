@@ -7,23 +7,78 @@
       <span class="fsa-field__message" id="thingthing-name__error-message-01" role="alert">This field is required</span>
     </div>
     <div class="fsa-field">
-      <label class="fsa-field__label" for="thingthing-abbreviation">Abbreviation <span class="fsa-field__label-desc">Required</span></label>
-      <input data-behavior="validate-abbr" class="fsa-input fsa-field__item" id="thingthing-abbreviation" name="thingthing-abbreviation" type="text" value="HRW" minlength="2" maxlength="3">
-      <span class="fsa-field__help">2 or 3 alpha characters, no numbers or special characters</span>
-      <span class="fsa-field__message" id="thingthing-abbreviation__error-message-01" role="alert">Cannot contain numbers</span>
+      <label class="fsa-field__label" for="thingthing-abbreviation">Abbreviation</label>
+      <input class="fsa-input fsa-field__item" id="thingthing-abbreviation" name="thingthing-abbreviation" type="text" value="HRW" minlength="2" maxlength="3" disabled="disabled">
     </div>
     <div class="fsa-field">
-      <input class="fsa-checkbox" id="thingthing-active" type="checkbox" name="thingthing-active" value="thingthing-active">
-      <label for="thingthing-active">Active</label>
-    </div>
-    <div class="fsa-field">
-      <span class="fsa-field__label">Markets <span class="fsa-field__label-desc">Required</span></span>
+      <span class="fsa-field__label">Class <span class="fsa-field__label-desc">Required</span></span>
       <div class="fsa-field__item">
-        {% include: 'includes/select-multi_markets--checked.html' @UNIQUE_ID:'thingiethingie' %}
+        {% include: 'includes/select-multi_classes--checked.html' @UNIQUE_ID:'UNIQUE-ID-NNVBLOrEMS' %}
       </div>
     </div>
+    <div class="fsa-field" id="UNIQUE-ID-ssgg555dd" hidden>
+      <label class="fsa-field__label" for="UNIQUE-ID-rrr6552000">Class</label>
+      <select data-behavior="choose-commodity-class" data-target-subclass="UNIQUE-ID-sss555000sss" data-target-adder="UNIQUE-ID-55s5saaaa51" class="fsa-select fsa-field__item" id="UNIQUE-ID-rrr6552000" name="UNIQUE-ID-rrr6552000">
+        <option value="None" checked="checked">None</option>
+        <!-- <option value="Add">Add</option> -->
+        <option value="----------" disabled="disabled">----------</option>
+        <option value="Barley">Barley</option>
+        <option value="CAN">CAN</option>
+        <option value="Crambe">Crambe</option>
+        <option value="Durum">Durum</option>
+        <option value="FLX">FLX</option>
+        <option value="Hard Red Spring">Hard Red Spring</option>
+        <option value="Hard Red Winter">Hard Red Winter</option>
+        <option value="Large">Large</option>
+        <option value="Lentils">Lentils</option>
+        <option value="Long Grain">Long Grain</option>
+        <option value="Medium Grain">Medium Grain</option>
+        <option value="Mustard">Mustard</option>
+        <option value="Oats">Oats</option>
+        <option value="Peas">Peas</option>
+        <option value="RAP">RAP</option>
+        <option value="SAF">SAF</option>
+        <option value="SES">SES</option>
+        <option value="SFN">SFN</option>
+        <option value="Short Grain">Short Grain</option>
+        <option value="Small">Small</option>
+        <option value="Soft Red Winter">Soft Red Winter</option>
+        <option value="Soft White Wheat">Soft White Wheat</option>
+        <option value="Sorghum">Sorghum</option>
+        <option value="SUN">SUN</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+    </div>
+    <div class="fsa-field" id="UNIQUE-ID-55s5saaaa51" hidden>
+      <label class="fsa-field__label" for="UNIQUE-ID-sgsssa">Class</label>
+      <div class="fsa-grid">
+        <div class="fsa-grid__1/1 fsa-grid__10/12@s">
+          <input class="fsa-input fsa-field__item" id="UNIQUE-ID-sgsssa" name="UNIQUE-ID-sgsssa" type="text" value="">
+        </div>
+        <div class="fsa-grid__1/1 fsa-grid__2/12@s">
+          <button data-behavior="choose-commodity-class__reset" data-target="UNIQUE-ID-ssgg555dd" class="fsa-btn fsa-btn--block fsa-btn--flat" type="button">Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="fsa-field" id="UNIQUE-ID-sss555000sss" hidden>
+      <label class="fsa-field__label" for="UNIQUE-ID-wwwroop">Sub-class</label>
+      <select class="fsa-select fsa-field__item" id="UNIQUE-ID-wwwroop" name="UNIQUE-ID-wwwroop">
+        <option value="None" checked="checked">None</option>
+        <option value="----------" disabled="disabled">----------</option>
+        <option value="Durum">Durum</option>
+        <option value="Amber Durum">Amber Durum</option>
+        <option value="Hard Amber Durum">Hard Amber Durum</option>
+      </select>
+    </div>
     <div class="fsa-field">
-      <button class="fsa-btn fsa-btn--primary" type="button" data-behavior="close-modal whiteout-show growl-show" data-target="unique-id-HSHHS73737732">Save</button>
+      <input class="fsa-checkbox" id="thingthing-active" type="checkbox" name="thingthing-active" value="thingthing-active" checked="checked">
+      <label for="thingthing-active">Active</label>
+    </div>
+    <p class="HINT HINT--HIDDEN-BLOCK">
+      Click <strong>Save</strong> button to demo really bad error.</em>
+    </p>
+    <div class="fsa-field">
+      <button class="fsa-btn fsa-btn--primary HINT" type="button" data-behavior="close-modal whiteout-show growl-show" data-target="unique-id-HSHHS73737732">Save</button>
       <button class="fsa-btn fsa-btn--flat" type="button" data-behavior="close-modal">Cancel</button>
     </div>
   </fieldset>
