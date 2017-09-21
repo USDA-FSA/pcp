@@ -50,6 +50,11 @@
 
   }
 
+  &:disabled {
+    outline: none;
+    box-shadow: none;
+  }
+
 }
 
 // scss-lint:disable QualifyingElement

@@ -23,6 +23,12 @@
     color: $color-fsa-tertiary;
   }
 
+  &__options {
+    position: absolute;
+    right: ($padding * 2);
+    top: 3px; // magic number alert TODO
+  }
+
   // ---------------------------------------------------------------------------
 
   &__bd {} // no rules to begin with, keep though.

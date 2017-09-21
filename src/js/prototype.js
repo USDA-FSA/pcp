@@ -776,3 +776,14 @@ $('body').on('change', '[data-behavior~="toggle-prototype-hints"]', function(eve
 })
 
 HintStatus();
+
+$('body').on('click', '[data-behavior~="confirm-remove-state-pair"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  $target.fadeTo('slow', '0', function() {
+    $(this).remove();
+  })
+
+})
