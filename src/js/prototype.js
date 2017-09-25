@@ -97,6 +97,7 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
   var $target = $('#' + $self.attr('data-target'));
 
   setTimeout(function() {
+
     $target.addClass('pcp-growl--dismissing');
 
     setTimeout(function() {
@@ -104,7 +105,7 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
       $target.addClass('pcp-growl--hidden');
     }, 500);
 
-  }, 3500);
+  }, 5000);
 
 })
 
@@ -839,5 +840,18 @@ $('body').on('click', '[data-behavior~="new-state-pair__save"]', function(event)
   $row.find('[data-behavior~="new-state-pair__save"]').attr('disabled', true)
   $row.find('span[id]').html('');
 
+
+})
+
+$('body').on('change', '[data-behavior~="confirm-reopen"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  if ($self.is(':checked')) {
+    $target.removeAttr('disabled');
+  } else {
+    $target.attr('disabled', true);
+  }
 
 })
