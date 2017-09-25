@@ -647,7 +647,6 @@ $('body').on('click', '[data-behavior~="choose-commodity-class__reset"]', functi
 
 });
 
-
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
@@ -785,5 +784,45 @@ $('body').on('click', '[data-behavior~="confirm-remove-state-pair"]', function(e
   $target.fadeTo('slow', '0', function() {
     $(this).remove();
   })
+
+})
+
+$('body').on('change', '[data-behavior~="new-state-pair__enable"]', function(event) {
+
+  var $self = $(this);
+  var $row = $self.closest('.pcp-table__row');
+  var $target = $row.find('[data-behavior~="new-state-pair__save"]');
+  var $previewValue = $self.val();
+
+  if ($previewValue == '') {
+    $target.attr('disabled', true);
+  } else {
+    $target.removeAttr('disabled');
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="new-state-pairing"]', function(event) {
+
+  var $self = $(this);
+  var $previewValue = $self.val();
+  var $target = $('#' + $self.attr('data-target'));
+
+  $target.html($previewValue);
+
+  if ($self.attr('name') == 'Market') {
+    if ($previewValue == '') {
+      $target.html('');
+    } else {
+      $target.prepend(' / ');
+    }
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="new-state-pair__save"]', function(event) {
+
+  var $self = $(this);
+  alert('save and add row');
 
 })
