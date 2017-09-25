@@ -823,12 +823,21 @@ $('body').on('change', '[data-behavior~="new-state-pairing"]', function(event) {
 $('body').on('click', '[data-behavior~="new-state-pair__save"]', function(event) {
 
   var $self = $(this);
+  var $row = $self.closest('.pcp-table__row');
   var $target = $('#' + $self.attr('data-target'));
 
   $target
     .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
     .removeAttr('hidden') // this isn't how you'd actually do it, I just have it in markup to demo
-    .fadeTo('slow', '1') // fade in
+    .fadeTo('slow', '1', function() {
+      console.log('done fading in');
+    })
   ;
+
+  // now let's revert row form elements to initial state
+  $row.find('[data-behavior~="new-state-pairing"]').val('');
+  $row.find('[data-behavior~="new-state-pair__save"]').attr('disabled', true)
+  $row.find('span[id]').html('');
+
 
 })
