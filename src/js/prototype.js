@@ -823,6 +823,12 @@ $('body').on('change', '[data-behavior~="new-state-pairing"]', function(event) {
 $('body').on('click', '[data-behavior~="new-state-pair__save"]', function(event) {
 
   var $self = $(this);
-  alert('save and add row');
+  var $target = $('#' + $self.attr('data-target'));
+
+  $target
+    .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
+    .removeAttr('hidden') // this isn't how you'd actually do it, I just have it in markup to demo
+    .fadeTo('slow', '1') // fade in
+  ;
 
 })
