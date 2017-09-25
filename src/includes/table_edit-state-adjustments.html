@@ -1,20 +1,21 @@
-<table class="fsa-table fsa-table--borderless fsa-table--responsive pcp-table--middle">
+<table class="fsa-table fsa-table--borderless fsa-table--responsive pcp-table--fixed pcp-table--middle">
   <thead>
     <tr class="pcp-table__row">
-      <th class="pcp-table__cell" scope="col">
+      <th colspan="8" class="pcp-table__cell" scope="col">
         <button class="pcp-table__sort pcp-table__sort--down" type="button">State</button>
       </th>
-      <th class="pcp-table__cell" scope="col">
+      <th colspan="8" class="pcp-table__cell" scope="col">
         <button class="pcp-table__sort" type="button">Market</button>
       </th>
-      <th class="pcp-table__cell" scope="col" colspan="2">
+      <th colspan="5" class="pcp-table__cell" scope="col">
         <button class="pcp-table__sort" type="button">Name</button>
       </th>
+      <th colspan="3" class="pcp-table__cell fsa-text-align--right" scope="col"></th>
     </tr>
   </thead>
   <tbody>
     <tr class="pcp-table__row">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         <select data-behavior="new-state-pairing" data-target="UNIQUE-ID-PAIR--STATE" class="fsa-select fsa-select--small fsa-select--block HINT" name="State">
           <option value="" selected=""></option>
           <option value="AL">Alabama</option>
@@ -70,7 +71,7 @@
           <option value="WY">Wyoming</option>
         </select>
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         <select data-behavior="new-state-pairing new-state-pair__enable" data-target="UNIQUE-ID-PAIR--MARKET" class="fsa-select fsa-select--small fsa-select--block HINT" name="Market">
           <option value="" selected=""></option>
           <option value="AMA">Amarillo</option>
@@ -86,124 +87,124 @@
           <option value="WCD">West Coast Domestic</option>
         </select>
       </td>
-      <td class="pcp-table__cell">
+      <td colspan="5" class="pcp-table__cell">
         <span id="UNIQUE-ID-PAIR--STATE"></span>
         <span id="UNIQUE-ID-PAIR--MARKET"></span>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--primary HINT" disabled="disabled" type="button" data-behavior="new-state-pair__save" data-target="unique-id-DEMO-NEW-PAIRING">Add</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--primary HINT" disabled="disabled" type="button" data-behavior="new-state-pair__save" data-target="unique-id-DEMO-NEW-PAIRING">Add</button>
       </td>
     </tr>
     <tr class="pcp-table__row" id="unique-id-DEMO-NEW-PAIRING" hidden>
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         AL - Alabama
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         AMA - Amarillo
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="Alabama">AL</abbr> / <abbr title="Amarillo">AMA</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary" type="button">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
       </td>
     </tr>
     <tr class="pcp-table__row" id="unique-id-yshsh4HDYD">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         KS - Kansas
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         GLF - Gulf
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="[SPELL_IT_OUT]">KS</abbr> / <abbr title="[SPELL_IT_OUT]">GLF</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary HINT" type="button" data-behavior="growl-show whiteout-show" data-target="unique-id-hsy26as7gy">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary HINT" type="button" data-behavior="growl-show whiteout-show" data-target="unique-id-hsy26as7gy">Remove</button>
       </td>
     </tr>
     <tr class="pcp-table__row">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         OR - Oregan
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         PNW - Pacific Northwest
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="[SPELL_IT_OUT]">OR</abbr> / <abbr title="[SPELL_IT_OUT]">PNW</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary" type="button">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
       </td>
     </tr>
     <tr class="pcp-table__row">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         OK - Oklahoma
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         GLF - Gulf
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="[SPELL_IT_OUT]">OK</abbr> / <abbr title="[SPELL_IT_OUT]">GLF</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary" type="button">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
       </td>
     </tr>
     <tr class="pcp-table__row">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         CO - Colorado
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         GLF - Gulf
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="[SPELL_IT_OUT]">CO</abbr> / <abbr title="[SPELL_IT_OUT]">GLF</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary" type="button">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
       </td>
     </tr>
     <tr class="pcp-table__row">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         NE - Nebraska
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         GLF - Gulf
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="[SPELL_IT_OUT]">NE</abbr> / <abbr title="[SPELL_IT_OUT]">GLF</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary" type="button">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
       </td>
     </tr>
     <tr class="pcp-table__row">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         SD - South Dakota
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         GLF - Gulf
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="[SPELL_IT_OUT]">SD</abbr> / <abbr title="[SPELL_IT_OUT]">GLF</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary" type="button">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
       </td>
     </tr>
     <tr class="pcp-table__row">
-      <td class="pcp-table__cell" aria-label="State">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
         CA - California
       </td>
-      <td class="pcp-table__cell" aria-label="Market">
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
         GLF - Gulf
       </td>
-      <td class="pcp-table__cell" aria-label="Name">
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
         <abbr title="[SPELL_IT_OUT]">CA</abbr> / <abbr title="[SPELL_IT_OUT]">GLF</abbr>
       </td>
-      <td class="pcp-table__cell fsa-text-align--right">
-        <button class="fsa-btn fsa-btn--small fsa-btn--tertiary" type="button">Remove</button>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
       </td>
     </tr>
   </tbody>
