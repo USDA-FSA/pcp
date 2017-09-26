@@ -647,7 +647,6 @@ $('body').on('click', '[data-behavior~="choose-commodity-class__reset"]', functi
 
 });
 
-
 function markerDemoMarkup() {
 
   var $source = $('#pcp-marker-demo__target');
@@ -776,3 +775,69 @@ $('body').on('change', '[data-behavior~="toggle-prototype-hints"]', function(eve
 })
 
 HintStatus();
+
+$('body').on('click', '[data-behavior~="confirm-remove-state-pair"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  $target.fadeTo('slow', '0', function() {
+    $(this).remove();
+  })
+
+})
+
+$('body').on('change', '[data-behavior~="new-state-pair__enable"]', function(event) {
+
+  var $self = $(this);
+  var $row = $self.closest('.pcp-table__row');
+  var $target = $row.find('[data-behavior~="new-state-pair__save"]');
+  var $previewValue = $self.val();
+
+  if ($previewValue == '') {
+    $target.attr('disabled', true);
+  } else {
+    $target.removeAttr('disabled');
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="new-state-pairing"]', function(event) {
+
+  var $self = $(this);
+  var $previewValue = $self.val();
+  var $target = $('#' + $self.attr('data-target'));
+
+  $target.html($previewValue);
+
+  if ($self.attr('name') == 'Market') {
+    if ($previewValue == '') {
+      $target.html('');
+    } else {
+      $target.prepend(' / ');
+    }
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="new-state-pair__save"]', function(event) {
+
+  var $self = $(this);
+  var $row = $self.closest('.pcp-table__row');
+  var $target = $('#' + $self.attr('data-target'));
+
+  $target
+    .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
+    .removeAttr('hidden') // this isn't how you'd actually do it, I just have it in markup to demo
+    .fadeTo('slow', '1', function() {
+      console.log('done fading in');
+    })
+  ;
+
+  // now let's revert row form elements to initial state
+  $row.find('[data-behavior~="new-state-pairing"]').val('');
+  $row.find('[data-behavior~="new-state-pair__save"]').attr('disabled', true)
+  $row.find('span[id]').html('');
+
+
+})

@@ -7,6 +7,7 @@
 
 
   &__hd {
+    position: relative;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -21,6 +22,12 @@
     font-weight: $font-bold;
     font-family: $font-sans;
     color: $color-fsa-tertiary;
+  }
+
+  &__options {
+    position: absolute;
+    right: ($padding * 2);
+    top: 3px; // magic number alert TODO
   }
 
   // ---------------------------------------------------------------------------
