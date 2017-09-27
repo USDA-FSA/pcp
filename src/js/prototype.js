@@ -105,7 +105,7 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
       $target.addClass('pcp-growl--hidden');
     }, 500);
 
-  }, 5000);
+  }, 7500);
 
 })
 
@@ -853,5 +853,16 @@ $('body').on('change', '[data-behavior~="confirm-reopen"]', function(event) {
   } else {
     $target.attr('disabled', true);
   }
+
+})
+
+$('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event) {
+
+  var $self = $(this);
+  var $reopenTarget = $('#' + $self.attr('data-reopen-target'));
+  var $reopenTarget__completer = $reopenTarget.closest('.pcp-title-action-bar').find('[disabled]');
+
+  $reopenTarget.remove();
+  $reopenTarget__completer.removeAttr('disabled');
 
 })
