@@ -23,7 +23,8 @@
 
         {% include: 'includes/pcp-info-bar.html' %}
 
-        {% include: 'includes/pcp-stepped-tabs__discovery.html' %}
+        <div id="DEMO-REOPEN-STEPPED-TABS--INITIAL">{% include: 'includes/pcp-stepped-tabs__discovery--at-adjustments.html' %}</div>
+        <div id="DEMO-REOPEN-STEPPED-TABS--POST" hidden="hidden">{% include: 'includes/pcp-stepped-tabs__discovery.html' %}</div>
 
         {% include: 'includes/pcp-title-action-bar__reopen.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' @reopen:'unique-id-hhsyq9s852' %}
 
@@ -38,6 +39,11 @@
   <footer>
     {% include: 'includes/pcp-footer-TEMP.html' %}
   </footer>
+
+  {% include: 'includes/pcp-modal__entry-pnw__complete.html' %}
+  {% include: 'includes/pcp-modal__entry-glf.html' %}
+  {% include: 'includes/pcp-modal__entry-rice.html' %}
+  {% include: 'includes/pcp-modal__edit-workflow.html' %}
 
   {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
 

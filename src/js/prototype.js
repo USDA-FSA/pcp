@@ -861,9 +861,21 @@ $('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event
   var $self = $(this);
   var $reopenTarget = $('#' + $self.attr('data-reopen-target'));
   var $reopenTarget__completer = $reopenTarget.closest('.pcp-title-action-bar').find('[disabled]');
+  var $reopenSteppedTabsTarget = $('#' + $self.attr('data-steps-target'));
+  var $reopenSteppedTabsTarget__new = $reopenSteppedTabsTarget.siblings('[hidden]');
+  var $reopenCompleteCheckbox = $('#' + $self.attr('data-complete-check-target'));
 
   $reopenTarget.remove();
   $reopenTarget__completer.removeAttr('disabled');
+  $reopenSteppedTabsTarget.attr('hidden', true);
+  $reopenCompleteCheckbox.removeAttr('disabled');
+  $reopenSteppedTabsTarget__new
+    .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
+    .removeAttr('hidden') // this isn't how you'd actually do it, I just have it in markup to demo
+    .fadeTo('slow', '1', function() {
+      console.log('done fading in');
+    })
+  ;
 
 })
 
