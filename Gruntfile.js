@@ -84,6 +84,9 @@ module.exports = function (grunt) {
     },
 
     simple_include: {
+      options: {
+        html_comment: true,
+      },
       default_options: {
         src: [
           'src/*.html'
