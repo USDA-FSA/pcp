@@ -25,7 +25,12 @@
 
         {% include: 'includes/pcp-stepped-tabs__closing.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'title' @action:'Complete Closing' @link:'workflow_mapping.html' %}
+        {% include: 'includes/pcp-title-action-bar.html' @title:'title' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' %}
+
+        <p>
+          <input class="fsa-checkbox" id="UNIQUE-ID-77shhsn" type="checkbox" name="UNIQUE-ID-77shhsn" value="approve" data-behavior="toggle-finalize">
+          <label for="UNIQUE-ID-77shhsn" class="HINT">[label]</label>
+        </p>
 
         {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
 
