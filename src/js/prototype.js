@@ -882,13 +882,23 @@ $('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event
   $reopenTarget__completer.removeAttr('disabled');
   $reopenSteppedTabsTarget.attr('hidden', true);
   $reopenCompleteCheckbox.removeAttr('disabled');
+
   $reopenSteppedTabsTarget__new
-    .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
     .removeAttr('hidden') // this isn't how you'd actually do it, I just have it in markup to demo
-    .fadeTo('slow', '1', function() {
-      console.log('done fading in');
+    .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
+    .slideUp('slow', function() { // animate the stepped tabs collapsing up
+      $(this)
+        .slideDown('slow', function() { // and then down
+          $(this)
+            .fadeTo('slow', '1', function() { // and then animate opacity
+              console.log('Done animating Stepped Tabs **reset**');
+            })
+          ;
+        })
+      ;
     })
   ;
+
 
 })
 
