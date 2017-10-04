@@ -198,6 +198,7 @@ $mapPanelIconWidth: $size-medium;
 
     min-height: 540px;
     height: 70vh;
+    overflow: hidden;
 
     // scss-lint:disable SelectorFormat
     .pcp-mapping--fullscreen & {
@@ -205,6 +206,10 @@ $mapPanelIconWidth: $size-medium;
       height: calc(100vh - 4.6px); // magic number
     }
 
+  }
+
+  &__PLACEHOLDER {
+    max-width: none;
   }
 
   // ---------------------------------------------------------------------------
