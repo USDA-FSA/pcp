@@ -97,6 +97,7 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
   var $target = $('#' + $self.attr('data-target'));
 
   setTimeout(function() {
+
     $target.addClass('pcp-growl--dismissing');
 
     setTimeout(function() {
@@ -104,7 +105,7 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
       $target.addClass('pcp-growl--hidden');
     }, 500);
 
-  }, 3500);
+  }, 7500);
 
 })
 
@@ -509,6 +510,19 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
 
 });
 
+$('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#UNIQUE-ID-FINALIZER');
+
+  if ($target.is(':disabled')) {
+    $target.removeAttr('disabled');
+  } else {
+    $target.attr('disabled', true);
+  }
+
+});
+
 $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
 
   // ---------------------------------------------------------------------------
@@ -841,3 +855,94 @@ $('body').on('click', '[data-behavior~="new-state-pair__save"]', function(event)
 
 
 })
+
+$('body').on('change', '[data-behavior~="confirm-reopen"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+
+  if ($self.is(':checked')) {
+    $target.removeAttr('disabled');
+  } else {
+    $target.attr('disabled', true);
+  }
+
+})
+
+$('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event) {
+
+  var $self = $(this);
+  var $reopenTarget = $('#' + $self.attr('data-reopen-target'));
+  var $reopenTarget__completer = $reopenTarget.closest('.pcp-title-action-bar').find('[disabled]');
+  var $reopenSteppedTabsTarget = $('#' + $self.attr('data-steps-target'));
+  var $reopenSteppedTabsTarget__new = $reopenSteppedTabsTarget.siblings('[hidden]');
+  var $reopenCompleteCheckbox = $('#' + $self.attr('data-complete-check-target'));
+
+  $reopenTarget.remove();
+  $reopenTarget__completer.removeAttr('disabled');
+  $reopenSteppedTabsTarget.attr('hidden', true);
+  $reopenCompleteCheckbox.removeAttr('disabled');
+
+  $reopenSteppedTabsTarget__new
+    .removeAttr('hidden') // this isn't how you'd actually do it, I just have it in markup to demo
+    .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
+    .slideUp('slow', function() { // animate the stepped tabs collapsing up
+      $(this)
+        .slideDown('slow', function() { // and then down
+          $(this)
+            .fadeTo('slow', '1', function() { // and then animate opacity
+              console.log('Done animating Stepped Tabs **reset**');
+            })
+          ;
+        })
+      ;
+    })
+  ;
+
+
+})
+
+;(function($) {
+    $.fn.drags = function(opt) {
+
+        opt = $.extend({handle:"",cursor:"move"}, opt);
+
+        if(opt.handle === "") {
+            var $el = this;
+        } else {
+            var $el = this.find(opt.handle);
+        }
+
+        return $el.css('cursor', opt.cursor).on("mousedown", function(e) {
+            if(opt.handle === "") {
+                var $drag = $(this).addClass('draggable');
+            } else {
+                var $drag = $(this).addClass('active-handle').parent().addClass('draggable');
+            }
+            var z_idx = $drag.css('z-index'),
+                drg_h = $drag.outerHeight(),
+                drg_w = $drag.outerWidth(),
+                pos_y = $drag.offset().top + drg_h - e.pageY,
+                pos_x = $drag.offset().left + drg_w - e.pageX;
+            $drag.css('z-index', 1000).parents().on("mousemove", function(e) {
+                $('.draggable').offset({
+                    top:e.pageY + pos_y - drg_h,
+                    left:e.pageX + pos_x - drg_w
+                }).on("mouseup", function() {
+                    $(this).removeClass('draggable').css('z-index', z_idx);
+                });
+            });
+            e.preventDefault(); // disable selection
+        }).on("mouseup", function() {
+            if(opt.handle === "") {
+                $(this).removeClass('draggable');
+            } else {
+                $(this).removeClass('active-handle').parent().removeClass('draggable');
+            }
+            console.log('this is the laziest, hackiest dragging interaction demo ever');
+        });
+
+    }
+})(jQuery);
+
+$('.pcp-mapping__PLACEHOLDER').drags();
