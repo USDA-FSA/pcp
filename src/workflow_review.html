@@ -27,21 +27,42 @@
 
         {% include: 'includes/pcp-title-action-bar.html' @title:'Review Adjustments' @action:'Complete Review' @link:'workflow_publish.html' @button_state:' ' %}
 
-        <div class="fsa-m-t--m">
+        <div class="fsa-m-t--m fsa-m-b--l">
           {% include: 'includes/pcp-content-tabs__review.html' %}
         </div>
 
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
-            <h2>Terminal</h2>
+            <div class="fsa-grid">
+              <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+                <h2 class="fsa-m-t--none fsa-m-b--none">Terminal</h2>
+              </div>
+              <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+                <div class="fsa-text-align--right">
+                  <select class="fsa-select" id="UNIQUE-ID-74USHHU" name="UNIQUE-ID-74USHHU">
+                    <option title="Corn" value="Corn">YC</option>
+                    <option title="Soybean" value="Soybean">YSB</option>
+                    <option title="Sorghum" value="Sorghum">SOR</option>
+                    <option title="Hard Red Winter Wheat" value="Hard Red Winter Wheat">HRW</option>
+                    <option title="Soft Red Winter Wheat" value="Soft Red Winter Wheat">SRW</option>
+                    <option title="Soft White Wheat" value="Soft White Wheat">WHI</option>
+                    <option title="Hard Red Spring Wheat" value="Hard Red Spring Wheat">HRS</option>
+                    <option title="Hard Amber Durum" value="Hard Amber Durum">HAD</option>
+                    <option title="Oats" value="Oats">OAT</option>
+                    <option title="Barley" value="Barley">BRL</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
             {% include: 'includes/pcp-adjust__terminal-review.html' %}
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
-            <h2>State</h2>
+            <h2 class="fsa-m-t--none fsa-m-b--none">State</h2>
             {% include: 'includes/pcp-adjust__state-review.html' %}
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
-            <h2>Protein Discounts</h2>
+            <h2 class="fsa-m-t--none fsa-m-b--none">Protein Discounts</h2>
             {% include: 'includes/pcp-adjust__protein-review.html' %}
           </div>
         </div>
