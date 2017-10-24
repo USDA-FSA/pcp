@@ -31,38 +31,35 @@
           {% include: 'includes/pcp-content-tabs__review.html' %}
         </div>
 
-        <div class="fsa-grid">
-          <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
-            <div class="fsa-grid">
-              <div class="fsa-grid__1/1 fsa-grid__1/2@m">
-                <h2 class="fsa-m-t--none fsa-m-b--none">Terminal</h2>
-              </div>
-              <div class="fsa-grid__1/1 fsa-grid__1/2@m">
-                <div class="fsa-text-align--right">
-                  <select class="fsa-select" id="UNIQUE-ID-74USHHU" name="UNIQUE-ID-74USHHU">
-                    <option title="Corn" value="Corn">YC</option>
-                    <option title="Soybean" value="Soybean">YSB</option>
-                    <option title="Sorghum" value="Sorghum">SOR</option>
-                    <option title="Hard Red Winter Wheat" value="Hard Red Winter Wheat">HRW</option>
-                    <option title="Soft Red Winter Wheat" value="Soft Red Winter Wheat">SRW</option>
-                    <option title="Soft White Wheat" value="Soft White Wheat">WHI</option>
-                    <option title="Hard Red Spring Wheat" value="Hard Red Spring Wheat">HRS</option>
-                    <option title="Hard Amber Durum" value="Hard Amber Durum">HAD</option>
-                    <option title="Oats" value="Oats">OAT</option>
-                    <option title="Barley" value="Barley">BRL</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+        <select class="fsa-select" id="UNIQUE-ID-74USHHU" name="UNIQUE-ID-74USHHU">
+          <option value="Corn">Summary</option>
+          <option value="Corn" selected="">YC - Corn</option>
+          <option value="Soybean">YSB - Soybean</option>
+          <option value="Sorghum">SOR - Sorghum</option>
+          <option value="Hard Red Winter Wheat">HRW - Hard Red Winter Wheat</option>
+          <option value="Soft Red Winter Wheat">SRW - Soft Red Winter Wheat</option>
+          <option value="Soft White Wheat">WHI - Soft White Wheat</option>
+          <option value="Hard Red Spring Wheat">HRS - Hard Red Spring Wheat</option>
+          <option value="Hard Amber Durum">HAD - Hard Amber Durum</option>
+          <option value="Oats">OAT - Oats</option>
+          <option value="Barley">BRL - Barley</option>
+        </select>
+        <span class="fsa-m-l--s">
+          <input class="fsa-checkbox" data-behavior="toggle-changes-only" data-target="UNIQUE-ID-CHANGE-TARGET" id="UNIQUE-ID-HSYHSCHANG" type="checkbox" name="pies" value="UNIQUE-ID-HSYHSCHANG">
+          <label for="UNIQUE-ID-HSYHSCHANG">Show changes only</label>
+        </span>
 
+        <div class="fsa-grid" id="UNIQUE-ID-CHANGE-TARGET">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
+            <h2>Terminal</h2>
             {% include: 'includes/pcp-adjust__terminal-review.html' %}
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
-            <h2 class="fsa-m-t--none fsa-m-b--none">State</h2>
+            <h2>State</h2>
             {% include: 'includes/pcp-adjust__state-review.html' %}
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m fsa-grid__1/3@l">
-            <h2 class="fsa-m-t--none fsa-m-b--none">Protein Discounts</h2>
+            <h2>Protein Discounts</h2>
             {% include: 'includes/pcp-adjust__protein-review.html' %}
           </div>
         </div>

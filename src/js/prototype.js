@@ -902,6 +902,32 @@ $('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event
 
 })
 
+$('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $rowsUnchanged = $target.find('tbody .pcp-table__row:not(.pcp-table__row--highlight)');
+
+  // TODO: maybe this: http://blog.slaks.net/2010/12/animating-table-rows-with-jquery.html
+  if ($self.is(':checked')) {
+    $rowsUnchanged.fadeTo('slow', '0', function() {
+      $(this)
+        .attr('aria-hidden', true)
+        .attr('hidden', true)
+      ;
+    })
+  } else {
+    $rowsUnchanged
+      .removeAttr('aria-hidden')
+      .removeAttr('hidden')
+      .fadeTo('slow', '1', function() {
+        // done;
+      })
+    ;
+  }
+
+})
+
 ;(function($) {
     $.fn.drags = function(opt) {
 
