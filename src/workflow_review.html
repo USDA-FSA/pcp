@@ -32,10 +32,10 @@
         </div>
 
         <div class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION">
-          <div id="UNIQUE-ID-7654321" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
+          <div id="UNIQUE-ID-7654321" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
             <p>
               <select class="fsa-select HINT" id="UNIQUE-ID-74USHHU" name="UNIQUE-ID-74USHHU">
-                <option value="Corn">Summary</option>
+                <option value="All">All</option>
                 <option value="Corn" selected="">YC - Corn</option>
                 <option value="Soybean">YSB - Soybean</option>
                 <option value="Sorghum">SOR - Sorghum</option>
@@ -48,7 +48,7 @@
                 <option value="Barley">BRL - Barley</option>
               </select>
               <span class="fsa-m-l--s">
-                <input class="fsa-checkbox" data-behavior="toggle-changes-only" data-target="UNIQUE-ID-CHANGE-TARGET_commodity" id="UNIQUE-ID-HSYHSCHANG" type="checkbox" name="pies" value="UNIQUE-ID-HSYHSCHANG">
+                <input class="fsa-checkbox" data-behavior="toggle-changes-only" data-target="UNIQUE-ID-CHANGE-TARGET_commodity" id="UNIQUE-ID-HSYHSCHANG" type="checkbox" name="pies" value="UNIQUE-ID-HSYHSCHANG" checked="checked">
                 <label for="UNIQUE-ID-HSYHSCHANG" class="HINT">Show changes only</label>
               </span>
             </p>
@@ -71,15 +71,27 @@
           </div>
           <div id="UNIQUE-ID-6272728" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
             <p>
-              <input class="fsa-checkbox" data-behavior="toggle-changes-only" data-target="UNIQUE-ID-CHANGE-TARGET_ldp" id="UNIQUE-ID-usjdudhdy4" type="checkbox" name="pies" value="UNIQUE-ID-usjdudhdy4">
+              <input class="fsa-checkbox" data-behavior="toggle-changes-only" data-target="UNIQUE-ID-CHANGE-TARGET_ldp" id="UNIQUE-ID-usjdudhdy4" type="checkbox" name="pies" value="UNIQUE-ID-usjdudhdy4" checked="checked">
               <label for="UNIQUE-ID-usjdudhdy4" class="HINT">Show changes only</label>
             </p>
             <div id="UNIQUE-ID-CHANGE-TARGET_ldp">
               {% include: 'includes/table_review-ldp-change.html' %}
             </div>
           </div>
-          <div id="UNIQUE-ID-6274679" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
-            <span class="OUTLINE">Differential content</span>
+          <div id="UNIQUE-ID-6274679" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
+            <p>
+              <select class="fsa-select HINT" id="UNIQUE-ID-YHYHUhyg67" name="UNIQUE-ID-YHYHUhyg67">
+                <option value="Commodities" selected="selected">Commodities</option>
+                <option value="Pulses">Pulses</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Rice">Rice</option>
+              </select>
+              <span class="fsa-m-l--s">
+                <input class="fsa-checkbox" data-behavior="toggle-changes-only" data-target="UNIQUE-ID-CHANGE-TARGET_differential" id="UNIQUE-ID-hujK82HZZ" type="checkbox" name="pies" value="UNIQUE-ID-hujK82HZZ" checked="checked">
+                <label for="UNIQUE-ID-hujK82HZZ" class="HINT">Show changes only</label>
+              </span>
+            </p>
+            {% include: 'includes/table_review-differential-change.html' %}
           </div>
         </div>
 
@@ -94,6 +106,7 @@
   </footer>
 
   {% include: 'includes/pcp-modal__edit-workflow.html' %}
+  {% include: 'includes/pcp-modal__differential-footnotes.html' %}
 
   {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
 
