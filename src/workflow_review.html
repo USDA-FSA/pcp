@@ -80,20 +80,46 @@
           </div>
           <div id="UNIQUE-ID-6274679" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
             <p>
-              <select class="fsa-select HINT" id="UNIQUE-ID-YHYHUhyg67" name="UNIQUE-ID-YHYHUhyg67">
-                <option value="Commodities" selected="selected">Commodities</option>
-                <option value="Pulses">Pulses</option>
-                <option value="Cotton">Cotton</option>
-                <option value="Rice">Rice</option>
+              <select class="fsa-select HINT" data-behavior="DEMO-FAKING-SELECT-CONTENT-SWAP" id="UNIQUE-ID-YHYHUhyg67" name="UNIQUE-ID-YHYHUhyg67">
+                <option data-target="UNIQUE-ID-commodities" value="Commodities" selected="selected">Commodities</option>
+                <option data-target="UNIQUE-ID-oilseeds" value="Minor Oilseeds">Minor Oilseeds</option>
+                <option data-target="UNIQUE-ID-pulses" value="Pulses">Pulses</option>
+                <option data-target="UNIQUE-ID-cotton" value="Cotton">Cotton</option>
+                <option data-target="UNIQUE-ID-rice" value="Rice">Rice</option>
               </select>
+              <!--
               <span class="fsa-m-l--s">
                 <input class="fsa-checkbox" data-behavior="toggle-changes-only" data-target="UNIQUE-ID-CHANGE-TARGET_differential" id="UNIQUE-ID-hujK82HZZ" type="checkbox" name="pies" value="UNIQUE-ID-hujK82HZZ" checked="checked">
                 <label for="UNIQUE-ID-hujK82HZZ" class="HINT">Show changes only</label>
               </span>
+              -->
             </p>
-            {% include: 'includes/table_review-differential-change.html' %}
+            <div class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION">
+              <div id="UNIQUE-ID-commodities" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
+                <!-- <h2>Commodities</h2> -->
+                {% include: 'includes/table_review-differential__commodities.html' %}
+              </div>
+              <div id="UNIQUE-ID-oilseeds" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
+                <!-- <h2>Minor Oilseeds</h2> -->
+                {% include: 'includes/table_review-differential__oilseeds.html' %}
+              </div>
+              <div id="UNIQUE-ID-pulses" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
+                <!-- <h2>Pulses</h2> -->
+                {% include: 'includes/table_review-differential__pulses.html' %}
+              </div>
+              <div id="UNIQUE-ID-cotton" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
+                <!-- <h2>Cotton</h2> -->
+                {% include: 'includes/table_review-differential__cotton.html' %}
+              </div>
+              <div id="UNIQUE-ID-rice" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
+                <!-- <h2>Rice</h2> -->
+                {% include: 'includes/table_review-differential__rice.html' %}
+              </div>
+            </div>
+
           </div>
         </div>
+
 
       </div>
 

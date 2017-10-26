@@ -226,6 +226,17 @@ $('body').on('click', '[data-behavior~="DEMO-FAKING-TAB-CONTENT-SWAP"]', functio
 
 })
 
+$('body').on('change', '[data-behavior~="DEMO-FAKING-SELECT-CONTENT-SWAP"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.find(':selected').data('target'));
+  var $targetPeers = $target.siblings('.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM');
+
+  $target.addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+  $targetPeers.removeClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+
+})
+
 $('body').on('click', '[data-behavior~="rift-pin"]', function(event) {
 
   alert('Pin this!')
