@@ -219,7 +219,13 @@ $('body').on('click', '[data-behavior~="DEMO-FAKING-TAB-CONTENT-SWAP"]', functio
 
   $selfPeers.removeClass('pcp-content-tabs__label--active');
   $self.addClass('pcp-content-tabs__label--active');
-  $target.addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE');
+  $target
+    .css('opacity', '0')
+    .addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+    .fadeTo('slow', '1', function() {
+      $(this).removeAttr('style');
+    })
+  ;
   $targetPeers.removeClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE');
 
   return false;
@@ -232,7 +238,13 @@ $('body').on('change', '[data-behavior~="DEMO-FAKING-SELECT-CONTENT-SWAP"]', fun
   var $target = $('#' + $self.find(':selected').data('target'));
   var $targetPeers = $target.siblings('.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM');
 
-  $target.addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+  $target
+    .css('opacity', '0')
+    .addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+    .fadeTo('slow', '1', function() {
+      $(this).removeAttr('style');
+    })
+  ;
   $targetPeers.removeClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
 
 })
@@ -914,6 +926,8 @@ $('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event
 })
 
 $('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event) {
+
+  alert('TODO: &--suppressed');
 
   var $self = $(this);
   var $target = $('#' + $self.attr('data-target'));

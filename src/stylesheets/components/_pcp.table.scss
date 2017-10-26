@@ -54,6 +54,10 @@
 
       background-color: $highlight-bgc;
 
+      &--suppressed {
+        background-color: initial;
+      }
+
     }
 
   }
