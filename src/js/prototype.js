@@ -249,6 +249,42 @@ $('body').on('change', '[data-behavior~="DEMO-FAKING-SELECT-CONTENT-SWAP"]', fun
 
 })
 
+$('body').on('change', '[data-behavior~="DEMO-FAKING-FILTER-ROW"]', function(event) {
+
+  var $self = $(this);
+  var $targetContainer = $('#' + $self.attr('data-target-container'));
+  var targetName = $self.find(':selected').data('target');
+  var $target = $targetContainer.find('[data-filter-row="' + targetName + '"]')
+
+  if (targetName == "all") {
+    $targetContainer
+      .find('.pcp-table__row')
+      .css('opacity', '0')
+      .removeAttr('hidden')
+      .fadeTo('slow', '1', function() {
+        $(this).removeAttr('style');
+      })
+    ;
+  } else {
+
+    $targetContainer
+      .find('.pcp-table__row')
+      .attr('hidden', true)
+      .css('opacity', '0') // need to set opacity to '0' before we animate it to '1'
+    ;
+
+    $target
+      .removeAttr('hidden')
+      .fadeTo('slow', '1', function() {
+        $(this).removeAttr('style');
+      })
+    ;
+  }
+
+
+
+})
+
 $('body').on('click', '[data-behavior~="rift-pin"]', function(event) {
 
   alert('Pin this!')
