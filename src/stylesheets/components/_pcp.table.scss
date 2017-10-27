@@ -52,6 +52,7 @@
 
     &--highlight {
 
+      transition: background .23s ease-in-out;
       background-color: $highlight-bgc;
 
       &--suppressed {
