@@ -927,14 +927,14 @@ $('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event
 
 $('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event) {
 
-  alert('TODO: &--suppressed');
-
   var $self = $(this);
   var $target = $('#' + $self.attr('data-target'));
+  var $rowsChanged = $target.find('.pcp-table__row--highlight');
   var $rowsUnchanged = $target.find('tbody .pcp-table__row:not(.pcp-table__row--highlight)');
 
   // TODO: maybe this: http://blog.slaks.net/2010/12/animating-table-rows-with-jquery.html
   if ($self.is(':checked')) {
+    $rowsChanged.addClass('pcp-table__row--highlight--suppressed');
     $rowsUnchanged.fadeTo('slow', '0', function() {
       $(this)
         .attr('aria-hidden', true)
@@ -942,6 +942,7 @@ $('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event)
       ;
     })
   } else {
+    $rowsChanged.removeClass('pcp-table__row--highlight--suppressed');
     $rowsUnchanged
       .removeAttr('aria-hidden')
       .removeAttr('hidden')
