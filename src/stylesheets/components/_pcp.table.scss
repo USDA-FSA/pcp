@@ -63,6 +63,26 @@
 
   }
 
+  &__cell {
+
+    &--highlight {
+
+      transition: background .23s ease-in-out;
+      background-color: $highlight-bgc;
+      box-shadow: 1px 0 0 0 $color-fsa-tertiary-200 inset, -1px 0 0 0 $color-fsa-tertiary-200 inset;
+      & + & {
+        box-shadow: -1px 0 0 0 $color-fsa-tertiary-200 inset;
+      }
+
+      &--suppressed {
+        background-color: initial;
+        box-shadow: none;
+      }
+
+    }
+
+  }
+
   &__th {
 
     font-weight: $font-bold;
