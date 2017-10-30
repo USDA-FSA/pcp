@@ -146,6 +146,7 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
   var $target = $('#' + $self.attr('data-target'));
 
   $self.attr('data-modal-origin','');
+  $('body').addClass('fsa-modal-scroll-fix');
 
   $target
     .addClass('pcp-modal--active')
@@ -165,6 +166,7 @@ $('body').on('click', '[data-behavior~="close-modal"]', function(event) {
   var $self = $(this)
   var $component = $self.closest('.pcp-modal')
   var $origin = $('body').find('[data-modal-origin]');
+  $('body').removeClass('fsa-modal-scroll-fix');
 
   $component
     .removeClass('pcp-modal--active')

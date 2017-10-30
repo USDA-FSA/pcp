@@ -1,4 +1,9 @@
 
+.fsa-modal-scroll-fix,
+.fsa-modal-is-open {
+  overflow: hidden;
+}
+
 .pcp-modal {
 
   will-change: visibility, opacity;
