@@ -1,15 +1,9 @@
 <table class="fsa-table fsa-table--borderless pcp-table">
   <thead>
     <tr class="pcp-table__row asdf">
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--pair pcp-table__cell--bisect" scope="col">Commodity</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--pair pcp-table__cell--bisect" scope="col" colspan="2">Terminal Adjustments</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--pair pcp-table__cell--bisect" scope="col" colspan="2">State Adjustments</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--pair" scope="col" colspan="3">Protein Discounts</th>
-    </tr>
-    <tr class="pcp-table__row asdf">
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub pcp-table__cell--bisect" scope="col" class="pcp-table__cell">
+      <th class="pcp-table__cell pcp-table__th" scope="col">
         <select class="fsa-select fsa-select--small fsa-select--block HINT" data-behavior="DEMO-FAKING-FILTER-ROW" data-target-container="UNIQUE-ID-filtering-rows" id="UNIQUE-ID-TH566AT" name="UNIQUE-ID-TH566AT">
-          <option data-target="all" value="all">All</option>
+          <option data-target="all" value="all">All Commodities</option>
           <option data-target="YC" value="YC">YC</option>
           <option data-target="YSB" value="YSB">YSB</option>
           <option data-target="SOR" value="SOR">SOR</option>
@@ -22,1023 +16,845 @@
           <option data-target="BRL" value="BRL">BRL</option>
         </select>
       </th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub" scope="col" class="pcp-table__cell">Market</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub pcp-table__cell--bisect fsa-text-align--right" scope="col" class="pcp-table__cell">Change</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub" scope="col" class="pcp-table__cell">Market</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub pcp-table__cell--bisect fsa-text-align--right" scope="col" class="pcp-table__cell">Change</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub" scope="col" class="pcp-table__cell">Market</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub fsa-text-align--right" scope="col" class="pcp-table__cell">Amber Change</th>
-      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub fsa-text-align--right" scope="col" class="pcp-table__cell">Durum Change</th>
+      <th class="pcp-table__cell pcp-table__th" scope="col">
+        <select class="fsa-select fsa-select--small fsa-select--block" id="UNIQUE-ID-jea7s" name="UNIQUE-ID-jea7s">
+          <option data-target="All" value="All">All Markets</option>
+          <option data-target="AMA" value="AMA">AMA</option>
+          <option data-target="KCM" value="KCM">KCM</option>
+          <option data-target="GLF" value="GLF">GLF</option>
+          <option data-target="MIN" value="MIN">MIN</option>
+          <option data-target="PWN" value="PWN">PWN</option>
+          <option data-target="WCD" value="WCD">WCD</option>
+          <option data-target="RTE" value="RTE">RTE</option>
+          <option data-target="UYH" value="UYH">UYH</option>
+          <option data-target="EES" value="EES">EES</option>
+          <option data-target="YHJ" value="YHJ">YHJ</option>
+        </select>
+      </th>
+      <th class="pcp-table__cell pcp-table__th fsa-text-align--right" scope="col">Terminal</th>
+      <th class="pcp-table__cell pcp-table__th fsa-text-align--right" scope="col" >State</th>
+      <th class="pcp-table__cell pcp-table__th fsa-text-align--right" scope="col">Protein: Amber</th>
+      <th class="pcp-table__cell pcp-table__th fsa-text-align--right" scope="col">Protein: Durum</th>
+    </tr>
+    <tr class="pcp-table__row asdf" hidden>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub" scope="col" class="pcp-table__cell">
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub" scope="col" class="pcp-table__cell">
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub fsa-text-align--right" scope="col" class="pcp-table__cell"></th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub fsa-text-align--right" scope="col" class="pcp-table__cell"></th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub fsa-text-align--right" scope="col" class="pcp-table__cell"></th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sub fsa-text-align--right" scope="col" class="pcp-table__cell"></th>
     </tr>
   </thead>
   <tbody id="UNIQUE-ID-filtering-rows">
 
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">AMA</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">AMA</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">AMA</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="YC">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YC">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YC</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YC</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="YSB">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="YSB">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YSB</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="SOR">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SOR">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SOR</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="HRW">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="SRW">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="SRW">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">SRW</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="WHI">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="WHI">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WHI</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="HRS">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HRS">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HRS</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="HAD">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="HAD">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">HAD</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="OAT">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="OAT">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">OAT</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
 
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">KCM</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">GLF</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">MIN</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">PWN</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
-    </tr>
-    <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
-      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.06</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">WCD</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right"></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">RTE</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.06</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+    </tr>
+    <tr class="pcp-table__row" data-filter-row="BRL">
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">UYH</abbr></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
+      <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.08</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.03</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">EES</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.08</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.03</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
     </tr>
     <tr class="pcp-table__row" data-filter-row="BRL">
-      <td class="pcp-table__cell pcp-table__cell--bisect"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
+      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">BRL</abbr></td>
       <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.02</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
-      <td class="pcp-table__cell pcp-table__cell--bisect fsa-text-align--right">-0.01</td>
-      <td class="pcp-table__cell"><abbr title="SPELL_IT_OUT">YHJ</abbr></td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.02</td>
+      <td class="pcp-table__cell fsa-text-align--right">-0.01</td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
       <td class="pcp-table__cell fsa-text-align--right"></td>
     </tr>
