@@ -62,6 +62,22 @@
 
   }
 
+  &__cell {
+
+    &--highlight {
+
+      transition: background .23s ease-in-out;
+      background-color: $highlight-bgc;
+
+      &--suppressed {
+        background-color: initial;
+        box-shadow: none;
+      }
+
+    }
+
+  }
+
   &__th {
 
     font-weight: $font-bold;

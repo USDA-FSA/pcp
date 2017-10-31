@@ -992,6 +992,28 @@ $('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event)
 
 })
 
+$('body').on('change', '[data-behavior~="toggle-changes-only--cell"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $rowsChanged = $target.find('tbody [data-has-changes="true"]');
+  var $rowsUnchanged = $target.find('tbody .pcp-table__row:not([data-has-changes="true"])');
+
+  // TODO: maybe this: http://blog.slaks.net/2010/12/animating-table-rows-with-jquery.html
+  if ($self.is(':checked')) {
+    $rowsUnchanged
+      .attr('aria-hidden', true)
+      .attr('hidden', true)
+    ;
+  } else {
+    $rowsUnchanged
+      .removeAttr('aria-hidden')
+      .removeAttr('hidden')
+    ;
+  }
+
+})
+
 ;(function($) {
     $.fn.drags = function(opt) {
 
