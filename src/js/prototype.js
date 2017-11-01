@@ -584,6 +584,24 @@ $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
 
 });
 
+$('body').on('change', '[data-behavior~="toggle-check-group"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $component = $self.closest('[data-component~="toggle-check-group"]');
+  var $checksAll = $component.find('[data-behavior~="toggle-check-group"]').length;
+  var $checksChecked = $component.find('[data-behavior~="toggle-check-group"]:checked').length;
+
+  console.log('there are **' + $checksAll + '** checkboxes, and **' + $checksChecked + '** are checked');
+
+  if ($checksAll == $checksChecked) {
+    $target.removeAttr('disabled');
+  } else {
+    $target.attr('disabled', true);
+  }
+
+});
+
 $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
 
   // ---------------------------------------------------------------------------
