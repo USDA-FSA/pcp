@@ -1001,11 +1001,13 @@ $('body').on('change', '[data-behavior~="toggle-changes-only--cell"]', function(
 
   // TODO: maybe this: http://blog.slaks.net/2010/12/animating-table-rows-with-jquery.html
   if ($self.is(':checked')) {
+    console.log('"Show changes only" is checked');
     $rowsUnchanged
       .attr('aria-hidden', true)
       .attr('hidden', true)
     ;
   } else {
+    console.log('"Show changes only" is NOT checked');
     $rowsUnchanged
       .removeAttr('aria-hidden')
       .removeAttr('hidden')
