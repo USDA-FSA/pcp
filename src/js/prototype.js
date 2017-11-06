@@ -957,15 +957,17 @@ $('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event)
       $(this)
         .attr('aria-hidden', true)
         .attr('hidden', true)
+        .removeAttr('style');
       ;
     })
   } else {
     $rowsUnchanged
+      .css('opacity','0')
       .removeAttr('aria-hidden')
       .removeAttr('hidden')
       .fadeTo('slow', '1', function() {
         $rowsChanged.removeClass('pcp-table__row--highlight--suppressed');
-        // done;
+        $(this).removeAttr('style');
       })
     ;
   }
@@ -973,6 +975,10 @@ $('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event)
 })
 
 $('body').on('change', '[data-behavior~="toggle-changes-only--cell"]', function(event) {
+
+  // Yes, 98% similar to [data-behavior~="toggle-changes-only"] above
+  // but I'm not motivated enough to refactor them to be a single one.
+  // Maybe a TODO some day. Sorry, not sorry...?
 
   var $self = $(this);
   var $target = $('#' + $self.attr('data-target'));
@@ -985,14 +991,16 @@ $('body').on('change', '[data-behavior~="toggle-changes-only--cell"]', function(
       $(this)
         .attr('aria-hidden', true)
         .attr('hidden', true)
+        .removeAttr('style');
       ;
     })
   } else {
     $rowsUnchanged
+      .css('opacity','0')
       .removeAttr('aria-hidden')
       .removeAttr('hidden')
       .fadeTo('slow', '1', function() {
-        // done;
+        $(this).removeAttr('style');
       })
     ;
   }
