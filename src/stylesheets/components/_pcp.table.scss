@@ -98,6 +98,13 @@
       font-weight: $font-normal;
     }
 
+    &--sticky {
+      position: sticky;
+      top: 0;
+      background-color: $color-fsa-site-bg;
+      z-index: 2;
+    }
+
   }
 
   &__sort {
