@@ -153,14 +153,21 @@ textarea[rows] {
       border-top-width: $size-base;
       border-bottom-width: 0;
       padding: $size-small;
+      box-shadow: -2px 0px 19px 0px rgba(0, 0, 0, .4);
 
       width: 320px;
       position: fixed;
       right: $size-medium;
       max-height: 70vh;
       overflow: hidden;
-      top: calc(100% - 36px);
       z-index: 9999999;
+      top: 100%;
+      top: calc(100% - 36px);
+      display: none;
+
+      html:hover & {
+        display: block;
+      }
 
       &:hover {
         overflow: auto;
