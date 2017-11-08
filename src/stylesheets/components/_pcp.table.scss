@@ -99,11 +99,17 @@
     }
 
     &--sticky {
+
       position: sticky;
       top: -1px;
       background-color: $color-fsa-site-bg;
       z-index: 2;
       box-shadow: 0 1px 0 0 $table-border-color;
+
+      &.pcp-table__th--pair {
+        box-shadow: none;
+      }
+
     }
 
   }
