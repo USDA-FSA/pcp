@@ -72,23 +72,25 @@ $('body').on('click', '[data-behavior~="growl-show"]', function(event) {
   console.log('showing ' + $self.attr('data-target'));
 
   $target
-    .removeClass('pcp-growl--hidden')
-    .closest('.pcp-growl-container--hidden')
-    .removeClass('pcp-growl-container--hidden')
+    .attr('aria-hidden', 'false')
+    .closest('.fsa-growl-container--hidden')
+    .removeClass('fsa-growl-container--hidden')
   ;
-
-  $target.removeClass('pcp-growl--hidden');
 
 })
 
 $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
+
   var $self = $(this);
-  var $component = $self.closest('.pcp-growl');
-  $component.addClass('pcp-growl--dismissing');
-  setTimeout(function() {
-    $component.removeClass('pcp-growl--dismissing');
-    $component.addClass('pcp-growl--hidden');
-  }, 230);
+  var $component = $self.closest('.fsa-growl');
+
+  $component.addClass('fsa-growl--dismissing');
+
+  $component.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+    $component.removeClass('fsa-growl--dismissing');
+    $component.attr('aria-hidden', 'true')
+  });
+
 })
 
 $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) {
@@ -98,12 +100,15 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
 
   setTimeout(function() {
 
-    $target.addClass('pcp-growl--dismissing');
+    $target.addClass('fsa-growl--dismissing');
 
-    setTimeout(function() {
-      $target.removeClass('pcp-growl--dismissing');
-      $target.addClass('pcp-growl--hidden');
-    }, 500);
+    $target.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $target.removeClass('fsa-growl--dismissing');
+      $target.attr('aria-hidden', 'true')
+    });
+
+    // setTimeout(function() {
+    // }, 500);
 
   }, 7500);
 
@@ -126,10 +131,6 @@ $('body').on('change', '[data-behavior~="modified-form"]', function(event) {
 
 })
 
-$('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
-  $('#pcp-whiteout').addClass('pcp-whiteout--hidden');
-})
-
 $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
   var $self = $(this);
   var $component = $self.closest('.pcp-popover');
@@ -137,7 +138,11 @@ $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
 })
 
 $('body').on('click', '[data-behavior~="whiteout-show"]', function(event) {
-  $('#pcp-whiteout').removeClass('pcp-whiteout--hidden');
+  $('#fsa-whiteout').attr('aria-hidden','false');
+})
+
+$('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
+  $('#fsa-whiteout').attr('aria-hidden','true');
 })
 
 $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
