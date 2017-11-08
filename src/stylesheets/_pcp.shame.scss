@@ -88,6 +88,14 @@ textarea[rows] {
   height: auto;
 }
 
+.fsa-label {
+  h1 & {
+    position: relative;
+    top: -$size-base;
+    margin-left: $size-base;
+  }
+}
+
 // -----------------------------------------------------------------------------
 // PROJECT PROTOTYPE
 
