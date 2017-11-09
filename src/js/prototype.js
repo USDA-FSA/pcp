@@ -72,23 +72,25 @@ $('body').on('click', '[data-behavior~="growl-show"]', function(event) {
   console.log('showing ' + $self.attr('data-target'));
 
   $target
-    .removeClass('pcp-growl--hidden')
-    .closest('.pcp-growl-container--hidden')
-    .removeClass('pcp-growl-container--hidden')
+    .attr('aria-hidden', 'false')
+    .closest('.fsa-growl-container--hidden')
+    .removeClass('fsa-growl-container--hidden')
   ;
-
-  $target.removeClass('pcp-growl--hidden');
 
 })
 
 $('body').on('click', '[data-behavior~="growl-dismiss"]', function(event) {
+
   var $self = $(this);
-  var $component = $self.closest('.pcp-growl');
-  $component.addClass('pcp-growl--dismissing');
-  setTimeout(function() {
-    $component.removeClass('pcp-growl--dismissing');
-    $component.addClass('pcp-growl--hidden');
-  }, 230);
+  var $component = $self.closest('.fsa-growl');
+
+  $component.addClass('fsa-growl--dismissing');
+
+  $component.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+    $component.removeClass('fsa-growl--dismissing');
+    $component.attr('aria-hidden', 'true')
+  });
+
 })
 
 $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) {
@@ -98,12 +100,15 @@ $('body').on('click', '[data-behavior~="growl-dismiss-delay"]', function(event) 
 
   setTimeout(function() {
 
-    $target.addClass('pcp-growl--dismissing');
+    $target.addClass('fsa-growl--dismissing');
 
-    setTimeout(function() {
-      $target.removeClass('pcp-growl--dismissing');
-      $target.addClass('pcp-growl--hidden');
-    }, 500);
+    $target.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $target.removeClass('fsa-growl--dismissing');
+      $target.attr('aria-hidden', 'true')
+    });
+
+    // setTimeout(function() {
+    // }, 500);
 
   }, 7500);
 
@@ -126,10 +131,6 @@ $('body').on('change', '[data-behavior~="modified-form"]', function(event) {
 
 })
 
-$('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
-  $('#pcp-whiteout').addClass('pcp-whiteout--hidden');
-})
-
 $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
   var $self = $(this);
   var $component = $self.closest('.pcp-popover');
@@ -137,7 +138,11 @@ $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
 })
 
 $('body').on('click', '[data-behavior~="whiteout-show"]', function(event) {
-  $('#pcp-whiteout').removeClass('pcp-whiteout--hidden');
+  $('#fsa-whiteout').attr('aria-hidden','false');
+})
+
+$('body').on('click', '[data-behavior~="whiteout-dismiss"]', function(event) {
+  $('#fsa-whiteout').attr('aria-hidden','true');
 })
 
 $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
@@ -148,7 +153,7 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
   $self.attr('data-modal-origin','');
 
   $target
-    .addClass('pcp-modal--active')
+    .addClass('fsa-modal--active')
     .attr('aria-hidden','false')
   ;
 
@@ -163,11 +168,11 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
 $('body').on('click', '[data-behavior~="close-modal"]', function(event) {
 
   var $self = $(this)
-  var $component = $self.closest('.pcp-modal')
+  var $component = $self.closest('.fsa-modal')
   var $origin = $('body').find('[data-modal-origin]');
 
   $component
-    .removeClass('pcp-modal--active')
+    .removeClass('fsa-modal--active')
     .attr('aria-hidden','true')
   ;
 
@@ -181,8 +186,8 @@ $('body').on('click', '[data-behavior~="close-modal"]', function(event) {
 $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 
   var $self = $(this);
-  var $component = $self.closest('.pcp-select-multi');
-  var $checks = $component.find('.pcp-select-multi__check');
+  var $component = $self.closest('.fsa-select-multi');
+  var $checks = $component.find('.fsa-select-multi__check');
 
   if($self.is(':checked')) {
     $checks.prop('checked', true);
@@ -212,17 +217,40 @@ $('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
 $('body').on('click', '[data-behavior~="DEMO-FAKING-TAB-CONTENT-SWAP"]', function(event) {
 
   var $self = $(this);
-  var $component = $self.closest('.pcp-content-tabs');
+  var $component = $self.closest('.fsa-content-tabs');
   var $target = $($self.attr('href'));
-  var $selfPeers = $component.find('.pcp-content-tabs__label');
+  var $selfPeers = $component.find('.fsa-content-tabs__label');
   var $targetPeers = $target.siblings('.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM');
 
-  $selfPeers.removeClass('pcp-content-tabs__label--active');
-  $self.addClass('pcp-content-tabs__label--active');
-  $target.addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE');
+  $selfPeers.removeClass('fsa-content-tabs__label--active');
+  $self.addClass('fsa-content-tabs__label--active');
+  $target
+    .css('opacity', '0')
+    .addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+    .fadeTo('slow', '1', function() {
+      $(this).removeAttr('style');
+    })
+  ;
   $targetPeers.removeClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE');
 
   return false;
+
+})
+
+$('body').on('change', '[data-behavior~="DEMO-FAKING-SELECT-CONTENT-SWAP"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.find(':selected').data('target'));
+  var $targetPeers = $target.siblings('.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM');
+
+  $target
+    .css('opacity', '0')
+    .addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+    .fadeTo('slow', '1', function() {
+      $(this).removeAttr('style');
+    })
+  ;
+  $targetPeers.removeClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
 
 })
 
@@ -491,7 +519,7 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
 
   // ---------------------------------------------------------------------------
   var $self = $(this);
-  var $scope = $(this).closest('.pcp-modal');
+  var $scope = $(this).closest('.fsa-modal');
   var $target = $scope.find('[data-complete-target]');
   var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox, .pcp-file-upload__input, .pcp-file-upload__clear');
   var $targetReadonly = $target.find('.fsa-input');
@@ -510,12 +538,67 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
 
 });
 
+$('body').on('change', '[data-behavior~="mark-change-label"]', function(event) {
+
+  var $self = $(this);
+  var $scope = $(this).closest('.fsa-modal');
+  var $label = $scope.find('h1 .fsa-label');
+
+  if ($self.is(':checked')) {
+    $label
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--success')
+          .text('Complete')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
+  }
+  else {
+    $label
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--warning')
+          .text('In Progress')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
+  }
+
+});
+
 $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
 
   var $self = $(this);
   var $target = $('#UNIQUE-ID-FINALIZER');
 
   if ($target.is(':disabled')) {
+    $target.removeAttr('disabled');
+  } else {
+    $target.attr('disabled', true);
+  }
+
+});
+
+$('body').on('change', '[data-behavior~="toggle-check-group"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $component = $self.closest('[data-component~="toggle-check-group"]');
+  var $checksAll = $component.find('[data-behavior~="toggle-check-group"]').length;
+  var $checksChecked = $component.find('[data-behavior~="toggle-check-group"]:checked').length;
+
+  console.log('there are **' + $checksAll + '** checkboxes, and **' + $checksChecked + '** are checked');
+
+  if ($checksAll == $checksChecked) {
     $target.removeAttr('disabled');
   } else {
     $target.attr('disabled', true);
@@ -536,11 +619,11 @@ $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
   if ($targetsDisable.is(':disabled')) {
     $targetsDisable.removeAttr('disabled');
     $targetReset.removeAttr('disabled');
-    $targetSave.addClass('pcp-content-tabs__label--unsaved')
+    $targetSave.addClass('fsa-content-tabs__label--unsaved')
   } else {
     $targetReset.attr('disabled', true);
     $targetsDisable.attr('disabled', true);
-    $targetSave.removeClass('pcp-content-tabs__label--unsaved');
+    $targetSave.removeClass('fsa-content-tabs__label--unsaved');
   }
 
 });
@@ -899,6 +982,70 @@ $('body').on('click', '[data-behavior~="confirm-submit-reopen"]', function(event
     })
   ;
 
+
+})
+
+$('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $rowsChanged = $target.find('.pcp-table__row--highlight');
+  var $rowsUnchanged = $target.find('tbody .pcp-table__row:not(.pcp-table__row--highlight)');
+
+  // TODO: maybe this: http://blog.slaks.net/2010/12/animating-table-rows-with-jquery.html
+  if ($self.is(':checked')) {
+    $rowsChanged.addClass('pcp-table__row--highlight--suppressed');
+    $rowsUnchanged.fadeTo('slow', '0', function() {
+      $(this)
+        .attr('aria-hidden', true)
+        .attr('hidden', true)
+        .removeAttr('style');
+      ;
+    })
+  } else {
+    $rowsUnchanged
+      .css('opacity','0')
+      .removeAttr('aria-hidden')
+      .removeAttr('hidden')
+      .fadeTo('slow', '1', function() {
+        $rowsChanged.removeClass('pcp-table__row--highlight--suppressed');
+        $(this).removeAttr('style');
+      })
+    ;
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="toggle-changes-only--cell"]', function(event) {
+
+  // Yes, 98% similar to [data-behavior~="toggle-changes-only"] above
+  // but I'm not motivated enough to refactor them to be a single one.
+  // Maybe a TODO some day. Sorry, not sorry...?
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $rowsChanged = $target.find('tbody [data-has-changes="true"]');
+  var $rowsUnchanged = $target.find('tbody .pcp-table__row:not([data-has-changes="true"])');
+
+  // TODO: maybe this: http://blog.slaks.net/2010/12/animating-table-rows-with-jquery.html
+  if ($self.is(':checked')) {
+    $rowsUnchanged.fadeTo('slow', '0', function() {
+      $(this)
+        .attr('aria-hidden', true)
+        .attr('hidden', true)
+        .removeAttr('style');
+      ;
+    })
+  } else {
+    $rowsUnchanged
+      .css('opacity','0')
+      .removeAttr('aria-hidden')
+      .removeAttr('hidden')
+      .fadeTo('slow', '1', function() {
+        $(this).removeAttr('style');
+      })
+    ;
+  }
 
 })
 

@@ -13,20 +13,24 @@
 @import 'elements/pcp.typography';
 @import 'elements/pcp.icon-TEMP';
 
+// # TO PORT
+// @import 'components/pcp.brand';
+// @import 'components/pcp.header';
+// @import 'components/pcp.nav-global';
+// PORTED @import 'components/pcp.footer-TEMP';
+// PORTED @import 'components/pcp.growl';
+// PORTED @import 'components/pcp.modal';
+// PORTED @import 'components/pcp.whiteout';
+// PORTED @import 'components/pcp.select-multi';
+// PORTED @import 'components/pcp.content-tabs';
+// / TO PORT
+
 // PCP Components
-@import 'components/pcp.brand';
-@import 'components/pcp.header';
-@import 'components/pcp.nav-global';
 @import 'components/pcp.popover';
-@import 'components/pcp.footer-TEMP';
 @import 'components/pcp.table-header';
 // @import 'components/pcp.global-access';
 @import 'components/pcp.info-bar';
 @import 'components/pcp.table';
-@import 'components/pcp.growl';
-@import 'components/pcp.modal';
-@import 'components/pcp.whiteout';
-@import 'components/pcp.select-multi';
 @import 'components/pcp.mapping';
 @import 'components/pcp.adjust';
 @import 'components/pcp.spinbox';
@@ -34,7 +38,6 @@
 @import 'components/pcp.marker';
 @import 'components/pcp.rift-detail';
 @import 'components/pcp.title-action-bar';
-@import 'components/pcp.content-tabs';
 @import 'components/pcp.stepped-tabs';
 @import 'components/pcp.highlight';
 @import 'components/pcp.file-upload';

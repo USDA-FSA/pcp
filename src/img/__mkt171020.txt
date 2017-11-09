@@ -1,0 +1,407 @@
+﻿HDR1010500000081019160700DAILY MARKET RATES(GRAIN/MISC COMMODITIES)
+
+Form Approved OMB No. 0560-XXXX Effective: October 19, 2016
+***NOTE CHANGES TO DIFFERENTIAL INFORMATION EFFECTIVE 10/19/16****
+
+The following Market Rates are established to aid in the development of the Posted
+County Prices (PCPs) which are used by county FSA Offices for loan redemption
+purposes. Uses of these rates for other purposes may not be appropriate.
+
+Questions concerning the grain and oilseed market values should be
+directed to : KCCO/CMD at (816) 926-3816
+
+THE FOLLOWING MARKET RATES ARE EFFECTIVE 7:00 A.M. (E.T.) 10/19/2016
+
+
+                             COMMODITIES
+
+           WHT                  WHT                  WHT                  WHT
+MKT        HRW                  HRS                  SRW                  WHI
+
+AMA        3.22  */(1)
+
+CIN                                                  3.90 */(11)
+
+EVN                                                  4.05 */(13)
+
+GLF        4.67  */(3) */(73)                        4.65 */(10)
+                */(74) */(75)
+KCM        4.33  */(2)                               3.35  */(9)
+
+MEM                                                  3.90 */(14)
+
+MIN        4.27  */(4) */(71)   5.73  */(7)
+
+PNW        4.90  */(5)          5.48  */(8)                               4.80  */(15)
+
+TOL                                                  4.06 */(12)          4.06  */(17)
+
+WCD        4.93  */(6) */(53)                                             4.76  */(16)
+
+THE FOLLOWING MARKET RATES ARE EFFECTIVE 7:00 A.M. (E.T.) 10/19/2016
+                             COMMODITIES
+
+           WHT                 CORN               BARLEY
+MKT        HAD                   YC                  BRL
+
+AMA                             3.64 */(22)
+
+CIN                             3.42 */(29)
+
+GLF                             3.88 */(24) */(54)   3.40 */(32)
+                                     */(56) */(57)
+KCM                             3.14 */(23)          3.05 */(33)
+
+LOS        7.10 */(20)    */C
+
+MEM                             3.59 */(31)
+
+MIN        7.35 */(18)    */A   2.99 */(25)          2.85 */(34) */(60)
+                                                          */(61)
+PNW        7.35 */(19)    */B   4.31 */(26) */(72)   3.19 */(35) */(58)
+
+TOL                             3.34 */(30)
+
+TKO                             3.62 */(28) */(55)
+
+WCD        7.15 */(21)    */D   4.46 */(27)          3.94 */(36) */(59)
+                                                          */(62) */(63)
+                             BASIS ORDINARY PROTEIN
+*/A MIN DISCOUNT   ($1.00)  FOR AMBER DURUM AND ($2.00) FOR DURUM
+*/B PNW DISCOUNT   ($1.00)  FOR AMBER DURUM AND ($2.00) FOR DURUM
+*/C LOS DISCOUNT   ($0.60)  FOR AMBER DURUM AND ($1.20) FOR DURUM
+*/D WCD DISCOUNT   ($0.60)  FOR AMBER DURUM AND ($1.20) FOR DURUM
+
+THE FOLLOWING MARKET RATES ARE EFFECTIVE 7:00 A.M. (E.T.) 10/19/2016
+                             COMMODITIES
+                                                    CWT.
+          OATS               SOYBEAN              GRAIN SORGHUM
+MKT        OAT                  YSB                  SOR
+
+CIN                             9.62 */(44)          6.00 */(51)
+
+GLF                            10.12 */(40) */(64)   6.92 */(49) */(69)
+                                     */(68)               */(70)
+KCM                             9.43 */(39)
+
+MEM                             9.79 */(46)          5.69 */(52)
+
+MIN        2.79 */(37)          8.98 */(41) */(65)
+                                     */(66) */(67)
+NCD                                                  5.25 */(48)
+
+PNW        3.37 */(38)         10.61 */(42)
+
+SCD                                                  5.33 */(47)
+
+TOL                             9.36 */(45)
+
+TKO                             9.48 */(43)
+
+WCD                                                  8.28 */(50)
+
+
+****NOTE CHANGES TO DIFFERENTIAL INFORMATION EFFECTIVE 10/19/16 *****
+POSTED COUNTY PRICE DIFFERENTIAL INFORMATION (Cents per bushel exceptas noted)
+UNTIL FURTHER NOTICE THE TERMINAL MARKETS LISTED BELOW WILL HAVE DIFFERENTIALS ADJUSTED
+AS FOLLOWS:
+
+(1)       AMA HRW differentials add -0.07 cents/bu.         (Effective 7/13/2016)
+(2)       KCM HRW differentials add -0.87 cents/bu.         (Effective 10/4/2016)
+
+(3)       GLF HRW differentials add -0.73 cents/bu.         (Effective 10/6/2016)
+(4)       MIN HRW differentials add -0.67 cents/bu.         (Effective 9/21/2016)
+(5)       PNW HRW differentials add -1.00 cents/bu.         (Effective 8/25/2016)
+
+(6)       WCD HRW differentials add -1.28 cents/bu.         (Effective 8/25/2016)
+(7)       MIN HRS differentials add -1.07 cents/bu.         (Effective 10/18/2016)
+(8)       PNW HRS differentials add -0.53 cents/bu.         (Effective 10/5/2016)
+
+(9)       KCM SRW differentials add 0.62 cents/bu.          (Effective 10/4/2016)
+(10)      GLF SRW differentials add -0.45 cents/bu.         (Effective 10/19/2016)
+(11)      CIN SRW differentials add 0.00 cents/bu.          (Effective 8/24/2016)
+(12)      TOL SRW differentials add -0.21 cents/bu.         (Effective 10/4/2016)
+(13)      EVN SRW differentials add -0.08 cents/bu.         (Effective 10/17/2016)
+
+(14)      MEM SRW differentials add 0.00 cents/bu.          (Effective 10/4/2016)
+(15)      PNW WHI differentials add -0.22 cents/bu.         (Effective 6/15/2016)
+(16)      WCD WHI differentials add -0.27 cents/bu.         (Effective 6/15/2016)
+
+(17)      TOL WHI differentials add 0.00 cents/bu.          (Effective 3/26/2012)
+(18)      MIN HAD differentials add -0.53 cents/bu.         (Effective 5/11/2016)
+(19)      PNW HAD differentials add -0.15 cents/bu.         (Effective 8/15/2016)
+
+(20)      LOS HAD differentials add -0.25 cents/bu.         (Effective 9/26/2016)
+(21)      WCD HAD differentials add -0.25 cents/bu.         (Effective 9/26/2016)
+
+(22)      AMA YC differentials add -0.04 cents/bu.          (Effective 9/22/2016)
+(23)      KCM YC differentials add 0.00 cents/bu.           (Effective 10/4/2016)
+(24)      GLF YC differentials add -0.33 cents/bu.          (Effective 10/6/2016)
+
+(25)      MIN YC differentials add 0.14 cents/bu.           (Effective 10/19/2016)
+(26)      PNW YC differentials add -0.73 cents/bu.          (Effective 10/13/2016)
+(27)      WCD YC differentials add -0.52 cents/bu.          (Effective 10/19/2016)
+
+(28)      TKO YC differentials add -0.29 cents/bu.          (Effective 10/18/2016)
+(29)      CIN YC differentials add -0.20 cents/bu.          (Effective 10/18/2016)
+(30)      TOL YC differentials add -0.12 cents/bu.          (Effective 10/4/2016)
+
+(31)      MEM YC differentials add -0.20 cents/bu.          (Effective 10/19/2016)
+(32)      GLF BRL differentials add -0.36 cents/bu.         (Effective 10/18/2016)
+(33)      KCM BRL differentials add -0.36 cents/bu.         (Effective 10/18/2016)
+
+(34)      MIN BRL differentials add -0.16 cents/bu.         (Effective 10/18/2016)
+(35)      PNW BRL differentials add -0.05 cents/bu.         (Effective 10/18/2016)
+
+(36)      WCD BRL differentials add -0.27 cents/bu.         (Effective 10/18/2016)
+(37)      MIN OAT differentials add -0.19 cents/bu.         (Effective 10/19/2016)
+(38)      PNW OAT differentials add -0.70 cents/bu.         (Effective 10/18/2016)
+
+(39)      KCM YSB differentials add -0.27 cents/bu.         (Effective 10/4/2016)
+(40)      GLF YSB differentials add -0.53 cents/bu.         (Effective 10/13/2016)
+(41)      MIN YSB differentials add 0.08 cents/bu.          (Effective 10/19/2016)
+
+(42)      PNW YSB differentials add -0.91 cents/bu.         (Effective 10/12/2016)
+(43)      TKO YSB differentials add -0.15 cents/bu.         (Effective 10/19/2016)
+(44)      CIN YSB differentials add -0.26 cents/bu.         (Effective 10/11/2016)
+
+(45)      TOL YSB differentials add -0.18 cents/bu.         (Effective 10/17/2016)
+(46)      MEM YSB differentials add -0.33 cents/bu.         (Effective 10/11/2016)
+
+(47)      SCD SOR differentials add 0.00 cents/cwt.         (Effective 9/10/2015)
+(48)      NCD SOR differentials add -0.30 cents/cwt.        (Effective 10/18/2016)
+(49)      GLF SOR differentials add -1.38 cents/cwt.        (Effective 9/22/2016)
+
+(50)      WCD SOR differentials add -2.02 cents/cwt.        (Effective 9/27/2016)
+(51)      CIN SOR differentials add -0.80 cents/cwt.        (Effective 9/22/2016)
+(52)      MEM SOR differentials add -0.25 cents/cwt.        (Effective 10/5/2016)
+
+(53)      WCD HRW differentials in CA add 0.03 cents/bu.    (Effective 8/22/2016)
+(54)      GLF YC differentials in MN add 0.00 cents/bu.     (Effective 9/27/2013)
+(55)      TKO YC differentials in WI add -0.03 cents/bu.    (Effective 6/19/2014)
+
+(56)      GLF YC differentials in TX add 0.00 cents/bu.     (Effective 9/20/2011)
+(57)      GLF YC differentials in OK add 0.00 cents/bu.     (Effective 9/20/2011)
+
+(58)      PNW BRL differentials in MT add -0.06 cents/bu.   (Effective 2/15/2013)
+(59)      WCD BRL differentials in MT add 0.00 cents/bu.    (Effective 11/17/2010)
+(60)      MIN BRL differentials in MT add 0.02 cents/bu.    (Effective 3/23/2015)
+
+(61)      MIN BRL differentials in WY add 0.00 cents/bu.    (Effective 9/27/2010)
+(62)      WCD BRL differentials in ID add 0.03 cents/bu.    (Effective 3/7/2016)
+(63)      WCD BRL differentials in OR add 0.00 cents/bu.    (Effective 11/17/2010)
+
+(64)      GLF YSB differentials in MN add 0.08 cents/bu.    (Effective 9/12/2016)
+(65)      MIN YSB differentials in SD add 0.00 cents/bu.    (Effective 1/4/2008)
+(66)      MIN YSB differentials in ND add 0.00 cents/bu.    (Effective 1/4/2008)
+
+(67)      MIN YSB differentials in WI add 0.06 cents/bu.    (Effective 10/13/2016)
+(68)      GLF YSB differentials in LA, AL, MS add 0.07 cents/bu.(Effective 2/11/2016)
+(69)      GLF SOR differentials in TX add 0.00 cents/cwt.   (Effective 10/5/2011)
+
+(70)      GLF SOR differentials in KS add 0.00 cents/cwt.   (Effective 1/8/2008)
+(71)      MIN HRW differentials in SD add 0.00 cents/bu.    (Effective 12/4/2015)
+
+(72)      PNW YC differentials in ND add -0.05 cents/bu.    (Effective 12/31/2014)
+(73)      GLF HRW differentials in KS add -0.10 cents/bu.   (Effective 8/19/2016)
+(74)      GLF HRW differentials in OK add -0.10 cents/bu.   (Effective 10/18/2016)
+
+(75)      GLF HRW differentials in CO add -0.10 cents/bu.   (Effective 8/19/2016)
+(76)      GLF HRW differentials in NE add -0.05 cents/bu.   (Effective 8/19/2016)
+MINOR OILSEEDS
+
+
+THE FOLLOWING MARKET RATES ARE EFFECTIVE 7:00 A.M. (ET)
+10/19/16 ALL PRICES PER CWT.
+
+
+             72    80      73     25     76     74     69     78     71
+MARKET     CAN    CRA    RAP    FLX    MUS    SAF    SEM    SFN    SUN
+
+ARL      15.10
+
+AUG      15.10
+
+CAR             14.72
+
+COL                                         19.00
+
+COR                                         19.00
+
+FAR                           14.64                       26.00  16.80
+
+GLD                                                       26.00  17.80
+
+GFK                                  26.00
+
+GRF      "N/B"         22.00  15.18  26.00
+
+PAR                                                20.00
+
+RDW      16.30                14.73                              "N/B"
+
+RIC                                         19.00
+
+VEL      16.45
+
+COMMODITIES:                               MARKETS:
+CAN -   CANOLA                             ARL - ARLINGTON, GA
+CRA -   CRAMBE                             AUG - AUGUSTA, GA
+RAP -   RAPESEED                           CAR - CARRINGTON, ND
+FLX -     FLAX                             COL - COLUSA, CA
+SEM -   SESAME SEED                        COR - CORCORAN, CA
+SUN -   SUNFLOWER SEEDS (OIL TYPE)         FAR - FARGO, ND
+SFN -   SUNFLOWER SEEDS (OTHER TYPE)       GLD - GOODLAND, KS
+SAF -   SAFFLOWER                          GFK - GRAND FORKS, ND
+MUS -   MUSTARD (INCLUDES):                GRF - GREAT FALLS, MT
+        YMU - YELLOW                       PAR - PARIS, TX
+        BMU - BROWN                        RDW - RED WING, MN
+        CMU - ORIENTAL                     RIC - RICHMOND, CA
+        XMU - MIXED                        VEL - VELVA, ND
+
+
+PULSES
+
+
+THE FOLLOWING MARKET RATES ARE EFFECTIVE 7:00 A.M. (ET)
+10/19/2016.  ALL PRICES PER CWT.
+
+            51     51     41     48
+MARKET     CHL    CHK    LEN    PEA
+
+US         31.5 26.50  22.40   8.67
+
+COMMODITIES:                 MARKETS:
+CHL - LARGE CHICKPEAS
+CHK - SMALL CHICKPEAS        US -  United States
+LEN - LENTILS
+PEA - PEAS*
+        YPE - YELLOW
+        GPE - GREEN
+
+
+* ALSO INCLUDES, WRINKLED, DRY, WINTER DRY (AUSTRIAN WINTER),
+MISCELLANEOUS (MARROWFAT - TYPE PEAS), MIXED.
+
+
+COTTON
+
+
+UPLAND COTTON ADJUSTED WORLD PRICE (AWP), FINE COUNT ADJUSTMENT (FCA), COARSE COUNT ADJUSTMENT (CCA), and
+MARKET GAIN/LOAN DEFICIENCY PAY RATE (LDP)
+Effective 12:01 a.m. Eastern Time, Friday, 10/14/16, through midnight Eastern Time, Thursday, 10/20/16:
+AWP = 57.90 cents per pound
+FCA 2015 crop = 0.01 cents per pound
+FCA 2016 crop = 0.11 cents per pound
+CCA = 0.00 cents per pound
+LDP Rate = 0.00 cents per pound, subject to allowable fine count or coarse count adjustment.
+
+The next scheduled AWP, FCA, and CCA announcement will be at 4:00 p.m. Eastern Time, Thursday, 10/20/16.
+
+
+
+
+
+
+
+
+
+
+
+
+RICE PRICES
+
+
+
+
+The following world prices of rice are effective from 10/19/16 at
+7:00 am eastern time until the next announcement occurs.  The next
+price announcement is scheduled for 10/26/16 at 7:00 am eastern time.
+       0
+.    Rates Per Hundredweight Rough
+Rates Per Pound For      .      Rice for Farm-Stored and
+Milled Rice Kernels      .      Warehouse Loans and LDPs
+_____________________________________________________________________
+.
+       0
+2015 CROP
+.      World        Loan Market
+World           Loan     .      Market        Gain and
+Price           Rate     .      Index         LDP Rate
+----Cents/Pound----     .       ---$/Hundredweight---
+.
+Long      13.56         10.22     .      12.31         0.00
+Med/Short 13.20          9.63     .      11.94         0.00
+Broken     8.18          6.51     .         na           na
+_____________________________________________________________________
+.
+2016 CROP                         .      World        Loan Market
+World           Loan     .      Market        Gain and
+Price           Rate     .      Index         LDP Rate
+----Cents/Pound----     .       ---$/Hundredweight---
+.
+Long      13.22          9.98     .      11.89         0.00
+Med/Short 12.84          9.55     .      11.64		 0.00 	
+Broken     7.97          7.16     .         na           na
+_____________________________________________________________________
+The above prices are based on the following loan rates, world prices
+and milling yields per hundredweight of rough rice:
+       0
+2015 CROP
+Loan Rate   World Price   .       Whole/Broken Yield
+------ $/Cwt ------     .           (Pounds/Cwt)
+.
+Long        6.60       8.69       .          56.41/12.76
+Med/Short   6.45       8.76      .          59.91/10.45
+       0
+       0
+2016 CROP
+Loan Rate   World Price   .       Whole/Broken Yield
+------ $/Cwt ------     .           (Pounds/Cwt)
+.
+Long        6.50       8.41       .          55.67/13.17
+Med/Short   6.50       8.59      .          61.16/9.21
+       0
+PRIVACY ACT AND PUBLIC BURDEN STATEMENTS
+
+The following statements are made in accordance with the Privacy Act
+of 1974 (5 USC 552a) and the Paperwork Reduction Act of 1995, as
+amended. The authority for requesting the following information is
+Docket CZ-200, 7 USC 7285 and 15 USC 714 B and C.  The data will be
+used to establish Bulk Grain market information.  This information
+may be provided to other agencies, IRS, Department of Justice, or
+other State and Federal law enforcement agencies, and in response
+to a court magistrate or administrative tribunal.  The provisions
+of criminal and civil fraud statutes, including:
+18 USC 286, 287, 371, 641, 651, 1001; 15 USC 714m; and
+31 USC 3729, may be applicable to the information provided.
+
+Federal agencies may not conduct or sponsor, and a person is not
+required to respond to a collection of information unless it displays
+a currently valid OMB control number.  Public reporting burden for
+this collection of information is estimated to average 15 minutes
+per response, including the time for reviewing instructions,
+searching existing data sources, gathering and maintaining the data
+needed, and completing and reviewing the collection of information.
+Send comments regarding this burden estimate or any other aspect of
+this collection of information, including suggestions for reducing
+this burden, to the U.S. Department of Agriculture, Clearance
+Officer, OIRM (OMB No. 0560-XXXX), Stop 7630, Washington, D.C. 20250-7630.
+
+NONDISCRIMINATION STATEMENT
+
+The U.S. Department of Agriculture (USDA) prohibits discrimination
+in all its programs and activities on the basis of race, color,
+national origin, gender, religion, age, disability, political beliefs,
+sexual orientation, and marital or family status.  (Not all
+prohibited bases apply to all programs.)  Persons with disabilities
+who require alternative means for communication of program information
+(Braille, large print, audiotape, etc.) should contact USDA’s TARGET
+Center at (202) 720-2600 (voice and TDD).
+
+To file a complaint of discrimination, write USDA, Director, Office
+of Civil Rights, Room 326-W, Whitten Building, 1400 Independence
+Avenue, SW, Washington, D.C. 20250-9410 or call (202) 720-5964
+(voice or TDD).
+
+USDA is an equal opportunity provider and employer.

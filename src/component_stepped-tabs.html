@@ -26,9 +26,11 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="workflow_discovery.html.html">Daily Process > Price Discovery</a></li>
+              <li><a href="workflow_discovery.html">Daily Process > Price Discovery</a></li>
+              <li><a href="workflow_discovery__complete.html">Daily Process > Price Discovery</a> (currently on Adjustments)</li>
               <li><a href="workflow_closing.html">Daily Process > Closing</a></li>
-              <li><a href="workflow_mapping.html">Daily Process > Mapping / Adjustment</a></li>
+              <li><a href="workflow_mapping.html">Daily Process > Adjustments</a></li>
+              <li><a href="workflow_review.html">Daily Process > Review</a></li>
               <li><a href="workflow_publish.html">Daily Process > Publish</a></li>
             </ul>
           </div>
@@ -46,6 +48,12 @@
         <h3 class="fsa-font--sans">Default</h3>
 
         {% include: 'includes/pcp-stepped-tabs.html' %}
+
+        <h3 class="fsa-font--sans">Buttons</h3>
+
+        <p>Actionable steps can be <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>, depending on how your system is set up.</p>
+
+        {% include: 'includes/pcp-stepped-tabs__button.html' %}
 
         <h3 class="fsa-font--sans">Justified</h3>
 
