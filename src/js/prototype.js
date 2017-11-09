@@ -153,7 +153,7 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
   $self.attr('data-modal-origin','');
 
   $target
-    .addClass('pcp-modal--active')
+    .addClass('fsa-modal--active')
     .attr('aria-hidden','false')
   ;
 
@@ -168,11 +168,11 @@ $('body').on('click', '[data-behavior~="open-modal"]', function(event) {
 $('body').on('click', '[data-behavior~="close-modal"]', function(event) {
 
   var $self = $(this)
-  var $component = $self.closest('.pcp-modal')
+  var $component = $self.closest('.fsa-modal')
   var $origin = $('body').find('[data-modal-origin]');
 
   $component
-    .removeClass('pcp-modal--active')
+    .removeClass('fsa-modal--active')
     .attr('aria-hidden','true')
   ;
 
@@ -519,7 +519,7 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
 
   // ---------------------------------------------------------------------------
   var $self = $(this);
-  var $scope = $(this).closest('.pcp-modal');
+  var $scope = $(this).closest('.fsa-modal');
   var $target = $scope.find('[data-complete-target]');
   var $targetDisable  = $target.find('.pcp-spinbox__btn, .fsa-radio, .fsa-checkbox, .pcp-file-upload__input, .pcp-file-upload__clear');
   var $targetReadonly = $target.find('.fsa-input');
@@ -534,6 +534,43 @@ $('body').on('change', '[data-behavior~="mark-complete"]', function(event) {
     $targetReadonly.removeAttr('readonly');
   } else {
     $targetReadonly.attr('readonly', true);
+  }
+
+});
+
+$('body').on('change', '[data-behavior~="mark-change-label"]', function(event) {
+
+  var $self = $(this);
+  var $scope = $(this).closest('.fsa-modal');
+  var $label = $scope.find('h1 .fsa-label');
+
+  if ($self.is(':checked')) {
+    $label
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--success')
+          .text('Complete')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
+  }
+  else {
+    $label
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--warning')
+          .text('In Progress')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
   }
 
 });
