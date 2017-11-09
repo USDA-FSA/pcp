@@ -217,13 +217,13 @@ $('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
 $('body').on('click', '[data-behavior~="DEMO-FAKING-TAB-CONTENT-SWAP"]', function(event) {
 
   var $self = $(this);
-  var $component = $self.closest('.pcp-content-tabs');
+  var $component = $self.closest('.fsa-content-tabs');
   var $target = $($self.attr('href'));
-  var $selfPeers = $component.find('.pcp-content-tabs__label');
+  var $selfPeers = $component.find('.fsa-content-tabs__label');
   var $targetPeers = $target.siblings('.PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM');
 
-  $selfPeers.removeClass('pcp-content-tabs__label--active');
-  $self.addClass('pcp-content-tabs__label--active');
+  $selfPeers.removeClass('fsa-content-tabs__label--active');
+  $self.addClass('fsa-content-tabs__label--active');
   $target
     .css('opacity', '0')
     .addClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
@@ -582,11 +582,11 @@ $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
   if ($targetsDisable.is(':disabled')) {
     $targetsDisable.removeAttr('disabled');
     $targetReset.removeAttr('disabled');
-    $targetSave.addClass('pcp-content-tabs__label--unsaved')
+    $targetSave.addClass('fsa-content-tabs__label--unsaved')
   } else {
     $targetReset.attr('disabled', true);
     $targetsDisable.attr('disabled', true);
-    $targetSave.removeClass('pcp-content-tabs__label--unsaved');
+    $targetSave.removeClass('fsa-content-tabs__label--unsaved');
   }
 
 });
