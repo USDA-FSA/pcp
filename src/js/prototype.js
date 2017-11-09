@@ -186,8 +186,8 @@ $('body').on('click', '[data-behavior~="close-modal"]', function(event) {
 $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 
   var $self = $(this);
-  var $component = $self.closest('.pcp-select-multi');
-  var $checks = $component.find('.pcp-select-multi__check');
+  var $component = $self.closest('.fsa-select-multi');
+  var $checks = $component.find('.fsa-select-multi__check');
 
   if($self.is(':checked')) {
     $checks.prop('checked', true);
