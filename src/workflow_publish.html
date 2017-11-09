@@ -25,8 +25,13 @@
 
         {% include: 'includes/pcp-stepped-tabs__publish.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Publish' @action:'Complete March 22, 2017' @link:'link.html' @button_state:'disabled' %}
+        {% include: 'includes/pcp-title-action-bar__publish.html' @title:'Publish' @action:'Complete March 22, 2017' @link:'workflow_closing.html' @button_state:'disabled' @reopen:'unique-id-publish-end' %}
 
+        <div class="HINT HINT--HIDDEN-BLOCK">
+          <p class="fsa-text-align--center fsa-text-size--4">
+            To enable <strong>Complete</strong> button: check all "Published" checkboxes.
+          </p>
+        </div>
         {% include: 'includes/table_publish.html' %}
 
       </div>
@@ -48,7 +53,7 @@
     {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
   </div>
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+    {% include: 'includes/growl_publish-end.html' @ID:'unique-id-publish-end' %}
   </div>
 
   {% include: 'includes/scripts.html' %}
