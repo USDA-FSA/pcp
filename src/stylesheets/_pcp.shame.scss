@@ -1,5 +1,62 @@
-// -----------------------------------------------------------------------------
-// TO BE SORTED
+// TO MOVE TO fsa-style --------------------------------------------------------
+
+.fsa-modal__title {
+  margin-bottom: .5em;
+}
+
+.fsa-content-tabs__label {
+  width: 100%;
+}
+
+.sr-only {
+  @include sr-only();
+}
+
+.fsa-email-string {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+// scss-lint:disable SelectorFormat
+.pcp-text--300 {
+  color: $color-fsa-tertiary-300;
+}
+
+textarea[rows] {
+  height: auto;
+}
+
+.fsa-label {
+  h1 & {
+    position: relative;
+    top: -$size-base;
+    margin-left: $size-base;
+  }
+}
+
+// TO BE SORTED ELSEWHERE IN PCP.SCSS ------------------------------------------
+
+// scss-lint:disable QualifyingElement
+abbr[title],
+acronym[title],
+dfn[title] {
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+// PROJECT PROTOTYPE -----------------------------------------------------------
+
+.TBD {
+  background-color: white;
+  border: 1px solid $color-fsa-tertiary-200;
+  padding: $size-default;
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+  color: $color-fsa-tertiary-100;
+  text-shadow: -1px -1px 0 $color-fsa-tertiary-200;
+}
 
 // scss-lint:disable SelectorFormat
 .OUTLINE {
@@ -55,59 +112,6 @@
     box-shadow: none;
   }
 
-}
-
-.fsa-content-tabs__label {
-  width: 100%;
-}
-
-// scss-lint:disable QualifyingElement
-abbr[title],
-acronym[title],
-dfn[title] {
-  border: 0;
-  outline: 0;
-  text-decoration: none;
-}
-
-.sr-only {
-  @include sr-only();
-}
-
-.fsa-email-string {
-  word-break: break-all;
-  overflow-wrap: break-word;
-}
-
-// scss-lint:disable SelectorFormat
-.pcp-text--300 {
-  color: $color-fsa-tertiary-300;
-}
-
-textarea[rows] {
-  height: auto;
-}
-
-.fsa-label {
-  h1 & {
-    position: relative;
-    top: -$size-base;
-    margin-left: $size-base;
-  }
-}
-
-// -----------------------------------------------------------------------------
-// PROJECT PROTOTYPE
-
-.TBD {
-  background-color: white;
-  border: 1px solid $color-fsa-tertiary-200;
-  padding: $size-default;
-  text-align: center;
-  font-size: 72px;
-  font-weight: bold;
-  color: $color-fsa-tertiary-100;
-  text-shadow: -1px -1px 0 $color-fsa-tertiary-200;
 }
 
 .pcp-marker-demo {
@@ -250,10 +254,9 @@ textarea[rows] {
 
 }
 
-// -----------------------------------------------------------------------------
-// FAKING TAB CONTENT SWAP
-
 .PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION {
+
+  // FAKING TAB CONTENT SWAP ---------------------------------------------------
 
 	&__ITEM {
     display: none;
@@ -265,9 +268,7 @@ textarea[rows] {
 
 }
 
-
-// -----------------------------------------------------------------------------
-// BROWSER SYNC
+// BROWSER SYNC ----------------------------------------------------------------
 
 #__bs_notify__ {
   top: auto !important;

@@ -13,21 +13,20 @@
 @import 'elements/pcp.typography';
 @import 'elements/pcp.icon-TEMP';
 
-// PCP Components
+// # TO PORT
 @import 'components/pcp.brand';
 @import 'components/pcp.header';
 @import 'components/pcp.nav-global';
 @import 'components/pcp.popover';
-
-// # TO PORT
 // PORTED @import 'components/pcp.footer-TEMP';
 // PORTED @import 'components/pcp.growl';
-@import 'components/pcp.modal';
+// @import 'components/pcp.modal';
 // @import 'components/pcp.whiteout';
 // @import 'components/pcp.select-multi';
-@import 'components/pcp.content-tabs';
+// @import 'components/pcp.content-tabs';
 // / TO PORT
 
+// PCP Components
 @import 'components/pcp.table-header';
 // @import 'components/pcp.global-access';
 @import 'components/pcp.info-bar';
