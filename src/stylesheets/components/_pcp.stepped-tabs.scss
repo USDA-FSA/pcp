@@ -33,7 +33,9 @@
 
   &__label {
 
+    @include reset-button();
     display: block;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     padding: $size-small $size-small ($size-small - .1rem);
@@ -82,14 +84,14 @@
 
       background-color: $colorComplete;
       text-shadow: 1px 1px 0 $color-black;
+      color: $color-fsa-white !important;
 
-      &:link,
       &:focus,
       &:visited,
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        color: $color-fsa-white !important;
+        color: $color-fsa-white;
       }
 
       &:focus,
@@ -104,8 +106,8 @@
 
       background-color: $colorActive;
       text-shadow: 1px 1px 0 $color-black;
+      color: $color-fsa-white;
 
-      &:link,
       &:focus,
       &:visited,
       &:active,
