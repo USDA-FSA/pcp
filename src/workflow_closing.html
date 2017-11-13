@@ -25,14 +25,21 @@
 
         {% include: 'includes/pcp-stepped-tabs__closing.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'title' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' %}
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Closing' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' %}
 
-        <p>
+        <div id="unique-id-closing-save">
+          <div class="fsa-field fsa-m-t--m">
+            <textarea class="fsa-textarea fsa-field__item" name="gemino-quis-ssg2" id="gemino-quis-ssg2" placeholder="Add a message"></textarea>
+          </div>
+          <div class="fsa-field">
+            <button class="fsa-btn fsa-btn--primary HINT" type="button" data-behavior="growl-show growl-dismiss-delay closing-save" data-disable-target="unique-id-closing-save" data-complete-target="UNIQUE-ID-FINALIZER" data-target="unique-id-asdfgwbhq33">Save</button>
+          </div>
+        </div>
+        <!-- <p>
           <input class="fsa-checkbox" id="UNIQUE-ID-77shhsn" type="checkbox" name="UNIQUE-ID-77shhsn" value="approve" data-behavior="toggle-finalize">
           <label for="UNIQUE-ID-77shhsn" class="HINT">[label]</label>
-        </p>
+        </p> -->
 
-        {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
 
       </div>
 
@@ -49,7 +56,7 @@
 
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
-    {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
+    {% include: 'includes/growl_closing-save.html' @ID:'unique-id-asdfgwbhq33' %}
   </div>
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
