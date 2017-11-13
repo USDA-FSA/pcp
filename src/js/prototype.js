@@ -36,7 +36,7 @@ function hasNumbers(t) {
 // Yes, not DRY enough, refactor some day if totally fee like it,
 // but probably won't because throwaway prototype. sue me.
 
-$('body').on('blur', '[data-behavior~="validate-commodity"]', function(event) {
+$('body').on('blur', '[data-behavior~="validate-commodity"], [data-behavior~="validate-closing"]', function(event) {
 
   var $self = $(this);
   var $component = $self.closest('.fsa-field');
@@ -45,6 +45,20 @@ $('body').on('blur', '[data-behavior~="validate-commodity"]', function(event) {
     $component.addClass('fsa-field--error');
   } else {
     $component.removeClass('fsa-field--error');
+  }
+
+})
+
+$('body').on('keyup', '[data-behavior~="validate-closing"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-save-target'));
+
+  if ($self.val() == '') {
+    $target.attr('disabled', true);
+  }
+  else {
+    $target.removeAttr('disabled');
   }
 
 })
