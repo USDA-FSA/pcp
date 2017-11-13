@@ -27,11 +27,13 @@
 
         {% include: 'includes/pcp-title-action-bar.html' @title:'Closing' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' %}
 
-        <div class="fsa-field fsa-m-t--m">
-          <textarea class="fsa-textarea fsa-field__item" name="gemino-quis-ssg2" id="gemino-quis-ssg2" placeholder="Add a message"></textarea>
-        </div>
-        <div class="fsa-field">
-          <button class="fsa-btn fsa-btn--primary HINT" type="button" onclick="$('#UNIQUE-ID-FINALIZER').removeAttr('disabled');" data-behavior="growl-show growl-dismiss-delay" data-target="unique-id-asdfgwbhq33">Save</button>
+        <div id="unique-id-closing-save">
+          <div class="fsa-field fsa-m-t--m">
+            <textarea class="fsa-textarea fsa-field__item" name="gemino-quis-ssg2" id="gemino-quis-ssg2" placeholder="Add a message"></textarea>
+          </div>
+          <div class="fsa-field">
+            <button class="fsa-btn fsa-btn--primary HINT" type="button" data-behavior="growl-show growl-dismiss-delay closing-save" data-disable-target="unique-id-closing-save" data-complete-target="UNIQUE-ID-FINALIZER" data-target="unique-id-asdfgwbhq33">Save</button>
+          </div>
         </div>
         <!-- <p>
           <input class="fsa-checkbox" id="UNIQUE-ID-77shhsn" type="checkbox" name="UNIQUE-ID-77shhsn" value="approve" data-behavior="toggle-finalize">

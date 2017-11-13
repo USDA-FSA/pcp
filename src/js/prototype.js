@@ -1049,6 +1049,22 @@ $('body').on('change', '[data-behavior~="toggle-changes-only--cell"]', function(
 
 })
 
+$('body').on('click', '[data-behavior~="closing-save"]', function(event) {
+
+
+  var $self = $(this);
+  var $targetComponent = $('#' + $self.attr('data-disable-target'));
+  var $targetForms = $targetComponent.find('button, textarea');
+  var $targetCompleter = $('#' + $self.attr('data-complete-target'));
+
+  $targetForms.attr('disabled', true);
+
+  $targetCompleter.removeAttr('disabled');
+
+})
+
+
+
 ;(function($) {
     $.fn.drags = function(opt) {
 
