@@ -40,11 +40,17 @@ $marker-color-affected: #02bfe7; // from USWDS
 
 .pcp-marker {
 
+  @include reset-button();
   cursor: pointer;
   position: relative;
   display: inline-block;
   user-select: none;
   transition: all .23s ease-in-out;
+
+  :focus,
+  &:focus {
+    outline: none;
+  }
 
   &:before {
     // Impacted
@@ -78,6 +84,7 @@ $marker-color-affected: #02bfe7; // from USWDS
 
   &__value {
 
+    display: block;
     z-index: 30;
     background-color: $marker-bgcolor-default;
     border: 1px solid $marker-bgcolor-default;
@@ -92,19 +99,17 @@ $marker-color-affected: #02bfe7; // from USWDS
     transition: all .23s ease-in-out;
     position: relative;
 
+    // .pcp-marker:focus & {
+    //   outline: 1px solid red;
+    // }
+
     .pcp-marker--large & {
       font-size: $marker-font-size--large;
-      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
-      padding:
-        $marker-padding * 2
-        $marker-padding * 2
-      ;
+      padding: ($marker-padding * 2) ($marker-padding * 2);
     }
 
     .pcp-marker--modified & {
       font-weight: $marker-weight-modified;
-      // color: $marker-color-modified;
-      // border-color: $marker-color-modified;
     }
 
     .pcp-marker--active & {
@@ -130,6 +135,7 @@ $marker-color-affected: #02bfe7; // from USWDS
   &__pinpoint {
 
     $pinpoint-size: $size-default;
+    display: block;
 
     &:before {
       content: '';
