@@ -1077,6 +1077,18 @@ $('body').on('click', '[data-behavior~="closing-save"]', function(event) {
 
 })
 
+$('body').on('change', '[data-behavior~="enable-closing-save"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-enable-target'));
+
+  if ($target.is(':disabled')) {
+    $target.removeAttr('disabled');
+  } else {
+    $target.attr('disabled', true);
+  }
+
+});
 
 
 ;(function($) {
