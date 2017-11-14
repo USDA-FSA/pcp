@@ -192,6 +192,11 @@ $mapPanelIconWidth: $size-medium;
       border-top: 0;
     }
 
+    &--no-scroll {
+      min-height: initial;
+      overflow: initial;
+    }
+
   }
 
   &__map {

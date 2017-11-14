@@ -1,0 +1,118 @@
+<table class="fsa-table fsa-table--borderless fsa-table--responsive pcp-table--fixed pcp-table--middle">
+  <thead>
+    <tr class="pcp-table__row">
+      <th colspan="8" class="pcp-table__cell" scope="col">
+        <button class="pcp-table__sort pcp-table__sort--down" type="button">State</button>
+      </th>
+      <th colspan="8" class="pcp-table__cell" scope="col">
+        <button class="pcp-table__sort" type="button">Market</button>
+      </th>
+      <th colspan="5" class="pcp-table__cell" scope="col">
+        <button class="pcp-table__sort" type="button">Name</button>
+      </th>
+      <th colspan="3" class="pcp-table__cell fsa-text-align--right" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="pcp-table__row">
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
+        <select data-behavior="new-state-pairing" data-target="UNIQUE-ID-PAIR--STATE" class="fsa-select fsa-select--small fsa-select--block HINT" name="State">
+          <option value="" selected=""></option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </td>
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
+        <select data-behavior="new-state-pairing new-state-pair__enable" data-target="UNIQUE-ID-PAIR--MARKET" class="fsa-select fsa-select--small fsa-select--block HINT" name="Market">
+          <option value="" selected=""></option>
+          <option value="AMA">Amarillo</option>
+          <option value="CIN">Cincinatti</option>
+          <option value="GLF">Gulf</option>
+          <option value="KCM">Kansas City, Missouri</option>
+          <option value="MEM">Memphis</option>
+          <option value="MIN">Minnesota</option>
+          <option value="NCD">NCD</option>
+          <option value="OTH">OTH</option>
+          <option value="PNW">Pacific Northwest</option>
+          <option value="SCD">SCD</option>
+          <option value="WCD">West Coast Domestic</option>
+        </select>
+      </td>
+      <td colspan="5" class="pcp-table__cell">
+        <span id="UNIQUE-ID-PAIR--STATE"></span>
+        <span id="UNIQUE-ID-PAIR--MARKET"></span>
+      </td>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--primary HINT" disabled="disabled" type="button" data-behavior="new-state-pair__save" data-target="unique-id-DEMO-NEW-PAIRING">Add</button>
+      </td>
+    </tr>
+    <tr class="pcp-table__row" id="unique-id-DEMO-NEW-PAIRING" hidden>
+      <td colspan="8" class="pcp-table__cell" aria-label="State">
+        AL - Alabama
+      </td>
+      <td colspan="8" class="pcp-table__cell" aria-label="Market">
+        AMA - Amarillo
+      </td>
+      <td colspan="5" class="pcp-table__cell" aria-label="Name">
+        <abbr title="Alabama">AL</abbr> / <abbr title="Amarillo">AMA</abbr>
+      </td>
+      <td colspan="3" class="pcp-table__cell fsa-text-align--right">
+        <button class="fsa-btn fsa-btn--small fsa-btn--block fsa-btn--tertiary" type="button">Remove</button>
+      </td>
+    </tr>
+    <tr class="pcp-table__row">
+      <td colspan="24" class="pcp-table__cell fsa-text-align--center">
+        Add some!
+      </td>
+    </tr>
+  </tbody>
+</table>
