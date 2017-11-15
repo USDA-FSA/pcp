@@ -21,9 +21,13 @@
 
       <div class="pcp-section__bd">
 
-        <h1>Begin a new workflow</h1>
+        {% include: 'includes/pcp-stepped-tabs__init.html' %}
 
-        {% include: 'includes/pcp-workflow__init.html' %}
+        <h1>Start a new Daily Process</h1>
+
+        <div class="fsa-m-t--m">
+          {% include: 'includes/pcp-workflow__init.html' %}
+        </div>
 
       </div>
 
