@@ -4,8 +4,8 @@
     @include fsa-grid-row();
   }
 
-	&__hd,
-	&__ft {
+  &__hd,
+  &__ft {
     @include breakpoint(M) {
       @include fsa-grid-column();
     }
@@ -24,11 +24,11 @@
     }
   }
 
-	&__title {
+  &__title {
     margin: 0;
   }
 
-	&__action {
+  &__action {
 
     display: block;
     width: 100%;

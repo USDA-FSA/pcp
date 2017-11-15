@@ -25,13 +25,14 @@
 
         {% include: 'includes/pcp-stepped-tabs__publish.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'title' @action:'Publish March 22, 2017' @link:'link.html' @button_state:'disabled' %}
+        {% include: 'includes/pcp-title-action-bar__publish.html' @title:'Publish' @action:'Complete March 22, 2017' @link:'workflow_closing.html' @button_state:'disabled' @reopen:'unique-id-publish-end' %}
 
-        <p>
-          <input class="fsa-checkbox" id="UNIQUE-ID-jjshgnn" type="checkbox" name="UNIQUE-ID-jjshgnn" value="approve" data-behavior="toggle-finalize">
-          <label for="UNIQUE-ID-jjshgnn" class="HINT">[label]</label>
-        </p>
-        {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
+        <div class="HINT HINT--HIDDEN-BLOCK">
+          <p class="fsa-text-align--center fsa-text-size--4">
+            To enable <strong>Complete</strong> button: check all "Published" checkboxes.
+          </p>
+        </div>
+        {% include: 'includes/table_publish.html' %}
 
       </div>
 
@@ -40,19 +41,18 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-TEMP.html' %}
+    {% include: 'includes/fsa-footer.html' %}
   </footer>
 
   {% include: 'includes/pcp-modal__edit-workflow.html' %}
 
-  {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
+  {% include: 'includes/whiteout.html' @HIDDEN:'true' %}
 
-  <div class="pcp-growl-container pcp-growl-container--hidden">
-    {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
+  <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
   </div>
-  <div class="pcp-growl-container pcp-growl-container--centered pcp-growl-container--hidden">
-    {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+  <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
+    {% include: 'includes/growl_publish-end.html' @ID:'unique-id-publish-end' %}
   </div>
 
   {% include: 'includes/scripts.html' %}

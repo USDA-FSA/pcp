@@ -21,9 +21,17 @@
 
       <div class="pcp-section__bd">
 
-        <h1>Start a new workflow</h1>
+        <div id="unique-id-infobar2354" hidden>
+          {% include: 'includes/pcp-info-bar.html' %}
+        </div>
 
-        {% include: 'includes/pcp-workflow__init.html' %}
+        {% include: 'includes/pcp-stepped-tabs__init.html' %}
+
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Initialize' @action:'Start Daily Process' @link:'workflow_discovery.html' @button_state:'disabled' %}
+
+        <div class="fsa-m-t--m">
+          {% include: 'includes/pcp-workflow__init.html' %}
+        </div>
 
       </div>
 
@@ -32,16 +40,18 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-TEMP.html' %}
+    {% include: 'includes/fsa-footer.html' %}
   </footer>
 
-  {% include: 'includes/whiteout.html' @CLASS:'pcp-whiteout--hidden' %}
+  {% include: 'includes/whiteout.html' @HIDDEN:'true' %}
 
-  <div class="pcp-growl-container pcp-growl-container--hidden">
+  {% include: 'includes/pcp-modal__edit-workflow.html' %}
+
+  <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
     {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
   </div>
-  <div class="pcp-growl-container pcp-growl-container--centered pcp-growl-container--hidden">
+  <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
   </div>
 

@@ -52,7 +52,33 @@
 
     &--highlight {
 
+      transition: background .23s ease-in-out;
       background-color: $highlight-bgc;
+
+      &--suppressed {
+        background-color: initial;
+      }
+
+    }
+
+  }
+
+  &__cell {
+
+    &--highlight {
+
+      transition: background .23s ease-in-out;
+      background-color: $highlight-bgc;
+      // box-shadow: 1px 0 0 0 $color-fsa-tertiary-200 inset, -1px 0 0 0 $color-fsa-tertiary-200 inset;
+
+      // & + & {
+      //   box-shadow: -1px 0 0 0 $color-fsa-tertiary-200 inset;
+      // }
+
+      &--suppressed {
+        background-color: initial;
+        box-shadow: none;
+      }
 
     }
 
@@ -70,6 +96,20 @@
 
     &--sub {
       font-weight: $font-normal;
+    }
+
+    &--sticky {
+
+      position: sticky;
+      top: -1px;
+      background-color: $color-fsa-site-bg;
+      z-index: 2;
+      box-shadow: 0 1px 0 0 $table-border-color;
+
+      &.pcp-table__th--pair {
+        box-shadow: none;
+      }
+
     }
 
   }

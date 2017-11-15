@@ -23,6 +23,19 @@
 
         <h1>[home]</h1>
 
+        <!-- <div class="show_on_success" style="display: none;">
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__8/12@l">
+              <div class="fsa-alert fsa-alert--success fsa-m-b--l" role="alert">
+                <div class="fsa-alert__body">
+                  <h3 class="fsa-alert__heading">Good job!</h3>
+                  <p class="fsa-alert__text"><strong>March 22, 2017</strong> is complete. Get started on the next day now!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
         {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
 
       </div>
@@ -32,10 +45,20 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-TEMP.html' %}
+    {% include: 'includes/fsa-footer.html' %}
   </footer>
 
   {% include: 'includes/scripts.html' %}
+
+  <div class="fsa-growl-container show_on_success" style="display:none;">
+    {% include: 'includes/growl_publish-complete.html ID:'unique-id-asdf3ha9999s' %}
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $(".show_on_success").toggle(document.URL.indexOf("success=true") !== -1);
+    });
+  </script>
 
 </body>
 

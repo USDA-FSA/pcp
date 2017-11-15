@@ -51,6 +51,13 @@ module.exports = function (grunt) {
         dest: 'src/js/vendor'
       },
 
+      fsaStyle_jsComponents: {
+        expand: true,
+        src: '**',
+        cwd: 'node_modules/fsa-style/src/js/components',
+        dest: 'src/js/components'
+      },
+
       jQuery: {
         expand: true,
         src: '**',

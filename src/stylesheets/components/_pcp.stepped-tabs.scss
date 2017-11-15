@@ -4,7 +4,9 @@
   $colorComplete: $color-fsa-secondary-300;
   $colorActive: $color-fsa-secondary;
   $colorFuture: $color-fsa-secondary-100;
+  $colorFutureText: transparentize($color-fsa-base, .5); // $color-fsa-secondary-900
   $colorDark: $color-fsa-secondary-900;
+  $labelPadding: $size-small;
 
   $arrowMagicNumber: 2.1rem;
 
@@ -33,14 +35,15 @@
 
   &__label {
 
+    @include reset-button();
     display: block;
+    width: 100%;
     text-align: center;
     text-decoration: none;
-    padding: $size-small $size-small ($size-small - .1rem);
+    padding: $labelPadding $labelPadding ($labelPadding - .1rem);
     background-color: $color-fsa-tertiary-100;
     font-weight: $font-bold;
     color: $color-fsa-base;
-
     position: relative;
 
     &:before,
@@ -82,14 +85,14 @@
 
       background-color: $colorComplete;
       text-shadow: 1px 1px 0 $color-black;
+      color: $color-fsa-white !important;
 
-      &:link,
       &:focus,
       &:visited,
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        color: $color-fsa-white !important;
+        color: $color-fsa-white;
       }
 
       &:focus,
@@ -104,8 +107,8 @@
 
       background-color: $colorActive;
       text-shadow: 1px 1px 0 $color-black;
+      color: $color-fsa-white;
 
-      &:link,
       &:focus,
       &:visited,
       &:active,
@@ -122,7 +125,11 @@
 
     &--incomplete {
       background-color: $colorFuture;
-      color: $colorDark;
+      color: $colorFutureText;
+    }
+
+    .pcp-stepped-tabs__item:first-child & {
+      padding-right: ( ($labelPadding * 2) + ($labelPadding / 3) );
     }
 
   }

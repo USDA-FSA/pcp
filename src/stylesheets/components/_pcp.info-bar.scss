@@ -15,6 +15,11 @@
 
   &__item {
 
+    > strong {
+      // boy was this a mistake, TODO: sometime
+      margin-right: $size-base;
+    }
+
     &--truncate {
       @include breakpoint(L) {
         max-width: 100%;

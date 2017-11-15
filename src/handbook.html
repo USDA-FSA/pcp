@@ -1,0 +1,42 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Posted County Prices' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  {% include: 'includes/fsa-disclaimer.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header__profile-only.html' %}
+    {% include: 'includes/pcp-nav-global__home.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>PCP Handbook</h1>
+
+        {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/fsa-footer.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>
