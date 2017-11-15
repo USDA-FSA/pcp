@@ -34,6 +34,31 @@
 
   &__bd {} // no rules to begin with, keep though.
 
+  &__empty {
+    background-color: $color-fsa-site-bg;
+    padding: $size-medium $size-default;
+    text-align: center;
+  }
+
+  &__empty-title {
+    @include font-size(2);
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-family: $font-sans;
+    color: $color-fsa-tertiary-300;
+  }
+
+  &__empty-message {
+    @include font-size(2);
+    color: $color-fsa-tertiary-300;
+  }
+
+  &__empty-action {
+    margin: 0;
+  }
+
+  &__btn {}
+
   // ---------------------------------------------------------------------------
 
   &__table {

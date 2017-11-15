@@ -62,14 +62,14 @@ dfn[title] {
   text-shadow: -1px -1px 0 $color-fsa-tertiary-200;
 }
 
+$hint-color: rgba(255, 69, 0, .8);
+
 // scss-lint:disable SelectorFormat
 .OUTLINE {
-  outline: 1px solid orangered;
+  outline: 1px solid $hint-color;
 }
 
 .HINT {
-
-  $hint-color: rgba(255, 69, 0, .8);
 
   .HINT-SHOW & {
 
@@ -77,9 +77,9 @@ dfn[title] {
     box-shadow:
       0 5000px 0 0 transparentize($hint-color, .7) inset,
       0 5000px 0 0 transparentize($hint-color, .7) inset,
-      0 0px 0 8px transparentize($hint-color, .6)
+      0 0px 0 7px transparentize($hint-color, .6)
     ;
-    outline: 2px solid orangered;
+    outline: 2px dashed $hint-color;
     outline-offset: 5px;
 
     &.pcp-content-tabs__label--active {

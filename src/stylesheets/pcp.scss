@@ -13,7 +13,9 @@
 @import 'elements/pcp.typography';
 @import 'elements/pcp.icon-TEMP';
 
-// # TO PORT
+// //////////////////////////////////////////////////////////////////////////////
+// [START] These have been ported, uncomment temporarily when implementing v2.0.0
+// //////////////////////////////////////////////////////////////////////////////
 // @import 'components/pcp.brand';
 // @import 'components/pcp.header';
 // @import 'components/pcp.nav-global';
@@ -23,7 +25,9 @@
 // PORTED @import 'components/pcp.whiteout';
 // PORTED @import 'components/pcp.select-multi';
 // PORTED @import 'components/pcp.content-tabs';
-// / TO PORT
+// //////////////////////////////////////////////////////////////////////////////
+// [END] These have been ported, uncomment temporarily when implementing v2.0.0
+// //////////////////////////////////////////////////////////////////////////////
 
 // PCP Components
 @import 'components/pcp.popover';
