@@ -602,6 +602,38 @@ $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
 
 });
 
+$('body').on('click', '[data-behavior~="init-day"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('[data-component]');
+  var $targetInfoBar = $('#unique-id-infobar2354');
+  var $targetFinalizer = $('#UNIQUE-ID-FINALIZER');
+
+  $self.attr('disabled', true)
+  $targetFinalizer.removeAttr('disabled');
+
+  $component
+    .find('select, textarea, input')
+    .attr('disabled', true)
+  ;
+
+  $targetInfoBar
+    .hide()
+    .removeAttr('hidden') // this isn't how you'd actually do it, I just have it in markup to demo
+    .css('opacity', '0') // need to set style properties  before we animate them
+    .slideDown('slow', function() { // and then down
+      $(this)
+        .fadeTo('slow', '1', function() { // and then animate opacity
+          $(this).removeAttr('style')
+          console.log('Done animating');
+        })
+      ;
+    })
+  ;
+
+
+});
+
 $('body').on('change', '[data-behavior~="toggle-check-group"]', function(event) {
 
   var $self = $(this);

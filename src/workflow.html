@@ -21,9 +21,13 @@
 
       <div class="pcp-section__bd">
 
+        <div id="unique-id-infobar2354" hidden>
+          {% include: 'includes/pcp-info-bar.html' %}
+        </div>
+
         {% include: 'includes/pcp-stepped-tabs__init.html' %}
 
-        <h1>Start a new Daily Process</h1>
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Initialize' @action:'Start Daily Process' @link:'workflow_discovery.html' @button_state:'disabled' %}
 
         <div class="fsa-m-t--m">
           {% include: 'includes/pcp-workflow__init.html' %}
@@ -40,6 +44,8 @@
   </footer>
 
   {% include: 'includes/whiteout.html' @HIDDEN:'true' %}
+
+  {% include: 'includes/pcp-modal__edit-workflow.html' %}
 
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
