@@ -82,6 +82,7 @@ $mapPanelIconWidth: $size-medium;
     position: absolute;
     right: -$mapPanelIconWidth;
     top: $mapPanelIconHeight / 2;
+    display: none;
   }
 
   &__panel-splitter {
