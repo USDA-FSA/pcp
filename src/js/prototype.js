@@ -661,15 +661,48 @@ $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
   var $targetsDisable  = $scopeNarrow.find('input, button');
   var $targetReset = $('#' + $self.attr('data-reset-target'));
   var $targetSave = $('#' + $self.attr('data-save-target'));
+  var $component = $self.closest('.pcp-map-toolbar');
+  var $labelStatus = $component.find('.fsa-label');
 
   if ($targetsDisable.is(':disabled')) {
+
     $targetsDisable.removeAttr('disabled');
     $targetReset.removeAttr('disabled');
     $targetSave.addClass('fsa-content-tabs__label--unsaved')
-  } else {
+
+    $labelStatus
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--warning')
+          .text('In Progress')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
+
+  }
+  else {
+
     $targetReset.attr('disabled', true);
     $targetsDisable.attr('disabled', true);
     $targetSave.removeClass('fsa-content-tabs__label--unsaved');
+
+    $labelStatus
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--success')
+          .text('Complete')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
+
   }
 
 });
