@@ -1,0 +1,42 @@
+
+.pcp-map-toolbar {
+
+  &__bd {
+    background-color: $color-white;
+    border: 1px solid $color-fsa-tertiary-200;
+    border-width: 0 1px 1px;
+    padding: $size-small $size-default;
+    display: flex;
+    align-items: center;
+  }
+
+	&__unit {
+
+    white-space: nowrap;
+    line-height: 1;
+    margin-right: $size-default;
+
+    &:first-child {}
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+	}
+
+	&__hd {}
+
+	&__title {
+    @include font-size(4);
+    margin: 0;
+  }
+
+	&__status {}
+
+	&__rift-states {}
+
+	&__mode {}
+
+	&__actions {}
+
+}
