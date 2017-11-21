@@ -20,6 +20,7 @@
     line-height: 1;
     margin-right: $size-default;
     text-align: center;
+    transition: width .23s ease-in-out;
 
     &:first-child {
       text-align: left;
