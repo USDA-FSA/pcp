@@ -457,6 +457,35 @@ $('body').on('focus', '.pcp-spinbox__input', function(event) {
 
 })
 
+$('body').on('click', '[data-behavior~="map-mode"]', function(event) {
+
+  $self = $(this);
+  $selfPeers = $self.siblings('[data-behavior="map-mode"]');
+  $component = $self.closest('.pcp-mapping');
+  $panel = $component.find('.pcp-mapping__panel');
+  $markers = $component.find('.pcp-mapping__marker');
+  $riftDetails = $component.find('.pcp-mapping__rift-detail');
+  $riftState = $component.find('.pcp-map-toolbar__unit--rift-state');
+  selfValue = $self.attr('data-mode');
+
+  $self.addClass('fsa-btn-group__item--active');
+  $selfPeers.removeClass('fsa-btn-group__item--active');
+
+  if (selfValue == 'edit') {
+    $panel.addClass('pcp-mapping__panel--visible');
+    $markers.removeAttr('hidden');
+    $riftDetails.removeAttr('hidden');
+    // $riftState.find('button').removeAttr('disabled');
+  }
+  else {
+    $panel.removeClass('pcp-mapping__panel--visible');
+    $markers.attr('hidden', true);
+    $riftDetails.attr('hidden', true);
+    // $riftState.find('button').attr('disabled', true);
+  }
+
+})
+
 $('body').on('keydown', '.pcp-spinbox__input[data-behavior~="spinbox-kill-keypress"]', function(e) {
 
   if (event.which == 39) {
