@@ -464,6 +464,7 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
   $component = $self.closest('.pcp-mapping');
   $panel = $component.find('.pcp-mapping__panel');
   $markers = $component.find('.pcp-mapping__marker');
+  $actions = $component.find('.pcp-map-toolbar__unit--actions');
   $riftDetails = $component.find('.pcp-mapping__rift-detail');
   $riftState = $component.find('.pcp-map-toolbar__unit--rift-state');
   selfValue = $self.attr('data-mode');
@@ -475,13 +476,26 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
     $panel.addClass('pcp-mapping__panel--visible');
     $markers.removeAttr('hidden');
     $riftDetails.removeAttr('hidden');
-    // $riftState.find('button').removeAttr('disabled');
+    $riftState.find('button').removeAttr('disabled');
+    $actions.find('button').removeAttr('disabled');
   }
-  else {
+  else if (selfValue == '5-30') {
     $panel.removeClass('pcp-mapping__panel--visible');
     $markers.attr('hidden', true);
     $riftDetails.attr('hidden', true);
-    // $riftState.find('button').attr('disabled', true);
+    $riftState.find('button').attr('disabled', true);
+    $actions.find('button').attr('disabled', true);
+  }
+  else {
+
+    $panel.addClass('pcp-mapping__panel--visible');
+    $markers.removeAttr('hidden');
+    $riftDetails.removeAttr('hidden');
+    $riftState.find('button').removeAttr('disabled');
+    $actions.find('button').removeAttr('disabled');
+
+    alert('what else can we put here?')
+
   }
 
 })
