@@ -2,20 +2,20 @@
 .pcp-map-toolbar {
 
   &__bd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     z-index: 1;
     background-color: $color-white;
     border: 1px solid $color-fsa-tertiary-200;
     border-width: 0 1px 1px;
     padding: $size-small $size-default;
-    display: flex;
-    align-items: center;
     box-shadow: 0 $size-default $size-medium (-$size-default) rgba(0, 0, 0, .4);
   }
 
 	&__unit {
 
-    flex: auto;
     white-space: nowrap;
     line-height: 1;
     margin-right: $size-default;
@@ -31,8 +31,7 @@
     }
 
     &--hd {
-      flex: none;
-      max-width: ($mapPanelWidth - $size-large)
+      max-width: 284px;
     }
 
     &--status {
