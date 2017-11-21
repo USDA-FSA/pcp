@@ -222,10 +222,6 @@ $mapPanelIconWidth: $size-medium;
 
   // ---------------------------------------------------------------------------
 
-  &__panel-tools {
-
-  }
-
   &__tools-primary {
 
     position: absolute;
@@ -259,13 +255,39 @@ $mapPanelIconWidth: $size-medium;
     overflow: hidden;
     width: $icon-size;
     height: $icon-size;
-    background-color: $color-fsa-tertiary-200;
+    background-color: $color-fsa-tertiary;
+    box-shadow:
 
     &--toggled {
       outline: 1px solid red;
     }
 
   }
+
+  &__tool {
+
+    width: $size-large;
+    height: $size-large;
+    background-color: $color-tertiary;
+
+    &--ly {
+      outline: 2px dotted red;
+    }
+
+    &--th {
+      outline: 2px dotted blue;
+    }
+
+    &--zm {
+      outline: 2px dotted green;
+    }
+
+    &--hm {
+      outline: 2px dotted purple;
+    }
+
+  }
+
 
   // ---------------------------------------------------------------------------
 
