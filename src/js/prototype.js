@@ -464,10 +464,12 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
   $component = $self.closest('.pcp-mapping');
   $panel = $component.find('.pcp-mapping__panel');
   $markers = $component.find('.pcp-mapping__marker');
-  $actions = $component.find('.pcp-map-toolbar__unit--actions');
-  $submit = $component.find('.pcp-map-toolbar__unit--submit');
   $riftDetails = $component.find('.pcp-mapping__rift-detail');
-  $riftState = $component.find('.pcp-map-toolbar__unit--rift-state');
+  $submit = $component.find('.fsa-checkbox');
+  $actions = $component.find('[data-action]');
+  $riftState = $component.find('.fsa-badge');
+
+
   selfValue = $self.attr('data-mode');
 
   $self.addClass('fsa-btn-group__item--active');
@@ -477,29 +479,17 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
     $panel.addClass('pcp-mapping__panel--visible');
     $markers.removeAttr('hidden');
     $riftDetails.removeAttr('hidden');
-    $riftState.find('button').removeAttr('disabled');
-    $actions.find('button').removeAttr('disabled');
-    $submit.find('.fsa-checkbox').removeAttr('disabled');
+    $riftState.removeAttr('disabled');
+    $actions.removeAttr('disabled');
+    $submit.removeAttr('disabled');
   }
-  else if (selfValue == '5-30') {
+  else {
     $panel.removeClass('pcp-mapping__panel--visible');
     $markers.attr('hidden', true);
     $riftDetails.attr('hidden', true);
-    $riftState.find('button').attr('disabled', true);
-    $actions.find('button').attr('disabled', true);
-    $submit.find('.fsa-checkbox').attr('disabled', true);
-  }
-  else {
-
-    $panel.addClass('pcp-mapping__panel--visible');
-    $markers.removeAttr('hidden');
-    $riftDetails.removeAttr('hidden');
-    $riftState.find('button').removeAttr('disabled');
-    $actions.find('button').removeAttr('disabled');
-    $submit.find('.fsa-checkbox').removeAttr('disabled');
-
-    alert('what else can we put here?')
-
+    $riftState.attr('disabled', true);
+    $actions.attr('disabled', true);
+    $submit.attr('disabled', true);
   }
 
 })

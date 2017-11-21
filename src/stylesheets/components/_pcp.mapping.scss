@@ -74,29 +74,9 @@ $mapPanelIconWidth: $size-medium;
       width: ($size-base * 100);
     }
 
-    &--tools {
-
-      border-right: 0;
-      border-left: 1px solid $color-fsa-tertiary-200;
-      width: ($mapPanelWidth / 7);
-      min-width: 0;
-      left: auto;
-      right: 0;
-      transform: translateX(100%);
-
-      .pcp-mapping--fullscreen & {
-        width: ($mapPanelWidth / 7);
-      }
-
-    }
-
     &--visible {
       transform: translateX(0);
-      &.pcp-mapping__panel--tools {
-        transform: translateX(0);
-      }
     }
-
 
   }
 

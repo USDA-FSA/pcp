@@ -4,7 +4,7 @@
   &__bd {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     position: relative;
     z-index: 1;
     background-color: $color-white;
@@ -18,9 +18,13 @@
 
     white-space: nowrap;
     line-height: 1;
-    margin-right: $size-default;
+    margin-right: $size-medium;
     text-align: center;
     transition: width .23s ease-in-out;
+
+    &--split {
+      margin-left: auto;
+    }
 
     &:first-child {
       text-align: left;
@@ -31,28 +35,12 @@
       margin-right: 0;
     }
 
-    &--hd {
-      max-width: 284px;
-    }
-
-    &--status {
-      text-align: left;
-    }
-
-    &--rift-state {}
-
-    &--mode {}
-
-    &--actions {}
-
-    &--submit {}
-
 	}
 
 	&__title {
     @include font-size(4);
     margin: 0;
-    max-width: 100%;
+    max-width: 284px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
