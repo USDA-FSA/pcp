@@ -34,6 +34,16 @@ textarea[rows] {
   }
 }
 
+.fsa-label,
+.fsa-badge {
+  &[disabled] {
+    opacity: .65;
+    filter: saturate(70%);
+    cursor: not-allowed;
+  }
+}
+
+
 // TO BE SORTED ELSEWHERE IN PCP.SCSS ------------------------------------------
 
 .pcp-file-name {
