@@ -465,6 +465,7 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
   $panel = $component.find('.pcp-mapping__panel');
   $markers = $component.find('.pcp-mapping__marker');
   $actions = $component.find('.pcp-map-toolbar__unit--actions');
+  $submit = $component.find('.pcp-map-toolbar__unit--submit');
   $riftDetails = $component.find('.pcp-mapping__rift-detail');
   $riftState = $component.find('.pcp-map-toolbar__unit--rift-state');
   selfValue = $self.attr('data-mode');
@@ -478,6 +479,7 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
     $riftDetails.removeAttr('hidden');
     $riftState.find('button').removeAttr('disabled');
     $actions.find('button').removeAttr('disabled');
+    $submit.find('button').removeAttr('disabled');
   }
   else if (selfValue == '5-30') {
     $panel.removeClass('pcp-mapping__panel--visible');
@@ -485,6 +487,7 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
     $riftDetails.attr('hidden', true);
     $riftState.find('button').attr('disabled', true);
     $actions.find('button').attr('disabled', true);
+    $submit.find('.fsa-checkbox').attr('disabled', true);
   }
   else {
 
@@ -493,6 +496,7 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
     $riftDetails.removeAttr('hidden');
     $riftState.find('button').removeAttr('disabled');
     $actions.find('button').removeAttr('disabled');
+    $submit.find('button').removeAttr('disabled');
 
     alert('what else can we put here?')
 
