@@ -22,7 +22,11 @@
 
         <p class="fsa-text--lead">These are a <strong>limited set of icons</strong> specific to PCP-II, and are not necessarily ones that will become part of the FSA Design System.</p>
 
-        <pre class="pcp-code-block"><code>[svg markup]</code></pre>
+        <pre class="pcp-code-block">&lt;svg class="pcp-icon <strong style="color:black">pcp-icon--[variation] pcp-icon--[size]</strong>" aria-labelledby="pcp-icon__label"&gt;
+  &lt;title id="pcp-icon__label"&gt;[label]&lt;/title&gt;
+  &lt;use xlink:href="img/symbol-defs.svg#<strong style="color:black">pcp-icon--[variation]</strong>"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+</pre>
 
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -40,7 +44,28 @@
           </div>
         </div>
 
-        <h2 class="pcp-prototype-title">[subtitle]</h2>
+        <h2 class="pcp-prototype-title">Variations</h2>
+
+        <ul class="fsa-list--inline">
+          <li>
+            <input class="fsa-radio" id="iconSize__default" name="iconSize" type="radio" value="default" data-behavior="iconSizeDemo" checked>
+            <label for="iconSize__default">Default</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="iconSize__small" name="iconSize" type="radio" value="small" data-behavior="iconSizeDemo">
+            <label for="iconSize__small">Small</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="iconSize__medium" name="iconSize" type="radio" value="medium" data-behavior="iconSizeDemo">
+            <label for="iconSize__medium">Medium</label>
+          </li>
+          <li>
+            <input class="fsa-radio" id="iconSize__large" name="iconSize" type="radio" value="large" data-behavior="iconSizeDemo">
+            <label for="iconSize__large">Large</label>
+          </li>
+        </ul>
+
+        {% include: 'includes/pcp-icon-list.html' %}
 
       </div>
 
