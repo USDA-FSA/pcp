@@ -1192,6 +1192,22 @@ $('body').on('change', '[data-behavior~="enable-closing-save"]', function(event)
 
 });
 
+$('body').on('change', '[data-behavior~="icon-size-demo"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#icon-list').find('.pcp-icon')
+  var selfValue = $self.val();
+
+  console.log(selfValue);
+
+  $target
+    .removeClass('pcp-icon-- pcp-icon--small pcp-icon--medium pcp-icon--large')
+    .addClass('pcp-icon--' + selfValue)
+    .removeClass('pcp-icon--')
+  ;
+
+})
+
 
 ;(function($) {
     $.fn.drags = function(opt) {

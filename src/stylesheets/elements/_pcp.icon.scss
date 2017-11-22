@@ -1,5 +1,5 @@
 $pcp-icon-size: $size-medium;
-$pcp-icon-size-small: $size-default;
+$pcp-icon-size-small: ($size-default + $size-base);
 $pcp-icon-size-medium: $size-large;
 $pcp-icon-size-large: $size-extra-large;
 
