@@ -409,9 +409,17 @@ $('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
 
   $self = $(this);
   $component = $self.closest('.pcp-mapping');
+  $icon = $self.find('use');
 
   $self.toggleClass('pcp-mapping__zoom--toggled');
   $component.toggleClass('pcp-mapping--fullscreen');
+
+  if ($self.hasClass('pcp-mapping__zoom--toggled')) {
+    $icon.attr('xlink:href','img/symbol-defs.svg#pcp-icon--shrink');
+  }
+  else {
+    $icon.attr('xlink:href','img/symbol-defs.svg#pcp-icon--enlarge');
+  }
 
 })
 
