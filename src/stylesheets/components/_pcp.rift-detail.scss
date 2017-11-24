@@ -22,17 +22,6 @@ $swapDistance: 2.8rem;
   }
 }
 
-// scss-lint:disable all
-.pcp-RIFT-ICON-TEMP {
-
-  background-color: rgba(255, 255, 255, .5) !important;
-
-  & + & {
-    margin-left: 5px;
-  }
-
-}
-
 .pcp-rift-detail {
 
   $padding: $size-default;
@@ -78,12 +67,20 @@ $swapDistance: 2.8rem;
     text-align: right;
     vertical-align: middle;
     // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
-    padding:
-      $size-base
-      $size-small
-      $size-base
-      $size-base
-    ;
+    padding: 0;
+  }
+
+  &__action-btn {
+
+    @include reset-button();
+    display: inline-block;
+    line-height: 1;
+    padding: $size-small;
+
+    & + & {
+      margin-left: (-$size-base);
+    }
+
   }
 
   &__bd {}
