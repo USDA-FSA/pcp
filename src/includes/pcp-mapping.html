@@ -14,7 +14,9 @@
     <div class="pcp-mapping__panel pcp-mapping__panel--visible">
 
       <div class="pcp-mapping__panel-toggle">
-        <button class="pcp-mapping__panel-btn" type="button" data-behavior="panel-toggle" title="Toggle Panel">Toggle Panel</button>
+        <button class="pcp-mapping__panel-btn" type="button" data-behavior="panel-toggle" title="Toggle Panel" aria-label="Toggle Panel">
+          {% include: 'includes/icon.html' @NAME:'circle-left' @SIZE:' ' @CLASS:' ' %}
+        </button>
       </div>
 
       <div class="pcp-mapping__panel-splitter"><i></i></div>
@@ -73,14 +75,23 @@
     </div>
 
     <div class="pcp-mapping__tools-primary">
-      <button class="pcp-mapping__zoom" type="button" data-behavior="fullscreen-toggle" title="Fullscreen">[O]</button>
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn" aria-label="Full screen" type="button" data-behavior="fullscreen-toggle" title="Fullscreen">{% include: 'includes/icon.html' @NAME:'enlarge' @SIZE:' ' @CLASS:'pcp-mapping__fullscreen' %}</button>
+      </div>
     </div>
 
     <div class="pcp-mapping__tools-secondary">
-      <div class="pcp-mapping__tool pcp-mapping__tool--th"></div>
-      <div class="pcp-mapping__tool pcp-mapping__tool--ly"></div>
-      <div class="pcp-mapping__tool pcp-mapping__tool--zm"></div>
-      <div class="pcp-mapping__tool pcp-mapping__tool--hm"></div>
+      <div class="pcp-mapping__tool" style="height:220px;"></div>
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn" aria-label="Layers" type="button" title="Layers">{% include: 'includes/icon.html' @NAME:'stack' @SIZE:' ' @CLASS:'pcp-mapping__layers' %}</button>
+      </div>
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn" aria-label="Zoom in" type="button" title="Zoom in">{% include: 'includes/icon.html' @NAME:'plus' @SIZE:' ' @CLASS:'pcp-mapping__zoom-in' %}</button>
+        <button class="pcp-mapping__btn pcp-mapping__btn--adj" aria-label="Zoom out" type="button" title="Zoom out">{% include: 'includes/icon.html' @NAME:'minus' @SIZE:' ' @CLASS:'pcp-mapping__zoom-out' %}</button>
+      </div>
+      <div class="pcp-mapping__tool pcp-mapping__tool--hm">
+        <button class="pcp-mapping__btn" aria-label="Map home" type="button" title="Map home">{% include: 'includes/icon.html' @NAME:'home' @SIZE:' ' @CLASS:'pcp-mapping__home' %}</button>
+      </div>
     </div>
 
   </div>

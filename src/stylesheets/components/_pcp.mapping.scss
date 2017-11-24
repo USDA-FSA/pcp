@@ -10,8 +10,8 @@
 }
 
 $mapPanelWidth: ($size-base * 85);
-$mapPanelIconHeight: $size-large;
-$mapPanelIconWidth: $size-medium;
+$mapPanelIconHeight: 42px;
+$mapPanelIconWidth: ($mapPanelIconHeight - 2px);
 
 .pcp-mapping {
 
@@ -52,6 +52,7 @@ $mapPanelIconWidth: $size-medium;
 
   &__panel {
 
+    will-change: transform;
     position: absolute;
     left: 0;
     top: 0;
@@ -64,7 +65,6 @@ $mapPanelIconWidth: $size-medium;
     transform: translateX(-100%);
     transition: all .23s ease-in-out;
     z-index: 1001;
-    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
 
     display: flex;
     flex-direction: column;
@@ -75,6 +75,7 @@ $mapPanelIconWidth: $size-medium;
     }
 
     &--visible {
+      box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
       transform: translateX(0);
     }
 
@@ -83,8 +84,8 @@ $mapPanelIconWidth: $size-medium;
   &__panel-toggle {
     position: absolute;
     right: -$mapPanelIconWidth;
-    top: $mapPanelIconHeight / 2;
-    display: none;
+    top: $size-default;
+    z-index: -1;
   }
 
   &__panel-splitter {
@@ -122,17 +123,30 @@ $mapPanelIconWidth: $size-medium;
     padding: 0;
     margin: 0;
     display: inline-block;
-    text-indent: -($mapPanelIconWidth * 10);
-    overflow: hidden;
     width: $mapPanelIconWidth;
     height: $mapPanelIconHeight;
     background-color: $color-fsa-site-bg;
-    border: 1px solid $color-fsa-tertiary-200;
-    border-left-width: 0;
-    border-radius: 0 2px 2px 0;
+    text-align: center;
+    border-left: 1px solid $color-fsa-tertiary-200;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 2px 2px $size-small rgba(0, 0, 0, .4);
+    transition: background .23s ease-in-out;
+
+    &:hover {
+      color: $color-fsa-link-hover;
+    }
+
+    &:active {
+      background-color: $color-fsa-tertiary-200;
+    }
 
     &--toggled {
-      // outline: 1px solid red;
+      transform: scaleX(-1);
+
+      border-right: 1px solid $color-fsa-tertiary-200;
+      border-radius: 4px 0 0 4px;
+      box-shadow: -2px 2px $size-small rgba(0, 0, 0, .4);
+
     }
 
   }
@@ -265,26 +279,45 @@ $mapPanelIconWidth: $size-medium;
 
   &__tool {
 
-    width: $size-large;
-    height: $size-large;
+    width: ($size-base * 10);
     background-color: $color-white;
     box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
     margin-top: $size-small;
 
-    &--th {
-      height: ($size-large * 4);
+  }
+
+  &__btn {
+
+    @include reset-button();
+    display: block;
+    width: 100%;
+    padding: $size-small;
+    transition: background .23s ease-in-out;
+
+    &:hover {
+      color: $color-fsa-link-hover;
     }
 
-    &--ly {}
-
-    &--zm {
-      height: ($size-large * 2);
+    &:active {
+      background-color: $color-fsa-tertiary-200;
     }
 
-    &--hm {}
+    & + .pcp-mapping__btn--adj {
+      border-top: 1px solid $color-fsa-tertiary-200;
+    }
 
   }
 
+  &__fullscreen { }
+
+  &__layers { }
+
+  &__zoom-in,
+  &__zoom-out {
+    width: 20px;
+  }
+
+  &__home { }
 
   // ---------------------------------------------------------------------------
 

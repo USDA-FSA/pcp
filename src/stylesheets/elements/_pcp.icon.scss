@@ -13,6 +13,8 @@ $pcp-icon-size-large: $size-extra-large;
   fill: currentColor;
   vertical-align: middle;
 
+  &--default {}
+
   &--small {
     width: $pcp-icon-size-small;
     height: $pcp-icon-size-small;
