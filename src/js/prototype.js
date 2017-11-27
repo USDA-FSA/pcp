@@ -145,12 +145,6 @@ $('body').on('change', '[data-behavior~="modified-form"]', function(event) {
 
 })
 
-$('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
-  var $self = $(this);
-  var $component = $self.closest('.pcp-popover');
-  $component.removeClass('pcp-popover--visible');
-})
-
 $('body').on('click', '[data-behavior~="whiteout-show"]', function(event) {
   $('#fsa-whiteout').attr('aria-hidden','false');
 })
@@ -209,6 +203,12 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
     $checks.prop('checked', false);
   }
 
+})
+
+$('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
+  var $self = $(this);
+  var $component = $self.closest('.pcp-popover');
+  $component.removeClass('pcp-popover--visible');
 })
 
 $('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
@@ -1235,7 +1235,7 @@ $('body').on('click', '[data-behavior~="change-popover-dir"]', function(event) {
   var dir = $self.data('dir');
 
   $target
-    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr')
+    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr pcp-popover--lc pcp-popover--rc')
     .addClass('pcp-popover--' + dir)
   ;
 

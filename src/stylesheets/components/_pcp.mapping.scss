@@ -130,14 +130,15 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
     border-left: 1px solid $color-fsa-tertiary-200;
     border-radius: 0 4px 4px 0;
     box-shadow: 2px 2px $size-small rgba(0, 0, 0, .4);
-    transition: background .23s ease-in-out;
+    // transition: background .23s ease-in-out;
 
     &:hover {
       color: $color-fsa-link-hover;
     }
 
     &:active {
-      background-color: $color-fsa-tertiary-200;
+      background-color: $color-fsa-link-hover;
+      color: $color-fsa-white;
     }
 
     &--toggled {
@@ -289,7 +290,7 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
     display: block;
     width: 100%;
     padding: $size-small;
-    transition: background .23s ease-in-out;
+    // transition: background .23s ease-in-out;
 
     &[disabled] {
       opacity: .4;
@@ -301,7 +302,8 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
     }
 
     &:not([disabled]):active {
-      background-color: $color-fsa-tertiary-200;
+      background-color: $color-fsa-link-hover;
+      color: $color-fsa-white;
     }
 
     &--adj {
