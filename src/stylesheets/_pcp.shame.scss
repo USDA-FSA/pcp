@@ -202,7 +202,7 @@ $hint-color: rgba(255, 69, 0, .8);
 
       width: 320px;
       position: fixed;
-      right: $size-medium;
+      right: ($size-extra-large * 2);
       max-height: 70vh;
       overflow: hidden;
       z-index: 9999999;

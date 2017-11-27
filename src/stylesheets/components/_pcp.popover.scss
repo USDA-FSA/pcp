@@ -1,17 +1,6 @@
 @keyframes popoverShow {
   from {
     opacity: 0;
-    transform: translateY(-$size-default);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-@keyframes popoverShowFadeOnly {
-  from {
-    opacity: 0;
   }
   to {
     opacity: 1;
@@ -25,6 +14,7 @@
   // ---------------------------------------------------------------------------
 
   display: none;
+  will-change: opacity;
   background-color: $color-white;
   position: fixed;
   top: $size-default;
@@ -372,18 +362,11 @@
     }
   }
 
-  &--visible {
+  &--visible,
+  &[aria-hidden="false"] {
 
     display: block;
     animation: popoverShow 230ms ease-in-out;
-
-    // scss-lint:disable SelectorFormat
-    &.pcp-popover--tc,
-    &.pcp-popover--bc,
-    &.pcp-popover--rc,
-    &.pcp-popover--lc {
-      animation: popoverShowFadeOnly 230ms ease-in-out;
-    }
 
   }
 
