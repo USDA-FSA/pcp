@@ -57,33 +57,10 @@
 
   // ---------------------------------------------------------------------------
 
-  &--br {
-
-    @include breakpoint(M) {
-      top: calc(100% + #{$size-small});
-      left: auto;
-      bottom: auto;
-      right: 0;
-    }
-
-    &:before,
-    &:after {
-      left: auto;
-      right: $size-default;
-      top: -($arrow-size * 2);
-      transform: translateY(2px);
-    }
-
-    &:before {
-      transform: translateY(1px);
-    }
-
-  }
-
   &--bl {
 
     @include breakpoint(M) {
-      top: calc(100% + #{$size-small});
+      top: calc(100% + #{$size-base});
       left: 0;
       bottom: auto;
       right: auto;
@@ -103,9 +80,74 @@
 
   }
 
-  &--tr {  }
+  &--br {
 
-  &--tl {  }
+    @include breakpoint(M) {
+      top: calc(100% + #{$size-base});
+      left: auto;
+      bottom: auto;
+      right: 0;
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: $size-default;
+      top: -($arrow-size * 2);
+      transform: translateY(2px);
+    }
+
+    &:before {
+      transform: translateY(1px);
+    }
+
+  }
+
+  &--tl {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: 0;
+      bottom: calc(100% + #{$size-base});
+      right: auto;
+    }
+
+    &:before,
+    &:after {
+      left: $size-default;
+      right: auto;
+      bottom: -($arrow-size * 2);
+      transform: rotate(180deg) translateY(1px);
+    }
+
+    &:before {
+      transform: rotate(180deg);
+    }
+
+  }
+
+  &--tr {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: auto;
+      bottom: calc(100% + #{$size-base});
+      right: 0;
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: $size-default;
+      bottom: -($arrow-size * 2);
+      transform: rotate(180deg) translateY(1px);
+    }
+
+    &:before {
+      transform: rotate(180deg);
+    }
+
+  }
 
   // ---------------------------------------------------------------------------
 
