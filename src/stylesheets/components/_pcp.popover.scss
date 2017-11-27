@@ -35,10 +35,6 @@
     box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
     min-width: $size-base * 60;
     position: absolute;
-    top: calc(100% + #{$size-small});
-    left: auto;
-    bottom: auto;
-    right: 0;
   }
 
   // ---------------------------------------------------------------------------
@@ -62,18 +58,50 @@
   // ---------------------------------------------------------------------------
 
   &--br {
+
+    @include breakpoint(M) {
+      top: calc(100% + #{$size-small});
+      left: auto;
+      bottom: auto;
+      right: 0;
+    }
+
     &:before,
     &:after {
+      left: auto;
       right: $size-default;
       top: -($arrow-size * 2);
       transform: translateY(2px);
     }
+
     &:before {
       transform: translateY(1px);
     }
+
   }
 
-  &--bl {  }
+  &--bl {
+
+    @include breakpoint(M) {
+      top: calc(100% + #{$size-small});
+      left: 0;
+      bottom: auto;
+      right: auto;
+    }
+
+    &:before,
+    &:after {
+      left: $size-default;
+      right: auto;
+      top: -($arrow-size * 2);
+      transform: translateY(2px);
+    }
+
+    &:before {
+      transform: translateY(1px);
+    }
+
+  }
 
   &--tr {  }
 

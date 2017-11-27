@@ -142,11 +142,9 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
 
     &--toggled {
       transform: scaleX(-1);
-
       border-right: 1px solid $color-fsa-tertiary-200;
       border-radius: 4px 0 0 4px;
       box-shadow: -2px 2px $size-small rgba(0, 0, 0, .4);
-
     }
 
   }
@@ -278,12 +276,11 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
   }
 
   &__tool {
-
     width: ($size-base * 10);
     background-color: $color-white;
     box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
     margin-top: $size-small;
-
+    position: relative;
   }
 
   &__btn {
@@ -294,15 +291,20 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
     padding: $size-small;
     transition: background .23s ease-in-out;
 
-    &:hover {
+    &[disabled] {
+      opacity: .4;
+      cursor: not-allowed;
+    }
+
+    &:not([disabled]):hover {
       color: $color-fsa-link-hover;
     }
 
-    &:active {
+    &:not([disabled]):active {
       background-color: $color-fsa-tertiary-200;
     }
 
-    & + .pcp-mapping__btn--adj {
+    &--adj {
       border-top: 1px solid $color-fsa-tertiary-200;
     }
 
@@ -310,11 +312,15 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
 
   &__fullscreen { }
 
-  &__layers { }
+  &__reset {
+    width: 18px;
+  }
+
+  &__layers {}
 
   &__zoom-in,
   &__zoom-out {
-    width: 20px;
+    width: 18px;
   }
 
   &__home { }

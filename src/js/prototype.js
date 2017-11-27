@@ -1216,6 +1216,52 @@ $('body').on('change', '[data-behavior~="icon-size-demo"]', function(event) {
 
 })
 
+$('body').on('click', '[data-behavior~="button-group-select"]', function(event) {
+
+  var $self = $(this);
+
+  $self
+    .addClass('fsa-btn-group__item--active')
+    .siblings()
+    .removeClass('fsa-btn-group__item--active')
+  ;
+
+})
+
+$('body').on('click', '[data-behavior~="change-popover-dir"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#popover-demo');
+  var dir = $self.data('dir');
+
+  $target
+    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr')
+    .addClass('pcp-popover--' + dir)
+  ;
+
+})
+
+$('body').on('click', '[data-behavior~="change-popover-size"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#popover-demo');
+  var size = $self.data('size');
+
+  $target
+    .removeClass('pcp-popover--size-small pcp-popover--size-medium pcp-popover--size-large')
+    .addClass('pcp-popover--size-' + size)
+  ;
+
+})
+
+$('body').on('click', '[data-behavior~="toggle-popover-title"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#popover-demo').find('.pcp-popover__title');
+
+  $target.toggle();
+
+})
 
 ;(function($) {
     $.fn.drags = function(opt) {

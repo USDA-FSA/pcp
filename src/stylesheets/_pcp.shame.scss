@@ -131,6 +131,16 @@ $hint-color: rgba(255, 69, 0, .8);
   position: relative;
 }
 
+.pcp-prototype-popover-demo {
+
+  padding: 200px;
+  text-align: center;
+  border: 1px solid $color-fsa-tertiary-200;
+  background-color: $color-fsa-tertiary-100;
+  margin-bottom: $size-extra-large;
+
+}
+
 .pcp-code-block {
 
   background-color: white;
