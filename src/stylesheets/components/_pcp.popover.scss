@@ -194,7 +194,7 @@
 
     @include breakpoint(M) {
       top: 50%;
-      left: calc(100% + #{$size-base});
+      left: calc(100% + #{$size-default});
       bottom: auto;
       right: auto;
       transform: translateY(-50%);
@@ -205,6 +205,100 @@
       left: auto;
       right: 100%;
       top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &:before {
+      right: calc(100% + 1px);
+    }
+
+  }
+
+  &--lt {
+
+    @include breakpoint(M) {
+      top: 0;
+      left: auto;
+      bottom: auto;
+      right: calc(100% + #{$size-default});
+    }
+
+    &:before,
+    &:after {
+      left: 100%;
+      right: auto;
+      top: 20px;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &:before {
+      left: calc(100% + 1px);
+    }
+
+  }
+
+  &--lb {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: auto;
+      bottom: 0;
+      right: calc(100% + #{$size-default});
+    }
+
+    &:before,
+    &:after {
+      left: 100%;
+      right: auto;
+      top: auto;
+      bottom: 4px;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &:before {
+      left: calc(100% + 1px);
+    }
+
+  }
+
+  &--rt {
+
+    @include breakpoint(M) {
+      top: 0;
+      left: calc(100% + #{$size-default});
+      bottom: auto;
+      right: auto;
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: 100%;
+      top: 20px;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &:before {
+      right: calc(100% + 1px);
+    }
+
+  }
+
+  &--rb {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: calc(100% + #{$size-default});
+      bottom: 0;
+      right: auto;
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: 100%;
+      top: auto;
+      bottom: 4px;
       transform: translateY(-50%) rotate(-90deg);
     }
 

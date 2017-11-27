@@ -471,12 +471,12 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
   $selfPeers = $self.siblings('[data-behavior="map-mode"]');
   $component = $self.closest('.pcp-mapping');
   $panel = $component.find('.pcp-mapping__panel');
+  $panelToggle = $component.find('.pcp-mapping__panel-btn');
   $markers = $component.find('.pcp-mapping__marker');
   $riftDetails = $component.find('.pcp-mapping__rift-detail');
   $submit = $component.find('.fsa-checkbox');
   $actions = $component.find('[data-action]');
   $riftState = $component.find('.fsa-badge');
-
 
   selfValue = $self.attr('data-mode');
 
@@ -485,6 +485,7 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
 
   if (selfValue == 'edit') {
     $panel.addClass('pcp-mapping__panel--visible');
+    $panelToggle.removeAttr('hidden');
     $markers.removeAttr('hidden');
     $riftDetails.removeAttr('hidden');
     $riftState.removeAttr('disabled');
@@ -493,6 +494,7 @@ $('body').on('click', '[data-behavior~="map-mode"]', function(event) {
   }
   else {
     $panel.removeClass('pcp-mapping__panel--visible');
+    $panelToggle.attr('hidden', true);
     $markers.attr('hidden', true);
     $riftDetails.attr('hidden', true);
     $riftState.attr('disabled', true);
@@ -1235,7 +1237,7 @@ $('body').on('click', '[data-behavior~="change-popover-dir"]', function(event) {
   var dir = $self.data('dir');
 
   $target
-    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr pcp-popover--lc pcp-popover--rc')
+    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr pcp-popover--lc pcp-popover--rc pcp-popover--lt pcp-popover--lb pcp-popover--rt pcp-popover--rb')
     .addClass('pcp-popover--' + dir)
   ;
 
@@ -1260,6 +1262,12 @@ $('body').on('click', '[data-behavior~="toggle-popover-title"]', function(event)
   var $target = $('#popover-demo').find('.pcp-popover__title');
 
   $target.toggle();
+
+})
+
+$('body').on('mousedown', '.pcp-mapping__map, .pcp-mapping__hd, .pcp-mapping__toolbar, .pcp-mapping__panel, .pcp-mapping__marker, .pcp-mapping__rift-detail, .pcp-mapping__btn:not([data-behavior="toggle-popover"])', function(event) {
+
+  $('.pcp-popover').removeClass('pcp-popover--visible');
 
 })
 
