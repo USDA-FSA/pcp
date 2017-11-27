@@ -22,7 +22,7 @@
 
         <p class="fsa-text--lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem sapiente, ratione exercitationem eveniet voluptatem?</p>
 
-        <pre class="pcp-code-block"><code>&lt;div class="<strong style="color:black">pcp-popover</strong>"&gt; ... &lt;/div&gt;</code></pre>
+        <pre class="pcp-code-block"><code>&lt;div class="<strong style="color:black">pcp-popover pcp-popover--[direction] pcp-popover--[size]</strong>"&gt; ... &lt;/div&gt;</code></pre>
 
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -40,26 +40,26 @@
           </div>
         </div>
 
-        <h2 class="pcp-prototype-title">Variations and States</h2>
+        <h2 class="pcp-prototype-title">Variations</h2>
 
         <p>
-          <span class="fsa-btn-group" role="group" aria-label="Popover Direction">
-            <button data-behavior="change-popover-dir button-group-select" data-dir="bl" class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Bottom-left</button>
-            <button data-behavior="change-popover-dir button-group-select" data-dir="br" class="fsa-btn-group__item" type="button">Bottom-right</button>
-            <button data-behavior="change-popover-dir button-group-select" data-dir="tl" class="fsa-btn-group__item" type="button">Top-left</button>
+          <span class="fsa-btn-group fsa-btn-group--small fsa-btn-group--block" role="group" aria-label="Popover Direction">
+            <button data-behavior="change-popover-dir button-group-select" data-dir="tl" class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Top-left</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="tc" class="fsa-btn-group__item" type="button">Top-center</button>
             <button data-behavior="change-popover-dir button-group-select" data-dir="tr" class="fsa-btn-group__item" type="button">Top-right</button>
-
-            <button data-behavior="change-popover-dir button-group-select" data-dir="lc" class="fsa-btn-group__item" type="button">Left-center</button>
-            <button data-behavior="change-popover-dir button-group-select" data-dir="rc" class="fsa-btn-group__item" type="button">Right-center</button>
-
-            <button data-behavior="change-popover-dir button-group-select" data-dir="lt" class="fsa-btn-group__item" type="button">Left-top</button>
-            <button data-behavior="change-popover-dir button-group-select" data-dir="lb" class="fsa-btn-group__item" type="button">Left-bottom</button>
             <button data-behavior="change-popover-dir button-group-select" data-dir="rt" class="fsa-btn-group__item" type="button">Right-top</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="rc" class="fsa-btn-group__item" type="button">Right-center</button>
             <button data-behavior="change-popover-dir button-group-select" data-dir="rb" class="fsa-btn-group__item" type="button">Right-bottom</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="br" class="fsa-btn-group__item" type="button">Bottom-right</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="bc" class="fsa-btn-group__item" type="button">Bottom-center</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="bl" class="fsa-btn-group__item" type="button">Bottom-left</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="lb" class="fsa-btn-group__item" type="button">Left-bottom</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="lc" class="fsa-btn-group__item" type="button">Left-center</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="lt" class="fsa-btn-group__item" type="button">Left-top</button>
           </span>
         </p>
         <p>
-          <span class="fsa-btn-group" role="group" aria-label="Popover Size">
+          <span class="fsa-btn-group fsa-btn-group--small" role="group" aria-label="Popover Size">
             <button data-behavior="change-popover-size button-group-select" data-size="small" class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Small</button>
             <button data-behavior="change-popover-size button-group-select" data-size="medium" class="fsa-btn-group__item" type="button">Medium</button>
             <button data-behavior="change-popover-size button-group-select" data-size="large" class="fsa-btn-group__item" type="button">Large</button>
@@ -72,7 +72,7 @@
 
         <div class="pcp-prototype-popover-demo">
           <div style="position: relative;">
-            <button class="fsa-btn fsa-btn--secondary fsa-btn--block" type="button" data-behavior="toggle-popover" data-target="popover-demo">Toggle popover</button>
+            <button style="height:144px; font-size: " class="fsa-btn fsa-btn--large fsa-btn--secondary fsa-btn--block fsa-text-size--7" type="button" data-behavior="toggle-popover" data-target="popover-demo">Click me!</button>
             {% include: 'includes/pcp-popover.demo.html' %}
           </div>
         </div>

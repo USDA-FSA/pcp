@@ -26,19 +26,15 @@
 
   display: none;
   background-color: $color-white;
-
   position: fixed;
   top: $size-default;
   right: $size-default;
   bottom: $size-large;
   left: $size-default;
   z-index: 50;
-
+  transition: width .23s ease-in-out;
   text-align: left;
-  box-shadow:
-    0 0 $size-default $size-large rgba(0, 0, 0, .3),
-    0 0 $size-default rgba(0, 0, 0, .5)
-  ;
+  box-shadow: 0 0 $size-default $size-large rgba(0, 0, 0, .3), 0 0 $size-default rgba(0, 0, 0, .5);
 
   @include breakpoint(M) {
 
@@ -48,7 +44,7 @@
 
     @supports (filter: drop-shadow(0 0 0 black)) { // @supports won't let me do @supports (filter: drop-shadow(); so placed a foo value in drop-shadow(foo)
       box-shadow: none;
-      filter: drop-shadow(0px 0px 0.4rem rgba(0, 0, 0, .5));
+      filter: drop-shadow(0 0 .4rem rgba(0, 0, 0, .5));
     }
 
   }
@@ -214,6 +210,54 @@
 
   }
 
+  &--tc {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: 50%;
+      bottom: calc(100% + #{$size-default});
+      right: auto;
+      transform: translateX(-50%);
+    }
+
+    &:before,
+    &:after {
+      left: 50%;
+      right: auto;
+      bottom: -($arrow-size * 2);
+      transform: rotate(180deg) translateY(1px) translateX(50%);
+    }
+
+    &:before {
+      transform: rotate(180deg) translateX(50%);
+    }
+
+  }
+
+  &--bc {
+
+    @include breakpoint(M) {
+      top: calc(100% + #{$size-default});
+      left: 50%;
+      bottom: auto;
+      right: auto;
+      transform: translateX(-50%);
+    }
+
+    &:before,
+    &:after {
+      left: 50%;
+      right: auto;
+      top: -($arrow-size * 2);
+      transform: translateX(-50%);
+    }
+
+    &:before {
+      transform: translateY(-1px) translateX(-50%);
+    }
+
+  }
+
   &--lt {
 
     @include breakpoint(M) {
@@ -333,6 +377,9 @@
     display: block;
     animation: popoverShow 230ms ease-in-out;
 
+    // scss-lint:disable SelectorFormat
+    &.pcp-popover--tc,
+    &.pcp-popover--bc,
     &.pcp-popover--rc,
     &.pcp-popover--lc {
       animation: popoverShowFadeOnly 230ms ease-in-out;
@@ -350,12 +397,12 @@
     right: -$size-small;
     padding: ($size-default * 1.5);
 
-    &:active {
-      opacity: .6;
-    }
-
     @include breakpoint(M) {
       display: none;
+    }
+
+    &:active {
+      opacity: .6;
     }
 
   }

@@ -1237,7 +1237,7 @@ $('body').on('click', '[data-behavior~="change-popover-dir"]', function(event) {
   var dir = $self.data('dir');
 
   $target
-    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr pcp-popover--lc pcp-popover--rc pcp-popover--lt pcp-popover--lb pcp-popover--rt pcp-popover--rb')
+    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr pcp-popover--lc pcp-popover--rc pcp-popover--lt pcp-popover--lb pcp-popover--rt pcp-popover--rb pcp-popover--bc pcp-popover--tc')
     .addClass('pcp-popover--' + dir)
   ;
 
