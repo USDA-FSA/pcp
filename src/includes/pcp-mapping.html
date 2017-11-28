@@ -82,8 +82,10 @@
 
     <div class="pcp-mapping__tools-secondary">
       <div class="pcp-mapping__tool" >
-        <div style="height:220px;"><!-- angular-slider here --></div>
-        <button class="pcp-mapping__btn pcp-mapping__btn--adj" aria-label="Reset" type="button" title="Reset" disabled="disabled" onclick="alert('Reset threshhold range to initial')">{% include: 'includes/icon.html' @NAME:'spinner11' @SIZE:' ' @CLASS:'pcp-mapping__reset' %}</button>
+        <div class="pcp-mapping__slider asdfasdfasdf">
+          {% include: 'includes/angular-slider.html' %}
+        </div>
+        <button class="pcp-mapping__btn" aria-label="Reset" type="button" title="Reset" onclick="alert('Reset threshhold range to initial.\n\nIf at initial, disable this button.')">{% include: 'includes/icon.html' @NAME:'spinner11' @SIZE:' ' @CLASS:'pcp-mapping__reset' %}</button>
       </div>
       <div class="pcp-mapping__tool">
         <button class="pcp-mapping__btn" aria-label="Layers" type="button" title="Layers" data-behavior="toggle-popover" data-target="popover-tools__layers" >{% include: 'includes/icon.html' @NAME:'stack' @SIZE:' ' @CLASS:'pcp-mapping__layers' %}</button>

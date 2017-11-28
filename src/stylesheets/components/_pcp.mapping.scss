@@ -284,6 +284,11 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
     position: relative;
   }
 
+  &__slider {
+    height: 240px;
+    border-bottom: 1px solid $color-fsa-tertiary-200;
+  }
+
   &__btn {
 
     @include reset-button();
