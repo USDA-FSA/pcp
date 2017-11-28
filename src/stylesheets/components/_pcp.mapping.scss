@@ -277,11 +277,17 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
   }
 
   &__tool {
+
     width: ($size-base * 10);
     background-color: $color-white;
     box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
     margin-top: $size-small;
     position: relative;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
   }
 
   &__slider {

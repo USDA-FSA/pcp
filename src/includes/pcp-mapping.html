@@ -76,19 +76,19 @@
 
     <div class="pcp-mapping__tools-primary">
       <div class="pcp-mapping__tool">
-        <button class="pcp-mapping__btn" aria-label="Full screen" type="button" data-behavior="fullscreen-toggle" title="Toggle fullscreen">{% include: 'includes/icon.html' @NAME:'enlarge' @SIZE:' ' @CLASS:'pcp-mapping__fullscreen' %}</button>
+        <button class="pcp-mapping__btn HINT" aria-label="Full screen" type="button" data-behavior="fullscreen-toggle" title="Toggle fullscreen">{% include: 'includes/icon.html' @NAME:'enlarge' @SIZE:' ' @CLASS:'pcp-mapping__fullscreen' %}</button>
       </div>
     </div>
 
     <div class="pcp-mapping__tools-secondary">
       <div class="pcp-mapping__tool" >
-        <div class="pcp-mapping__slider asdfasdfasdf">
+        <div class="pcp-mapping__slider">
           {% include: 'includes/angular-slider.html' %}
         </div>
-        <button class="pcp-mapping__btn" aria-label="Reset" type="button" title="Reset" onclick="alert('Reset threshhold range to initial.\n\nIf at initial, disable this button.')">{% include: 'includes/icon.html' @NAME:'spinner11' @SIZE:' ' @CLASS:'pcp-mapping__reset' %}</button>
+        <button class="pcp-mapping__btn HINT" aria-label="Reset" type="button" title="Reset" onclick="alert('Reset threshhold range to initial.\n\nIf at initial, disable this button.')">{% include: 'includes/icon.html' @NAME:'spinner11' @SIZE:' ' @CLASS:'pcp-mapping__reset' %}</button>
       </div>
       <div class="pcp-mapping__tool">
-        <button class="pcp-mapping__btn" aria-label="Layers" type="button" title="Layers" data-behavior="toggle-popover" data-target="popover-tools__layers" >{% include: 'includes/icon.html' @NAME:'stack' @SIZE:' ' @CLASS:'pcp-mapping__layers' %}</button>
+        <button class="pcp-mapping__btn HINT" aria-label="Layers" type="button" title="Layers" data-behavior="toggle-popover" data-target="popover-tools__layers" >{% include: 'includes/icon.html' @NAME:'stack' @SIZE:' ' @CLASS:'pcp-mapping__layers' %}</button>
         {% include: 'includes/pcp-popover.tools__layers.html' %}
       </div>
       <div class="pcp-mapping__tool">
@@ -96,7 +96,7 @@
         <button class="pcp-mapping__btn pcp-mapping__btn--adj" aria-label="Zoom out" type="button" title="Zoom out">{% include: 'includes/icon.html' @NAME:'minus' @SIZE:' ' @CLASS:'pcp-mapping__zoom-out' %}</button>
       </div>
       <div class="pcp-mapping__tool">
-        <button class="pcp-mapping__btn" aria-label="Map home" type="button" title="Map home" onclick="alert('Reset map zoom level to initial')">{% include: 'includes/icon.html' @NAME:'home' @SIZE:' ' @CLASS:'pcp-mapping__home' %}</button>
+        <button class="pcp-mapping__btn HINT" aria-label="Map home" type="button" title="Map home" onclick="alert('Reset map zoom level to initial')">{% include: 'includes/icon.html' @NAME:'home' @SIZE:' ' @CLASS:'pcp-mapping__home' %}</button>
       </div>
     </div>
 

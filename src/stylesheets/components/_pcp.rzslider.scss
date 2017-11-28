@@ -1,44 +1,60 @@
-.pcp-rzslider.rzslider .rz-pointer {
-  background-color: rgb(117, 113, 110);
-  border-radius: 100%;
-}
 
-.pcp-rzslider.rzslider .rz-pointer:active:after,
-.pcp-rzslider.rzslider .rz-pointer:focus:after {
-  background-color: #02bfe7;
-}
+// scss-lint:disable all
 
-.pcp-rzslider.rzslider.rz-vertical {
-  margin: 0 20px 0 18px;
-}
+.pcp-rzslider {
 
-.pcp-rzslider.rzslider.rz-vertical .rz-bubble {
-  opacity: 0;
-  box-shadow: 0 0 0.8rem rgba(0,0,0,0.4);
-  left: auto !important;
-  right: 28px;
-  font-weight: bold;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 4px 4px 3px;
-  line-height: 1;
-  font-size: 17px;
-}
+  &.rzslider .rz-pointer {
+    background-color: $color-fsa-tertiary-300;
+    border-radius: 100%;
+  }
 
-.pcp-rzslider.rzslider.rz-vertical:hover .rz-bubble {
-  opacity: 1;
-}
+  &.rzslider .rz-pointer:active:after,
+  &.rzslider .rz-pointer:focus:after {
+    background-color: $color-fsa-aqua;
+  }
 
-.pcp-rzslider.rzslider.rz-vertical .rz-bubble.rz-limit {
-  display: none;
-}
+  &.rzslider.rz-vertical {
+    margin: 0 18px;
+  }
 
-.pcp-rzslider.rzslider .rz-bar-wrapper.rz-right-out-selection .rz-bar {
-  background: #cd2026;
-}
+  &.rzslider.rz-vertical .rz-bubble {
+    opacity: 0;
+    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+    left: auto !important;
+    right: 28px;
+    font-weight: bold;
+    background-color: $color-fsa-white;
+    padding: $size-base;
+    line-height: 1;
+    font-size: $font-size-3;
+  }
 
-.pcp-rzslider.rzslider .rz-bar-wrapper.rz-left-out-selection .rz-bar {
-  background: #f9c642;
+  &.rzslider.rz-vertical:hover .rz-bubble {
+    opacity: 1;
+  }
+
+  &.rzslider.rz-vertical .rz-bubble {
+    .pcp-mapping__tool:hover & {
+      opacity: 1;
+    }
+  }
+
+  &.rzslider.rz-vertical .rz-bubble.rz-limit {
+    display: none;
+  }
+
+  &.rzslider .rz-bar {
+    border-radius: 0;
+  }
+
+  &.rzslider .rz-bar-wrapper.rz-right-out-selection .rz-bar {
+    background: $color-fsa-red;
+  }
+
+  &.rzslider .rz-bar-wrapper.rz-left-out-selection .rz-bar {
+    background: $color-gold;
+  }
+
 }
 
 // /* --------------------------------------------------------------- */
@@ -47,7 +63,7 @@
 // .TEMP-TOOL-DONT-USE {
 //   width: 40px;
 //   width: 4rem;
-//   background-color: #fff;
+//   background-color: $color-fsa-white;
 //   box-shadow: 0 0 0.8rem rgba(0,0,0,0.4);
 //   margin-top: 8px;
 //   margin-top: .8rem;

@@ -34,7 +34,7 @@
 
     @supports (filter: drop-shadow(0 0 0 black)) { // @supports won't let me do @supports (filter: drop-shadow(); so placed a foo value in drop-shadow(foo)
       box-shadow: none;
-      filter: drop-shadow(0 0 .4rem rgba(0, 0, 0, .5));
+      filter: drop-shadow(0 0 $size-base rgba(0, 0, 0, .4));
     }
 
   }
