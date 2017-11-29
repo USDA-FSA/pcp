@@ -81,6 +81,15 @@
     </div>
 
     <div class="pcp-mapping__tools-secondary">
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn HINT" aria-label="Legend" type="button" title="Legend" data-behavior="toggle-popover" data-target="popover-tools__legend" >
+          i
+        </button>
+
+        <!-- include: 'includes/icon.html' @NAME:'checkbox-unchecked' @SIZE:' ' @CLASS:' ' -->
+
+        {% include: 'includes/pcp-popover.tools__legend.html' %}
+      </div>
       <div class="pcp-mapping__tool" >
         <div class="pcp-mapping__slider">
           {% include: 'includes/angular-slider.html' %}

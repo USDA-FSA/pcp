@@ -28,11 +28,12 @@
 @import 'components/pcp.card';
 @import 'components/pcp.marker';
 @import 'components/pcp.rift-detail';
+@import 'components/pcp.legend';
 @import 'components/pcp.title-action-bar';
 @import 'components/pcp.stepped-tabs';
 @import 'components/pcp.highlight';
 @import 'components/pcp.file-upload';
-@import 'components/pcp.rzslider';
+@import 'components/pcp.rzslider'; // selectively styles items from lib/rzslider (imported above)
 
 // PCP Shame
 @import 'pcp.shame';

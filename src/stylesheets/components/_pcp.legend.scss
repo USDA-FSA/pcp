@@ -1,0 +1,32 @@
+.pcp-legend {
+
+	&__list {
+    @include reset-ul();
+  }
+
+	&__item {
+
+    @include reset-li();
+    margin-top: .5em;
+    display: flex;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+	}
+
+	&__preview {
+    padding-right: $size-small;
+	}
+
+  &__thumb {
+    width: $size-medium;
+    height: $size-medium;
+    background-color: #ccc;
+    border: 1px solid rgba(0, 0, 0, .4);
+  }
+
+	&__label {}
+
+}

@@ -401,8 +401,7 @@
     overflow: auto;
 
     @include breakpoint(M) {
-      max-height: 64px;
-      max-height: 70vh;
+      max-height: 425px;
     }
 
     :first-child { margin-top: 0; }
@@ -413,6 +412,8 @@
 
   &__hd {
     background-color: $color-fsa-tertiary-100;
+    position: sticky;
+    top: 0;
   }
 
   &__title {
