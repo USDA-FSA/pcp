@@ -3,26 +3,26 @@
     <ol class="pcp-stepped-tabs__list">
       <li class="pcp-stepped-tabs__item">
         <button class="pcp-stepped-tabs__label pcp-stepped-tabs__label--complete" type="button">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--current"></span>
-          Lor
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Lor</span>
         </button>
       </li>
       <li class="pcp-stepped-tabs__item">
         <button class="pcp-stepped-tabs__label pcp-stepped-tabs__label--active" type="button">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--current"></span>
-          Em ipsum
+          {% include: 'includes/icon.html' @NAME:'contrast' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Em ipsum</span>
         </button>
       </li>
       <li class="pcp-stepped-tabs__item">
         <span class="pcp-stepped-tabs__label pcp-stepped-tabs__label--incomplete">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--incomplete"></span>
-          Dol
+          {% include: 'includes/icon.html' @NAME:'radio-unchecked' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Dol</span>
         </span>
       </li>
       <li class="pcp-stepped-tabs__item">
         <span class="pcp-stepped-tabs__label pcp-stepped-tabs__label--incomplete">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--incomplete"></span>
-          Or Sit Amet
+          {% include: 'includes/icon.html' @NAME:'radio-unchecked' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Or Sit Amet</span>
         </span>
       </li>
     </ol>
