@@ -27,7 +27,7 @@ $swapDistance: 2.8rem;
   $padding: $size-default;
 
   background-color: $color-white;
-  border: 1px solid $color-fsa-tertiary-200;
+  // border: 1px solid $color-fsa-tertiary-200;
   box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
 
   &--pinned {}
@@ -66,7 +66,6 @@ $swapDistance: 2.8rem;
     display: table-cell;
     text-align: right;
     vertical-align: middle;
-    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
     padding: 0;
   }
 
@@ -75,7 +74,12 @@ $swapDistance: 2.8rem;
     @include reset-button();
     display: inline-block;
     line-height: 1;
-    padding: $size-small;
+    // scss-lint:disable all NestingDepth SelectorFormat TrailingSemicolon SpaceAfterPropertyColon
+    padding:
+      ($size-small - .1rem)
+      ($size-small)
+      ($size-small + .2rem)
+    ;
 
     & + & {
       margin-left: (-$size-base);

@@ -34,7 +34,7 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
 
   &__hd {}
 
-  &__toolbar {}
+  &__cardbar {}
 
   &__bd {
 
@@ -226,7 +226,7 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
       border: 0;
       height: calc(100vh - 94px);
       // 94px is a magic number.
-      // It's the cumulative height of .pcp-mapping__hd and .pcp-mapping__toolbar
+      // It's the cumulative height of .pcp-mapping__hd and .pcp-mapping__cardbar
     }
 
   }
@@ -324,6 +324,10 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
   }
 
   &__fullscreen { }
+
+  &__legend {
+    width: 21px;
+  }
 
   &__reset {
     width: 18px;

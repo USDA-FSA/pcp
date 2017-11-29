@@ -2,7 +2,7 @@
   <div class="pcp-mapping__hd">
     {% include: 'includes/pcp-content-tabs__map.html' %}
   </div>
-  <div class="pcp-mapping__toolbar">
+  <div class="pcp-mapping__cardbar">
     {% include: 'includes/pcp-map-toolbar.html' %}
   </div>
   <div class="pcp-mapping__bd">
@@ -82,12 +82,7 @@
 
     <div class="pcp-mapping__tools-secondary">
       <div class="pcp-mapping__tool">
-        <button class="pcp-mapping__btn HINT" aria-label="Legend" type="button" title="Legend" data-behavior="toggle-popover" data-target="popover-tools__legend" >
-          i
-        </button>
-
-        <!-- include: 'includes/icon.html' @NAME:'checkbox-unchecked' @SIZE:' ' @CLASS:' ' -->
-
+        <button class="pcp-mapping__btn HINT" aria-label="Legend" type="button" title="Legend" data-behavior="toggle-popover" data-target="popover-tools__legend" >{% include: 'includes/icon.html' @NAME:'list' @SIZE:' ' @CLASS:'pcp-mapping__legend' %}</button>
         {% include: 'includes/pcp-popover.tools__legend.html' %}
       </div>
       <div class="pcp-mapping__tool" >
