@@ -1,0 +1,93 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Component' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header-project.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Component: Popover</h1>
+
+        <p class="fsa-text--lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem sapiente, ratione exercitationem eveniet voluptatem?</p>
+
+        <pre class="pcp-code-block"><code>&lt;div class="<strong style="color:black">pcp-popover pcp-popover--[direction] pcp-popover--[size]</strong>"&gt; ... &lt;/div&gt;</code></pre>
+
+        <div class="fsa-grid">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="pcp-prototype-title">As seen on</h2>
+            <ul>
+              <li>Profile link (name) of <code>.fsa-header-app</code></li>
+              <li><a href="workflow_mapping.html">Adjustments:</a> Map Tools</li>
+            </ul>
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="pcp-prototype-title">FSA Design System References</h2>
+            <ul>
+              <li><a href="http://usda-fsa.github.io/fsa-design-system/?preview">FSA Design System</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="pcp-prototype-title">Variations</h2>
+
+        <p>
+          <span class="fsa-btn-group fsa-btn-group--small fsa-btn-group--block" role="group" aria-label="Popover Direction">
+            <button data-behavior="change-popover-dir button-group-select" data-dir="tl" class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Top-left</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="tc" class="fsa-btn-group__item" type="button">Top-center</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="tr" class="fsa-btn-group__item" type="button">Top-right</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="rt" class="fsa-btn-group__item" type="button">Right-top</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="rc" class="fsa-btn-group__item" type="button">Right-center</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="rb" class="fsa-btn-group__item" type="button">Right-bottom</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="br" class="fsa-btn-group__item" type="button">Bottom-right</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="bc" class="fsa-btn-group__item" type="button">Bottom-center</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="bl" class="fsa-btn-group__item" type="button">Bottom-left</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="lb" class="fsa-btn-group__item" type="button">Left-bottom</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="lc" class="fsa-btn-group__item" type="button">Left-center</button>
+            <button data-behavior="change-popover-dir button-group-select" data-dir="lt" class="fsa-btn-group__item" type="button">Left-top</button>
+          </span>
+        </p>
+        <p>
+          <span class="fsa-btn-group fsa-btn-group--small" role="group" aria-label="Popover Size">
+            <button data-behavior="change-popover-size button-group-select" data-size="small" class="fsa-btn-group__item fsa-btn-group__item--active" type="button">Small</button>
+            <button data-behavior="change-popover-size button-group-select" data-size="medium" class="fsa-btn-group__item" type="button">Medium</button>
+            <button data-behavior="change-popover-size button-group-select" data-size="large" class="fsa-btn-group__item" type="button">Large</button>
+          </span>
+        </p>
+        <p>
+          <input data-behavior="toggle-popover-title" class="fsa-checkbox" id="unique-id-foigh" type="checkbox" name="unique-id-foigh" value="yes" checked="checked">
+          <label for="unique-id-foigh">Optional title</label>
+        </p>
+
+        <div class="pcp-prototype-popover-demo">
+          <div style="position: relative;">
+            <button style="height:144px; font-size: " class="fsa-btn fsa-btn--large fsa-btn--secondary fsa-btn--block fsa-text-size--7" type="button" data-behavior="toggle-popover" data-target="popover-demo">Click me!</button>
+            {% include: 'includes/pcp-popover.demo.html' %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-project.html' %}
+  </footer>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>

@@ -59,6 +59,10 @@
 
         {% include: 'includes/pcp-stepped-tabs.html' @variation:'pcp-stepped-tabs--justified' %}
 
+        <h3 class="fsa-font--sans">No icons</h3>
+
+        {% include: 'includes/pcp-stepped-tabs__no-icons.html' @variation:' ' %}
+
         <h2 class="pcp-prototype-title">Samples</h2>
 
         {% include: 'includes/pcp-stepped-tabs__step-1-of-4.html' %}
@@ -66,9 +70,13 @@
         {% include: 'includes/pcp-stepped-tabs__step-3-of-4.html' %}
         {% include: 'includes/pcp-stepped-tabs__step-4-of-4.html' %}
 
-        <h3 class="fsa-font--sans">Mapping Adjustments (on step 3 of 4)</h3>
+        <h3 class="fsa-font--sans">Adjustments (on step 4 of 6)</h3>
 
         {% include: 'includes/pcp-stepped-tabs__mapping.html' %}
+
+        <h3 class="fsa-font--sans">Adjustments <em>in progress</em>, but currently viewing <em>completed</em> Price Discovery</h3>
+
+        {% include: 'includes/pcp-stepped-tabs__discovery--at-adjustments.html' %}
 
       </div>
 

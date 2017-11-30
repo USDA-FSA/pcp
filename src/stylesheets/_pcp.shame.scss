@@ -22,6 +22,16 @@
   color: $color-fsa-tertiary-300;
 }
 
+.pcp-checkbox--block {
+
+  display: block;
+
+  &:hover {
+
+  }
+
+}
+
 textarea[rows] {
   height: auto;
 }
@@ -31,6 +41,15 @@ textarea[rows] {
     position: relative;
     top: -$size-base;
     margin-left: $size-base;
+  }
+}
+
+.fsa-label,
+.fsa-badge {
+  &[disabled] {
+    opacity: .65;
+    filter: saturate(70%);
+    cursor: not-allowed;
   }
 }
 
@@ -122,6 +141,16 @@ $hint-color: rgba(255, 69, 0, .8);
   position: relative;
 }
 
+.pcp-prototype-popover-demo {
+
+  padding: 300px 400px;
+  text-align: center;
+  border: 1px solid $color-fsa-tertiary-200;
+  background-color: $color-fsa-tertiary-100;
+  margin-bottom: $size-extra-large;
+
+}
+
 .pcp-code-block {
 
   background-color: white;
@@ -173,7 +202,7 @@ $hint-color: rgba(255, 69, 0, .8);
 
       width: 320px;
       position: fixed;
-      right: $size-medium;
+      right: ($size-extra-large * 2);
       max-height: 70vh;
       overflow: hidden;
       z-index: 9999999;

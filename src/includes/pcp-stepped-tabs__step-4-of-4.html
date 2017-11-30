@@ -3,26 +3,26 @@
     <ol class="pcp-stepped-tabs__list">
       <li class="pcp-stepped-tabs__item">
         <a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--complete" href="link.html">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--current"></span>
-          Step 1
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Step 1</span>
         </a>
       </li>
       <li class="pcp-stepped-tabs__item">
         <a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--complete" href="link.html">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--complete"></span>
-          Step 2
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Step 2</span>
         </a>
       </li>
       <li class="pcp-stepped-tabs__item">
         <a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--complete" href="link.html">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--complete"></span>
-          Step 3
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Step 3</span>
         </a>
       </li>
       <li class="pcp-stepped-tabs__item">
         <a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--active" href="link.html">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--current"></span>
-          Step 4
+          {% include: 'includes/icon.html' @NAME:'contrast' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Step 4</span>
         </a>
       </li>
     </ol>
