@@ -153,39 +153,43 @@
 
   }
 
-  &__status {
-
-    $icon-size: $size-default;
-
-    // position: relative;
-    // appearance: none;
-    // border: 0;
-    // padding: 0;
-    // margin: 0 $size-base 0 0;
-    // display: inline-block;
-    // margin-right: $size-base;
-    // text-indent: $icon-size * 5;
-    // overflow: hidden;
-    // width: $icon-size;
-    // height: $icon-size;
-
-    &--complete {
-      // background-color: rgba(255, 255, 255, .3);
-    }
-
-    &--current {
-      // background-color: rgba(255, 255, 255, .6);
-    }
-
-    &--incomplete {
-      // background-color: rgba(0, 0, 0, .3);
-    }
-
-  }
+  // &__status {
+  //
+  //   $icon-size: $size-default;
+  //
+  //   // position: relative;
+  //   // appearance: none;
+  //   // border: 0;
+  //   // padding: 0;
+  //   // margin: 0 $size-base 0 0;
+  //   // display: inline-block;
+  //   // margin-right: $size-base;
+  //   // text-indent: $icon-size * 5;
+  //   // overflow: hidden;
+  //   // width: $icon-size;
+  //   // height: $icon-size;
+  //
+  //   &--complete {
+  //     // background-color: rgba(255, 255, 255, .3);
+  //   }
+  //
+  //   &--current {
+  //     // background-color: rgba(255, 255, 255, .6);
+  //   }
+  //
+  //   &--incomplete {
+  //     // background-color: rgba(0, 0, 0, .3);
+  //   }
+  //
+  // }
 
   &__icon {
 
     display: none;
+
+    &.pcp-icon--contrast {
+      transform: scaleX(-1);
+    }
 
     @include breakpoint(L) {
       display: inline-block;
@@ -199,7 +203,6 @@
       }
 
     }
-
 
   }
 
