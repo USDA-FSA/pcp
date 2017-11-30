@@ -145,12 +145,6 @@ $('body').on('change', '[data-behavior~="modified-form"]', function(event) {
 
 })
 
-$('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
-  var $self = $(this);
-  var $component = $self.closest('.pcp-popover');
-  $component.removeClass('pcp-popover--visible');
-})
-
 $('body').on('click', '[data-behavior~="whiteout-show"]', function(event) {
   $('#fsa-whiteout').attr('aria-hidden','false');
 })
@@ -209,6 +203,12 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
     $checks.prop('checked', false);
   }
 
+})
+
+$('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
+  var $self = $(this);
+  var $component = $self.closest('.pcp-popover');
+  $component.removeClass('pcp-popover--visible');
 })
 
 $('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
@@ -409,9 +409,17 @@ $('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
 
   $self = $(this);
   $component = $self.closest('.pcp-mapping');
+  $icon = $self.find('use');
 
   $self.toggleClass('pcp-mapping__zoom--toggled');
   $component.toggleClass('pcp-mapping--fullscreen');
+
+  if ($self.hasClass('pcp-mapping__zoom--toggled')) {
+    $icon.attr('xlink:href','img/symbol-defs.svg#pcp-icon--shrink');
+  }
+  else {
+    $icon.attr('xlink:href','img/symbol-defs.svg#pcp-icon--enlarge');
+  }
 
 })
 
@@ -454,6 +462,45 @@ $('body').on('focus', '.pcp-spinbox__input', function(event) {
   $component.addClass('pcp-adjust__spinbox--focused');
 
   console.log('spinbox focused');
+
+})
+
+$('body').on('click', '[data-behavior~="map-mode"]', function(event) {
+
+  $self = $(this);
+  $selfPeers = $self.siblings('[data-behavior="map-mode"]');
+  $component = $self.closest('.pcp-mapping');
+  $panel = $component.find('.pcp-mapping__panel');
+  $panelToggle = $component.find('.pcp-mapping__panel-btn');
+  $markers = $component.find('.pcp-mapping__marker');
+  $riftDetails = $component.find('.pcp-mapping__rift-detail');
+  $submit = $component.find('.fsa-checkbox');
+  $actions = $component.find('[data-action]');
+  $riftState = $component.find('.fsa-badge');
+
+  selfValue = $self.attr('data-mode');
+
+  $self.addClass('fsa-btn-group__item--active');
+  $selfPeers.removeClass('fsa-btn-group__item--active');
+
+  if (selfValue == 'edit') {
+    $panel.addClass('pcp-mapping__panel--visible');
+    $panelToggle.removeAttr('hidden');
+    $markers.removeAttr('hidden');
+    $riftDetails.removeAttr('hidden');
+    $riftState.removeAttr('disabled');
+    $actions.removeAttr('disabled');
+    $submit.removeAttr('disabled');
+  }
+  else {
+    $panel.removeClass('pcp-mapping__panel--visible');
+    $panelToggle.attr('hidden', true);
+    $markers.attr('hidden', true);
+    $riftDetails.attr('hidden', true);
+    $riftState.attr('disabled', true);
+    $actions.attr('disabled', true);
+    $submit.attr('disabled', true);
+  }
 
 })
 
@@ -661,15 +708,48 @@ $('body').on('change', '[data-behavior~="mark-adj-complete"]', function(event) {
   var $targetsDisable  = $scopeNarrow.find('input, button');
   var $targetReset = $('#' + $self.attr('data-reset-target'));
   var $targetSave = $('#' + $self.attr('data-save-target'));
+  var $component = $self.closest('.pcp-map-toolbar');
+  var $labelStatus = $component.find('.fsa-label');
 
   if ($targetsDisable.is(':disabled')) {
+
     $targetsDisable.removeAttr('disabled');
     $targetReset.removeAttr('disabled');
     $targetSave.addClass('fsa-content-tabs__label--unsaved')
-  } else {
+
+    $labelStatus
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--warning')
+          .text('In Progress')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
+
+  }
+  else {
+
     $targetReset.attr('disabled', true);
     $targetsDisable.attr('disabled', true);
     $targetSave.removeClass('fsa-content-tabs__label--unsaved');
+
+    $labelStatus
+      .fadeOut('slow', function() {
+        $(this)
+          .removeClass('fsa-label--general fsa-label--alert fsa-label--warning fsa-label--success')
+          .addClass('fsa-label--success')
+          .text('Complete')
+          .fadeIn('fast', function() {
+            // done
+          })
+        ;
+      })
+    ;
+
   }
 
 });
@@ -1122,6 +1202,74 @@ $('body').on('change', '[data-behavior~="enable-closing-save"]', function(event)
 
 });
 
+$('body').on('change', '[data-behavior~="icon-size-demo"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#icon-list').find('.pcp-icon')
+  var selfValue = $self.val();
+
+  console.log(selfValue);
+
+  $target
+    .removeClass('pcp-icon-- pcp-icon--small pcp-icon--medium pcp-icon--large')
+    .addClass('pcp-icon--' + selfValue)
+    .removeClass('pcp-icon--')
+  ;
+
+})
+
+$('body').on('click', '[data-behavior~="button-group-select"]', function(event) {
+
+  var $self = $(this);
+
+  $self
+    .addClass('fsa-btn-group__item--active')
+    .siblings()
+    .removeClass('fsa-btn-group__item--active')
+  ;
+
+})
+
+$('body').on('click', '[data-behavior~="change-popover-dir"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#popover-demo');
+  var dir = $self.data('dir');
+
+  $target
+    .removeClass('pcp-popover--bl pcp-popover--br pcp-popover--tl pcp-popover--tr pcp-popover--lc pcp-popover--rc pcp-popover--lt pcp-popover--lb pcp-popover--rt pcp-popover--rb pcp-popover--bc pcp-popover--tc')
+    .addClass('pcp-popover--' + dir)
+  ;
+
+})
+
+$('body').on('click', '[data-behavior~="change-popover-size"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#popover-demo');
+  var size = $self.data('size');
+
+  $target
+    .removeClass('pcp-popover--size-small pcp-popover--size-medium pcp-popover--size-large')
+    .addClass('pcp-popover--size-' + size)
+  ;
+
+})
+
+$('body').on('click', '[data-behavior~="toggle-popover-title"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#popover-demo').find('.pcp-popover__title');
+
+  $target.toggle();
+
+})
+
+$('body').on('mousedown', '.pcp-mapping__map, .pcp-mapping__hd, .pcp-mapping__toolbar, .pcp-mapping__panel, .pcp-mapping__marker, .pcp-mapping__rift-detail, .pcp-mapping__btn:not([data-behavior="toggle-popover"])', function(event) {
+
+  $('.pcp-popover').removeClass('pcp-popover--visible');
+
+})
 
 ;(function($) {
     $.fn.drags = function(opt) {

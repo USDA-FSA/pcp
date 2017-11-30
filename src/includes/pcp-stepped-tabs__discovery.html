@@ -3,38 +3,38 @@
     <ol class="pcp-stepped-tabs__list">
       <li class="pcp-stepped-tabs__item">
         <a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--complete HINT" href="workflow.html" title="Complete">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--complete"></span>
-          Initialize
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Initialize</span>
         </a>
       </li>
       <li class="pcp-stepped-tabs__item">
         <a class="pcp-stepped-tabs__label pcp-stepped-tabs__label--active" href="workflow_discovery.html" title="In Progress">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--complete"></span>
-          Price Discovery
+          {% include: 'includes/icon.html' @NAME:'contrast' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Price Discovery</span>
         </a>
       </li>
       <li class="pcp-stepped-tabs__item">
         <span class="pcp-stepped-tabs__label pcp-stepped-tabs__label--incomplete" title="Not Started">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--incomplete"></span>
-          Closing
+          {% include: 'includes/icon.html' @NAME:'radio-unchecked' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Closing</span>
         </span>
       </li>
       <li class="pcp-stepped-tabs__item">
         <span class="pcp-stepped-tabs__label pcp-stepped-tabs__label--incomplete" title="Not Started">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--incomplete"></span>
-          Adjustments
+          {% include: 'includes/icon.html' @NAME:'radio-unchecked' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Adjustments</span>
         </span>
       </li>
       <li class="pcp-stepped-tabs__item">
         <span class="pcp-stepped-tabs__label pcp-stepped-tabs__label--incomplete" title="Not Started">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--incomplete"></span>
-          Review
+          {% include: 'includes/icon.html' @NAME:'radio-unchecked' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Review</span>
         </span>
       </li>
       <li class="pcp-stepped-tabs__item">
         <span class="pcp-stepped-tabs__label pcp-stepped-tabs__label--incomplete" title="Not Started">
-          <span class="pcp-stepped-tabs__status pcp-stepped-tabs__status--incomplete"></span>
-          Publish
+          {% include: 'includes/icon.html' @NAME:'radio-unchecked' @SIZE:' ' @CLASS:'pcp-stepped-tabs__icon' %}
+          <span class="pcp-stepped-tabs__text">Publish</span>
         </span>
       </li>
     </ol>

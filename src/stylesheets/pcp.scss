@@ -1,6 +1,7 @@
 
 // Bring in fsa-style, i.e. http://usda-fsa.github.io/fsa-style/
 @import 'lib/fsa-style/fsa-style';
+@import 'lib/rzslider';
 
 // PCP Core
 @import 'core/pcp.variables';
@@ -11,23 +12,8 @@
 
 // PCP Elements
 @import 'elements/pcp.typography';
+@import 'elements/pcp.icon';
 @import 'elements/pcp.icon-TEMP';
-
-// //////////////////////////////////////////////////////////////////////////////
-// [START] These have been ported, uncomment temporarily when implementing v2.0.0
-// //////////////////////////////////////////////////////////////////////////////
-// @import 'components/pcp.brand';
-// @import 'components/pcp.header';
-// @import 'components/pcp.nav-global';
-// PORTED @import 'components/pcp.footer-TEMP';
-// PORTED @import 'components/pcp.growl';
-// PORTED @import 'components/pcp.modal';
-// PORTED @import 'components/pcp.whiteout';
-// PORTED @import 'components/pcp.select-multi';
-// PORTED @import 'components/pcp.content-tabs';
-// //////////////////////////////////////////////////////////////////////////////
-// [END] These have been ported, uncomment temporarily when implementing v2.0.0
-// //////////////////////////////////////////////////////////////////////////////
 
 // PCP Components
 @import 'components/pcp.popover';
@@ -36,15 +22,18 @@
 @import 'components/pcp.info-bar';
 @import 'components/pcp.table';
 @import 'components/pcp.mapping';
+@import 'components/pcp.cardbar';
 @import 'components/pcp.adjust';
 @import 'components/pcp.spinbox';
 @import 'components/pcp.card';
 @import 'components/pcp.marker';
 @import 'components/pcp.rift-detail';
+@import 'components/pcp.legend';
 @import 'components/pcp.title-action-bar';
 @import 'components/pcp.stepped-tabs';
 @import 'components/pcp.highlight';
 @import 'components/pcp.file-upload';
+@import 'components/pcp.rzslider'; // selectively styles items from lib/rzslider (imported above)
 
 // PCP Shame
 @import 'pcp.shame';

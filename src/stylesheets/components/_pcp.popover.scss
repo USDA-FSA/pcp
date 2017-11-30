@@ -1,11 +1,9 @@
 @keyframes popoverShow {
   from {
     opacity: 0;
-    transform: translateY(-$size-default);
   }
   to {
     opacity: 1;
-    transform: translateY(0%);
   }
 }
 
@@ -16,36 +14,37 @@
   // ---------------------------------------------------------------------------
 
   display: none;
+  will-change: opacity;
   background-color: $color-white;
-
   position: fixed;
   top: $size-default;
   right: $size-default;
   bottom: $size-large;
   left: $size-default;
   z-index: 50;
-
+  transition: width .23s ease-in-out;
   text-align: left;
-  box-shadow:
-    0 0 $size-default $size-large rgba(0, 0, 0, .3),
-    0 0 $size-default rgba(0, 0, 0, .5)
-  ;
+  box-shadow: 0 0 $size-default $size-large rgba(0, 0, 0, .3), 0 0 $size-default rgba(0, 0, 0, .5);
 
   @include breakpoint(M) {
-    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+
     min-width: $size-base * 60;
     position: absolute;
-    top: calc(100% + #{$size-small});
-    left: auto;
-    bottom: auto;
-    right: 0;
+    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+
+    @supports (filter: drop-shadow(0 0 0 black)) { // @supports won't let me do @supports (filter: drop-shadow(); so placed a foo value in drop-shadow(foo)
+      box-shadow: none;
+      filter: drop-shadow(0 0 $size-base rgba(0, 0, 0, .4));
+    }
+
   }
 
   // ---------------------------------------------------------------------------
 
   &:before {
     @include breakpoint(M) {
-      @include css-triangle($arrow-size, $color-fsa-tertiary-200, bottom);
+      $arrow-shadow: tint($color-fsa-tertiary-300, 30%); // #b7b5b3
+      @include css-triangle($arrow-size, $arrow-shadow, bottom);
       content: '';
       position: absolute;
     }
@@ -61,23 +60,287 @@
 
   // ---------------------------------------------------------------------------
 
-  &--br {
+  &--bl {
+
+    @include breakpoint(M) {
+      top: calc(100% + #{$size-default});
+      left: 0;
+      bottom: auto;
+      right: auto;
+    }
+
     &:before,
     &:after {
-      right: $size-default;
+      left: $size-default;
+      right: auto;
       top: -($arrow-size * 2);
-      transform: translateY(2px);
+      // transform: translateY(2px);
     }
+
     &:before {
-      transform: translateY(1px);
+      transform: translateY(-1px);
     }
+
   }
 
-  &--bl {  }
+  &--br {
 
-  &--tr {  }
+    @include breakpoint(M) {
+      top: calc(100% + #{$size-default});
+      left: auto;
+      bottom: auto;
+      right: 0;
+    }
 
-  &--tl {  }
+    &:before,
+    &:after {
+      left: auto;
+      right: $size-default;
+      top: -($arrow-size * 2);
+      // transform: translateY(2px);
+    }
+
+    &:before {
+      transform: translateY(-1px);
+    }
+
+  }
+
+  &--tl {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: 0;
+      bottom: calc(100% + #{$size-default});
+      right: auto;
+    }
+
+    &:before,
+    &:after {
+      left: $size-default;
+      right: auto;
+      bottom: -($arrow-size * 2);
+      transform: rotate(180deg) translateY(1px);
+    }
+
+    &:before {
+      transform: rotate(180deg);
+    }
+
+  }
+
+  &--tr {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: auto;
+      bottom: calc(100% + #{$size-default});
+      right: 0;
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: $size-default;
+      bottom: -($arrow-size * 2);
+      transform: rotate(180deg) translateY(1px);
+    }
+
+    &:before {
+      transform: rotate(180deg);
+    }
+
+  }
+
+  &--lc {
+
+    @include breakpoint(M) {
+      top: 50%;
+      left: auto;
+      bottom: auto;
+      right: calc(100% + #{$size-default});
+      transform: translateY(-50%);
+    }
+
+    &:before,
+    &:after {
+      left: 100%;
+      right: auto;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &:before {
+      left: calc(100% + 1px);
+    }
+
+  }
+
+  &--rc {
+
+    @include breakpoint(M) {
+      top: 50%;
+      left: calc(100% + #{$size-default});
+      bottom: auto;
+      right: auto;
+      transform: translateY(-50%);
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &:before {
+      right: calc(100% + 1px);
+    }
+
+  }
+
+  &--tc {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: 50%;
+      bottom: calc(100% + #{$size-default});
+      right: auto;
+      transform: translateX(-50%);
+    }
+
+    &:before,
+    &:after {
+      left: 50%;
+      right: auto;
+      bottom: -($arrow-size * 2);
+      transform: rotate(180deg) translateY(1px) translateX(50%);
+    }
+
+    &:before {
+      transform: rotate(180deg) translateX(50%);
+    }
+
+  }
+
+  &--bc {
+
+    @include breakpoint(M) {
+      top: calc(100% + #{$size-default});
+      left: 50%;
+      bottom: auto;
+      right: auto;
+      transform: translateX(-50%);
+    }
+
+    &:before,
+    &:after {
+      left: 50%;
+      right: auto;
+      top: -($arrow-size * 2);
+      transform: translateX(-50%);
+    }
+
+    &:before {
+      transform: translateY(-1px) translateX(-50%);
+    }
+
+  }
+
+  &--lt {
+
+    @include breakpoint(M) {
+      top: 0;
+      left: auto;
+      bottom: auto;
+      right: calc(100% + #{$size-default});
+    }
+
+    &:before,
+    &:after {
+      left: 100%;
+      right: auto;
+      top: 20px;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &:before {
+      left: calc(100% + 1px);
+    }
+
+  }
+
+  &--lb {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: auto;
+      bottom: 0;
+      right: calc(100% + #{$size-default});
+    }
+
+    &:before,
+    &:after {
+      left: 100%;
+      right: auto;
+      top: auto;
+      bottom: 4px;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &:before {
+      left: calc(100% + 1px);
+    }
+
+  }
+
+  &--rt {
+
+    @include breakpoint(M) {
+      top: 0;
+      left: calc(100% + #{$size-default});
+      bottom: auto;
+      right: auto;
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: 100%;
+      top: 20px;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &:before {
+      right: calc(100% + 1px);
+    }
+
+  }
+
+  &--rb {
+
+    @include breakpoint(M) {
+      top: auto;
+      left: calc(100% + #{$size-default});
+      bottom: 0;
+      right: auto;
+    }
+
+    &:before,
+    &:after {
+      left: auto;
+      right: 100%;
+      top: auto;
+      bottom: 4px;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &:before {
+      right: calc(100% + 1px);
+    }
+
+  }
 
   // ---------------------------------------------------------------------------
 
@@ -99,9 +362,12 @@
     }
   }
 
-  &--visible {
+  &--visible,
+  &[aria-hidden="false"] {
+
     display: block;
     animation: popoverShow 230ms ease-in-out;
+
   }
 
   // ---------------------------------------------------------------------------
@@ -114,12 +380,12 @@
     right: -$size-small;
     padding: ($size-default * 1.5);
 
-    &:active {
-      opacity: .6;
-    }
-
     @include breakpoint(M) {
       display: none;
+    }
+
+    &:active {
+      opacity: .6;
     }
 
   }
@@ -135,8 +401,7 @@
     overflow: auto;
 
     @include breakpoint(M) {
-      max-height: 64px;
-      max-height: 70vh;
+      max-height: 425px;
     }
 
     :first-child { margin-top: 0; }
@@ -147,6 +412,8 @@
 
   &__hd {
     background-color: $color-fsa-tertiary-100;
+    position: sticky;
+    top: 0;
   }
 
   &__title {
