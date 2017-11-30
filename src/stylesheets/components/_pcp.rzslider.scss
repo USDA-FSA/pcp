@@ -3,6 +3,12 @@
 
 .pcp-rzslider {
 
+  &[disabled] {
+    opacity: .4;
+    filter: grayscale(100%);
+    pointer-events: none;
+  }
+
   &.rzslider .rz-pointer {
     background-color: $color-fsa-tertiary-300;
     border-radius: 100%;
@@ -27,6 +33,7 @@
     padding: $size-base;
     line-height: 1;
     font-size: $font-size-3;
+    pointer-events: none;
   }
 
   &.rzslider.rz-vertical:hover .rz-bubble {
@@ -45,6 +52,10 @@
 
   &.rzslider .rz-bar {
     border-radius: 0;
+  }
+
+  &.rzslider .rz-selection {
+    background: $color-fsa-tertiary-300;
   }
 
   &.rzslider .rz-bar-wrapper.rz-right-out-selection .rz-bar {
