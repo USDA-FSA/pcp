@@ -25,7 +25,14 @@
   }
 
   &__title {
+
     margin: 0;
+
+    @include breakpoint(M, down) {
+      @include h2();
+      font-weight: $font-normal;
+    }
+
   }
 
   &__action {

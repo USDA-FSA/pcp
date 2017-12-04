@@ -49,6 +49,10 @@
       font-size: $font-size-2;
     }
 
+    @include breakpoint(M, down) {
+      padding-left: $labelPadding + ($size-base / 2);
+    }
+
     @include breakpoint(L) {
       font-weight: $font-bold;
       font-size: $font-size-3;
@@ -104,6 +108,7 @@
 
       background-color: $colorComplete;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, .6);
+      // scss-lint:disable ImportantRule
       color: $color-fsa-white !important;
 
       &:focus,
@@ -148,48 +153,20 @@
     }
 
     .pcp-stepped-tabs__item:first-child & {
+
       padding-right: ( ($labelPadding * 2) + ($labelPadding / 3) );
+
+      @include breakpoint(M, down) {
+        padding-left: ($labelPadding / 2);
+      }
+
     }
 
   }
 
-  // &__status {
-  //
-  //   $icon-size: $size-default;
-  //
-  //   // position: relative;
-  //   // appearance: none;
-  //   // border: 0;
-  //   // padding: 0;
-  //   // margin: 0 $size-base 0 0;
-  //   // display: inline-block;
-  //   // margin-right: $size-base;
-  //   // text-indent: $icon-size * 5;
-  //   // overflow: hidden;
-  //   // width: $icon-size;
-  //   // height: $icon-size;
-  //
-  //   &--complete {
-  //     // background-color: rgba(255, 255, 255, .3);
-  //   }
-  //
-  //   &--current {
-  //     // background-color: rgba(255, 255, 255, .6);
-  //   }
-  //
-  //   &--incomplete {
-  //     // background-color: rgba(0, 0, 0, .3);
-  //   }
-  //
-  // }
-
   &__icon {
 
     display: none;
-
-    &.pcp-icon--contrast {
-      transform: scaleX(-1);
-    }
 
     @include breakpoint(L) {
       display: inline-block;
@@ -198,10 +175,16 @@
       vertical-align: bottom;
       filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, .6));
 
+      // scss-lint:disable SelectorFormat
       .pcp-stepped-tabs__label--incomplete & {
         filter: none;
       }
 
+    }
+
+    // scss-lint:disable SelectorFormat
+    &.pcp-icon--contrast {
+      transform: scaleX(-1);
     }
 
   }
