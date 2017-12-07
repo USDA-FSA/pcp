@@ -148,7 +148,7 @@ module.exports = function (grunt) {
         processors: [
           require('pixrem')(), // add fallbacks for rem units
           require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
-          // require('postcss-quantity-queries')(), // do things like .asdf:at-least(4) {} ; https://github.com/pascalduez/postcss-quantity-queries
+          require('postcss-quantity-queries')(), // do things like .asdf:at-least(4) {} ; https://github.com/pascalduez/postcss-quantity-queries
           // require('cssnano')() // minify the result
         ]
       },

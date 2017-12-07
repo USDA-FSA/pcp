@@ -8,6 +8,20 @@
   width: 100%;
 }
 
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+11),
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+11) ~ .fsa-content-tabs__item {
+  .fsa-content-tabs__label {
+    @include font-size(3);
+  }
+}
+
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+15),
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+15) ~ .fsa-content-tabs__item {
+  .fsa-content-tabs__label {
+    @include font-size(2);
+  }
+}
+
 .sr-only {
   @include sr-only();
 }
