@@ -22,6 +22,20 @@
   }
 }
 
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+18),
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+18) ~ .fsa-content-tabs__item {
+  .fsa-content-tabs__label {
+    @include font-size(1);
+  }
+}
+
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+21),
+.pcp-mapping .fsa-content-tabs__item:nth-last-child(n+21) ~ .fsa-content-tabs__item {
+  .fsa-content-tabs__label {
+    @include font-size(0);
+  }
+}
+
 .sr-only {
   @include sr-only();
 }
