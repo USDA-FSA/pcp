@@ -52,11 +52,11 @@
 
 .pcp-checkbox--block {
 
-  display: block;
-
-  &:hover {
-
+  .fsa-checkbox + & {
+    display: block;
   }
+
+  &:hover {}
 
 }
 
