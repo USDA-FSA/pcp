@@ -101,6 +101,10 @@ $marker-color-affected: $color-fsa-aqua-300; // from USWDS
     position: relative;
     box-shadow: 0 $size-base $size-default rgba(0, 0, 0, .7);
 
+    &:hover {
+      z-index: 9000;
+    }
+
     .pcp-marker--large & {
       font-size: $marker-font-size--large;
       padding: ($marker-padding * 2);
