@@ -1,0 +1,27 @@
+// scss-lint:disable QualifyingElement
+abbr[title],
+acronym[title],
+dfn[title] {
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+// scss-lint:disable SelectorFormat
+.pcp-text--300 {
+  color: $color-fsa-tertiary-300;
+}
+
+.pcp-checkbox--block {
+
+  .fsa-checkbox + & {
+    display: block;
+  }
+
+  &:hover {}
+
+}
+
+.pcp-file-name {
+  white-space: nowrap;
+}
