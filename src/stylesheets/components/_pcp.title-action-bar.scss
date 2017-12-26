@@ -1,31 +1,40 @@
 .pcp-title-action-bar {
 
-  @include breakpoint(M) {
+  @include breakpoint(L) {
     @include fsa-grid-row();
   }
 
   &__hd,
   &__ft {
-    @include breakpoint(M) {
+    @include breakpoint(L) {
       @include fsa-grid-column();
     }
   }
 
   &__hd {
-    @include breakpoint(M) {
+    @include breakpoint(L) {
       @include fsa-grid-column-width(8);
     }
   }
 
   &__ft {
-    @include breakpoint(M) {
+    margin-top: $size-small;
+    @include breakpoint(L) {
       @include fsa-grid-column-width(4);
+      margin-top: 0;
       text-align: right;
     }
   }
 
   &__title {
+
     margin: 0;
+
+    @include breakpoint(L, down) {
+      @include h2();
+      font-weight: $font-normal;
+    }
+
   }
 
   &__action {
@@ -33,7 +42,7 @@
     display: block;
     width: 100%;
 
-    @include breakpoint(M) {
+    @include breakpoint(L) {
       display: inline-block;
       width: auto;
     }

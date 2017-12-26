@@ -1,15 +1,17 @@
 $marker-color-base: $color-white;
 $marker-font-size: $font-size-3;
 $marker-font-size--large: $font-size-4;
-$marker-radius: 2px;
+$marker-radius: 9px;
 $marker-padding: $size-base;
 
-$marker-bgcolor-default: $color-fsa-tertiary;
+$marker-bgcolor-default: $color-fsa-tertiary-300;
 $marker-bgcolor-high: $color-fsa-red;
 $marker-bgcolor-low: $color-gold-lighter; // from USWDS
 
-$marker-border-color-default: $color-white;
-$marker-border-color-high: $color-fsa-red;
+$marker-border-color: rgba(0, 0, 0, .4);
+
+$marker-border-color-default: $color-white; // unused
+$marker-border-color-high: $color-fsa-red; // unused
 $marker-border-color-low: $color-gold-lighter; // from USWDS
 
 $marker-text-default: $color-base;
@@ -20,15 +22,15 @@ $marker-weight-default: $font-bold;
 $marker-weight-modified: $font-normal;
 
 $marker-color-modified: $color-fsa-tertiary-300;
-$marker-color-affected: #02bfe7; // from USWDS
+$marker-color-affected: $color-fsa-aqua-300; // from USWDS
 
 // scss-lint:disable SelectorFormat
 
 @keyframes markerPulse {
   0% { transform: scale(0, 0); opacity: 0; }
-  33% { opacity: .5; }
-  66% { transform: scale(1.8, 1.8); opacity: 0; }
-  100% { transform: scale(1.8, 1.8); opacity: 0; }
+  50% { opacity: .5; }
+  66% { transform: scale(2.5, 2.5); opacity: 0; }
+  100% { transform: scale(2.5, 2.5); opacity: 0; }
 }
 
 @keyframes impactPulse {
@@ -86,7 +88,7 @@ $marker-color-affected: #02bfe7; // from USWDS
     display: block;
     z-index: 30;
     background-color: $marker-bgcolor-default;
-    border: 1px solid $marker-bgcolor-default;
+    border: 1px solid $marker-border-color;
     font-size: $marker-font-size;
     font-weight: $marker-weight-default;
     line-height: 1;
@@ -97,6 +99,11 @@ $marker-color-affected: #02bfe7; // from USWDS
     text-align: center;
     transition: all .23s ease-in-out;
     position: relative;
+    box-shadow: 0 $size-base $size-default rgba(0, 0, 0, .7);
+
+    &:hover {
+      z-index: 9000;
+    }
 
     .pcp-marker--large & {
       font-size: $marker-font-size--large;
@@ -109,23 +116,23 @@ $marker-color-affected: #02bfe7; // from USWDS
 
     .pcp-marker--active & {
       transform: translate(0, -7px);
-      box-shadow: 0 2px 0 0 black;
+      box-shadow: 0 $size-base $size-medium rgba(0, 0, 0, .4), 0 2px 0 0 black;
     }
 
     .pcp-marker--high & {
       background-color: $marker-bgcolor-high;
-      border-color: $marker-bgcolor-high;
+      // border-color: $marker-border-color-high;
       color: $marker-text-high;
     }
 
     .pcp-marker--low & {
       background-color: $marker-bgcolor-low;
-      border-color: $marker-bgcolor-low;
+      // border-color: $marker-border-color-low;
       color: $marker-text-low;
     }
 
     .pcp-marker:focus & {
-      box-shadow: 0 0 0 2px black;
+      box-shadow: 0 $size-base $size-medium rgba(0, 0, 0, .4), 0 0 0 2px black;
     }
 
   }

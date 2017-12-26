@@ -44,9 +44,13 @@
 
   &__add {
 
-    float: right;
+    @include breakpoint(M, down) {
+      display: block;
+      width: 100%;
+    }
 
     @include breakpoint(M) {
+      float: right;
       float: none;
       display: inline-block;
 

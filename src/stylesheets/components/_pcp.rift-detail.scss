@@ -192,6 +192,7 @@ $swapDistance: 2.8rem;
 
       padding-left: $padding * 3;
       padding-right: $padding * 3;
+      box-shadow: none;
 
       @include breakpoint(L) {
         min-width: 12rem;
