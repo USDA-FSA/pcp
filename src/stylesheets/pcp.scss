@@ -14,7 +14,6 @@
 // PCP Elements
 @import 'elements/pcp.typography';
 @import 'elements/pcp.icon';
-// REMOVE @import 'elements/pcp.icon-TEMP';
 
 // PCP Components
 @import 'components/pcp.popover';
@@ -37,6 +36,6 @@
 // SHAME SHAME SHAME SHAME SHAME SHAME SHAME SHAME SHAME SHAME SHAME SHAME SHAME
 @import 'pcp.shame';
 
-// Prototype
-@import 'prototype/pcp.prototype'; // DO NOT USE IN PRODUCTION
-@import 'prototype/pcp.project-header'; // DO NOT USE IN PRODUCTION
+// Prototype - DO NOT USE IN PRODUCTION DO NOT USE IN PRODUCTION DO NOT USE IN PRODUCTION DO NOT USE IN PRODUCTION
+@import 'prototype/pcp.prototype';
+@import 'prototype/pcp.project-header';
