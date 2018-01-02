@@ -285,3 +285,44 @@ $swapDistance: 2.8rem;
   }
 
 }
+
+.pcp-rift-collection {
+  will-change: left;
+  position: absolute;
+  left: ($mapPanelWidth + $size-default);
+  bottom: 0;
+  z-index: 1000;
+  display: flex; // Optional way to reverse wrap the popups from bottom to top. OR Limit number of popups open
+  flex-wrap: wrap-reverse;
+  margin-right: 58px; // Temporary to allow interaction with legend/controls on right side of map and prevent overlaying them
+  transition: all .23s ease-in-out;
+
+  &--closed {
+    left: $size-default;
+  }
+
+  // scss-lint:disable SelectorFormat
+  .pcp-mapping--fullscreen & {
+
+    left: (($size-base * 100) + $size-default);
+
+    &--closed {
+      left: ($size-default);
+    }
+
+  }
+
+}
+
+.pcp-rift-popup {
+
+  width: 220px;
+  margin-bottom: $size-default;
+  margin-right: $size-default;
+  transition: margin .23s ease-in-out;
+
+  &--pinned {
+    margin-bottom: 0;
+  }
+
+}

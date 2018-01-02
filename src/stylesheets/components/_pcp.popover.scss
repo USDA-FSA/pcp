@@ -379,6 +379,7 @@
     top: -$size-small;
     right: -$size-small;
     padding: ($size-default * 1.5);
+    z-index: 1;
 
     @include breakpoint(M) {
       display: none;

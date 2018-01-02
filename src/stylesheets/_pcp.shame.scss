@@ -1,7 +1,21 @@
 // TO MOVE TO fsa-style --------------------------------------------------------
 
-textarea[rows] {
+::-webkit-inner-spin-button {
+  margin-top: -1px;
+  margin-right: $size-base;
+}
+
+.fsa-textarea[rows] {
   height: auto;
+  min-height: 6rem;
+}
+
+fieldset[disabled] {
+  opacity: .5;
+}
+
+.fsa-btn--flat {
+  text-align: left;
 }
 
 .sr-only {
@@ -10,6 +24,10 @@ textarea[rows] {
 
 .fsa-modal__title {
   margin-bottom: .5em;
+}
+
+.fsa-modal__content {
+  margin-bottom: $size-extra-large;
 }
 
 .fsa-content-tabs__label {
