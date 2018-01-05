@@ -1,8 +1,21 @@
 // TO MOVE TO fsa-style --------------------------------------------------------
 
-::-webkit-inner-spin-button {
-  margin-top: -1px;
-  margin-right: $size-base;
+.fsa-modal {
+
+  &__title {
+    margin-bottom: .5em;
+  }
+
+  &__content {
+
+    margin-bottom: $size-medium;
+
+    .fsa-modal--fullscreen & {
+      min-height: calc(100vh - 5rem); // magic number
+    }
+
+  }
+
 }
 
 .fsa-textarea[rows] {
@@ -20,14 +33,6 @@ fieldset[disabled] {
 
 .sr-only {
   @include sr-only();
-}
-
-.fsa-modal__title {
-  margin-bottom: .5em;
-}
-
-.fsa-modal__content {
-  margin-bottom: $size-extra-large;
 }
 
 .fsa-content-tabs__label {

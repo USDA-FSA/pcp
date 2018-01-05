@@ -160,3 +160,31 @@ th.pcp-table__cell--bisect {
     border-right: 1px solid $color-fsa-tertiary-200;
   }
 }
+
+.pcp-overflow-table {
+
+  position: relative;
+  overflow: auto;
+  max-height: 62vh;
+  margin-top: 1em;
+  border: 1px solid $table-border-color;
+  border-top-width: 2px;
+
+  > .fsa-table {
+    border: 0;
+    margin: 0;
+  }
+
+  @media screen and (min-height: 720px) {
+    max-height: 65vh;
+  }
+
+  @media screen and (min-height: 875px) {
+    max-height: 63vh;
+  }
+
+  @media screen and (min-height: 1024px) {
+    max-height: 68vh;
+  }
+
+}

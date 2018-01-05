@@ -60,6 +60,11 @@
       margin: 0;
     }
 
+    &::-webkit-inner-spin-button {
+      margin-top: -1px;
+      margin-right: $size-base;
+    }
+
     &:focus {
       outline: 0;
     }
