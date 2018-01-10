@@ -34,6 +34,6 @@
   },
   "dependencies": {
     "jquery": "^2.2.2",
-    "fsa-style": "^2.1.0"
+    "fsa-style": "^2.1.1"
   }
 }
