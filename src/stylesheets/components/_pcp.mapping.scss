@@ -49,6 +49,43 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
   &__ft {}
 
   // ---------------------------------------------------------------------------
+  // Quantity Queries for Commodity Tabs. Labels are known to be 2- or 3-letter
+  // combinations, so we can adjust font-size depending on quantity of tabs
+
+  // if at least 11 tabs
+  .fsa-content-tabs__item:nth-last-child(n+11),
+  .fsa-content-tabs__item:nth-last-child(n+11) ~ .fsa-content-tabs__item {
+    .fsa-content-tabs__label {
+      @include font-size(3);
+      outline: 1px solid red;
+    }
+  }
+
+  // if at least 15 tabs
+  .fsa-content-tabs__item:nth-last-child(n+15),
+  .fsa-content-tabs__item:nth-last-child(n+15) ~ .fsa-content-tabs__item {
+    .fsa-content-tabs__label {
+      @include font-size(2);
+    }
+  }
+
+  // if at least 18 tabs
+  .fsa-content-tabs__item:nth-last-child(n+18),
+  .fsa-content-tabs__item:nth-last-child(n+18) ~ .fsa-content-tabs__item {
+    .fsa-content-tabs__label {
+      @include font-size(1);
+    }
+  }
+
+  // if at least 21 tabs
+  .fsa-content-tabs__item:nth-last-child(n+21),
+  .fsa-content-tabs__item:nth-last-child(n+21) ~ .fsa-content-tabs__item {
+    .fsa-content-tabs__label {
+      @include font-size(0);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
 
   &__panel {
 

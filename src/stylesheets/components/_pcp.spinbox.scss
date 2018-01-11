@@ -13,6 +13,21 @@
   $button-arrow-size-small: 4px;
 
   position: relative;
+  min-width: 8.2rem;
+  min-width: 10ch; // for browsers that support ch unit
+  font-size: $font-size-3;
+
+  &--small {
+    font-size: $font-size-2;
+    min-width: 7.2rem;
+    min-width: 9.5ch;
+  }
+
+  &--large {
+    font-size: $font-size-4;
+    min-width: 10rem;
+    min-width: 11.5ch;
+  }
 
   &__number {
 
@@ -43,6 +58,11 @@
     &::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+
+    &::-webkit-inner-spin-button {
+      margin-top: -1px;
+      margin-right: $size-base;
     }
 
     &:focus {

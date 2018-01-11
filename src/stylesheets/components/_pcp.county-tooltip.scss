@@ -1,0 +1,61 @@
+.pcp-county-tooltip {
+
+  .leaflet-tooltip & {
+    margin: -8px;
+  }
+
+  &__hd {}
+
+  &__region {
+    @include h6();
+    font-family: $font-sans;
+    line-height: 1;
+    margin: 0;
+    padding: $size-small $size-default;
+    background-color: $color-fsa-secondary;
+    color: $color-white;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-transform: none;
+  }
+
+  &__title {
+    @include h6();
+    background-color: $color-fsa-tertiary-100;
+    color: $color-fsa-tertiary;
+    font-weight: $font-bold;
+    margin: 0;
+    padding: $size-small $size-default;
+    text-transform: none;
+  }
+
+  &__county {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: 1;
+    vertical-align: middle;
+    max-width: 126px;
+  }
+
+  &__state {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__bd {
+    padding: ($size-default + ($size-base / 2)) $size-default 0;
+  }
+
+  &__table {
+    width: 100%;
+    margin: 0;
+  }
+
+}

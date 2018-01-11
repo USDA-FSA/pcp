@@ -1,0 +1,35 @@
+// scss-lint:disable QualifyingElement
+abbr[title],
+acronym[title],
+dfn[title] {
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+.pcp-app main {
+  min-height: calc(100vh - 580px); // Magic number, generally: "minimum height is 100% of browser height minus the height of header and footer, plus some"
+}
+
+// scss-lint:disable SelectorFormat
+.pcp-text--300 {
+  color: $color-fsa-tertiary-300;
+}
+
+.pcp-checkbox--block {
+
+  .fsa-checkbox + & {
+    display: block;
+  }
+
+  &:hover {}
+
+}
+
+.pcp-file-name {
+  white-space: nowrap;
+}
+
+.pcp-btn--discovery {
+  min-width: 7.6rem;
+}
