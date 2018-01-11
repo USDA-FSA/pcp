@@ -1,10 +1,10 @@
 .pcp-legend {
 
-	&__list {
+  &__list {
     @include reset-ul();
   }
 
-	&__item {
+  &__item {
 
     @include reset-li();
     margin-top: .5em;
@@ -14,11 +14,11 @@
       margin-top: 0;
     }
 
-	}
+  }
 
-	&__preview {
+  &__preview {
     padding-right: $size-small;
-	}
+  }
 
   &__thumb {
     width: $size-medium;
@@ -27,6 +27,17 @@
     border: 1px solid rgba(0, 0, 0, .4);
   }
 
-	&__label {}
+  &__label {
+
+    &--help {
+      cursor: help;
+      border-bottom: 2px dotted transparent;
+    }
+
+    &--help:hover {
+      border-bottom-color: $color-fsa-aqua;
+    }
+
+  }
 
 }

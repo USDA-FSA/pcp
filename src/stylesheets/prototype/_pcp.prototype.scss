@@ -1,16 +1,5 @@
 // pcp.prototype ---------------------------------------------------------------
 
-.TBD {
-  background-color: white;
-  border: 1px solid $color-fsa-tertiary-200;
-  padding: $size-default;
-  text-align: center;
-  font-size: 72px;
-  font-weight: bold;
-  color: $color-fsa-tertiary-100;
-  text-shadow: -1px -1px 0 $color-fsa-tertiary-200;
-}
-
 $hint-color: rgba(255, 69, 0, .8);
 
 // scss-lint:disable SelectorFormat
@@ -128,7 +117,7 @@ $hint-color: rgba(255, 69, 0, .8);
       border-top-width: $size-base;
       border-bottom-width: 0;
       padding: $size-small;
-      box-shadow: -2px 0px 19px 0px rgba(0, 0, 0, .4);
+      box-shadow: -2px 0 19px 0 rgba(0, 0, 0, .4);
 
       width: 320px;
       position: fixed;
@@ -153,7 +142,8 @@ $hint-color: rgba(255, 69, 0, .8);
     }
 
     .pcp-prototype-home & {
-      display: none;
+      // scss-lint:disable ImportantRule
+      display: none !important;
     }
 
   }
@@ -221,12 +211,24 @@ $hint-color: rgba(255, 69, 0, .8);
 
   // FAKING TAB CONTENT SWAP ---------------------------------------------------
 
-	&__ITEM {
+  &__ITEM {
     display: none;
-	}
+  }
 
-	&__ITEM--ACTIVE {
+  &__ITEM--ACTIVE {
     display: block;
-	}
+  }
 
+}
+
+// scss-lint:disable SelectorFormat
+.TBD {
+  background-color: white;
+  border: 1px solid $color-fsa-tertiary-200;
+  padding: $size-default;
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+  color: $color-fsa-tertiary-100;
+  text-shadow: -1px -1px 0 $color-fsa-tertiary-200;
 }

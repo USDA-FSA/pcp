@@ -40,7 +40,8 @@
     width: 100%;
     text-align: center;
     text-decoration: none;
-    padding: $labelPadding $labelPadding ($labelPadding - .1rem);
+    padding: ($labelPadding - .1rem) $labelPadding ($labelPadding);
+    // padding: $labelPadding $labelPadding ($labelPadding - .1rem);
     background-color: $color-fsa-tertiary-100;
     color: $color-fsa-base;
     position: relative;
