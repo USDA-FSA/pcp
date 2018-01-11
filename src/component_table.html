@@ -58,10 +58,17 @@
 
         {% include: 'includes/pcp-adjust__state-review.html' %}
 
-        <h3 class="fsa-font--sans">Entry</h3>
+        <h2 class="pcp-prototype-title">Scrollable overflow</h2>
+
+        {% include: 'includes/table_overflow-example.html' %}
+
+        <h3 class="fsa-font--sans">Example</h3>
+
+        {% include: 'includes/program-entry__pnw-proteins.html' %}
+
+        <h3 class="fsa-font--sans">Example</h3>
 
         {% include: 'includes/program-entry__pnw.html' %}
-        {% include: 'includes/program-entry__glf.html' %}
 
         <h2 class="pcp-prototype-title">Controlling column widths</h2>
 
@@ -93,7 +100,7 @@
         <pre class="pcp-code-block"><code> ...<br> &lt;tr&gt;<br> &nbsp;&nbsp;&lt;th <strong style="color: black;">colspan="8"</strong>&gt;Column one&lt;/th&gt;<br> &nbsp;&nbsp;&lt;th <strong style="color: black;">colspan="8"</strong>&gt;Column two&lt;/th&gt;<br> &nbsp;&nbsp;&lt;th <strong style="color: black;">colspan="8"</strong>&gt;Column three&lt;/th&gt;<br> &lt;/tr&gt;<br> &lt;tr&gt;<br> &nbsp;&nbsp;&lt;td <strong style="color: black;">colspan="8"</strong>&gt;A&lt;/td&gt;<br> &nbsp;&nbsp;&lt;td <strong style="color: black;">colspan="8"</strong>&gt;B&lt;/td&gt;<br> &nbsp;&nbsp;&lt;td <strong style="color: black;">colspan="8"</strong>&gt;C&lt;/td&gt;<br> &lt;/tr&gt;<br> ... </code></pre>
 
         <div style="max-width: 68ch;">
-          <p>Which within <code>fsa-table</code> renders <strong>3 perfectly distributed columns</strong>...</p>
+          <p>Which with <code>class="fsa-table pcp-table--fixed"</code> renders <strong>3 perfectly distributed columns</strong>...</p>
         </div>
 
         <table class="fsa-table fsa-table--borderless pcp-table pcp-table--fixed">
@@ -106,9 +113,9 @@
           </thead>
           <tbody>
             <tr class="pcp-table__row">
-              <td class="pcp-table__cell" scope="col" colspan="8" colspan="8">Allorem ipsum dolor sit amet</td>
-              <td class="pcp-table__cell" scope="col" colspan="8" colspan="8">Bexx numquam aspernatur eligendi consectetur esse eius ab eum laudantium eaque dolorum, natus</td>
-              <td class="pcp-table__cell" scope="col" colspan="8" colspan="8">Cvoluptatibus.</td>
+              <td class="pcp-table__cell" colspan="8">Allorem ipsum dolor sit amet</td>
+              <td class="pcp-table__cell" colspan="8">Bexx numquam aspernatur eligendi consectetur esse eius ab eum laudantium eaque dolorum, natus</td>
+              <td class="pcp-table__cell" colspan="8">Cvoluptatibus.</td>
             </tr>
           </tbody>
         </table>
