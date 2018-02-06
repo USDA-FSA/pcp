@@ -1,11 +1,3 @@
-<div hidden>
-  - [x] Display Sequence: #
-  - [x] Rift Minimum: #.##
-  - [x] Rift Maximum: #.##
-  - [ ] Class Type: PCP|RCP|Blank
-  - [ ] Season Indicator: Summer|Fall
-  - [x] Market Price Adjustment: Yes|No
-</div>
 <table class="fsa-table fsa-table--borderless fsa-table--responsive pcp-table">
   <thead>
     <tr class="pcp-table__row">
@@ -19,13 +11,19 @@
         <button class="pcp-table__sort" type="button">Commodity</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
-        <button class="pcp-table__sort" type="button"><span style="background-color: yellow;">Order</span></button>
+        <button class="pcp-table__sort" type="button">Order</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
-        <button class="pcp-table__sort" type="button">Rift <abbr title="Minimum">Min</abbr></button>
+        <button class="pcp-table__sort" type="button"><abbr title="Rift Minimum">Min</abbr></button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
-        <button class="pcp-table__sort" type="button">Rift <abbr title="Maximum">Max</abbr></button>
+        <button class="pcp-table__sort" type="button"><abbr title="RiftMaximum">Max</abbr></button>
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
+        <button class="pcp-table__sort" type="button">Type</button>
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
+        <button class="pcp-table__sort" type="button">Season</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
         <button class="pcp-table__sort" type="button">Sub-class</button>
@@ -34,7 +32,7 @@
         <button class="pcp-table__sort" type="button">Markets</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
-        <button class="pcp-table__sort" type="button"><span style="background-color: yellow;">SHORTERPLEASE</span></button>
+        <button class="pcp-table__sort" type="button">Market Price Adjustment</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
         <button class="pcp-table__sort" type="button">Active</button>
@@ -48,7 +46,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">BRL</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">2</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">Blank</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -57,9 +57,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -69,17 +67,17 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">CSS</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">JB </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">23</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.00</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.77</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">GLF</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -90,7 +88,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">CTN</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">16</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">0.89</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -99,9 +99,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -111,8 +109,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">POP</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">DUR</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">22</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.05</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.19</td>
+      <td class="pcp-table__cell" aria-label="Type">Blank</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class">
         <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">ABC</abbr></li>
@@ -128,9 +128,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -140,8 +138,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">XYZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">RR </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">6</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.10</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -152,9 +152,7 @@
           <li><abbr title="spell_it_out">PNW</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -165,7 +163,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">PBS</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">13</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">0.89</td>
+      <td class="pcp-table__cell" aria-label="Type">Blank</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -175,9 +175,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -188,7 +186,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">SOR</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">9</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.81</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -198,9 +198,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -210,8 +208,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">QWE</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YSB</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">10</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.01</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.65</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -219,9 +219,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -232,7 +230,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">BRL</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">8</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">0.66</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -241,9 +241,7 @@
           <li><abbr title="spell_it_out">OTH</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--warning">Inactive</span>
       </td>
@@ -254,7 +252,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">CTN</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">5</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.11</td>
+      <td class="pcp-table__cell" aria-label="Type">Blank</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -264,9 +264,7 @@
           <li><abbr title="spell_it_out">SCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -276,8 +274,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">AAS</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">HRW</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">15</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.00</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">0.89</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -286,9 +286,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--warning">Inactive</span>
       </td>
@@ -299,7 +297,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">JB </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">4</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.05</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -308,9 +308,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -320,8 +318,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">XYZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">PBS</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">14</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.11</td>
       <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -331,9 +331,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -343,8 +341,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">PAQ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YC </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">12</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.12</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">0.09</td>
+      <td class="pcp-table__cell" aria-label="Type">Blank</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -353,9 +353,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -366,7 +364,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">BRL</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">3</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -375,9 +375,7 @@
           <li><abbr title="spell_it_out">PNW</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -387,8 +385,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">AZZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">CTN</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">11</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.08</td>
       <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -397,9 +397,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -411,6 +409,8 @@
       <td class="pcp-table__cell" aria-label="Display Order">25</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
       <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -418,9 +418,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -430,8 +428,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">PXX</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">JB </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">18</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.03</td>
       <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -439,9 +439,7 @@
           <li><abbr title="spell_it_out">NCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -451,8 +449,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">ZZP</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">PBS</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">7</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.08</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -460,9 +460,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -472,8 +470,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">MQQ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">RR </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">20</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.07</td>
       <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -482,9 +482,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -494,8 +492,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">RAD</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">SOR</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">19</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.03</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">0.09</td>
+      <td class="pcp-table__cell" aria-label="Type">PCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -505,9 +505,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -517,8 +515,10 @@
       <td class="pcp-table__cell" aria-label="Abbreviation">AAW</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YSB</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">21</td>
-      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.01</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">0.75</td>
+      <td class="pcp-table__cell" aria-label="Type">Blank</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -527,9 +527,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -540,7 +538,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">RR </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">1</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.13</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -551,9 +551,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
@@ -564,7 +562,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">SOR</abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">17</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.19</td>
+      <td class="pcp-table__cell" aria-label="Type">RCP</td>
+      <td class="pcp-table__cell" aria-label="Season">Fall</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -577,9 +577,7 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">No</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--warning">Inactive</span>
       </td>
@@ -590,7 +588,9 @@
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YC </abbr></td>
       <td class="pcp-table__cell" aria-label="Display Order">24</td>
       <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
-      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.02</td>
+      <td class="pcp-table__cell" aria-label="Type">Blank</td>
+      <td class="pcp-table__cell" aria-label="Season">Summer</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--unstyled">
@@ -600,9 +600,7 @@
           <li><abbr title="spell_it_out">OTH</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
-        Yes/No
-      </td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">Yes</td>
       <td class="pcp-table__cell" aria-label="Active">
         <span class="fsa-label fsa-label--success">Active</span>
       </td>
