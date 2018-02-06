@@ -1,3 +1,11 @@
+<div hidden>
+  - [x] Display Sequence: #
+  - [x] Rift Minimum: #.##
+  - [x] Rift Maximum: #.##
+  - [ ] Class Type: PCP|RCP|Blank
+  - [ ] Season Indicator: Summer|Fall
+  - [x] Market Price Adjustment: Yes|No
+</div>
 <table class="fsa-table fsa-table--borderless fsa-table--responsive pcp-table">
   <thead>
     <tr class="pcp-table__row">
@@ -5,16 +13,28 @@
         <button class="pcp-table__sort pcp-table__sort--down" type="button">Name</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
-        <button class="pcp-table__sort" type="button">Abbreviation</button>
+        <button class="pcp-table__sort" type="button" title="Abbreviation">Abbr</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
         <button class="pcp-table__sort" type="button">Commodity</button>
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
+        <button class="pcp-table__sort" type="button"><span style="background-color: yellow;">Order</span></button>
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
+        <button class="pcp-table__sort" type="button">Rift <abbr title="Minimum">Min</abbr></button>
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
+        <button class="pcp-table__sort" type="button">Rift <abbr title="Maximum">Max</abbr></button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
         <button class="pcp-table__sort" type="button">Sub-class</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
         <button class="pcp-table__sort" type="button">Markets</button>
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
+        <button class="pcp-table__sort" type="button"><span style="background-color: yellow;">SHORTERPLEASE</span></button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col">
         <button class="pcp-table__sort" type="button">Active</button>
@@ -26,70 +46,105 @@
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat HINT" type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum">Barley</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">XYZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">BRL</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">2</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">MIN</abbr></li>
           <li><abbr title="spell_it_out">SCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">CAN</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">CSS</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">JB </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">23</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">GLF</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Crambe</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">QWE</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">CTN</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">16</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">OTH</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Durum</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">POP</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">DUR</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">22</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">ABC</abbr></li>
           <li><abbr title="spell_it_out">XYZ</abbr></li>
           <li><abbr title="spell_it_out">XCD</abbr></li>
         </ul>
       </td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">OTH</abbr></li>
           <li><abbr title="spell_it_out">SCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">FLX</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">XYZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">RR </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">6</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">GLF</abbr></li>
           <li><abbr title="spell_it_out">MEM</abbr></li>
@@ -97,254 +152,398 @@
           <li><abbr title="spell_it_out">PNW</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Hard Red Spring</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">IIO</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">PBS</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">13</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">CIN</abbr></li>
           <li><abbr title="spell_it_out">MEM</abbr></li>
           <li><abbr title="spell_it_out">NCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Hard Red Winter</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">TRE</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">SOR</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">9</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">OTH</abbr></li>
           <li><abbr title="spell_it_out">PNW</abbr></li>
           <li><abbr title="spell_it_out">SCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Large</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">QWE</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YSB</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">10</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">KCM</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
-    <tr class="pcp-table__row pcp-table__row--inactive" title="Inactive">
+    <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Lentils</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">VCB</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">BRL</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">8</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">NCD</abbr></li>
           <li><abbr title="spell_it_out">OTH</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Inactive</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--warning">Inactive</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Long Grain</button></td>
-      <td class="pcp-table__cell" aria-label="Abbreviation">IQA</td>
+      <td class="pcp-table__cell" aria-label="Abbreviation">LGR</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">CTN</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">5</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">GLF</abbr></li>
           <li><abbr title="spell_it_out">PNW</abbr></li>
           <li><abbr title="spell_it_out">SCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
-    <tr class="pcp-table__row pcp-table__row--inactive" title="Inactive">
+    <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Medium Grain</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">AAS</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">HRW</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">15</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">CIN</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Inactive</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--warning">Inactive</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Mustard</button></td>
-      <td class="pcp-table__cell" aria-label="Abbreviation">MMM</td>
+      <td class="pcp-table__cell" aria-label="Abbreviation">MST</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">JB </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">4</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">CIN</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Oats</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">XYZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">PBS</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">14</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">CIN</abbr></li>
           <li><abbr title="spell_it_out">PNW</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Peas</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">PAQ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YC </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">12</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">PNW</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">RAP</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">WWE</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">BRL</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">3</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">MIN</abbr></li>
           <li><abbr title="spell_it_out">NCD</abbr></li>
           <li><abbr title="spell_it_out">PNW</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">SAF</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">AZZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">CTN</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">11</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">SCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">SES</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">UUU</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">HRW</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">25</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">SCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">SFN</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">PXX</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">JB </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">18</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">KCM</abbr></li>
           <li><abbr title="spell_it_out">NCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Short Grain</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">ZZP</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">PBS</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">7</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Small</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">MQQ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">RR </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">20</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">CIN</abbr></li>
           <li><abbr title="spell_it_out">SCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Soft Red Winter</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">RAD</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">SOR</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">19</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">KCM</abbr></li>
           <li><abbr title="spell_it_out">OTH</abbr></li>
           <li><abbr title="spell_it_out">SCD</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Soft White Wheat</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">AAW</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YSB</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">21</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">PNW</abbr></li>
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Sorghum</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">QPP</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">RR </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">1</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+        <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">KCM</abbr></li>
           <li><abbr title="spell_it_out">MEM</abbr></li>
           <li><abbr title="spell_it_out">MIN</abbr></li>
@@ -352,15 +551,23 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
-    <tr class="pcp-table__row pcp-table__row--inactive" title="Inactive">
+    <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">SUN</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">MZZ</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">SOR</abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">17</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">CIN</abbr></li>
           <li><abbr title="spell_it_out">MEM</abbr></li>
@@ -370,22 +577,35 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Inactive</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--warning">Inactive</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button type="button" data-behavior="open-modal" data-target="UNIQUE-ID-durum" class="fsa-btn fsa-btn--flat">Yellow</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">VVV</td>
       <td class="pcp-table__cell" aria-label="Commodity"><abbr title="spell_it_out">YC </abbr></td>
+      <td class="pcp-table__cell" aria-label="Display Order">24</td>
+      <td class="pcp-table__cell" aria-label="Rift Minimum">0.02</td>
+      <td class="pcp-table__cell" aria-label="Rift Maximum">1.09</td>
       <td class="pcp-table__cell" aria-label="Sub-class"></td>
       <td class="pcp-table__cell" aria-label="Markets">
-        <ul class="fsa-list--inline fsa-m-b--none">
+        <ul class="fsa-list--unstyled">
           <li><abbr title="spell_it_out">AMA</abbr></li>
           <li><abbr title="spell_it_out">KCM</abbr></li>
           <li><abbr title="spell_it_out">MEM</abbr></li>
           <li><abbr title="spell_it_out">OTH</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active</td>
+      <td class="pcp-table__cell" aria-label="Market Price Adjustment">
+        Yes/No
+      </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
   </tbody>
 </table>
