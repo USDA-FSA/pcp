@@ -1,0 +1,25 @@
+// TODO move to fsa-style //////////////////////////////////////////////////////
+
+.fsa-tophat__bd,
+.fsa-header-app__bd,
+.fsa-nav-global__bd,
+.fsa-topper__bd,
+.fsa-footer__bd,
+.fsa-screen-id__bd {
+  @media print {
+    max-width: none;
+  }
+}
+
+.fsa-footer,
+.fsa-screen-id {
+  @media print {
+    box-shadow: none !important;
+  }
+}
+
+// TODO move to elsewhere in PCP partials //////////////////////////////////////
+
+.thingthing {
+
+}
