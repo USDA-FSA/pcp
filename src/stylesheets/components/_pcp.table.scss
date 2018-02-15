@@ -187,4 +187,8 @@ th.pcp-table__cell--bisect {
     max-height: 68vh;
   }
 
+  @media print {
+    max-height: none;
+  }
+
 }
