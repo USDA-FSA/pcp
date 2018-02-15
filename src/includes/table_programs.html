@@ -8,6 +8,9 @@
         <button class="pcp-table__sort" type="button">Abbreviation</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col" role="button">
+        <button class="pcp-table__sort" type="button">Type</button>
+      </th>
+      <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col" role="button">
         <button class="pcp-table__sort" type="button">Markets</button>
       </th>
       <th class="pcp-table__cell pcp-table__th pcp-table__th--sticky" scope="col" role="button">
@@ -19,6 +22,11 @@
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">Cotton Markets</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">CTN</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Market price file upload</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">GLF</abbr></li>
@@ -27,11 +35,18 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">Eastern Markets</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">EST</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Manual market price entry</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">GLF</abbr></li>
@@ -39,11 +54,18 @@
           <li><abbr title="spell_it_out">OTH</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">GULF-KC-AMA</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">GLF</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Manual market price entry</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">KCM</abbr></li>
@@ -51,22 +73,39 @@
           <li><abbr title="spell_it_out">PNW</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
-    <tr class="pcp-table__row pcp-table__row--inactive">
+    <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">Central Coast</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">CCC</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Market price file upload</li>
+          <li>Manual market price entry</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">WCD</abbr></li>
           <li><abbr title="spell_it_out">PNW</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Inactive</td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--warning">Inactive</span>
+      </td>
     </tr>
-    <tr class="pcp-table__row pcp-table__row--inactive">
+    <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">New England Western</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">NEW</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Market price file upload</li>
+          <li>Manual market price entry</li>
+          <li>LDP file upload</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">ABC</abbr></li>
@@ -74,21 +113,35 @@
           <li><abbr title="spell_it_out">XYZ</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Inactive </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--warning">Inactive</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">North Central Marketing</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">MIN</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Manual market price entry</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">PNW Markets</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">PNW</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Manual market price entry</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">GLF</abbr></li>
@@ -96,11 +149,19 @@
           <li><abbr title="spell_it_out">PNW</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
     <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">Rice Markets</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">RR</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Market price file upload</li>
+          <li>LDP file upload</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets">
         <ul class="fsa-list--inline fsa-m-b--none">
           <li><abbr title="spell_it_out">GLF</abbr></li>
@@ -111,13 +172,23 @@
           <li><abbr title="spell_it_out">WCD</abbr></li>
         </ul>
       </td>
-      <td class="pcp-table__cell" aria-label="Active">Active </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--success">Active</span>
+      </td>
     </tr>
-    <tr class="pcp-table__row pcp-table__row--inactive">
+    <tr class="pcp-table__row">
       <td class="pcp-table__cell" aria-label="Name"><button class="fsa-btn fsa-btn--flat" type="button">Jelly Belly Markets</button></td>
       <td class="pcp-table__cell" aria-label="Abbreviation">JBP</td>
+      <td class="pcp-table__cell" aria-label="Type">
+        <ul class="fsa-list--unstyled">
+          <li>Manual market price entry</li>
+          <li>LDP file upload</li>
+        </ul>
+      </td>
       <td class="pcp-table__cell" aria-label="Markets"></td>
-      <td class="pcp-table__cell" aria-label="Active">Inactive </td>
+      <td class="pcp-table__cell" aria-label="Active">
+        <span class="fsa-label fsa-label--warning">Inactive</span>
+      </td>
     </tr>
   </tbody>
 </table>
