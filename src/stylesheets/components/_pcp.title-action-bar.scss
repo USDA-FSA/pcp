@@ -50,4 +50,11 @@
 
   }
 
+  &__icon {
+    $icon-size: ($size-medium * .9);
+    width: $icon-size;
+    height: $icon-size;
+    transform: translateY(-1px);
+  }
+
 }
