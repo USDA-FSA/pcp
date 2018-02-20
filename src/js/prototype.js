@@ -205,6 +205,39 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 
 })
 
+$('body').on('change', '[data-behavior~="multi-check"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('[data-multi-check-group]');
+  var $checks = $component.find('[data-multi-check-group__item]');
+
+  if($self.is(':checked')) {
+    $checks.prop('checked', true);
+  }
+  else {
+    $checks.prop('checked', false);
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="multi-check-item"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('[data-multi-check-group]');
+  var $parent = $component.find('[data-multi-check-group__parent]');
+  var $checks = $component.find('[data-multi-check-group__item]');
+
+  if ($checks.not(":checked").length === 0) {
+    $parent.prop('indeterminate', false);
+    $parent.prop('checked', true);
+  }
+  else {
+    $parent.prop('indeterminate', true);
+    $parent.prop('checked', false);
+  }
+
+})
+
 $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
   var $self = $(this);
   var $component = $self.closest('.pcp-popover');
