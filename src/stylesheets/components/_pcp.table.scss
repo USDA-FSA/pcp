@@ -151,6 +151,10 @@
 
   }
 
+  @media print {
+    margin-top: 2em;
+  }
+
 }
 
 // scss-lint:disable QualifyingElement SelectorFormat
@@ -188,6 +192,8 @@ th.pcp-table__cell--bisect {
   }
 
   @media print {
+    border-left: 0;
+    border-right: 0;
     max-height: none;
   }
 

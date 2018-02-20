@@ -1,5 +1,67 @@
 // TODO move to fsa-style //////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+@media print {
+  @page {
+    // size: landscape;
+    // size: 320mm 450mm;
+    // size: 320mm;
+    size: (8.5in * 1.75) (11in * 1.75);
+    margin: .25in;
+  }
+}
+
+body {
+  @media print {
+    background-color: transparent;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+.fsa-nav-global {
+  @media print {
+    border-bottom-color: $color-fsa-tertiary-200;
+  }
+}
+
+.fsa-nav-global__link--active .fsa-nav-global__text {
+  @media print {
+    box-shadow: none;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+.fsa-content-tabs {
+  @media print {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+.fsa-content-tabs__label-text {
+
+  @media print {
+
+    color: $color-fsa-tertiary-300;
+
+    .fsa-content-tabs__label--active & {
+      font-weight: $font-bold;
+      color: black;
+      box-shadow: none;
+    }
+
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+.pcp-table__th--sticky {
+  @media print {
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
 .fsa-tophat__bd,
 .fsa-header-app__bd,
 .fsa-nav-global__bd,
@@ -15,6 +77,31 @@
 .fsa-screen-id {
   @media print {
     box-shadow: none !important;
+  }
+}
+
+.fsa-screen-id {
+
+  @media print {
+    border-top: 1px solid $color-fsa-tertiary-100;
+    background-color: transparent;
+    padding: initial;
+    padding-top: .5em;
+    margin: 2em 0 0;
+  }
+
+  &__bd {
+    @media print {
+      color: initial;
+    }
+  }
+
+}
+
+.fsa-topper,
+.fsa-footer {
+  @media print {
+    display: none;
   }
 }
 
