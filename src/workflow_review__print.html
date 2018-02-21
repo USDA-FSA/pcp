@@ -1,0 +1,88 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Posted County Prices: Review' %}
+
+<body>
+
+  <section>
+
+    <div class="pcp-print">
+
+      <div class="pcp-print__hd">
+        <header></header>
+      </div>
+
+      <div class="pcp-print__segment">
+        <header>
+          {% include: 'includes/pcp-stepped-tabs__review.html' %}
+          {% include: 'includes/pcp-info-bar__print.html' %}
+        </header>
+        <article>
+          <h1>Commodities</h1>
+          <h2>YC - Corn</h2>
+          {% include: 'includes/review-adjustments__two-up.html' %}
+          <h2>YSB - Soybean</h2>
+          {% include: 'includes/review-adjustments__three-up.html' %}
+          <h2>SOR - Sorghum</h2>
+          {% include: 'includes/review-adjustments__two-up.html' %}
+          <h2>HRW - Hard Red Winter Wheat</h2>
+          {% include: 'includes/review-adjustments__three-up.html' %}
+          <h2>SRW - Soft Red Winter Wheat</h2>
+          {% include: 'includes/review-adjustments__two-up.html' %}
+          <h2>WHI - Soft White Wheat</h2>
+          {% include: 'includes/review-adjustments__two-up.html' %}
+          <h2>HRS - Hard Red Spring Wheat</h2>
+          {% include: 'includes/review-adjustments__three-up.html' %}
+          <h2>HAD - Hard Amber Durum</h2>
+          {% include: 'includes/review-adjustments__two-up.html' %}
+          <h2>OAT - Oats</h2>
+          {% include: 'includes/review-adjustments__two-up.html' %}
+          <h2>BRL - Barley</h2>
+          {% include: 'includes/review-adjustments__two-up.html' %}
+        </article>
+      </div>
+
+      <div class="pcp-print__segment">
+        <header>
+          {% include: 'includes/pcp-stepped-tabs__review.html' %}
+          {% include: 'includes/pcp-info-bar__print.html' %}
+        </header>
+        <article>
+          <h1>LDP</h1>
+          {% include: 'includes/table_review-ldp-change.html' %}
+        </article>
+      </div>
+
+      <div class="pcp-print__segment">
+        <header>
+          {% include: 'includes/pcp-stepped-tabs__review.html' %}
+          {% include: 'includes/pcp-info-bar__print.html' %}
+        </header>
+        <article>
+          <h1>Differential</h1>
+          <h2>Commodities</h2>
+          {% include: 'includes/table_review-differential__commodities.html' %}
+          <h2>Minor Oilseeds</h2>
+          {% include: 'includes/table_review-differential__oilseeds.html' %}
+          <h2>Pulses</h2>
+          {% include: 'includes/table_review-differential__pulses.html' %}
+          <h2>Cotton</h2>
+          <pre>{% include: 'includes/table_review-differential__cotton__RAW.html' %}</pre>
+          <h2>Rice</h2>
+          <pre>{% include: 'includes/table_review-differential__rice__RAW.html' %}</pre>
+        </article>
+      </div>
+
+      <div class="pcp-print__ft">
+        <footer></footer>
+      </div>
+
+    </div>
+
+  </section>
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>

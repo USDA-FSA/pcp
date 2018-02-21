@@ -1,0 +1,40 @@
+.pcp-print {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $font-bold;
+  }
+
+  h2 {
+    border-top: 2px solid $color-fsa-tertiary;
+    margin-top: 1em;
+    padding-top: $size-default;
+  }
+
+  pre {
+    @include font-size(3);
+    background-color: transparent;
+    padding: $size-default;
+    color: inherit;
+    border: 1px solid $table-border-color;
+  }
+
+  .pcp-table {
+    border-top-width: 3px;
+    border-left: 1px solid $table-border-color;
+    border-right: 1px solid $table-border-color;
+  }
+
+  &__hd {}
+
+  &__segment {
+    page-break-after: always;
+  }
+
+  &__ft {}
+
+}
