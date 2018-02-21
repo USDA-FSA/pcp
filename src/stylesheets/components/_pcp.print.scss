@@ -29,10 +29,21 @@
     border-right: 1px solid $table-border-color;
   }
 
+  .pcp-stepped-tabs {
+    margin-left: -($size-default + .1rem);
+    margin-right: -($size-default + .1rem);
+    margin-bottom: -($size-default + .1rem);
+  }
+
   &__hd {}
 
   &__segment {
     page-break-after: always;
+  }
+
+  &__segment-hd {
+    border: 1px solid $table-border-color;
+    padding: $size-default;
   }
 
   &__ft {}

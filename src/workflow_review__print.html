@@ -14,8 +14,9 @@
 
       <div class="pcp-print__segment">
         <header>
-          {% include: 'includes/pcp-stepped-tabs__review.html' %}
-          {% include: 'includes/pcp-info-bar__print.html' %}
+          <div class="pcp-print__segment-hd">
+            {% include: 'includes/print-segment-header.html' %}
+          </div>
         </header>
         <article>
           <h1>Commodities</h1>
@@ -44,8 +45,9 @@
 
       <div class="pcp-print__segment">
         <header>
-          {% include: 'includes/pcp-stepped-tabs__review.html' %}
-          {% include: 'includes/pcp-info-bar__print.html' %}
+          <div class="pcp-print__segment-hd">
+            {% include: 'includes/print-segment-header.html' %}
+          </div>
         </header>
         <article>
           <h1>LDP</h1>
@@ -55,8 +57,9 @@
 
       <div class="pcp-print__segment">
         <header>
-          {% include: 'includes/pcp-stepped-tabs__review.html' %}
-          {% include: 'includes/pcp-info-bar__print.html' %}
+          <div class="pcp-print__segment-hd">
+            {% include: 'includes/print-segment-header.html' %}
+          </div>
         </header>
         <article>
           <h1>Differential</h1>
@@ -82,6 +85,11 @@
   </section>
 
   {% include: 'includes/scripts.html' %}
+  <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', this.print());
+
+  </script>
 
 </body>
 
