@@ -227,14 +227,26 @@ $('body').on('change', '[data-behavior~="multi-check-item"]', function(event) {
   var $parent = $component.find('[data-multi-check-group__parent]');
   var $checks = $component.find('[data-multi-check-group__item]');
 
-  if ($checks.not(":checked").length === 0) {
+  checksAmt = $checks.length;
+  checksAmtNotChecked = $checks.not(":checked").length;
+
+  console.log(checksAmtNotChecked + ' of ' + checksAmt + ' are NOT checked');
+
+  if (checksAmt === checksAmtNotChecked) {
+    $parent.prop('indeterminate', false);
+    $parent.prop('checked', false);
+  }
+  else if (checksAmtNotChecked === 0) {
+    // console.log('ALL children are checked');
     $parent.prop('indeterminate', false);
     $parent.prop('checked', true);
   }
   else {
+    // console.log('SOME children are checked');
     $parent.prop('indeterminate', true);
     $parent.prop('checked', false);
   }
+
 
 })
 
