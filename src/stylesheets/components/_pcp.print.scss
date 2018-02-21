@@ -24,9 +24,15 @@
   }
 
   .pcp-table {
-    border-top-width: 3px;
+    border-top: 3px solid $table-border-color;
     border-left: 1px solid $table-border-color;
     border-right: 1px solid $table-border-color;
+  }
+
+  .pcp-overflow-table {
+    max-height: none;
+    border: 0;
+    margin-bottom: 2em;
   }
 
   .pcp-stepped-tabs {
