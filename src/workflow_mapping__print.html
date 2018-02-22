@@ -1,0 +1,86 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Posted County Prices: Adjustments' %}
+
+<body>
+
+  <section>
+
+    <div class="pcp-print">
+
+      <div class="pcp-print__hd">
+        <header></header>
+      </div>
+
+      <div class="pcp-print__segment">
+        <header>
+          <div class="pcp-print__segment-hd">
+            {% include: 'includes/print-segment-header__mapping.html' %}
+          </div>
+        </header>
+        <article>
+          <h1>HRW - Hard Red Winter</h1>
+          <ul class="fsa-list--inline">
+            <li>
+              <strong>Status:</strong>
+              <span class="fsa-label fsa-label--warning" title="This Commodity is actively being worked on">In Progress</span>
+            </li>
+            <li>
+              <strong>High:</strong>
+              <span type="button" class="fsa-badge fsa-badge--alert" title="High">3</span>
+            </li>
+            <li>
+              <strong>Low:</strong>
+              <span type="button" class="fsa-badge fsa-badge--warning" title="Low">7</span>
+            </li>
+            <li>
+              <strong>Normal:</strong>
+              <span type="button" class="fsa-badge" title="Normal">5</span>
+            </li>
+          </ul>
+
+          <div class="fsa-m-b--m">
+            <style>
+              .TEMP-MAP-PREVIEW-DONT-USE-ME-IN-PRODUCTION {
+                display: block;
+                max-width: 100%;
+                border: 1px solid #c8c7c6;
+              }
+            </style>
+            <img class="TEMP-MAP-PREVIEW-DONT-USE-ME-IN-PRODUCTION" src="img/map-adjustments--print.jpg" alt="">
+          </div>
+
+          <div class="fsa-grid">
+            <div class="fsa-grid__1 fsa-grid__1/3@m OUTLINE">
+              {% include: 'includes/pcp-adjust__terminal.html' @title:'Terminal Adjustments' %}
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@m OUTLINE">
+              {% include: 'includes/pcp-adjust__state.html' @title:'State Adjustments' %}
+            </div>
+            <div class="fsa-grid__1 fsa-grid__1/3@m OUTLINE">
+              {% include: 'includes/pcp-adjust__protein-discounts.html' @title:'Premiums/Discount' %}
+            </div>
+          </div>
+
+        </article>
+      </div>
+
+      <div class="pcp-print__ft">
+        <footer></footer>
+      </div>
+
+    </div>
+
+  </section>
+
+  {% include: 'includes/scripts.html' %}
+
+  <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', this.print());
+
+  </script>
+
+</body>
+
+</html>
