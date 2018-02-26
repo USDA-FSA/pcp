@@ -41,6 +41,12 @@
     margin-bottom: -($size-default + .1rem);
   }
 
+  .pcp-adjust {
+    border: 1px solid $table-border-color;
+    border-bottom: 0;
+    outline: 5px solid red;
+  }
+
   &__hd {}
 
   &__segment {
