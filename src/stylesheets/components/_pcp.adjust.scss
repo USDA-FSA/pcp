@@ -5,15 +5,21 @@
 
   // ---------------------------------------------------------------------------
 
-
   &__hd {
+
     position: relative;
     position: sticky;
     top: 0;
     z-index: 1;
+
+    @media print {
+      position: static
+    }
+
   }
 
   &__title {
+
     @include font-size(2);
     text-transform: uppercase;
     margin: 0;
@@ -22,6 +28,11 @@
     font-weight: $font-bold;
     font-family: $font-sans;
     color: $color-fsa-tertiary;
+
+    .pcp-print & {
+      display: none;
+    }
+
   }
 
   &__options {
@@ -137,6 +148,10 @@
     text-transform: uppercase;
 
     &--adj {}
+
+    .pcp-print & {
+      background-color: $color-fsa-tertiary-100;
+    }
 
   }
 

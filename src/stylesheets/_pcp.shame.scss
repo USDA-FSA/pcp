@@ -7,7 +7,7 @@
     // size: 320mm 450mm;
     // size: 320mm;
     size: (8.5in * 1.75) (11in * 1.75);
-    margin: .25in;
+    // margin: .25in;
   }
 }
 
@@ -18,10 +18,26 @@ body {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+.fsa-badge--alert {
+
+  @media print {
+    background-color: shade($badge-bgc-alert, 60%);
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
 .fsa-label {
   // brute-force to override any inheritance (e.g. within an <h1>)
   font-family: $font-sans;
   font-weight: $font-normal;
+
+  &--alert {
+    @media print {
+      background-color: shade($label-bgc-alert, 60%);
+    }
+  }
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////

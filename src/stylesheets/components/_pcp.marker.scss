@@ -120,14 +120,18 @@ $marker-color-affected: $color-fsa-aqua-300; // from USWDS
     }
 
     .pcp-marker--high & {
+
       background-color: $marker-bgcolor-high;
-      // border-color: $marker-border-color-high;
       color: $marker-text-high;
+
+      @media print {
+        background-color: shade($marker-bgcolor-high, 60%);
+      }
+
     }
 
     .pcp-marker--low & {
       background-color: $marker-bgcolor-low;
-      // border-color: $marker-border-color-low;
       color: $marker-text-low;
     }
 
@@ -156,14 +160,6 @@ $marker-color-affected: $color-fsa-aqua-300; // from USWDS
       transform: rotate(45deg);
       z-index: 20;
     }
-
-    // .pcp-marker--high &:before {
-    //   background-color: $marker-bgcolor-high;
-    // }
-    //
-    // .pcp-marker--low &:before {
-    //   background-color: $marker-bgcolor-low;
-    // }
 
     .pcp-marker--active &:after {
       z-index: 10;
