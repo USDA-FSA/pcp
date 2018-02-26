@@ -327,6 +327,20 @@ $('body').on('change', '[data-behavior~="DEMO-FAKING-SELECT-CONTENT-SWAP"]', fun
 
 })
 
+var windowObjectReference; // global variable
+
+$('body').on('click', '[data-behavior~="new-print-window"]', function(event) {
+
+  windowObjectReference = window.open(
+    this.href,
+    "PCP Custom Print",
+    "width=1200, height=540, resizable, scrollbars=yes, status=1, left=0, top=200, location=no"
+  );
+
+  return false;
+
+})
+
 $('body').on('click', '[data-behavior~="rift-pin"]', function(event) {
 
   alert('Pin this!')
