@@ -205,6 +205,20 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 
 })
 
+function checkMultiCheck() {
+
+  var $component = $('[data-multi-check-group]');
+  var $checker = $component.find('[data-behavior~="multi-check"]');
+  var $checks = $component.find('[data-multi-check-group__item]');
+
+  if ($checks.is(':checked')) {
+    $checker.prop('indeterminate', true);
+  }
+
+}
+
+checkMultiCheck();
+
 $('body').on('change', '[data-behavior~="multi-check"]', function(event) {
 
   var $self = $(this);
