@@ -349,6 +349,12 @@ $('body').on('change', '[data-behavior~="DEMO-FAKING-SELECT-CONTENT-SWAP"]', fun
 
 var windowObjectReference; // global variable
 
+function popupCenter(url, title, w, h) {
+  var left = (screen.width  / 2) - ( w / 2);
+  var top = (screen.height / 2 ) - ( h / 2);
+  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+}
+
 $('body').on('click', '[data-behavior~="new-print-window"]', function(event) {
 
   var $self = $(this);
@@ -356,24 +362,14 @@ $('body').on('click', '[data-behavior~="new-print-window"]', function(event) {
   var popTitle = $self.data('pop-title');
   var popWidth = $self.data('pop-width');
   var popHeight = $self.data('pop-height');
-  var popLeft = $self.data('pop-left');
-  var popTop = $self.data('pop-top');
+  var popExtras = 'resizable,scrollbars,menubar=no,directories=no,location=no,toolbar=no,status=no,copyhistory=no,' + $self.data('pop-extras');
+  var popLeft = (screen.width  / 2) - ( popWidth / 2);
+  var popTop = (screen.height / 2 ) - ( popHeight / 2);
+  var popFeatures = 'width=' + popWidth + ',height=' + popHeight + ',left=' + popLeft + ',top=' + popTop + ',' + popExtras;
 
-  console.log('Print Window Attributes:\nTITLE: ' + popTitle + ', WIDTH: ' + popWidth + ', HEIGHT: ' + popHeight + ', LEFT: ' + popLeft + ', TOP: ' + popTop )
+  console.log('WINDOW FEATURES: ' + popFeatures);
 
-  // function OpenMe(){
-  //   var height = 250;
-  //   var width = 550;
-  //   var top = window.innerHeight-height;
-  //   var left = window.innerHeight-width;
-  //   window.open('https://google.com', '_blank', 'location=yes, height=250,width=550, top='+top+', left='+left+', scrollbars=yes,status=yes');
-  // }
-
-  windowObjectReference = window.open(
-    this.href,
-    popTitle,
-    'width=' + popWidth + ',height=' + popHeight + ',left=' + popLeft + ',top=' + popTop + ',resizable,scrollbars,status=no,centerscreen'
-  );
+  windowObjectReference = window.open(this.href, popTitle, popFeatures);
 
   return false;
 
