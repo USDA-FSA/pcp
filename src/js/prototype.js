@@ -208,12 +208,33 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 function checkMultiCheck() {
 
   var $component = $('[data-multi-check-group]');
-  var $checker = $component.find('[data-behavior~="multi-check"]');
-  var $checks = $component.find('[data-multi-check-group__item]');
 
-  if ($checks.is(':checked')) {
-    $checker.prop('indeterminate', true);
-  }
+  $component.each(function(index) {
+
+    var $self = $(this);
+
+    var $checker = $self.find('[data-behavior~="multi-check"]');
+    var $checks = $self.find('[data-multi-check-group__item]');
+
+    checksAmt = $checks.length;
+    checksAmtNotChecked = $checks.not(":checked").length;
+
+    if ($checks.is(':checked')) {
+      if (checksAmt === checksAmtNotChecked) {
+        $checker.prop('indeterminate', false);
+        $checker.prop('checked', false);
+      }
+      else if (checksAmtNotChecked === 0) {
+        $checker.prop('indeterminate', false);
+        $checker.prop('checked', true);
+      }
+      else {
+        $checker.prop('indeterminate', true);
+        $checker.prop('checked', false);
+      }
+    }
+
+  });
 
 }
 
@@ -260,7 +281,6 @@ $('body').on('change', '[data-behavior~="multi-check-item"]', function(event) {
     $parent.prop('indeterminate', true);
     $parent.prop('checked', false);
   }
-
 
 })
 
@@ -331,10 +351,28 @@ var windowObjectReference; // global variable
 
 $('body').on('click', '[data-behavior~="new-print-window"]', function(event) {
 
+  var $self = $(this);
+
+  var popTitle = $self.data('pop-title');
+  var popWidth = $self.data('pop-width');
+  var popHeight = $self.data('pop-height');
+  var popLeft = $self.data('pop-left');
+  var popTop = $self.data('pop-top');
+
+  console.log('Print Window Attributes:\nTITLE: ' + popTitle + ', WIDTH: ' + popWidth + ', HEIGHT: ' + popHeight + ', LEFT: ' + popLeft + ', TOP: ' + popTop )
+
+  // function OpenMe(){
+  //   var height = 250;
+  //   var width = 550;
+  //   var top = window.innerHeight-height;
+  //   var left = window.innerHeight-width;
+  //   window.open('https://google.com', '_blank', 'location=yes, height=250,width=550, top='+top+', left='+left+', scrollbars=yes,status=yes');
+  // }
+
   windowObjectReference = window.open(
     this.href,
-    "PCP Custom Print",
-    "width=1200, height=540, resizable, scrollbars=yes, status=1, left=0, top=200, location=no"
+    popTitle,
+    'width=' + popWidth + ',height=' + popHeight + ',left=' + popLeft + ',top=' + popTop + ',resizable,scrollbars,status=no,centerscreen'
   );
 
   return false;
