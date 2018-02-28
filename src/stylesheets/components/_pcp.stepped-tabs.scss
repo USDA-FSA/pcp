@@ -118,13 +118,17 @@
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        color: $color-fsa-white;
+        &:not(span,div) {
+          color: $color-fsa-white;
+        }
       }
 
       &:focus,
       &:hover {
-        outline: 0;
-        background-color: $colorDark;
+        &:not(span,div) {
+          outline: 0;
+          background-color: $colorDark;
+        }
       }
 
     }
@@ -140,11 +144,15 @@
       &:active,
       &:hover {
         // scss-lint:disable ImportantRule
-        color: $color-fsa-white !important;
+        &:not(span,div) {
+          color: $color-fsa-white !important;
+        }
       }
 
       &:hover {
-        background-color: $colorDark;
+        &:not(span,div) {
+          background-color: $colorDark;
+        }
       }
 
     }
