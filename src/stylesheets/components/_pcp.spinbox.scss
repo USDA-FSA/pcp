@@ -86,7 +86,9 @@
       &:hover,
       &:focus {
         // background-color: $color-white;
-        border-color: $button-border-color-hover;
+        &:not([disabled]) {
+          border-color: $button-border-color-hover;
+        }
       }
 
     }
