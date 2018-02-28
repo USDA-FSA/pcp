@@ -52,7 +52,7 @@ $('body').on('blur', '[data-behavior~="validate-commodity"], [data-behavior~="va
 $('body').on('keyup', '[data-behavior~="validate-closing"]', function(event) {
 
   var $self = $(this);
-  var $target = $('#' + $self.attr('data-save-target'));
+  var $target = $('#' + $self.attr('data-save-target'));''
 
   if ($self.val() == '') {
     $target.attr('disabled', true);
@@ -356,10 +356,23 @@ function popupCenter(url, title, w, h) {
 }
 
 function pcpCustomPrint() {
-  document.addEventListener('DOMContentLoaded', this.print());
+  // document.addEventListener('DOMContentLoaded', this.print());
 }
 
 $('body').on('click', '[data-behavior~="new-print-window"]', function(event) {
+
+  // USAGE:
+  // <a
+  //   href="workflow_mapping__print.html"
+  //   data-behavior="new-print-window"
+  //   data-pop-title="loremIpsum"
+  //   data-pop-width="1080"
+  //   data-pop-height="768"
+  //   data-pop-extras=""
+  // >
+  //   text
+  // </a>
+
 
   var $self = $(this);
 
