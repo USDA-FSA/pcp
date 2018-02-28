@@ -8,6 +8,8 @@
 
     <div class="pcp-print">
 
+      <div class="pcp-print__draft">Draft</div>
+
       <div class="pcp-print__hd">
         <header></header>
       </div>
@@ -53,15 +55,15 @@
           <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__1/3@m">
               <h2>Terminal Adjustments</h2>
-              {% include: 'includes/pcp-adjust__terminal.html' @title:'Terminal Adjustments' %}
+              {% include: 'includes/pcp-adjust__terminal___print.html' @title:'Terminal Adjustments' %}
             </div>
             <div class="fsa-grid__1 fsa-grid__1/3@m">
               <h2>State Adjustments</h2>
-              {% include: 'includes/pcp-adjust__state.html' @title:'State Adjustments' %}
+              {% include: 'includes/pcp-adjust__state___print.html' @title:'State Adjustments' %}
             </div>
             <div class="fsa-grid__1 fsa-grid__1/3@m">
               <h2>Premiums / Discount</h2>
-              {% include: 'includes/pcp-adjust__protein-discounts.html' @title:'Premiums/Discount' %}
+              {% include: 'includes/pcp-adjust__protein-discounts___print.html' @title:'Premiums/Discount' %}
             </div>
           </div>
 
@@ -78,10 +80,8 @@
 
   {% include: 'includes/scripts.html' %}
 
-  <script type="text/javascript">
-
-    document.addEventListener('DOMContentLoaded', this.print());
-
+  <script>
+    pcpCustomPrint();
   </script>
 
 </body>

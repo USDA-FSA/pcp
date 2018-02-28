@@ -51,7 +51,7 @@
         </header>
         <article>
           <h1>LDP</h1>
-          {% include: 'includes/table_review-ldp-change.html' %}
+          {% include: 'includes/table_review-ldp-change__print.html' %}
         </article>
       </div>
 
@@ -64,7 +64,7 @@
         <article>
           <h1>Differential</h1>
           <h2>Commodities</h2>
-          {% include: 'includes/table_review-differential__commodities.html' %}
+          {% include: 'includes/table_review-differential__commodities___print.html' %}
           <h2>Minor Oilseeds</h2>
           {% include: 'includes/table_review-differential__oilseeds.html' %}
           <h2>Pulses</h2>
@@ -86,10 +86,8 @@
 
   {% include: 'includes/scripts.html' %}
 
-  <script type="text/javascript">
-
-    document.addEventListener('DOMContentLoaded', this.print());
-
+  <script>
+    pcpCustomPrint();
   </script>
 
 </body>

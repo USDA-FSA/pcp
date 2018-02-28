@@ -12,10 +12,6 @@
     top: 0;
     z-index: 1;
 
-    @media print {
-      position: static
-    }
-
   }
 
   &__title {
@@ -28,10 +24,6 @@
     font-weight: $font-bold;
     font-family: $font-sans;
     color: $color-fsa-tertiary;
-
-    .pcp-print & {
-      display: none;
-    }
 
   }
 

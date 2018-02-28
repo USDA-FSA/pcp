@@ -355,6 +355,10 @@ function popupCenter(url, title, w, h) {
   return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 }
 
+function pcpCustomPrint() {
+  document.addEventListener('DOMContentLoaded', this.print());
+}
+
 $('body').on('click', '[data-behavior~="new-print-window"]', function(event) {
 
   var $self = $(this);

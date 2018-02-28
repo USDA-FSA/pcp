@@ -8,6 +8,8 @@
 
     <div class="pcp-print">
 
+      <div class="pcp-print__draft">Draft</div>
+
       <div class="pcp-print__hd">
         <header></header>
       </div>
@@ -30,7 +32,7 @@
               <span>Woody Boyd</span>
             </li>
           </ul>
-          {% include: 'includes/program-entry__glf.html' %}
+          {% include: 'includes/program-entry__glf___print.html' %}
         </article>
       </div>
 
@@ -53,9 +55,9 @@
             </li>
           </ul>
           <h2>Markets</h2>
-          {% include: 'includes/program-entry__pnw.html' %}
+          {% include: 'includes/program-entry__pnw___print.html' %}
           <h2>Proteins</h2>
-          {% include: 'includes/program-entry__pnw-proteins.html' %}
+          {% include: 'includes/program-entry__pnw-proteins___print.html' %}
         </article>
       </div>
 
@@ -94,10 +96,8 @@
 
   {% include: 'includes/scripts.html' %}
 
-  <script type="text/javascript">
-
-    document.addEventListener('DOMContentLoaded', this.print());
-
+  <script>
+    pcpCustomPrint();
   </script>
 
 </body>
