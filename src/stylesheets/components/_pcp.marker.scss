@@ -145,6 +145,7 @@ $marker-color-affected: $color-fsa-aqua-300; // from USWDS
 
     $pinpoint-size: $size-default;
     display: block;
+    pointer-events: none;
 
     &:before {
       content: '';
