@@ -112,6 +112,8 @@
 
       @media print {
         position: static;
+        box-shadow: none;
+        background: transparent;
       }
 
     }
@@ -151,6 +153,14 @@
     &--down:after {
       background-image: url('../img/chevron-down.png');
       background-image: url('../img/chevron-down.svg');
+    }
+
+    &:hover:not(.pcp-table__sort--up, .pcp-table__sort--down) {
+      &:after {
+        background-image: url('#{$image-path}/chevron-up.png');
+        background-image: url('#{$image-path}/chevron-up.svg');
+        opacity: .4;
+      }
     }
 
   }
