@@ -1,0 +1,45 @@
+.WIP-proceeder {
+
+  $component-bgcolor-default: $white;
+  $component-border-color: $color-fsa-tertiary-200;
+  $component-padding: $size-default;
+
+  & {
+    margin: $size-large 0;
+    background-color: $component-bgcolor-default;
+    border: 1px solid $component-border-color;
+    padding: $component-padding;
+  }
+
+  &--sticky {
+    position: sticky;
+    bottom: $size-default;
+    z-index: 2;
+    box-shadow: 0 0 $size-default rgba(0, 0, 0, .3);
+  }
+
+  &__hd {}
+
+  &__bd {
+    display: flex;
+  }
+
+  &__item {
+
+    & {
+      margin-right: $size-default;
+    }
+
+    &--primary {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+  }
+
+}
