@@ -1,0 +1,109 @@
+.pcp-print {
+
+  padding: $size-base;
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  &__draft {
+    font-size: ($font-size-3 * 15);
+    line-height: 1;
+    font-weight: $font-bold;
+    color: transparentize(black, .85);
+    text-align: center;
+    text-transform: uppercase;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transform: rotate(-45deg);
+  }
+
+  &__hd {}
+
+  &__segment {
+    page-break-after: always;
+  }
+
+  &__segment-hd {
+    border: 1px solid $table-border-color;
+    padding: $size-default;
+  }
+
+  &__ft {}
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  // *:not(code, kbd, pre, samp) {
+  //   font-family: $helvetica;
+  // }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $font-bold;
+  }
+
+  h2 {
+    border-top: 2px solid $color-fsa-tertiary;
+    margin-top: 1em;
+    padding-top: $size-default;
+  }
+
+  pre {
+    @include font-size(3);
+    background-color: transparent;
+    padding: $size-default;
+    color: inherit;
+    border: 1px solid $table-border-color;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  .pcp-stepped-tabs {
+    margin-left: -($size-default + .1rem);
+    margin-right: -($size-default + .1rem);
+    margin-bottom: -($size-default + .1rem);
+  }
+
+  .pcp-table {
+    border-top: 3px solid $table-border-color;
+    border-left: 1px solid $table-border-color;
+    border-right: 1px solid $table-border-color;
+  }
+
+  .pcp-overflow-table {
+    max-height: none;
+    border: 0;
+    margin-bottom: 2em;
+  }
+
+  .pcp-adjust {
+
+    border: 1px solid $table-border-color;
+    border-bottom: 0;
+
+    &__table {
+      border-top: 3px solid $table-border-color;
+      border-left: 1px solid $table-border-color;
+      border-right: 1px solid $table-border-color;
+    }
+
+    &__th,
+    &__td {
+      padding-top: $size-default;
+      padding-bottom: $size-default;
+      border-top: 1px solid $table-border-color;
+      border-bottom: 1px solid $table-border-color;
+    }
+
+    &__td {
+      font-size: $font-size-3;
+    }
+
+  }
+
+}

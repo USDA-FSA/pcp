@@ -1,0 +1,105 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Posted County Prices: Discovery' %}
+
+<body>
+
+  <section>
+
+    <div class="pcp-print">
+
+      <div class="pcp-print__draft">Draft</div>
+
+      <div class="pcp-print__hd">
+        <header></header>
+      </div>
+
+      <div class="pcp-print__segment">
+        <header>
+          <div class="pcp-print__segment-hd">
+            {% include: 'includes/print-segment-header__discovery.html' %}
+          </div>
+        </header>
+        <article>
+          <h1>GLF - Gulf of Mexico Ports</h1>
+          <ul class="fsa-list--inline">
+            <li>
+              <strong>Status:</strong>
+              <span class="fsa-label fsa-label--success" title="This program has been worked on and has been marked as complete">Complete</span>
+            </li>
+            <li>
+              <strong>Assignee:</strong>
+              <span>Woody Boyd</span>
+            </li>
+          </ul>
+          {% include: 'includes/program-entry__glf___print.html' %}
+        </article>
+      </div>
+
+      <div class="pcp-print__segment">
+        <header>
+          <div class="pcp-print__segment-hd">
+            {% include: 'includes/print-segment-header__discovery.html' %}
+          </div>
+        </header>
+        <article>
+          <h1>PNW - Pacific Northwest</h1>
+          <ul class="fsa-list--inline">
+            <li>
+              <strong>Status:</strong>
+              <span class="fsa-label fsa-label--warning" title="This program is actively being worked on by the assignee">In Progess</span>
+            </li>
+            <li>
+              <strong>Assignee:</strong>
+              <span>Sam Malone</span>
+            </li>
+          </ul>
+          <h2>Markets</h2>
+          {% include: 'includes/program-entry__pnw___print.html' %}
+          <h2>Proteins</h2>
+          {% include: 'includes/program-entry__pnw-proteins___print.html' %}
+        </article>
+      </div>
+
+      <div class="pcp-print__segment">
+        <header>
+          <div class="pcp-print__segment-hd">
+            {% include: 'includes/print-segment-header__discovery.html' %}
+          </div>
+        </header>
+        <article>
+          <h1>Rice</h1>
+          <ul class="fsa-list--inline">
+            <li>
+              <strong>Status:</strong>
+              <span class="fsa-label fsa-label--general" title="This program is ready for the assignee to begin work">Not Started</span>
+            </li>
+            <li>
+              <strong>Assignee:</strong>
+              <span>Sam Malone</span>
+            </li>
+          </ul>
+          <h2>Market Prices</h2>
+          <pre>{% include: 'includes/rice-markets__080917.txt' %}</pre>
+          <h2>LDP</h2>
+          <pre>{% include: 'includes/rice-ldp__080917.txt' %}</pre>
+        </article>
+      </div>
+
+      <div class="pcp-print__ft">
+        <footer></footer>
+      </div>
+
+    </div>
+
+  </section>
+
+  {% include: 'includes/scripts.html' %}
+
+  <script>
+    pcpCustomPrint();
+  </script>
+
+</body>
+
+</html>

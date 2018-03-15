@@ -1,7 +1,3 @@
-body {
-  overflow-x: auto;
-}
-
 // scss-lint:disable QualifyingElement
 
 abbr[title],
@@ -13,7 +9,13 @@ dfn[title] {
 }
 
 .pcp-app main {
+
   min-height: calc(100vh - 580px); // Magic number, generally: "minimum height is 100% of browser height minus the height of header and footer, plus some"
+
+  @media print {
+    min-height: initial;
+  }
+
 }
 
 // scss-lint:disable SelectorFormat

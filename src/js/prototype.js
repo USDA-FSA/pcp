@@ -52,7 +52,7 @@ $('body').on('blur', '[data-behavior~="validate-commodity"], [data-behavior~="va
 $('body').on('keyup', '[data-behavior~="validate-closing"]', function(event) {
 
   var $self = $(this);
-  var $target = $('#' + $self.attr('data-save-target'));
+  var $target = $('#' + $self.attr('data-save-target'));''
 
   if ($self.val() == '') {
     $target.attr('disabled', true);
@@ -205,6 +205,85 @@ $('body').on('change', '[data-behavior~="select-multi-all"]', function(event) {
 
 })
 
+function checkMultiCheck() {
+
+  var $component = $('[data-multi-check-group]');
+
+  $component.each(function(index) {
+
+    var $self = $(this);
+
+    var $checker = $self.find('[data-behavior~="multi-check"]');
+    var $checks = $self.find('[data-multi-check-group__item]');
+
+    checksAmt = $checks.length;
+    checksAmtNotChecked = $checks.not(":checked").length;
+
+    if ($checks.is(':checked')) {
+      if (checksAmt === checksAmtNotChecked) {
+        $checker.prop('indeterminate', false);
+        $checker.prop('checked', false);
+      }
+      else if (checksAmtNotChecked === 0) {
+        $checker.prop('indeterminate', false);
+        $checker.prop('checked', true);
+      }
+      else {
+        $checker.prop('indeterminate', true);
+        $checker.prop('checked', false);
+      }
+    }
+
+  });
+
+}
+
+checkMultiCheck();
+
+$('body').on('change', '[data-behavior~="multi-check"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('[data-multi-check-group]');
+  var $checks = $component.find('[data-multi-check-group__item]');
+
+  if($self.is(':checked')) {
+    $checks.prop('checked', true);
+  }
+  else {
+    $checks.prop('checked', false);
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="multi-check-item"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('[data-multi-check-group]');
+  var $parent = $component.find('[data-multi-check-group__parent]');
+  var $checks = $component.find('[data-multi-check-group__item]');
+
+  checksAmt = $checks.length;
+  checksAmtNotChecked = $checks.not(":checked").length;
+
+  console.log(checksAmtNotChecked + ' of ' + checksAmt + ' are NOT checked');
+
+  if (checksAmt === checksAmtNotChecked) {
+    $parent.prop('indeterminate', false);
+    $parent.prop('checked', false);
+  }
+  else if (checksAmtNotChecked === 0) {
+    // console.log('ALL children are checked');
+    $parent.prop('indeterminate', false);
+    $parent.prop('checked', true);
+  }
+  else {
+    // console.log('SOME children are checked');
+    $parent.prop('indeterminate', true);
+    $parent.prop('checked', false);
+  }
+
+})
+
 $('body').on('click', '[data-behavior~="popover-dismiss"]', function(event) {
   var $self = $(this);
   var $component = $self.closest('.pcp-popover');
@@ -265,6 +344,51 @@ $('body').on('change', '[data-behavior~="DEMO-FAKING-SELECT-CONTENT-SWAP"]', fun
     })
   ;
   $targetPeers.removeClass('PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE')
+
+})
+
+var windowObjectReference; // global variable
+
+function popupCenter(url, title, w, h) {
+  var left = (screen.width  / 2) - ( w / 2);
+  var top = (screen.height / 2 ) - ( h / 2);
+  return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+}
+
+function pcpCustomPrint() {
+  // document.addEventListener('DOMContentLoaded', this.print());
+}
+
+$('body').on('click', '[data-behavior~="new-print-window"]', function(event) {
+
+  // USAGE:
+  // <a
+  //   href="workflow_mapping__print.html"
+  //   data-behavior="new-print-window"
+  //   data-pop-title="loremIpsum"
+  //   data-pop-width="1080"
+  //   data-pop-height="768"
+  //   data-pop-extras=""
+  // >
+  //   text
+  // </a>
+
+
+  var $self = $(this);
+
+  var popTitle = $self.data('pop-title');
+  var popWidth = $self.data('pop-width');
+  var popHeight = $self.data('pop-height');
+  var popExtras = 'resizable,scrollbars,menubar=no,directories=no,location=no,toolbar=no,status=no,copyhistory=no,' + $self.data('pop-extras');
+  var popLeft = (screen.width  / 2) - ( popWidth / 2);
+  var popTop = (screen.height / 2 ) - ( popHeight / 2);
+  var popFeatures = 'width=' + popWidth + ',height=' + popHeight + ',left=' + popLeft + ',top=' + popTop + ',' + popExtras;
+
+  console.log('WINDOW FEATURES: ' + popFeatures);
+
+  windowObjectReference = window.open(this.href, popTitle, popFeatures);
+
+  return false;
 
 })
 

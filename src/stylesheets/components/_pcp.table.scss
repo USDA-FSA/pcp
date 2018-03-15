@@ -110,6 +110,12 @@
         box-shadow: none;
       }
 
+      @media print {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+      }
+
     }
 
   }
@@ -149,6 +155,18 @@
       background-image: url('../img/chevron-down.svg');
     }
 
+    &:hover:not(.pcp-table__sort--up, .pcp-table__sort--down) {
+      &:after {
+        background-image: url('#{$image-path}/chevron-up.png');
+        background-image: url('#{$image-path}/chevron-up.svg');
+        opacity: .4;
+      }
+    }
+
+  }
+
+  @media print {
+    margin-top: 2em;
   }
 
 }
@@ -185,6 +203,12 @@ th.pcp-table__cell--bisect {
 
   @media screen and (min-height: 1024px) {
     max-height: 68vh;
+  }
+
+  @media print {
+    border-left: 0;
+    border-right: 0;
+    max-height: none;
   }
 
 }

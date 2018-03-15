@@ -296,6 +296,8 @@ $swapDistance: 2.8rem;
   flex-wrap: wrap-reverse;
   margin-right: 58px; // Temporary to allow interaction with legend/controls on right side of map and prevent overlaying them
   transition: all .23s ease-in-out;
+  align-items: flex-start;
+  pointer-events: none;
 
   &--closed {
     left: $size-default;
@@ -317,6 +319,7 @@ $swapDistance: 2.8rem;
 .pcp-rift-popup {
 
   width: 220px;
+  pointer-events: auto;
   margin-bottom: $size-default;
   margin-right: $size-default;
   transition: margin .23s ease-in-out;
