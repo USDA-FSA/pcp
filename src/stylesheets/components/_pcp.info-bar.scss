@@ -6,9 +6,19 @@
 
     @include font-size(2);
 
+    .pcp-info-bar--print & {
+      @include font-size(3);
+    }
+
     @include breakpoint(L) {
+
       display: flex;
       align-items: center;
+
+      .pcp-info-bar--print & {
+        align-items: initial;
+      }
+
     }
 
   }
@@ -28,21 +38,37 @@
         margin-right: 0;
       }
 
+      .pcp-info-bar--print & {
+        white-space: normal;
+      }
+
     }
 
     > strong {
       // boy was this a mistake, TODO: sometime
+      .pcp-info-bar--print & {
+        display: block;
+      }
+
       margin-right: $size-base;
     }
 
     &--truncate {
+
       max-width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
       word-wrap: normal;
+
+      .pcp-info-bar--print & {
+        white-space: normal;
+      }
+
     }
 
   }
+
+  &--print {}
 
 }

@@ -4,8 +4,18 @@
       <h1 class="pcp-title-action-bar__title">{{ title }}</h1>
     </div>
     <div class="pcp-title-action-bar__ft">
-      <button class="fsa-btn fsa-btn--alt fsa-btn--large pcp-title-action-bar__action HINT" type="button" data-behavior="growl-show whiteout-show" data-target="{{ reopen }}" id="UNIQUE-ID-REOPENER">Re-open</button>
-      <button {{ button_state }} id="UNIQUE-ID-FINALIZER" class="fsa-btn fsa-btn--primary fsa-btn--large pcp-title-action-bar__action HINT" type="submit" disabled="disabled">{{ action }}</button>
+      <button class="fsa-btn fsa-btn--alt fsa-btn--large pcp-title-action-bar__action HINT" data-behavior="open-modal" data-target="UNIQUE-ID-PRINT-REVIEW" type="button" title="Print">
+        {% include: 'includes/icon.html' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' @NAME:'printer' %}
+      </button>
+      <button class="fsa-btn fsa-btn--alt fsa-btn--large pcp-title-action-bar__action HINT" type="button" data-behavior="growl-show whiteout-show" data-target="{{ reopen }}" id="UNIQUE-ID-REOPENER" title="Re-open Discovery">
+        {% include: 'includes/icon.html' @NAME:'spinner11' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' %}
+      </button>
+      <button {{ button_state }} id="UNIQUE-ID-FINALIZER" class="fsa-btn fsa-btn--primary fsa-btn--large pcp-title-action-bar__action HINT" type="submit" disabled="disabled">
+        <span class="fsa-m-r--xs">
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' %}
+        </span>
+        {{ action }}
+      </button>
     </div>
   </div>
 </form>

@@ -139,11 +139,19 @@ $hint-color: rgba(255, 69, 0, .8);
         bottom: 0;
       }
 
+      @media print {
+        display: none !important;
+      }
+
     }
 
     .pcp-prototype-home & {
       // scss-lint:disable ImportantRule
       display: none !important;
+    }
+
+    @media print {
+      display: none;
     }
 
   }

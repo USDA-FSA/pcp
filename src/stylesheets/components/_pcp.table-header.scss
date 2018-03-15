@@ -100,5 +100,8 @@
     }
   }
 
+  @media print {
+    display: none;
+  }
 
 }

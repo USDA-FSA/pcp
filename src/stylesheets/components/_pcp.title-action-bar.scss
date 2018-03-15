@@ -13,15 +13,16 @@
 
   &__hd {
     @include breakpoint(L) {
-      @include fsa-grid-column-width(8);
+      // @include fsa-grid-column-width(8);
     }
   }
 
   &__ft {
     margin-top: $size-small;
     @include breakpoint(L) {
-      @include fsa-grid-column-width(4);
+      // @include fsa-grid-column-width(4);
       margin-top: 0;
+      margin-left: auto;
       text-align: right;
     }
   }
@@ -47,6 +48,13 @@
       width: auto;
     }
 
+  }
+
+  &__icon {
+    $icon-size: ($size-medium * .9);
+    width: $icon-size;
+    height: $icon-size;
+    transform: translateY(-1px);
   }
 
 }
