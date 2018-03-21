@@ -765,7 +765,7 @@ $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
   var $self = $(this);
   var $target = $('#UNIQUE-ID-FINALIZER');
 
-  if ($target.is(':disabled')) {
+  if ($target.is('[disabled]')) {
     $target.removeAttr('disabled');
   } else {
     $target.attr('disabled', true);

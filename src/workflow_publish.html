@@ -25,14 +25,19 @@
 
         {% include: 'includes/pcp-stepped-tabs__publish.html' %}
 
-        {% include: 'includes/pcp-title-action-bar__publish.html' @title:'Publish' @action:'Complete March 22, 2017' @link:'workflow_closing.html' @button_state:'disabled' @reopen:'unique-id-publish-end' %}
+        <div style="outline: 10px solid Orangered;">
+          {% include: 'includes/pcp-title-action-bar__publish.html' @title:'Publish' @action:'Complete March 22, 2017' @link:'workflow_closing.html' @button_state:'disabled' @reopen:'unique-id-publish-end' %}
+        </div>
 
         <div class="HINT HINT--HIDDEN-BLOCK">
           <p class="fsa-text-align--center fsa-text-size--4">
             To enable <strong>Complete</strong> button: check all "Published" checkboxes.
           </p>
         </div>
+
         {% include: 'includes/table_publish.html' %}
+
+        {% include: 'includes/proceeder.html' @CLASS:'WIP-proceeder--sticky' @action:'Complete March 22, 2017' @link:'workflow_mapping.html' @button_state:'disabled' %}
 
       </div>
 

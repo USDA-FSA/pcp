@@ -6,3 +6,38 @@
 }
 
 // TODO move to fsa-style //////////////////////////////////////////////////////
+
+.fsa-label {
+  @include font-size(0);
+}
+
+// Typography experiment
+
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6,
+.fsa-text--h1,
+.fsa-text--h2,
+.fsa-text--h3,
+.fsa-text--h3,
+.fsa-text--h4,
+.fsa-text--h5,
+.fsa-text--h6 {
+  font-family: $font-sans;
+  font-weight: 700;
+}
+
+h1,
+.fsa-text--h1 {
+  font-weight: 500;
+  font-size: 4.6rem;
+}
+
+// Hacky, but let's make anchors with disabled attribute non-clickable
+a[disabled] {
+  pointer-events: none;
+}

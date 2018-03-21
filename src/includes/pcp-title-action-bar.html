@@ -1,4 +1,4 @@
-<form action="{{ link }}">
+
   <div class="pcp-title-action-bar">
     <div class="pcp-title-action-bar__hd">
       <h1 class="pcp-title-action-bar__title">{{ title }}</h1>
@@ -7,12 +7,14 @@
       <button class="fsa-btn fsa-btn--alt fsa-btn--large pcp-title-action-bar__action HINT" data-behavior="open-modal" data-target="UNIQUE-ID-PRINT-REVIEW" type="button" title="Print">
         {% include: 'includes/icon.html' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' @NAME:'printer' %}
       </button>
-      <button {{ button_state }} id="UNIQUE-ID-FINALIZER" class="fsa-btn fsa-btn--primary fsa-btn--large pcp-title-action-bar__action HINT" type="submit">
-        <span class="fsa-m-r--xs">
-          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' %}
-        </span>
+      <!-- 
+      [[[button {{ button_state }} id="UNIQUE-ID-FINALIZER" class="fsa-btn fsa-btn--primary fsa-btn--large pcp-title-action-bar__action HINT" type="submit"]]]
+        [[[span class="fsa-m-r--xs"]]]
+          [[[ include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' ]]]
+        [[[/span]]]
         {{ action }}
-      </button>
+      [[[/button]]]
+       -->
     </div>
   </div>
 </form>
