@@ -1091,11 +1091,12 @@ function HintStatus() {
   var $hintCheckbox = $('#show-hints');
 
   if (hintStatus) {
-    console.log('There IS a "hints" cookie');
+    // console.log('There IS a "hints" cookie');
     $('body').addClass('HINT-SHOW');
     $hintCheckbox.prop('checked', true);
-  } else {
-    console.log('There is NO "hints" cookie');
+  }
+  else {
+    // console.log('There is NO "hints" cookie');
   }
 
 }
@@ -1441,3 +1442,32 @@ $('body').on('mousedown', '.pcp-mapping__map, .pcp-mapping__hd, .pcp-mapping__to
 })(jQuery);
 
 $('.pcp-mapping__PLACEHOLDER').drags();
+
+$(function() {
+
+    var $WIPcomponent = $('.WIP-proceeder--sticky');
+
+    $(window).scroll(function() {
+
+        var pageTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var WIPcomponentPosTop = $WIPcomponent.offset().top - pageTop;
+        var WIPcomponentHeight = $WIPcomponent.outerHeight();
+        var WIPcomponentPosBot = windowHeight - (WIPcomponentPosTop + WIPcomponentHeight);
+
+        // console.log('pageTop: ' + pageTop);
+        // console.log('windowHeight: ' + windowHeight);
+        // console.log('WIPcomponentPosTop: ' + WIPcomponentPosTop);
+        // console.log('WIPcomponentHeight: ' + WIPcomponentHeight);
+        // console.log('WIPcomponentPosBot: ' + WIPcomponentPosBot);
+
+        if (WIPcomponentPosBot > 12) {
+          $WIPcomponent.addClass("WIP-proceeder--unstuck");
+        }
+        else {
+          $WIPcomponent.removeClass("WIP-proceeder--unstuck");
+        }
+
+    });
+
+});

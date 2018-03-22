@@ -26,9 +26,12 @@
         <div id="DEMO-REOPEN-STEPPED-TABS--INITIAL">{% include: 'includes/pcp-stepped-tabs__discovery--at-adjustments.html' %}</div>
         <div id="DEMO-REOPEN-STEPPED-TABS--POST" hidden="hidden">{% include: 'includes/pcp-stepped-tabs__discovery.html' %}</div>
 
-        {% include: 'includes/pcp-title-action-bar__reopen.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' @reopen:'unique-id-hhsyq9s852' %}
+        <!-- include: 'includes/pcp-title-action-bar__reopen.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' @reopen:'unique-id-hhsyq9s852' -->
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_review.html' @button_state:'disabled' %}
 
         {% include: 'includes/table_assignments__complete.html' %}
+
+        {% include: 'includes/proceeder__reopen.html' @CLASS:'WIP-proceeder--sticky' @action:'Complete Discovery' @link:'workflow_closing.html' @button_state:'disabled' @reopen:'unique-id-hhsyq9s852' %}
 
       </div>
 

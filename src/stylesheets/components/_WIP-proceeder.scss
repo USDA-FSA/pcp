@@ -39,6 +39,19 @@
 
   }
 
+  &--unstuck {
+
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    border-color: $component-border-color;
+
+    @include breakpoint(L, down) {
+      border: 1px solid $component-border-color;
+    }
+
+  }
+
   &__hd {}
 
   &__bd {

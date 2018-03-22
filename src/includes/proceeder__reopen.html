@@ -1,0 +1,29 @@
+<div class="WIP-proceeder {{ CLASS }}">
+  <div class="WIP-proceeder__hd"><!-- Keep --></div>
+  <div class="WIP-proceeder__bd">
+    <div class="WIP-proceeder__item">
+      <button class="fsa-btn fsa-btn--secondary fsa-btn--large WIP-proceeder__btn" type="button">
+        <span>[secondary action]</span>
+      </button>
+    </div>
+    <div class="WIP-proceeder__item">
+      <button class="fsa-btn fsa-btn--alt fsa-btn--large WIP-proceeder__btn" type="button">
+        <span>[tertiary action]</span>
+      </button>
+    </div>
+    <div class="WIP-proceeder__item">
+      <button class="fsa-btn fsa-btn--alt fsa-btn--large pcp-title-action-bar__action HINT" type="button" data-behavior="growl-show whiteout-show" data-target="{{ reopen }}" id="UNIQUE-ID-REOPENER" title="Re-open Discovery">
+        {% include: 'includes/icon.html' @NAME:'spinner11' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' %}
+      </button>
+    </div>
+    <div class="WIP-proceeder__item WIP-proceeder__item--primary">
+      <button id="UNIQUE-ID-FINALIZER" {{ button_state }} class="fsa-btn fsa-btn--primary fsa-btn--large WIP-proceeder__btn HINT" type="button" onclick="window.location = '{{ link }}'"><!-- Hacky use of onclick attribute. Sue me. -->
+        <span class="fsa-m-r--xs">
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' %}
+        </span>
+        <span>{{ action }}</span>
+      </button>
+    </div>
+  </div>
+  <div class="WIP-proceeder__ft"><!-- Keep --></div>
+</div>
