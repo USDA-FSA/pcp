@@ -42,16 +42,10 @@
   }
 
   &--unstuck {
-
     box-shadow: none;
     margin-left: 0;
     margin-right: 0;
     border: 1px solid $component-border-color;
-
-    // @include breakpoint(L, down) {
-    //   border: 1px solid $component-border-color;
-    // }
-
   }
 
   &__hd {}
@@ -62,17 +56,42 @@
     }
   }
 
+  &__secondary,
+  &__primary {
+    @include breakpoint(L) {
+      display: flex;
+    }
+  }
+
+  &__secondary {
+
+    margin-bottom: $size-default;
+    margin-right: auto;
+
+    @include breakpoint(L) {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__primary {
+    margin-left: auto;
+  }
+
   &__item {
 
     & {
+
       margin-bottom: $size-default;
+
       @include breakpoint(L) {
         margin-right: $size-default;
         margin-bottom: 0;
       }
+
     }
 
-    &--primary {
+    &:last-child {
       margin-left: auto;
       margin-right: 0;
       margin-bottom: 0;
