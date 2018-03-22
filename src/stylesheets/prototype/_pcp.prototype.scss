@@ -92,15 +92,23 @@ $hint-color: rgba(255, 69, 0, .8);
 
   &__title {
 
-    line-height: 1;
-    font-size: $font-size-3;
-    font-family: $font-sans;
-    font-weight: $font-bold;
-    background-color: tint($hint-color, 40%);
-    margin: (-$size-small) (-$size-small) $size-default;
-    padding: $size-small;
-    position: sticky;
-    top: (-$size-small);
+    & {
+      color: transparent;
+      line-height: 1;
+      font-size: $font-size-3;
+      font-family: $font-sans;
+      font-weight: $font-bold;
+      background-color: shade($hint-color, 10%);
+      margin: (-$size-small) (-$size-small) $size-default;
+      padding: $size-small;
+      position: sticky;
+      top: (-$size-small);
+    }
+
+    .pcp-prototype-index:hover & {
+      color: initial;
+      background-color: tint($hint-color, 40%);
+    }
 
     .pcp-prototype-home & {
       display: none;
@@ -117,12 +125,13 @@ $hint-color: rgba(255, 69, 0, .8);
       background-color: tint($hint-color, 80%);
       border: 1px solid shade($hint-color, 10%);
       border-top-width: $size-base;
+      border-left-width: $size-base;
       border-bottom-width: 0;
       padding: $size-small;
       box-shadow: -2px 0 19px 0 rgba(0, 0, 0, .4);
       width: 320px;
       position: fixed;
-      right: -($width * .9);
+      right: -($width * .88);
       max-height: 70vh;
       overflow: hidden;
       z-index: 9999999;
