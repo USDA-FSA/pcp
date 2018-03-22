@@ -58,5 +58,16 @@ h6,
 h1,
 .fsa-text--h1 {
   font-weight: 500;
-  font-size: 4.6rem;
+  font-size: 4.2rem;
+}
+
+.fsa-text--lead {
+
+  @include font-size(5);
+  font-family: $font-sans;
+
+  strong {
+    font-weight: bolder;
+  }
+
 }
