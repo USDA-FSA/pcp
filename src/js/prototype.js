@@ -534,9 +534,11 @@ $('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
   $self = $(this);
   $component = $self.closest('.pcp-mapping');
   $icon = $self.find('use');
+  $componentProceeder = $('.WIP-proceeder');
 
   $self.toggleClass('pcp-mapping__zoom--toggled');
   $component.toggleClass('pcp-mapping--fullscreen');
+  $componentProceeder.toggleClass('WIP-proceeder--sticky');
 
   if ($self.hasClass('pcp-mapping__zoom--toggled')) {
     $icon.attr('xlink:href','img/symbol-defs.svg#pcp-icon--shrink');

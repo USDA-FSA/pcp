@@ -25,9 +25,7 @@
 
         {% include: 'includes/pcp-stepped-tabs__review.html' %}
 
-        <div style="outline: 10px solid Orangered;">
-          {% include: 'includes/pcp-title-action-bar__complete-review.html' @title:'Review Adjustments' @action:'Complete Review' @link:'workflow_publish.html' @button_state:' ' %}
-        </div>
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Review Adjustments' @action:'Complete Review' @link:'workflow_publish.html' @button_state:' ' %}
 
         <div class="fsa-m-t--m fsa-m-b--l">
           {% include: 'includes/pcp-content-tabs__review.html' %}
@@ -176,7 +174,7 @@
           </div>
         </div>
 
-        {% include: 'includes/proceeder.html' @CLASS:'WIP-proceeder--sticky' @action:'Complete Review' @link:'workflow_publish.html' @button_state:' ' %}
+        {% include: 'includes/proceeder__complete-review.html' @CLASS:'WIP-proceeder--sticky' @action:'Complete Review' @link:'workflow_publish.html' @button_state:' ' %}
 
       </div>
 

@@ -1,18 +1,42 @@
 
 // TODO move elsewhere in PCP SCSS /////////////////////////////////////////////
-
 .sample-sample-sample {
   outline: 1px solid red;
 }
 
 // TODO move to fsa-style //////////////////////////////////////////////////////
-
 .fsa-label {
   @include font-size(0);
 }
 
-// Typography experiment
+// Hacky, but let's make anchors with disabled attribute non-clickable
+a[disabled] {
+  pointer-events: none;
+}
 
+// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/85
+.pcp-stepped-tabs {
+
+  &__label {
+
+    cursor: initial;
+
+    &:not(span, div) {
+      cursor: pointer;
+    }
+
+  }
+
+}
+
+// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/87
+.pcp-mapping {
+  &__btn {
+    text-align: center;
+  }
+}
+
+// Typography experiment
 h1,
 h2,
 h3,
@@ -35,9 +59,4 @@ h1,
 .fsa-text--h1 {
   font-weight: 500;
   font-size: 4.6rem;
-}
-
-// Hacky, but let's make anchors with disabled attribute non-clickable
-a[disabled] {
-  pointer-events: none;
 }

@@ -5,34 +5,62 @@
   $component-padding: $size-default;
 
   & {
-    margin: $size-large 0;
+
+    margin: $size-large (-$size-default);
     background-color: $component-bgcolor-default;
-    border: 1px solid $component-border-color;
+    border-top: 1px solid $component-border-color;
     padding: $component-padding;
+    transition: margin .23s ease-in-out;
+
+    @include breakpoint(L) {
+      border: 1px solid $component-border-color;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include breakpoint(XL) {
+      margin-left: -$size-default;
+      margin-right: -$size-default;
+    }
+
   }
 
   &--sticky {
+
     position: sticky;
-    bottom: $size-default;
-    z-index: 2;
-    box-shadow: 0 0 $size-default rgba(0, 0, 0, .3);
+    z-index: 1001;
+    box-shadow: 0 0 $size-medium rgba(0, 0, 0, .3);
+    border-color: shade($component-border-color, 20%);
+    bottom: 0;
+
+    @include breakpoint(L) {
+      bottom: $size-default;
+    }
+
   }
 
   &__hd {}
 
   &__bd {
-    display: flex;
+    @include breakpoint(L) {
+      display: flex;
+    }
   }
 
   &__item {
 
     & {
-      margin-right: $size-default;
+      margin-bottom: $size-default;
+      @include breakpoint(L) {
+        margin-right: $size-default;
+        margin-bottom: 0;
+      }
     }
 
     &--primary {
       margin-left: auto;
       margin-right: 0;
+      margin-bottom: 0;
     }
 
   }
