@@ -96,7 +96,7 @@ $hint-color: rgba(255, 69, 0, .8);
     font-size: $font-size-3;
     font-family: $font-sans;
     font-weight: $font-bold;
-    background-color: $color-fsa-secondary-100;
+    background-color: tint($hint-color, 40%);
     margin: (-$size-small) (-$size-small) $size-default;
     padding: $size-small;
     position: sticky;
@@ -112,15 +112,17 @@ $hint-color: rgba(255, 69, 0, .8);
 
     @include breakpoint(L) {
 
-      background-color: white;
-      border: 1px solid $color-fsa-secondary;
+      $width: 320px;
+
+      background-color: tint($hint-color, 80%);
+      border: 1px solid shade($hint-color, 10%);
       border-top-width: $size-base;
       border-bottom-width: 0;
       padding: $size-small;
       box-shadow: -2px 0 19px 0 rgba(0, 0, 0, .4);
       width: 320px;
       position: fixed;
-      right: ($size-extra-large * 2);
+      right: -($width * .9);
       max-height: 70vh;
       overflow: hidden;
       z-index: 9999999;
@@ -129,13 +131,14 @@ $hint-color: rgba(255, 69, 0, .8);
       display: none;
 
       html:hover & {
-        // display: block;
+        display: block;
       }
 
       &:hover {
         overflow: auto;
         top: auto;
         bottom: 0;
+        right: -1px;
       }
 
       @media print {
