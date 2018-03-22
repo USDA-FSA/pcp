@@ -10,15 +10,15 @@
     background-color: $component-bgcolor-default;
     border-top: 1px solid $component-border-color;
     padding: $component-padding;
-    transition: margin .23s ease-in-out;
+    transition: all .23s ease-in-out;
 
     @include breakpoint(L) {
-      border: 1px solid $component-border-color;
       margin-left: 0;
       margin-right: 0;
     }
 
     @include breakpoint(XL) {
+      border: 1px solid $component-border-color;
       margin-left: -$size-default;
       margin-right: -$size-default;
     }
@@ -32,8 +32,10 @@
     box-shadow: 0 0 $size-medium rgba(0, 0, 0, .3);
     border-color: shade($component-border-color, 20%);
     bottom: 0;
+    margin-left: -$size-default;
+    margin-right: -$size-default;
 
-    @include breakpoint(L) {
+    @include breakpoint(XL) {
       bottom: $size-default;
     }
 
@@ -44,11 +46,11 @@
     box-shadow: none;
     margin-left: 0;
     margin-right: 0;
-    border-color: $component-border-color;
+    border: 1px solid $component-border-color;
 
-    @include breakpoint(L, down) {
-      border: 1px solid $component-border-color;
-    }
+    // @include breakpoint(L, down) {
+    //   border: 1px solid $component-border-color;
+    // }
 
   }
 

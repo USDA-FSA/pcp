@@ -1447,7 +1447,8 @@ $(function() {
 
     var $WIPcomponent = $('.WIP-proceeder--sticky');
 
-    $(window).scroll(function() {
+    if ($WIPcomponent.length) {
+      $(window).scroll(function() {
 
         var pageTop = $(window).scrollTop();
         var windowHeight = $(window).height();
@@ -1468,6 +1469,7 @@ $(function() {
           $WIPcomponent.removeClass("WIP-proceeder--unstuck");
         }
 
-    });
+      });
+    }
 
 });
