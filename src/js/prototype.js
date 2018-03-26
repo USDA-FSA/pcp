@@ -782,6 +782,36 @@ $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
 
 });
 
+$('body').on('change', '[data-behavior~="update-status-label"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#UNIQUE-ID-STATUS-LABEL__RICE');
+
+  if($self.is(':checked')) {
+    $target.html('<span class="fsa-label fsa-label--success" title="This program has been worked on and has been marked as complete">Complete</span>');
+  }
+  else {
+    $target.html('<span class="fsa-label fsa-label--warning" title="This program is actively being worked on by the assignee">In Progress</span>');
+  }
+
+});
+
+$('body').on('change', '[data-behavior~="update-status-message"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-status-target'));
+  var messageInitial = $target.data('message-initial')
+  var messageAfter = $target.data('message-after')
+
+  if($self.is(':checked')) {
+    $target.html(messageAfter);
+  }
+  else {
+    $target.html(messageInitial);
+  }
+
+});
+
 $('body').on('click', '[data-behavior~="init-day"]', function(event) {
 
   var $self = $(this);
