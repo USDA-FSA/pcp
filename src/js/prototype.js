@@ -770,9 +770,9 @@ $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
   if ($target.is('[disabled]')) {
     $target
       .removeAttr('disabled')
-      .addClass('--enabling')
+      .addClass('pcp-animate--flipInX')
       .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-        $(this).removeClass('--enabling');
+        $(this).removeClass('pcp-animate--flipInX');
       });
     ;
   }
@@ -804,10 +804,22 @@ $('body').on('change', '[data-behavior~="update-status-message"]', function(even
   var messageAfter = $target.data('message-after')
 
   if($self.is(':checked')) {
-    $target.html(messageAfter);
+    $target
+      .addClass('pcp-animate--flipInX')
+      .html(messageAfter)
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-animate--flipInX');
+      });
+    ;
   }
   else {
-    $target.html(messageInitial);
+    $target
+      .addClass('pcp-animate--flipInX')
+      .html(messageInitial)
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-animate--flipInX');
+      });
+    ;
   }
 
 });
@@ -822,9 +834,9 @@ $('body').on('click', '[data-behavior~="init-day"]', function(event) {
   $self.attr('disabled', true)
   $targetFinalizer
     .removeAttr('disabled')
-    .addClass('--enabling')
+    .addClass('pcp-animate--flipInX')
     .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-      $(this).removeClass('--enabling');
+      $(this).removeClass('pcp-animate--flipInX');
     });
   ;
 
@@ -863,9 +875,9 @@ $('body').on('change', '[data-behavior~="toggle-check-group"]', function(event) 
   if ($checksAll == $checksChecked) {
     $target
       .removeAttr('disabled')
-      .addClass('--enabling')
+      .addClass('pcp-animate--flipInX')
       .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-        $(this).removeClass('--enabling');
+        $(this).removeClass('pcp-animate--flipInX');
       });
     ;
   }
@@ -1366,9 +1378,9 @@ $('body').on('click', '[data-behavior~="closing-save"]', function(event) {
 
   $targetCompleter
     .removeAttr('disabled')
-    .addClass('--enabling')
+    .addClass('pcp-animate--flipInX')
     .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-      $(this).removeClass('--enabling');
+      $(this).removeClass('pcp-animate--flipInX');
     });
   ;
 

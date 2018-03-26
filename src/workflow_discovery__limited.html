@@ -27,9 +27,15 @@
 
         {% include: 'includes/pcp-title-action-bar.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' @button_state:'disabled' %}
 
+        <div class="HINT HINT--HIDDEN-BLOCK">
+          <p class="fsa-text-align--center fsa-text-size--4">
+            This user <strong>does NOT have role/permission to modify Assignee</strong>. Assignee column is raw text instead of <code>&lt;select&gt;</code> form elements.
+          </p>
+        </div>
+
         {% include: 'includes/table_assignments__limited.html' %}
 
-        {% include: 'includes/proceeder.html' @CLASS:'WIP-proceeder--sticky' @message:'Discovery entry for <strong>3</strong> of <strong>8</strong> Programs are Complete'  @action:'Complete Discovery' @link:'workflow_closing.html' @button_state:'disabled' %}
+        {% include: 'includes/proceeder.html' @CLASS:'WIP-proceeder--sticky' @message:'<strong>3</strong> of <strong>8</strong> Discovery Programs are Complete'  @action:'Complete Discovery' @link:'workflow_closing.html' @button_state:'disabled' %}
 
       </div>
 
