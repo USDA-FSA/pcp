@@ -768,8 +768,15 @@ $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
   var $target = $('#UNIQUE-ID-FINALIZER');
 
   if ($target.is('[disabled]')) {
-    $target.removeAttr('disabled');
-  } else {
+    $target
+      .removeAttr('disabled')
+      .addClass('--enabling')
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('--enabling');
+      });
+    ;
+  }
+  else {
     $target.attr('disabled', true);
   }
 
@@ -783,7 +790,13 @@ $('body').on('click', '[data-behavior~="init-day"]', function(event) {
   var $targetFinalizer = $('#UNIQUE-ID-FINALIZER');
 
   $self.attr('disabled', true)
-  $targetFinalizer.removeAttr('disabled');
+  $targetFinalizer
+    .removeAttr('disabled')
+    .addClass('--enabling')
+    .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $(this).removeClass('--enabling');
+    });
+  ;
 
   $component
     .find('select, textarea, input')
@@ -818,8 +831,15 @@ $('body').on('change', '[data-behavior~="toggle-check-group"]', function(event) 
   console.log('there are **' + $checksAll + '** checkboxes, and **' + $checksChecked + '** are checked');
 
   if ($checksAll == $checksChecked) {
-    $target.removeAttr('disabled');
-  } else {
+    $target
+      .removeAttr('disabled')
+      .addClass('--enabling')
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('--enabling');
+      });
+    ;
+  }
+  else {
     $target.attr('disabled', true);
   }
 
@@ -1307,12 +1327,20 @@ $('body').on('click', '[data-behavior~="closing-save"]', function(event) {
 
   var $self = $(this);
   var $targetComponent = $('#' + $self.attr('data-disable-target'));
-  var $targetForms = $targetComponent.find('button, textarea');
+  var $targetForms = $targetComponent.find('button, textarea, input');
   var $targetCompleter = $('#' + $self.attr('data-complete-target'));
 
   $targetForms.attr('disabled', true);
 
-  $targetCompleter.removeAttr('disabled');
+  // $targetCompleter.removeAttr('disabled');
+
+  $targetCompleter
+    .removeAttr('disabled')
+    .addClass('--enabling')
+    .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $(this).removeClass('--enabling');
+    });
+  ;
 
 })
 
@@ -1443,33 +1471,48 @@ $('body').on('mousedown', '.pcp-mapping__map, .pcp-mapping__hd, .pcp-mapping__to
 
 $('.pcp-mapping__PLACEHOLDER').drags();
 
-$(function() {
+;$(function() {
 
     var $WIPcomponent = $('.WIP-proceeder--sticky');
 
+    function WIPcomponent() {
+
+      var pageTop = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      var WIPcomponentPosTop = $WIPcomponent.offset().top - pageTop;
+      var WIPcomponentHeight = $WIPcomponent.outerHeight();
+      var WIPcomponentPosBot = windowHeight - (WIPcomponentPosTop + WIPcomponentHeight);
+
+      // console.log('pageTop: ' + pageTop);
+      // console.log('windowHeight: ' + windowHeight);
+      // console.log('WIPcomponentPosTop: ' + WIPcomponentPosTop);
+      // console.log('WIPcomponentHeight: ' + WIPcomponentHeight);
+      // console.log('WIPcomponentPosBot: ' + WIPcomponentPosBot);
+
+      if (WIPcomponentPosBot > 12) {
+        $WIPcomponent.addClass("WIP-proceeder--unstuck");
+      }
+      else {
+        $WIPcomponent.removeClass("WIP-proceeder--unstuck");
+      }
+
+    }
+
     if ($WIPcomponent.length) {
+
       $(window).scroll(function() {
-
-        var pageTop = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        var WIPcomponentPosTop = $WIPcomponent.offset().top - pageTop;
-        var WIPcomponentHeight = $WIPcomponent.outerHeight();
-        var WIPcomponentPosBot = windowHeight - (WIPcomponentPosTop + WIPcomponentHeight);
-
-        // console.log('pageTop: ' + pageTop);
-        // console.log('windowHeight: ' + windowHeight);
-        // console.log('WIPcomponentPosTop: ' + WIPcomponentPosTop);
-        // console.log('WIPcomponentHeight: ' + WIPcomponentHeight);
-        // console.log('WIPcomponentPosBot: ' + WIPcomponentPosBot);
-
-        if (WIPcomponentPosBot > 12) {
-          $WIPcomponent.addClass("WIP-proceeder--unstuck");
-        }
-        else {
-          $WIPcomponent.removeClass("WIP-proceeder--unstuck");
-        }
-
+        WIPcomponent()
       });
+
+      $(document).ready(function() {
+        WIPcomponent();
+      })
+
+      $(window).resize(function() {
+        // may want to **debounce** this, e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
+        WIPcomponent();
+      })
+
     }
 
 });

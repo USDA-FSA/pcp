@@ -34,11 +34,15 @@
           <div class="pcp-title-action-bar__ft"></div>
         </div>
 
+        <div class="HINT HINT--HIDDEN-BLOCK">
+          <p class="fsa-text-align--center fsa-text-size--4">This UI is mostly out-of-date, refer to SVN codebase for most current</p>
+        </div>
+
         <div class="fsa-m-t--m">
           {% include: 'includes/pcp-workflow__init.html' %}
         </div>
 
-        {% include: 'includes/proceeder.html' @CLASS:'WIP-proceeder--sticky' @action:'Start Daily Process' @link:'workflow_discovery.html' @button_state:'disabled' %}
+        {% include: 'includes/proceeder.html' @CLASS:'WIP-proceeder--sticky' @message:'Let’s get started' @action:'Start Daily Process' @link:'workflow_discovery.html' @button_state:'disabled' %}
 
       </div>
 

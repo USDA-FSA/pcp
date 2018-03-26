@@ -1,17 +1,15 @@
 <div class="WIP-proceeder {{ CLASS }}">
   <div class="WIP-proceeder__hd"><!-- Keep --></div>
   <div class="WIP-proceeder__bd">
+    <div class="WIP-proceeder__message" role="status">
+      {% include: 'includes/icon.html' @NAME:'info' @SIZE:' ' @CLASS:'WIP-proceeder__message-icon' %}
+      <span class="WIP-proceeder__message-text">
+        <span id="DYNAMIC-UNIQUE__ID-STATUS-MESSAGE">{{ message }}</span>
+      </span>
+    </div>
     <div class="WIP-proceeder__secondary">
-      <div class="WIP-proceeder__item">
-        <button class="fsa-btn fsa-btn--secondary fsa-btn--large WIP-proceeder__btn" type="button">
-          <span>[secondary action]</span>
-        </button>
-      </div>
-      <div class="WIP-proceeder__item">
-        <button class="fsa-btn fsa-btn--alt fsa-btn--large WIP-proceeder__btn" type="button">
-          <span>[tertiary action]</span>
-        </button>
-      </div>
+      <div class="WIP-proceeder__item"></div>
+      <div class="WIP-proceeder__item"></div>
     </div>
     <div class="WIP-proceeder__primary">
       <div class="WIP-proceeder__item">

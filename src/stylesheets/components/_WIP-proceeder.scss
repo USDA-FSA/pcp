@@ -53,6 +53,7 @@
   &__bd {
     @include breakpoint(L) {
       display: flex;
+      align-items: center;
     }
   }
 
@@ -60,7 +61,33 @@
   &__primary {
     @include breakpoint(L) {
       display: flex;
+      align-items: center;
     }
+  }
+
+  &__message {
+
+    @include font-size(3);
+    margin-bottom: $size-default;
+    text-align: center;
+
+    @include breakpoint(L) {
+      @include font-size(4);
+      text-align: left;
+      margin-bottom: 0;
+      margin-right: $size-default;
+    }
+
+  }
+
+  &__message-icon {
+
+    margin-right: $size-small;
+
+    @include breakpoint(L) {
+      margin-left: $size-base;
+    }
+
   }
 
   &__secondary {
