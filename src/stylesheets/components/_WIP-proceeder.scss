@@ -3,6 +3,7 @@
   $component-bgcolor-default: $white;
   $component-border-color: $color-fsa-tertiary-200;
   $component-padding: $size-default;
+  $component-icon-size: $size-medium;
 
   & {
 
@@ -117,8 +118,39 @@
   }
 
   &__btn {
+
     display: block;
     width: 100%;
+
+    @include breakpoint(L, down) {
+      height: $button-height;
+      font-size: $button-font-size;
+      padding:
+        ($button-padding - .1rem)
+        ($button-padding * 1.5)
+        ($button-padding - .1rem)
+      ;
+    }
+
+  }
+
+  &__btn-label {
+    .WIP-proceeder__icon + & {
+      margin-left: $size-small;
+    }
+  }
+
+  &__icon {
+
+    width: ($component-icon-size * .8);
+    height: ($component-icon-size * .8);
+    transform: translateY(-1px);
+
+    @include breakpoint(L) {
+      width: ($component-icon-size);
+      height: ($component-icon-size);
+    }
+
   }
 
 }
