@@ -50,18 +50,12 @@
 
   &__hd {}
 
-  &__bd {
-    @include breakpoint(L) {
-      display: flex;
-      align-items: center;
-    }
-  }
+  &__ft {}
 
-  &__secondary,
-  &__primary {
+  &__bd {
+    align-items: center;
     @include breakpoint(L) {
       display: flex;
-      align-items: center;
     }
   }
 
@@ -81,48 +75,43 @@
 
   }
 
-  &__message-icon {
-
-    margin-right: $size-small;
-
-    @include breakpoint(L) {
-      margin-left: $size-base;
+  &__actions {
+    @include breakpoint(M) {
+      display: flex;
     }
-
-  }
-
-  &__secondary {
-
-    margin-bottom: $size-default;
-    margin-right: auto;
-
     @include breakpoint(L) {
-      margin-bottom: 0;
+      margin-left: auto;
+      align-items: center;
     }
-
   }
 
-  &__primary {
-    margin-left: auto;
-  }
-
-  &__item {
+  &__action-item {
 
     & {
 
       margin-bottom: $size-default;
 
-      @include breakpoint(L) {
+      @include breakpoint(M) {
         margin-right: $size-default;
         margin-bottom: 0;
+        flex: 1;
       }
+
+      @include breakpoint(L) {}
 
     }
 
     &:last-child {
-      margin-left: auto;
-      margin-right: 0;
-      margin-bottom: 0;
+
+      @include breakpoint(M) {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+
+      @include breakpoint(L) {
+        margin-left: auto;
+      }
+
     }
 
   }

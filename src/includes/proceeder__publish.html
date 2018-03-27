@@ -2,17 +2,12 @@
   <div class="WIP-proceeder__hd"><!-- Keep --></div>
   <div class="WIP-proceeder__bd">
     <div class="WIP-proceeder__message" role="status">
-      <!-- include: 'includes/icon.html' @NAME:'info' @SIZE:' ' @CLASS:'WIP-proceeder__message-icon' -->
       <span class="WIP-proceeder__message-text">
         <span id="DYNAMIC-UNIQUE__ID-STATUS-MESSAGE">{{ message }}</span>
       </span>
     </div>
-    <div class="WIP-proceeder__secondary">
-      <div class="WIP-proceeder__item"></div>
-      <div class="WIP-proceeder__item"></div>
-    </div>
-    <div class="WIP-proceeder__primary">
-      <div class="WIP-proceeder__item">
+    <div class="WIP-proceeder__actions">
+      <div class="WIP-proceeder__action-item">
         <button id="UNIQUE-ID-FINALIZER" {{ button_state }} class="fsa-btn fsa-btn--primary fsa-btn--large WIP-proceeder__btn HINT" type="button" data-behavior="growl-show whiteout-show" data-target="{{ reopen }}">
           <span class="fsa-m-r--xs">
             {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' %}

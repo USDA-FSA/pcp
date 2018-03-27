@@ -7,12 +7,16 @@
         <span id="DYNAMIC-UNIQUE__ID-STATUS-MESSAGE" data-message-initial="{{ message }}" data-message-after="{{ messageAfter }}">{{ message }}</span>
       </span>
     </div>
-    <div class="WIP-proceeder__secondary">
-      <div class="WIP-proceeder__item"></div>
-      <div class="WIP-proceeder__item"></div>
-    </div>
-    <div class="WIP-proceeder__primary">
-      <div class="WIP-proceeder__item">
+    <div class="WIP-proceeder__actions">
+      <!--
+      [[div class="WIP-proceeder__action-item"]]
+        [[button class="fsa-btn fsa-btn--secondary fsa-btn--large WIP-proceeder__btn" type="button"]]Secondary[[/button]]
+      [[/div]]
+      [[div class="WIP-proceeder__action-item"]]
+        [[button class="fsa-btn fsa-btn--alt fsa-btn--large WIP-proceeder__btn" type="button"]]Tertiary[[/button]]
+      [[/div]]
+      -->
+      <div class="WIP-proceeder__action-item">
         <button id="UNIQUE-ID-FINALIZER" {{ button_state }} class="fsa-btn fsa-btn--primary fsa-btn--large WIP-proceeder__btn HINT" type="button" onclick="window.location = '{{ link }}'"><!-- Hacky use of onclick attribute. Sue me. -->
           <span class="fsa-m-r--xs">
             {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'pcp-title-action-bar__icon' %}
