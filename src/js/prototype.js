@@ -534,11 +534,11 @@ $('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
   $self = $(this);
   $component = $self.closest('.pcp-mapping');
   $icon = $self.find('use');
-  $componentProceeder = $('.WIP-proceeder');
+  $componentSteppedControl = $('.fsa-stepped-control');
 
   $self.toggleClass('pcp-mapping__zoom--toggled');
   $component.toggleClass('pcp-mapping--fullscreen');
-  $componentProceeder.toggleClass('WIP-proceeder--sticky');
+  $componentSteppedControl.toggleClass('fsa-stepped-control--sticky');
 
   if ($self.hasClass('pcp-mapping__zoom--toggled')) {
     $icon.attr('xlink:href','img/symbol-defs.svg#pcp-icon--shrink');
@@ -1515,7 +1515,7 @@ $('.pcp-mapping__PLACEHOLDER').drags();
 
 ;$(function() {
 
-    var $WIPcomponent = $('.WIP-proceeder--sticky');
+    var $WIPcomponent = $('.fsa-stepped-control--sticky');
 
     function WIPcomponent() {
 
@@ -1532,10 +1532,10 @@ $('.pcp-mapping__PLACEHOLDER').drags();
       // console.log('WIPcomponentPosBot: ' + WIPcomponentPosBot);
 
       if (WIPcomponentPosBot > 12) {
-        $WIPcomponent.addClass("WIP-proceeder--unstuck");
+        $WIPcomponent.addClass("fsa-stepped-control--unstuck");
       }
       else {
-        $WIPcomponent.removeClass("WIP-proceeder--unstuck");
+        $WIPcomponent.removeClass("fsa-stepped-control--unstuck");
       }
 
     }

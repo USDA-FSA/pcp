@@ -1,4 +1,4 @@
-.WIP-proceeder {
+.fsa-stepped-control {
 
   $component-bgcolor-default: $white;
   $component-border-color: $color-fsa-tertiary-200;
@@ -135,7 +135,7 @@
   }
 
   &__btn-label {
-    .WIP-proceeder__icon + & {
+    .fsa-stepped-control__icon + & {
       margin-left: $size-small;
     }
   }
