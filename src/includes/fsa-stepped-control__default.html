@@ -1,22 +1,60 @@
-<div class="fsa-stepped-control {{ CLASS }}">
+<h2 class="pcp-prototype-title">Variations</h2>
+
+<h3 class="fsa-font--sans">Default</h3>
+
+<div class="fsa-stepped-control">
   <div class="fsa-stepped-control__hd"><!-- Keep --></div>
   <div class="fsa-stepped-control__bd">
     <div class="fsa-stepped-control__message" role="status">
-      {{ message }}
+      {{ status }}
     </div>
     <div class="fsa-stepped-control__actions">
       <div class="fsa-stepped-control__action-item">
-        <button class="fsa-btn fsa-btn--secondary fsa-btn--large fsa-stepped-control__btn" type="button">Secondary</button>
-      </div>
-      <div class="fsa-stepped-control__action-item">
-        <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">Tertiary</button>
+        <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary }}</button>
       </div>
       <div class="fsa-stepped-control__action-item">
         <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
-          <span class="fsa-stepped-control__btn-label">{{ action }}</span>
+          <span class="fsa-stepped-control__btn-label">{{ primary }}</span>
         </button>
       </div>
     </div>
   </div>
   <div class="fsa-stepped-control__ft"><!-- Keep --></div>
 </div>
+
+<h3 class="fsa-font--sans">Bi-directional</h3>
+<div class="fsa-stepped-control fsa-stepped-control--bidirectional">
+  <div class="fsa-stepped-control__hd"><!-- Keep --></div>
+  <div class="fsa-stepped-control__bd">
+    <div class="fsa-stepped-control__message" role="status">
+      {{ status }}
+    </div>
+    <div class="fsa-stepped-control__actions">
+      <div class="fsa-stepped-control__action-item fsa-stepped-control__action-item--pull">
+        <button class="fsa-btn fsa-btn--secondary fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary }}</button>
+      </div>
+      <div class="fsa-stepped-control__action-item">
+        <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ alt }}</button>
+      </div>
+      <div class="fsa-stepped-control__action-item">
+        <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
+          <span class="fsa-stepped-control__btn-label">{{ primary }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="fsa-stepped-control__ft"><!-- Keep --></div>
+</div>
+
+
+<h3 class="fsa-font--sans">With status</h3>
+<p>Necessitatibus, doloribus officiis iste, repellendus, consectetur distinctio rerum mollitia autem qui excepturi obcaecati quis. At culpa, odio. Quaerat quidem, rem odio recusandae.</p>
+<h3 class="fsa-font--sans">Sticky</h3>
+<p>Necessitatibus, doloribus officiis iste, repellendus, consectetur distinctio rerum mollitia autem qui excepturi obcaecati quis. At culpa, odio. Quaerat quidem, rem odio recusandae.</p>
+
+<h2 class="pcp-prototype-title">Samples</h2>
+
+<h3 class="fsa-font--sans">asdf</h3>
+<p>Necessitatibus, doloribus officiis iste, repellendus, consectetur distinctio rerum mollitia autem qui excepturi obcaecati quis. At culpa, odio. Quaerat quidem, rem odio recusandae.</p>
+<h3 class="fsa-font--sans">qwer</h3>
+<p>Necessitatibus, doloribus officiis iste, repellendus, consectetur distinctio rerum mollitia autem qui excepturi obcaecati quis. At culpa, odio. Quaerat quidem, rem odio recusandae.</p>

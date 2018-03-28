@@ -9,17 +9,20 @@
 
     margin: $size-large (-$size-default);
     background-color: $component-bgcolor-default;
-    border-top: 1px solid $component-border-color;
+    border: 1px solid $component-border-color;
+    border-left-width: 0;
+    border-right-width: 0;
     padding: $component-padding;
     transition: all .23s ease-in-out;
 
     @include breakpoint(L) {
+      border-left-width: 1px;
+      border-right-width: 1px;
       margin-left: 0;
       margin-right: 0;
     }
 
     @include breakpoint(XL) {
-      border: 1px solid $component-border-color;
       margin-left: -$size-default;
       margin-right: -$size-default;
     }
@@ -31,6 +34,9 @@
     position: sticky;
     z-index: 1001;
     box-shadow: 0 0 $size-medium rgba(0, 0, 0, .3);
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
     border-color: shade($component-border-color, 20%);
     bottom: 0;
     margin-left: -$size-default;
@@ -38,6 +44,9 @@
 
     @include breakpoint(XL) {
       bottom: $size-default;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
     }
 
   }
@@ -54,10 +63,19 @@
   &__ft {}
 
   &__bd {
+
     align-items: center;
+
     @include breakpoint(L) {
       display: flex;
     }
+
+    .fsa-stepped-control--bidirectional & {
+      @include breakpoint(L) {
+        display: block;
+      }
+    }
+
   }
 
   &__message {
@@ -74,16 +92,26 @@
       padding-left: $size-small;
     }
 
+    .fsa-stepped-control--bidirectional & {
+      @include breakpoint(L) {
+        margin-bottom: $size-default;
+      }
+    }
+
   }
 
   &__actions {
+
     @include breakpoint(M) {
       display: flex;
     }
+
     @include breakpoint(L) {
       margin-left: auto;
       align-items: center;
+      justify-content: space-between;
     }
+
   }
 
   &__action-item {
@@ -98,7 +126,9 @@
         flex: 1;
       }
 
-      @include breakpoint(L) {}
+      @include breakpoint(L) {
+        flex: initial;
+      }
 
     }
 
@@ -109,10 +139,20 @@
         margin-bottom: 0;
       }
 
+    }
+
+    &--push {
       @include breakpoint(L) {
         margin-left: auto;
+        border-left: $size-default solid transparent;
       }
+    }
 
+    &--pull {
+      @include breakpoint(L) {
+        margin-right: auto;
+        border-right: $size-default solid transparent;
+      }
     }
 
   }
