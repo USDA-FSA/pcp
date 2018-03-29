@@ -22,11 +22,6 @@
       margin-right: 0;
     }
 
-    @include breakpoint(XL) {
-      margin-left: -$size-default;
-      margin-right: -$size-default;
-    }
-
   }
 
   &--sticky {
@@ -128,9 +123,10 @@
 
     &:last-child {
 
+      margin-bottom: 0;
+
       @include breakpoint(M) {
         margin-right: 0;
-        margin-bottom: 0;
       }
 
     }
@@ -190,7 +186,6 @@
 }
 
 .DEMO-STICKY-STEPPED-CONTROL {
-  background-color: transparentize($color-fsa-red, .9);
-  outline: 2px dashed transparentize($color-fsa-red, .7);
-  // outline-offset: -$size-small;
+  outline: 3px dashed transparentize($color-fsa-red, .9);
+  outline-offset: -3px;
 }
