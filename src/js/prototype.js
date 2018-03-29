@@ -1515,44 +1515,49 @@ $('.pcp-mapping__PLACEHOLDER').drags();
 
 ;$(function() {
 
-    var $WIPcomponent = $('.fsa-stepped-control--sticky');
+    var $steppedControl = $('.fsa-stepped-control--sticky'); // only the --sticky ones
 
-    function WIPcomponent() {
+    function steppedControl() {
 
-      var pageTop = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var WIPcomponentPosTop = $WIPcomponent.offset().top - pageTop;
-      var WIPcomponentHeight = $WIPcomponent.outerHeight();
-      var WIPcomponentPosBot = windowHeight - (WIPcomponentPosTop + WIPcomponentHeight);
+      $steppedControl.each(function(index) {
 
-      // console.log('pageTop: ' + pageTop);
-      // console.log('windowHeight: ' + windowHeight);
-      // console.log('WIPcomponentPosTop: ' + WIPcomponentPosTop);
-      // console.log('WIPcomponentHeight: ' + WIPcomponentHeight);
-      // console.log('WIPcomponentPosBot: ' + WIPcomponentPosBot);
+        var $self = $(this)
+        var pageTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var steppendControlPosTop = $self.offset().top - pageTop;
+        var steppendControlHeight = $self.outerHeight();
+        var steppendControlPosBot = windowHeight - (steppendControlPosTop + steppendControlHeight);
 
-      if (WIPcomponentPosBot > 12) {
-        $WIPcomponent.addClass("fsa-stepped-control--unstuck");
-      }
-      else {
-        $WIPcomponent.removeClass("fsa-stepped-control--unstuck");
-      }
+        // console.log('pageTop: ' + pageTop);
+        // console.log('windowHeight: ' + windowHeight);
+        // console.log('steppendControlPosTop: ' + steppendControlPosTop);
+        // console.log('steppendControlHeight: ' + steppendControlHeight);
+        // console.log('steppendControlPosBot: ' + steppendControlPosBot);
+
+        if (steppendControlPosBot > 12) {
+          $self.addClass("fsa-stepped-control--unstuck");
+        }
+        else {
+          $self.removeClass("fsa-stepped-control--unstuck");
+        }
+
+      });
 
     }
 
-    if ($WIPcomponent.length) {
+    if ($steppedControl.length) { // only run if at least one instance
 
       $(window).scroll(function() {
-        WIPcomponent()
+        steppedControl()
       });
 
       $(document).ready(function() {
-        WIPcomponent();
+        steppedControl();
       })
 
       $(window).resize(function() {
         // may want to **debounce** this, e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
-        WIPcomponent();
+        steppedControl();
       })
 
     }
