@@ -41,12 +41,12 @@
   @include font-size(0);
 }
 
-// Hacky, but let's make anchors with disabled attribute non-clickable
+// Hacky, but let's make anchors with disabled attribute non-clickable /////////
 a[disabled] {
   pointer-events: none;
 }
 
-// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/85
+// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/85 //
 .pcp-stepped-tabs {
 
   &__label {
@@ -61,14 +61,14 @@ a[disabled] {
 
 }
 
-// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/87
+// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/87 //
 .pcp-mapping {
   &__btn {
     text-align: center;
   }
 }
 
-// Typography experiment
+// Typography experiment ///////////////////////////////////////////////////////
 h1,
 h2,
 h3,
@@ -102,4 +102,17 @@ h1,
     font-weight: bolder;
   }
 
+}
+
+// Button Minimization Experiment //////////////////////////////////////////////
+.fsa-btn {
+  font-weight: $font-bold;
+}
+
+.fsa-btn--flat {
+  font-weight: inherit;
+}
+
+.fsa-btn--secondary {
+  @extend .fsa-btn--alt;
 }
