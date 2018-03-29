@@ -64,12 +64,7 @@
 
     @include breakpoint(L) {
       display: flex;
-    }
-
-    &--block {
-      @include breakpoint(L) {
-        display: block;
-      }
+      flex-wrap: wrap;
     }
 
   }
@@ -89,6 +84,7 @@
     }
 
     &--block {
+      flex-basis: 100%;
       @include breakpoint(L) {
         margin-bottom: $size-default;
       }
@@ -97,6 +93,8 @@
   }
 
   &__list {
+
+    flex: 1;
 
     @include breakpoint(M) {
       display: flex;
@@ -189,4 +187,9 @@
 
   }
 
+}
+
+.DEMO-STICKY-STEPPED-CONTROL {
+  outline: $size-small dashed transparentize($color-fsa-red, .8);
+  outline-offset: -$size-small;
 }
