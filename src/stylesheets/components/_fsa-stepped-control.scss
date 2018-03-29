@@ -190,6 +190,7 @@
 }
 
 .DEMO-STICKY-STEPPED-CONTROL {
-  outline: $size-small dashed transparentize($color-fsa-red, .8);
-  outline-offset: -$size-small;
+  background-color: transparentize($color-fsa-red, .9);
+  outline: 2px dashed transparentize($color-fsa-red, .7);
+  // outline-offset: -$size-small;
 }
