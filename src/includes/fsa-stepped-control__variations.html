@@ -1,5 +1,10 @@
 <h2 class="pcp-prototype-title">Variations / Examples</h2>
 
+<h3 class="fsa-font--sans">Modal</h3>
+<p>
+  <button class="fsa-btn fsa-btn--alt fsa-btn--small" type="button" data-behavior="open-modal" data-target="STEPPED-CONTROL-MODAL-VARIATION">Open Modal</button>
+</p>
+
 <h3 class="fsa-font--sans">Default</h3>
 
 <div class="fsa-stepped-control">
@@ -36,6 +41,26 @@
   </div>
 </div>
 
+<h3 class="fsa-font--sans">Default, with multiple secondary</h3>
+
+<div class="fsa-stepped-control">
+  <div class="fsa-stepped-control__bd">
+    <div class="fsa-stepped-control__list">
+      <div class="fsa-stepped-control__item">
+        <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary_1 }}</button>
+      </div>
+      <div class="fsa-stepped-control__item">
+        <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ secondary_2 }}</button>
+      </div>
+      <div class="fsa-stepped-control__item">
+        <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
+          <span class="fsa-stepped-control__btn-label">{{ primary }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <h3 class="fsa-font--sans">Directional</h3>
 
 <div class="fsa-stepped-control">
@@ -53,7 +78,7 @@
   </div>
 </div>
 
-<h3 class="fsa-font--sans">Directional, multiple actions</h3>
+<h3 class="fsa-font--sans">Directional, with message and multiple actions</h3>
 
 <div class="fsa-stepped-control">
   <div class="fsa-stepped-control__bd">
@@ -93,6 +118,29 @@
   </div>
 </div>
 
+<h3 class="fsa-font--sans">Directional, with Status Message <em>and</em> multiple actions</h3>
+
+<div class="fsa-stepped-control">
+  <div class="fsa-stepped-control__bd">
+    <div class="fsa-stepped-control__message fsa-stepped-control__message--block" role="status">
+      <strong>5</strong> of <strong>10</strong> Commodities are complete
+    </div>
+    <div class="fsa-stepped-control__list">
+      <div class="fsa-stepped-control__item">
+        <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive_1 }}</button>
+      </div>
+      <div class="fsa-stepped-control__item fsa-stepped-control__item--pull">
+        <button class="fsa-btn fsa-btn--alt fsa-btn--large fsa-stepped-control__btn" type="button">{{ regressive_2 }}</button>
+      </div>
+      <div class="fsa-stepped-control__item">
+        <button class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn" type="submit">
+          <span class="fsa-stepped-control__btn-label">{{ progressive }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <h3 class="fsa-font--sans">Sticky + Default</h3>
 
 <div class="DEMO-STICKY-STEPPED-CONTROL">
@@ -114,8 +162,6 @@
       </div>
     </div>
   </div>
-
-  <p>Reprehenderit inv omnis saepe quam assumenda iste eum cum magnamentore eos explicabo fugiat excepturi dolorum, natus deleniti? Hic magni facilis.</p>
 </div>
 
 <h3 class="fsa-font--sans">Sticky + Default, with Status Message</h3>
@@ -142,7 +188,6 @@
       </div>
     </div>
   </div>
-  <p>Reprehenderit inv omnis saepe quam assumenda iste eum cum magnamentore eos explicabo fugiat excepturi dolorum, natus deleniti? Hic magni facilis.</p>
 </div>
 
 <h3 class="fsa-font--sans">Sticky + Directional</h3>
@@ -150,6 +195,8 @@
 <div class="DEMO-STICKY-STEPPED-CONTROL">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio dolores, unde aperiam, nemo harum sed repellendus veniam voluptas cupiditate porro facilis voluptates ipsam, sapiente illum odit possimus debitis est. Necessitatibus.</p>
   <p>Ducimus architecto ipsa iusto aliquid deserunt commodi dolore, magnam cumque dolorum modi placeat nulla ea veniam suscipit, dolorem voluptas consequuntur repellendus non.</p>
+  <p>Reprehenderit inv omnis saepe quam assumenda iste eum cum magnamentore eos explicabo fugiat excepturi dolorum, natus deleniti? Hic magni facilis.</p>
+  <p>Quia quos cupiditate quae sed earum doloribus voluptatum praesentium! Quae sapiente ea quia veniam, cumque, beatae animi commodi, molestias, temporibus rerum harum.</p>
   <div class="fsa-stepped-control fsa-stepped-control--sticky">
     <div class="fsa-stepped-control__bd">
       <div class="fsa-stepped-control__list">
@@ -164,9 +211,6 @@
       </div>
     </div>
   </div>
-  <p>Reprehenderit inv omnis saepe quam assumenda iste eum cum magnamentore eos explicabo fugiat excepturi dolorum, natus deleniti? Hic magni facilis.</p>
-  <p>Quia quos cupiditate quae sed earum doloribus voluptatum praesentium! Quae sapiente ea quia veniam, cumque, beatae animi commodi, molestias, temporibus rerum harum.</p>
-  <p>Possimus quod, velit ipsa ratione sunt qui, accusantium unde quidem quibusdam nam fuga voluptates eos illum dicta nostrum quia sint iure consequuntur.</p>
 </div>
 
 <h3 class="fsa-font--sans">Sticky + Directional, with Status Message</h3>
@@ -191,7 +235,4 @@
       </div>
     </div>
   </div>
-  <p>Reprehenderit inv omnis saepe quam assumenda iste eum cum magnamentore eos explicabo fugiat excepturi dolorum, natus deleniti? Hic magni facilis.</p>
-  <p>Quia quos cupiditate quae sed earum doloribus voluptatum praesentium! Quae sapiente ea quia veniam, cumque, beatae animi commodi, molestias, temporibus rerum harum.</p>
-  <p>Possimus quod, velit ipsa ratione sunt qui, accusantium unde quidem quibusdam nam fuga voluptates eos illum dicta nostrum quia sint iure consequuntur.</p>
 </div>

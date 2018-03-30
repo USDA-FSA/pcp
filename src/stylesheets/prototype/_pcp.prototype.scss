@@ -118,6 +118,10 @@ $hint-color: rgba(255, 69, 0, .8);
 
   &--docked {
 
+    @include breakpoint(L, down) {
+      display: none;
+    }
+
     @include breakpoint(L) {
 
       $width: 320px;

@@ -1551,6 +1551,10 @@ $('.pcp-mapping__PLACEHOLDER').drags();
         steppedControl()
       });
 
+      $('.fsa-modal').scroll(function() {
+        steppedControl()
+      });
+
       $(document).ready(function() {
         steppedControl();
       })
