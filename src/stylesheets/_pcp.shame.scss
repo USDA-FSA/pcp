@@ -1,36 +1,4 @@
 // TODO move elsewhere in PCP SCSS /////////////////////////////////////////////
-@keyframes flipInX {
-  from {
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  40% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    animation-timing-function: ease-in;
-  }
-
-  60% {
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-  }
-
-  to {
-    transform: perspective(400px);
-  }
-}
-
-.pcp-animate--flipInX {
-  animation-fill-mode: both;
-  backface-visibility: visible !important;
-  animation: flipInX 1.23s;
-}
-
 .sample-sample-sample {
   outline: 1px solid red;
 }
@@ -47,19 +15,15 @@ a[disabled] {
 }
 
 // TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/85 //
-.pcp-stepped-tabs {
-
-  &__label {
-
-    cursor: initial;
-
-    &:not(span, div) {
-      cursor: pointer;
-    }
-
-  }
-
-}
+// .pcp-stepped-tabs {
+//
+//   &__label {
+//
+//     cursor: initial;
+//
+//   }
+//
+// }
 
 // TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/87 //
 .pcp-mapping {
