@@ -25,7 +25,14 @@
 
         {% include: 'includes/pcp-stepped-tabs__closing.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Closing' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' %}
+        <!-- include: 'includes/pcp-title-action-bar.html' @title:'Closing' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' -->
+
+        <div class="pcp-title-action-bar">
+          <div class="pcp-title-action-bar__hd">
+            <h1 class="pcp-title-action-bar__title">Closing</h1>
+          </div>
+          <div class="pcp-title-action-bar__ft"></div>
+        </div>
 
         <div id="unique-id-closing-save">
           <div class="fsa-m-t--m">
@@ -52,6 +59,7 @@
           </div>
         </div>
 
+        {% include: 'includes/fsa-stepped-control.html' @CLASS:'fsa-stepped-control--sticky' @message:'Ready for Adjustments' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' %}
 
       </div>
 

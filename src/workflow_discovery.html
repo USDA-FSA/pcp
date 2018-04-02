@@ -25,7 +25,7 @@
 
         {% include: 'includes/pcp-stepped-tabs__discovery.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_closing.html' @button_state:'disabled' %}
+        {% include: 'includes/pcp-title-action-bar.html' @title:'Today’s Assignments' @action:'Complete Discovery' @link:'workflow_review.html' @button_state:'disabled' %}
 
         <div class="HINT HINT--HIDDEN-BLOCK">
           <p class="fsa-text-align--center fsa-text-size--4">
@@ -34,6 +34,8 @@
         </div>
 
         {% include: 'includes/table_assignments.html' %}
+
+        {% include: 'includes/fsa-stepped-control.html' @CLASS:'fsa-stepped-control--sticky' @message:'<strong>7</strong> of <strong>8</strong>  Programs are Complete' @messageAfter:'<strong>All</strong> Programs are Complete' @action:'Complete Discovery' @link:'workflow_closing.html' @button_state:'disabled' %}
 
       </div>
 

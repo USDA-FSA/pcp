@@ -1,0 +1,66 @@
+{% include: 'includes/html.html' %}
+
+{% include: 'includes/head.html' @title:'Component' %}
+
+<body class="pcp-app">
+
+  {% include: 'includes/fsa-browser-upgrade.html' %}
+
+  {% include: 'includes/skipnav.html' %}
+
+  <header>
+    {% include: 'includes/pcp-header-project.html' %}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <div class="pcp-section">
+
+      <div class="pcp-section__bd">
+
+        <h1>Component: Stepped Control</h1>
+
+        <p class="fsa-text--lead">Typically paired with <strong><a href="component_stepped-tabs.html">Stepped Tabs</a></strong>, this component acts in two parts: surface associated <strong>actions</strong>, and optionally provide <strong>Status</strong> of current step.</p>
+
+        <pre class="pcp-code-block"><code>class="<strong>pcp-stepped-control</strong>"</code></pre>
+
+        <div class="fsa-grid">
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="pcp-prototype-title">As seen on</h2>
+            <ul>
+              <li><a href="workflow_discovery.html">Daily Process &gt; Discovery</a></li>
+              <li><a href="workflow_discovery__complete.html">Daily Process &gt; Discovery</a> (currently on Adjustments)</li>
+              <li><a href="workflow_closing.html">Daily Process &gt; Closing</a></li>
+              <li><a href="workflow_mapping.html">Daily Process &gt; Adjustments</a></li>
+              <li><a href="workflow_review.html">Daily Process &gt; Review</a></li>
+              <li><a href="workflow_publish.html">Daily Process &gt; Publish</a></li>
+            </ul>
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__1/2@m">
+            <h2 class="pcp-prototype-title">FSA Design System References</h2>
+            <ul>
+              <li><a href="http://usda-fsa.github.io/fsa-design-system/?preview">FSA Design System</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {% include: 'includes/fsa-stepped-control__variations.html'  %}
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    {% include: 'includes/pcp-footer-project.html' %}
+  </footer>
+
+  {% include: 'includes/pcp-modal__stepped-control-variation.html' %}
+  {% include: 'includes/pcp-modal__stepped-control-variation-2.html' %}
+
+  {% include: 'includes/scripts.html' %}
+
+</body>
+
+</html>
