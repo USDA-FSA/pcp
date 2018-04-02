@@ -336,6 +336,7 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
 
     @include reset-button();
     display: block;
+    text-align: center;
     width: 100%;
     padding: $size-small;
     // transition: background .23s ease-in-out;

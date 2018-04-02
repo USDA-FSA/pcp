@@ -14,24 +14,6 @@ a[disabled] {
   pointer-events: none;
 }
 
-// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/85 //
-// .pcp-stepped-tabs {
-//
-//   &__label {
-//
-//     cursor: initial;
-//
-//   }
-//
-// }
-
-// TODO move to UX Prototype to fix https://github.com/USDA-FSA/pcp/issues/87 //
-.pcp-mapping {
-  &__btn {
-    text-align: center;
-  }
-}
-
 // Typography experiment ///////////////////////////////////////////////////////
 h1,
 h2,
