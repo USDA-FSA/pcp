@@ -22,6 +22,7 @@
 
     @include breakpoint(M) {
       display: flex;
+      align-items: center;
     }
 
     @include breakpoint(L) {
