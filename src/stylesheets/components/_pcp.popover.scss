@@ -374,7 +374,7 @@
 
   &__close {
 
-    @include button-reset;
+    @include reset-button;
     position: absolute;
     top: -$size-small;
     right: -$size-small;
