@@ -374,7 +374,7 @@
 
   &__close {
 
-    @include pcp-button-reset;
+    @include button-reset;
     position: absolute;
     top: -$size-small;
     right: -$size-small;
