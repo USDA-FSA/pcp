@@ -246,7 +246,7 @@ $swapDistance: 2.8rem;
     }
 
     &--interior {
-      font-weight: $font-light;
+      // font-weight: $font-light;
       color: $color-fsa-tertiary-300;
     }
 
@@ -254,7 +254,6 @@ $swapDistance: 2.8rem;
 
   &__markets-item {
 
-    font-family: $font-serif;
     line-height: 1.6;
 
   }
