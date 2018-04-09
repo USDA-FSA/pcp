@@ -35,6 +35,8 @@
 
         {% include: 'includes/pcp-mapping.html' %}
 
+        {% include: 'includes/fsa-stepped-control.html' @CLASS:'fsa-stepped-control--sticky' @message:'<strong>9</strong> of <strong>10</strong> Commodity Adjustments are Complete' @messageAfter:'<strong>All</strong> Commodity Adjustments are Complete' @action:'Complete Adjustments' @link:'workflow_review.html' @button_state:'disabled' %}
+
       </div>
 
     </div>
@@ -54,6 +56,7 @@
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
     {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
+    {% include: 'includes/growl_map__discovery-change.html' @ID:'unique-id-yshzshfarm' %}
   </div>
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}

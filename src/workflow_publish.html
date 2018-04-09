@@ -25,14 +25,24 @@
 
         {% include: 'includes/pcp-stepped-tabs__publish.html' %}
 
-        {% include: 'includes/pcp-title-action-bar__publish.html' @title:'Publish' @action:'Complete March 22, 2017' @link:'workflow_closing.html' @button_state:'disabled' @reopen:'unique-id-publish-end' %}
+        <!-- include: 'includes/pcp-title-action-bar.html' @title:'' @action:'Complete March 22, 2017' @link:'workflow_closing.html' @button_state:'disabled' -->
+
+        <div class="pcp-title-action-bar">
+          <div class="pcp-title-action-bar__hd">
+            <h1 class="pcp-title-action-bar__title">Publish</h1>
+          </div>
+          <div class="pcp-title-action-bar__ft"></div>
+        </div>
 
         <div class="HINT HINT--HIDDEN-BLOCK">
           <p class="fsa-text-align--center fsa-text-size--4">
             To enable <strong>Complete</strong> button: check all "Published" checkboxes.
           </p>
         </div>
+
         {% include: 'includes/table_publish.html' %}
+
+        {% include: 'includes/fsa-stepped-control__publish.html' @CLASS:'fsa-stepped-control--sticky' @message:'<strong>0</strong> of <strong>3</strong> documents have been psoted' @action:'Complete March 22, 2017' @link:'workflow_mapping.html' @button_state:'disabled' @reopen:'unique-id-publish-end' %}
 
       </div>
 

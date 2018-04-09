@@ -534,9 +534,11 @@ $('body').on('click', '[data-behavior~="fullscreen-toggle"]', function(event) {
   $self = $(this);
   $component = $self.closest('.pcp-mapping');
   $icon = $self.find('use');
+  $componentSteppedControl = $('.fsa-stepped-control');
 
   $self.toggleClass('pcp-mapping__zoom--toggled');
   $component.toggleClass('pcp-mapping--fullscreen');
+  $componentSteppedControl.toggleClass('fsa-stepped-control--sticky');
 
   if ($self.hasClass('pcp-mapping__zoom--toggled')) {
     $icon.attr('xlink:href','img/symbol-defs.svg#pcp-icon--shrink');
@@ -765,10 +767,59 @@ $('body').on('change', '[data-behavior~="toggle-finalize"]', function(event) {
   var $self = $(this);
   var $target = $('#UNIQUE-ID-FINALIZER');
 
-  if ($target.is(':disabled')) {
-    $target.removeAttr('disabled');
-  } else {
+  if ($target.is('[disabled]')) {
+    $target
+      .removeAttr('disabled')
+      .addClass('pcp-animate--flipInX')
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-animate--flipInX');
+      });
+    ;
+  }
+  else {
     $target.attr('disabled', true);
+  }
+
+});
+
+$('body').on('change', '[data-behavior~="update-status-label"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#UNIQUE-ID-STATUS-LABEL__RICE');
+
+  if($self.is(':checked')) {
+    $target.html('<span class="fsa-label fsa-label--success" title="This program has been worked on and has been marked as complete">Complete</span>');
+  }
+  else {
+    $target.html('<span class="fsa-label fsa-label--warning" title="This program is actively being worked on by the assignee">In Progress</span>');
+  }
+
+});
+
+$('body').on('change', '[data-behavior~="update-status-message"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-status-target'));
+  var messageInitial = $target.data('message-initial')
+  var messageAfter = $target.data('message-after')
+
+  if($self.is(':checked')) {
+    $target
+      .addClass('pcp-animate--flipInX')
+      .html(messageAfter)
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-animate--flipInX');
+      });
+    ;
+  }
+  else {
+    $target
+      .addClass('pcp-animate--flipInX')
+      .html(messageInitial)
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-animate--flipInX');
+      });
+    ;
   }
 
 });
@@ -781,7 +832,13 @@ $('body').on('click', '[data-behavior~="init-day"]', function(event) {
   var $targetFinalizer = $('#UNIQUE-ID-FINALIZER');
 
   $self.attr('disabled', true)
-  $targetFinalizer.removeAttr('disabled');
+  $targetFinalizer
+    .removeAttr('disabled')
+    .addClass('pcp-animate--flipInX')
+    .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $(this).removeClass('pcp-animate--flipInX');
+    });
+  ;
 
   $component
     .find('select, textarea, input')
@@ -816,8 +873,15 @@ $('body').on('change', '[data-behavior~="toggle-check-group"]', function(event) 
   console.log('there are **' + $checksAll + '** checkboxes, and **' + $checksChecked + '** are checked');
 
   if ($checksAll == $checksChecked) {
-    $target.removeAttr('disabled');
-  } else {
+    $target
+      .removeAttr('disabled')
+      .addClass('pcp-animate--flipInX')
+      .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $(this).removeClass('pcp-animate--flipInX');
+      });
+    ;
+  }
+  else {
     $target.attr('disabled', true);
   }
 
@@ -1089,11 +1153,12 @@ function HintStatus() {
   var $hintCheckbox = $('#show-hints');
 
   if (hintStatus) {
-    console.log('There IS a "hints" cookie');
+    // console.log('There IS a "hints" cookie');
     $('body').addClass('HINT-SHOW');
     $hintCheckbox.prop('checked', true);
-  } else {
-    console.log('There is NO "hints" cookie');
+  }
+  else {
+    // console.log('There is NO "hints" cookie');
   }
 
 }
@@ -1304,12 +1369,25 @@ $('body').on('click', '[data-behavior~="closing-save"]', function(event) {
 
   var $self = $(this);
   var $targetComponent = $('#' + $self.attr('data-disable-target'));
-  var $targetForms = $targetComponent.find('button, textarea');
+  var $targetForms = $targetComponent.find('button, textarea, input');
   var $targetCompleter = $('#' + $self.attr('data-complete-target'));
+  var $targetCloser = $('#UNIQUE-ID-REOPEN-CLOSING');
 
   $targetForms.attr('disabled', true);
 
-  $targetCompleter.removeAttr('disabled');
+  // $targetCompleter.removeAttr('disabled');
+
+  $targetCloser
+    .removeAttr('hidden')
+  ;
+
+  $targetCompleter
+    .removeAttr('disabled')
+    .addClass('pcp-animate--flipInX')
+    .on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      $(this).removeClass('pcp-animate--flipInX');
+    });
+  ;
 
 })
 
@@ -1439,3 +1517,58 @@ $('body').on('mousedown', '.pcp-mapping__map, .pcp-mapping__hd, .pcp-mapping__to
 })(jQuery);
 
 $('.pcp-mapping__PLACEHOLDER').drags();
+
+;$(function() {
+
+    var $steppedControl = $('.fsa-stepped-control--sticky'); // only the --sticky ones
+
+    function steppedControl() {
+
+      $steppedControl.each(function(index) {
+
+        var $self = $(this)
+        var pageTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var steppendControlPosTop = $self.offset().top - pageTop;
+        var steppendControlHeight = $self.outerHeight();
+        var steppendControlPosBot = windowHeight - (steppendControlPosTop + steppendControlHeight);
+
+        // console.log('pageTop: ' + pageTop);
+        // console.log('windowHeight: ' + windowHeight);
+        // console.log('steppendControlPosTop: ' + steppendControlPosTop);
+        // console.log('steppendControlHeight: ' + steppendControlHeight);
+        // console.log('steppendControlPosBot: ' + steppendControlPosBot);
+
+        if (steppendControlPosBot > 12) {
+          $self.addClass("fsa-stepped-control--unstuck");
+        }
+        else {
+          $self.removeClass("fsa-stepped-control--unstuck");
+        }
+
+      });
+
+    }
+
+    if ($steppedControl.length) { // only run if at least one instance
+
+      $(window).scroll(function() {
+        steppedControl()
+      });
+
+      $('.fsa-modal').scroll(function() {
+        steppedControl()
+      });
+
+      $(document).ready(function() {
+        steppedControl();
+      })
+
+      $(window).resize(function() {
+        // may want to **debounce** this, e.g. http://benalman.com/projects/jquery-throttle-debounce-plugin/
+        steppedControl();
+      })
+
+    }
+
+});

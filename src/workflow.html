@@ -27,11 +27,22 @@
 
         {% include: 'includes/pcp-stepped-tabs__init.html' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Initialize' @action:'Start Daily Process' @link:'workflow_discovery.html' @button_state:'disabled' %}
+        <div class="pcp-title-action-bar">
+          <div class="pcp-title-action-bar__hd">
+            <h1 class="pcp-title-action-bar__title">Initialize</h1>
+          </div>
+          <div class="pcp-title-action-bar__ft"></div>
+        </div>
+
+        <div class="HINT HINT--HIDDEN-BLOCK">
+          <p class="fsa-text-align--center fsa-text-size--4">This UI is mostly out-of-date, refer to SVN codebase for most current</p>
+        </div>
 
         <div class="fsa-m-t--m">
           {% include: 'includes/pcp-workflow__init.html' %}
         </div>
+
+        {% include: 'includes/fsa-stepped-control.html' @CLASS:'fsa-stepped-control--sticky' @message:'Let’s get started' @action:'Start Daily Process' @link:'workflow_discovery.html' @button_state:'disabled' %}
 
       </div>
 

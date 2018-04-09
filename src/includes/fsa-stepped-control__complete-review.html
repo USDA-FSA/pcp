@@ -1,0 +1,15 @@
+<div class="fsa-stepped-control {{ CLASS }}">
+  <div class="fsa-stepped-control__bd">
+    <div class="fsa-stepped-control__message" role="status">
+      <span id="DYNAMIC-UNIQUE__ID-STATUS-MESSAGE">{{ message }}</span>
+    </div>
+    <div class="fsa-stepped-control__list">
+      <div class="fsa-stepped-control__item">
+        <button {{ button_state }} class="fsa-btn fsa-btn--primary fsa-btn--large fsa-stepped-control__btn HINT" data-behavior="growl-show whiteout-show" data-target="unique-id-sghj4ppp" type="button">
+          {% include: 'includes/icon.html' @NAME:'checkmark' @SIZE:' ' @CLASS:'fsa-stepped-control__icon' %}
+          <span class="fsa-stepped-control__btn-label">{{ action }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
