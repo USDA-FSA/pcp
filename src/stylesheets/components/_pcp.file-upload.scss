@@ -99,6 +99,10 @@
 
   }
 
+  &[hidden] {
+    display: none !important; /* stylelint-disable-line declaration-no-important */
+  }
+
 }
 
 // IE workaround
