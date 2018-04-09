@@ -96,7 +96,6 @@ $hint-color: rgba(255, 69, 0, .8);
       color: transparent;
       line-height: 1;
       font-size: $font-size-3;
-      font-family: $font-sans;
       font-weight: $font-bold;
       background-color: shade($hint-color, 10%);
       margin: (-$size-small) (-$size-small) $size-default;
@@ -175,7 +174,6 @@ $hint-color: rgba(255, 69, 0, .8);
 
 .pcp-prototype-title {
 
-  font-family: $font-sans;
   border-top: 2px solid $color-fsa-secondary-900;
   font-weight: $font-normal;
 

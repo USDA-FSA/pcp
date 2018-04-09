@@ -13,11 +13,11 @@
       opacity: .4;
       cursor: not-allowed;
       pointer-events: none;
-      color: transparentize($button-default-text, .35);
+      // color: transparentize($button-default-text, .35);
     }
 
     .pcp-file-upload__input:focus + & {
-      background-color: #282523;
+      // background-color: #282523;
     }
 
   }
@@ -55,6 +55,10 @@
       display: none;
     }
 
+  }
+
+  &[hidden] {
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 
 }
@@ -97,6 +101,10 @@
       outline: 0;
     }
 
+  }
+
+  &[hidden] {
+    display: none !important; /* stylelint-disable-line declaration-no-important */
   }
 
 }
