@@ -2,3 +2,11 @@
 .sample-sample-sample {
   outline: 1px solid red;
 }
+
+// TODO https://github.com/USDA-FSA/fsa-style/issues/236
+.fsa-btn--secondary:focus:not([disabled]),
+.fsa-btn--secondary:active:not([disabled]),
+.fsa-btn--alt:focus:not([disabled]),
+.fsa-btn--alt:active:not([disabled]) {
+  background-color: $button-primary-active;
+}
