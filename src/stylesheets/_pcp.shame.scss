@@ -10,3 +10,7 @@
 .fsa-btn--alt:active:not([disabled]) {
   background-color: $button-primary-active;
 }
+
+[hidden], template {
+  display: none;
+}

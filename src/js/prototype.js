@@ -1371,10 +1371,15 @@ $('body').on('click', '[data-behavior~="closing-save"]', function(event) {
   var $targetComponent = $('#' + $self.attr('data-disable-target'));
   var $targetForms = $targetComponent.find('button, textarea, input');
   var $targetCompleter = $('#' + $self.attr('data-complete-target'));
+  var $targetCloser = $('#UNIQUE-ID-REOPEN-CLOSING');
 
   $targetForms.attr('disabled', true);
 
   // $targetCompleter.removeAttr('disabled');
+
+  $targetCloser
+    .removeAttr('hidden')
+  ;
 
   $targetCompleter
     .removeAttr('disabled')
