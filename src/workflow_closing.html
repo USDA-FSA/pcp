@@ -44,22 +44,24 @@
               <label class="fsa-field__label" for="gemino-quis-shdj">Message</label>
               <textarea class="fsa-textarea fsa-field__item HINT" name="gemino-quis-shdj" id="gemino-quis-shdj" placeholder="Add a message"></textarea>
             </div>
-            <div class="fsa-field">
+            <!-- <div class="fsa-field">
               <input data-behavior="enable-closing-save" data-enable-target="unique-id-saver-272728" class="fsa-checkbox" id="UNIQUE-ID-77shhsn" type="checkbox" name="UNIQUE-ID-77shhsn" value="approve">
               <label for="UNIQUE-ID-77shhsn" class="HINT">Closings are in</label>
-            </div>
+            </div> -->
             <!-- <div class="fsa-field">
               <label class="fsa-field__label" for="gemino-quis-ssg2">Message <span class="fsa-field__label-desc">Required</span></label>
               <textarea data-behavior="validate-closing" data-save-target="unique-id-saver-272728" class="fsa-textarea fsa-field__item" name="gemino-quis-ssg2" id="gemino-quis-ssg2" placeholder="Add a message"></textarea>
               <span class="fsa-field__message" id="closing-message__freeform" role="alert">This field is required</span>
             </div> -->
             <div class="fsa-field">
-              <button disabled="disabled" id="unique-id-saver-272728" class="fsa-btn fsa-btn--primary HINT" type="button" data-behavior="growl-show growl-dismiss-delay closing-save" data-disable-target="unique-id-closing-save" data-complete-target="UNIQUE-ID-FINALIZER" data-target="unique-id-asdfgwbhq33">Save</button>
+              <button id="unique-id-saver-272728" class="fsa-btn fsa-btn--primary HINT" type="button" data-behavior="growl-show growl-dismiss-delay closing-save" data-disable-target="unique-id-closing-save" data-complete-target="UNIQUE-ID-FINALIZER" data-target="unique-id-asdfgwbhq33">Save</button>
             </div>
           </div>
         </div>
 
-        {% include: 'includes/fsa-stepped-control.html' @CLASS:'fsa-stepped-control--sticky' @message:'Ready for Adjustments' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' %}
+        {% include: 'includes/fsa-stepped-control__closing.html' @CLASS:'fsa-stepped-control--sticky' @message:'Ready for Adjustments' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:' ' @target:'unique-id-close-end' %}
+
+        <!-- data-behavior="growl-show whiteout-show" -->
 
       </div>
 
@@ -80,6 +82,10 @@
   </div>
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
     {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+  </div>
+
+  <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
+    {% include: 'includes/growl_close-end.html' @ID:'unique-id-close-end' %}
   </div>
 
   {% include: 'includes/scripts.html' %}
