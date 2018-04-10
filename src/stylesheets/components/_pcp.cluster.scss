@@ -1,0 +1,59 @@
+.pcp-cluster {
+
+  margin-left: -20px;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  z-index: 90;
+  background-clip: padding-box;
+  border-radius: 20px;
+  background: rgba($color-fsa-aqua, .5);
+  display: inline-block;
+
+  &--low {
+    background: rgba($color-gold-lighter, .5); // from USWDS
+  }
+
+  &--high {
+    background: rgba($color-fsa-red, .5);
+  }
+
+  &__value {
+
+    @include font-size(4);
+    color: $color-white;
+    line-height: 32px;
+
+    // scss-lint:disable SelectorFormat
+    .pcp-cluster--low & {
+      color: $color-black;
+    }
+
+    .pcp-cluster--high & {
+      color: $color-white;
+    }
+
+  }
+
+  &__bd {
+
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba($color-fsa-aqua, .8);
+    position: absolute;
+
+    &--high {
+      background: rgba($color-fsa-red, .8);
+    }
+
+    &--low {
+      background: rgba($color-gold-lighter, .8); // from USWDS
+    }
+
+  }
+
+}
