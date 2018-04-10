@@ -57,7 +57,6 @@ $mapPanelIconWidth: ($mapPanelIconHeight - 2px);
   .fsa-content-tabs__item:nth-last-child(n+11) ~ .fsa-content-tabs__item {
     .fsa-content-tabs__label {
       @include font-size(3);
-      outline: 1px solid red;
     }
   }
 
