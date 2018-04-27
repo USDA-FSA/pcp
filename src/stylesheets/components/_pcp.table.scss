@@ -165,6 +165,27 @@
 
   }
 
+  &__county-ref {
+
+    @include font-size(2);
+    margin-left: $size-small;
+    font-style: italic;
+    color: $color-fsa-tertiary-300;
+
+    &--suppressed {
+      display: none;
+    }
+
+    &:before {
+      content: '(';
+    }
+
+    &:after {
+      content: ')';
+    }
+
+  }
+
   @media print {
     margin-top: 2em;
   }
