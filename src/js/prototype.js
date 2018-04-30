@@ -1335,7 +1335,7 @@ $('body').on('change', '[data-behavior~="toggle-county-ref"]', function(event) {
 
   var $self = $(this);
   var $target = $('#' + $self.attr('data-target'));
-  var $countyRefs = $target.find('.pcp-table__county-ref');
+  var $countyRefs = $target.find('.pcp-table__county-ref:not(.pcp-table__county-ref--long)');
 
   if ($self.is(':checked')) {
     $countyRefs.attr('aria-hidden', 'false');

@@ -167,22 +167,18 @@
 
   &__county-ref {
 
-    @include font-size(2);
-    margin-left: $size-small;
-    font-style: italic;
+    @include font-size(1);
     color: $color-fsa-tertiary-300;
-    white-space: nowrap;
+    display: block;
+    // white-space: nowrap;
+
+    // &--long {
+    //   @include font-size(1);
+    //   margin-left: 0;
+    // }
 
     &[aria-hidden="true"] {
       display: none;
-    }
-
-    &:before {
-      content: '(';
-    }
-
-    &:after {
-      content: ')';
     }
 
   }
