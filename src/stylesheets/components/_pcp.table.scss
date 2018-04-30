@@ -171,8 +171,9 @@
     margin-left: $size-small;
     font-style: italic;
     color: $color-fsa-tertiary-300;
+    white-space: nowrap;
 
-    &--suppressed {
+    &[aria-hidden="true"] {
       display: none;
     }
 

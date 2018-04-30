@@ -1331,6 +1331,20 @@ $('body').on('change', '[data-behavior~="toggle-changes-only"]', function(event)
 
 })
 
+$('body').on('change', '[data-behavior~="toggle-county-ref"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-target'));
+  var $countyRefs = $target.find('.pcp-table__county-ref');
+
+  if ($self.is(':checked')) {
+    $countyRefs.attr('aria-hidden', 'false');
+  } else {
+    $countyRefs.attr('aria-hidden', 'true');
+  }
+
+})
+
 $('body').on('change', '[data-behavior~="toggle-changes-only--cell"]', function(event) {
 
   // Yes, 98% similar to [data-behavior~="toggle-changes-only"] above
