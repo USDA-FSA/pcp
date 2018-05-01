@@ -170,17 +170,18 @@
     @include font-size(1);
     color: $color-fsa-tertiary-300;
     display: block;
-    // white-space: nowrap;
-
-    // &--long {
-    //   @include font-size(1);
-    //   margin-left: 0;
-    // }
 
     &[aria-hidden="true"] {
       display: none;
     }
 
+  }
+
+  &__5-30 {
+    @include breakpoint(L) {
+      float: right;
+      margin-left: $size-base;
+    }
   }
 
   @media print {
