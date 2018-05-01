@@ -89,13 +89,25 @@
     font-weight: $font-bold;
 
     &--pair {
+
       // scss-lint:disable ImportantRule
       border-bottom: 0 !important; // refactor to remove important
       padding-bottom: 0 !important; // refactor to remove important
+
+      @include breakpoint(L, down) {
+        @include font-size(2);
+      }
+      
     }
 
     &--sub {
+
       font-weight: $font-normal;
+
+      @include breakpoint(L, down) {
+        @include font-size(1);
+      }
+
     }
 
     &--sticky {
@@ -161,6 +173,29 @@
         background-image: url('#{$image-path}/chevron-up.svg');
         opacity: .4;
       }
+    }
+
+  }
+
+  &__county-ref {
+
+    @include font-size(1);
+    color: $color-fsa-tertiary-300;
+    display: block;
+
+    &[aria-hidden="true"] {
+      display: none;
+    }
+
+  }
+
+  &__5-30 {
+
+    display: block;
+
+    @include breakpoint(L) {
+      float: right;
+      margin-left: $size-base;
     }
 
   }
