@@ -178,10 +178,18 @@
   }
 
   &__5-30 {
+
+    display: block;
+
+    @include breakpoint(M) {
+      display: initial;
+    }
+
     @include breakpoint(L) {
       float: right;
       margin-left: $size-base;
     }
+    
   }
 
   @media print {
