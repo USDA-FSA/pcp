@@ -109,6 +109,10 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
+        from: '/node_modules/fsa-style/src/stylesheets/',
+        to: './src/stylesheets/'
+      },
+      {
         from: './src/js',
         to: './js/'
       },
