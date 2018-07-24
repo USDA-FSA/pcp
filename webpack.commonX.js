@@ -124,5 +124,6 @@ module.exports = {
       alias: {
         'fsaStyleScss' : path.join(__dirname, 'node_modules/fsa-style/src/stylesheets/fsa-style.scss')
        }
-  }  
+  }
+  
 };

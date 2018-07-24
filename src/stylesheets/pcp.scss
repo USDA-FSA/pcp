@@ -1,6 +1,9 @@
 
 // Bring in fsa-style, i.e. http://usda-fsa.github.io/fsa-style/
-//@import 'lib/fsa-style/fsa-style';
+
+$image-path: '/img';
+@import '~fsa-style/src/stylesheets/fsa-style.scss';
+
 @import 'lib/rzslider';
 
 // PCP Core
