@@ -1,0 +1,109 @@
+<div class="pcp-mapping">
+  <div class="pcp-mapping__hd">
+    {% include: 'includes/pcp-content-tabs__map.html' %}
+  </div>
+  <div class="pcp-mapping__cardbar">
+    {% include: 'includes/pcp-map-toolbar.html' %}
+  </div>
+  <div class="pcp-mapping__bd">
+
+    <div class="pcp-mapping__map" data-behavior="DEMO-CLOSE-RIFT-DETAILS">
+      <img draggable="true" class="pcp-mapping__PLACEHOLDER" style="transform: translate(-260px, -775px);" src="img/map--continental.png" alt="">
+    </div>
+
+    <div class="pcp-mapping__panel pcp-mapping__panel--visible">
+
+      <div class="pcp-mapping__panel-toggle">
+        <button class="pcp-mapping__panel-btn" type="button" data-behavior="panel-toggle" title="Toggle Panel" aria-label="Toggle Panel">
+          {% include: 'includes/icon.html' @NAME:'circle-left' @SIZE:' ' @CLASS:' ' %}
+        </button>
+      </div>
+
+      <div class="pcp-mapping__panel-splitter"><i></i></div>
+
+      <div class="pcp-mapping__panel-hd">
+        <!-- include: 'includes/pcp-card__hrw.html' -->
+      </div>
+      <div class="pcp-mapping__panel-bd pcp-mapping__panel-bd--scrollable">
+        <div class="pcp-mapping__panel-bd-scroll-item pcp-mapping__panel-bd-scroll-item--top">
+          {% include: 'includes/pcp-adjust__terminal.html' @title:'Terminal Adjustments' %}
+        </div>
+        <div class="pcp-mapping__panel-bd--splitter"><i></i></div>
+        <div class="pcp-mapping__panel-bd-scroll-item pcp-mapping__panel-bd-scroll-item--middle">
+          {% include: 'includes/pcp-adjust__state.html' @title:'State Adjustments' %}
+        </div>
+        <div class="pcp-mapping__panel-bd--splitter pcp-mapping__panel-bd--splitter-middle"><i></i></div>
+        <div class="pcp-mapping__panel-bd-scroll-item pcp-mapping__panel-bd-scroll-item--bottom">
+          {% include: 'includes/pcp-adjust__protein-discounts.html' @title:'Premiums/Discount' %}
+        </div>
+      </div>
+      <div class="pcp-mapping__panel-ft"></div>
+
+    </div>
+
+    <div class="pcp-mapping__marker" style="top: 40px; left: 405px;">
+      <button class="pcp-marker pcp-marker--high pcp-marker--modified HINT" data-behavior="DEMO-MAP-RIFT-DETAILS" data-target="UNIQUE-ID-88893887672562" type="button">
+        <span class="pcp-marker__value">-0.03</span>
+        <span class="pcp-marker__pinpoint"></span>
+      </button>
+    </div>
+
+    <div class="pcp-mapping__marker" style="top: 130px; left: 805px;">
+      <button class="pcp-marker pcp-marker--low HINT" data-behavior="DEMO-MAP-RIFT-DETAILS" data-target="UNIQUE-ID-76883776994975" type="button">
+        <span class="pcp-marker__value">-0.76</span>
+        <span class="pcp-marker__pinpoint"></span>
+      </button>
+    </div>
+
+    <div class="pcp-mapping__marker" style="top: 390px; left: 865px;">
+      <button class="pcp-marker HINT" data-behavior="DEMO-MAP-RIFT-DETAILS" data-target="UNIQUE-ID-445S5545545558" type="button">
+        <span class="pcp-marker__value">-0.08</span>
+        <span class="pcp-marker__pinpoint"></span>
+      </button>
+    </div>
+
+    <div class="pcp-mapping__rift-detail" id="UNIQUE-ID-88893887672562">
+      {% include: 'includes/rift-detail.html' %}
+    </div>
+
+    <div class="pcp-mapping__rift-detail" id="UNIQUE-ID-76883776994975">
+      {% include: 'includes/rift-detail__example-76883776994975.html' %}
+    </div>
+
+    <div class="pcp-mapping__rift-detail" id="UNIQUE-ID-445S5545545558">
+      {% include: 'includes/rift-detail__example-445S5545545558.html' %}
+    </div>
+
+    <div class="pcp-mapping__tools-primary">
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn HINT" aria-label="Full screen" type="button" data-behavior="fullscreen-toggle" title="Toggle fullscreen">{% include: 'includes/icon.html' @NAME:'enlarge' @SIZE:' ' @CLASS:'pcp-mapping__fullscreen' %}</button>
+      </div>
+    </div>
+
+    <div class="pcp-mapping__tools-secondary">
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn HINT" aria-label="Legend" type="button" title="Legend" data-behavior="toggle-popover" data-target="popover-tools__legend" >{% include: 'includes/icon.html' @NAME:'list' @SIZE:' ' @CLASS:'pcp-mapping__legend' %}</button>
+        {% include: 'includes/pcp-popover.tools__legend.html' %}
+      </div>
+      <div class="pcp-mapping__tool" >
+        <div class="pcp-mapping__slider">
+          {% include: 'includes/angular-slider.html' %}
+        </div>
+        <button class="pcp-mapping__btn HINT" aria-label="Reset" type="button" title="Reset" onclick="alert('Reset threshhold range to initial.\n\nIf at initial, disable this button.')">{% include: 'includes/icon.html' @NAME:'spinner11' @SIZE:' ' @CLASS:'pcp-mapping__reset' %}</button>
+      </div>
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn HINT" aria-label="Layers" type="button" title="Layers" data-behavior="toggle-popover" data-target="popover-tools__layers" >{% include: 'includes/icon.html' @NAME:'stack' @SIZE:' ' @CLASS:'pcp-mapping__layers' %}</button>
+        {% include: 'includes/pcp-popover.tools__layers.html' %}
+      </div>
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn" aria-label="Zoom in" type="button" title="Zoom in">{% include: 'includes/icon.html' @NAME:'plus' @SIZE:' ' @CLASS:'pcp-mapping__zoom-in' %}</button>
+        <button class="pcp-mapping__btn pcp-mapping__btn--adj" aria-label="Zoom out" type="button" title="Zoom out">{% include: 'includes/icon.html' @NAME:'minus' @SIZE:' ' @CLASS:'pcp-mapping__zoom-out' %}</button>
+      </div>
+      <div class="pcp-mapping__tool">
+        <button class="pcp-mapping__btn HINT" aria-label="Map home" type="button" title="Map home" onclick="alert('Reset map zoom level to initial')">{% include: 'includes/icon.html' @NAME:'home' @SIZE:' ' @CLASS:'pcp-mapping__home' %}</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="pcp-mapping__ft"></div>
+</div>

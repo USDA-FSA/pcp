@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -26,8 +26,8 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="workflow_mapping.html">Daily Process > Mapping / Adjustment</a></li>
-              <li><a href="settings_commodities.html">Settings</a></li>
+              <li><a href="workflow_mapping.njk">Daily Process > Mapping / Adjustment</a></li>
+              <li><a href="settings_commodities.njk">Settings</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -42,37 +42,37 @@
 
         <h3>Default</h3>
 
-        {% include: 'includes/pcp-content-tabs__handful.html' %}
+        {% include: 'includes/pcp-content-tabs__handful.njk' %}
 
         <h3>Small</h3>
 
-        {% include: 'includes/pcp-content-tabs__small.html' %}
+        {% include: 'includes/pcp-content-tabs__small.njk' %}
 
         <h3>Large</h3>
 
-        {% include: 'includes/pcp-content-tabs__large.html' %}
+        {% include: 'includes/pcp-content-tabs__large.njk' %}
 
         <h3>Justified</h3>
 
-        {% include: 'includes/pcp-content-tabs__justified.html' %}
+        {% include: 'includes/pcp-content-tabs__justified.njk' %}
 
         <h3>Justified Equal</h3>
 
-        {% include: 'includes/pcp-content-tabs__justified-equal.html' %}
+        {% include: 'includes/pcp-content-tabs__justified-equal.njk' %}
 
         <h2 class="pcp-prototype-title">Samples</h2>
 
         <h3>Mapping</h3>
 
-        {% include: 'includes/pcp-content-tabs__map.html' %}
+        {% include: 'includes/pcp-content-tabs__map.njk' %}
 
         <h3>Settings</h3>
 
-        {% include: 'includes/pcp-content-tabs__settings__markets.html' %}
+        {% include: 'includes/pcp-content-tabs__settings__markets.njk' %}
 
         <h3>Multi-line wrap (auto)</h3>
 
-        {% include: 'includes/pcp-content-tabs__multi-line-wrap.html' %}
+        {% include: 'includes/pcp-content-tabs__multi-line-wrap.njk' %}
 
       </div>
 
@@ -81,10 +81,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

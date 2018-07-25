@@ -1,18 +1,18 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Review' %}
+{% include: 'includes/head.njk' @title:'Review' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
+  {% include: 'includes/fsa-disclaimer.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header__profile-only.html' %}
-    {% include: 'includes/pcp-nav-global__workflow.html' %}
+    {% include: 'includes/pcp-header__profile-only.njk' %}
+    {% include: 'includes/pcp-nav-global__workflow.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -21,14 +21,14 @@
 
       <div class="pcp-section__bd">
 
-        {% include: 'includes/pcp-info-bar.html' %}
+        {% include: 'includes/pcp-info-bar.njk' %}
 
-        {% include: 'includes/pcp-stepped-tabs__review.html' %}
+        {% include: 'includes/pcp-stepped-tabs__review.njk' %}
 
-        {% include: 'includes/pcp-title-action-bar.html' @title:'Review Adjustments' @action:'Complete Review' @link:'workflow_publish.html' @button_state:' ' %}
+        {% include: 'includes/pcp-title-action-bar.njk' @title:'Review Adjustments' @action:'Complete Review' @link:'workflow_publish.njk' @button_state:' ' %}
 
         <div class="fsa-m-t--m fsa-m-b--l">
-          {% include: 'includes/pcp-content-tabs__review.html' %}
+          {% include: 'includes/pcp-content-tabs__review.njk' %}
         </div>
 
         <div class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION">
@@ -56,65 +56,65 @@
               <div class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION">
                 <div id="UNIQUE-ID-COM-All" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
                   <h2>YC - Corn</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                   <h2>YSB - Soybean</h2>
-                  {% include: 'includes/review-adjustments__three-up.html' %}
+                  {% include: 'includes/review-adjustments__three-up.njk' %}
                   <h2>SOR - Sorghum</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                   <h2>HRW - Hard Red Winter Wheat</h2>
-                  {% include: 'includes/review-adjustments__three-up.html' %}
+                  {% include: 'includes/review-adjustments__three-up.njk' %}
                   <h2>SRW - Soft Red Winter Wheat</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                   <h2>WHI - Soft White Wheat</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                   <h2>HRS - Hard Red Spring Wheat</h2>
-                  {% include: 'includes/review-adjustments__three-up.html' %}
+                  {% include: 'includes/review-adjustments__three-up.njk' %}
                   <h2>HAD - Hard Amber Durum</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                   <h2>OAT - Oats</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                   <h2>BRL - Barley</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-YC" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2 class="">YC - Corn</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-YSB" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>YSB - Soybean</h2>
-                  {% include: 'includes/review-adjustments__three-up.html' %}
+                  {% include: 'includes/review-adjustments__three-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-SOR" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>SOR - Sorghum</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-HRW" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>HRW - Hard Red Winter Wheat</h2>
-                  {% include: 'includes/review-adjustments__three-up.html' %}
+                  {% include: 'includes/review-adjustments__three-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-SRW" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>SRW - Soft Red Winter Wheat</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-WHI" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>WHI - Soft White Wheat</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-HRS" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>HRS - Hard Red Spring Wheat</h2>
-                  {% include: 'includes/review-adjustments__three-up.html' %}
+                  {% include: 'includes/review-adjustments__three-up.njk' %}
                 </div>
                   <div id="UNIQUE-ID-COM-HAD" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>HAD - Hard Amber Durum</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-OAT" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>OAT - Oats</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
                 <div id="UNIQUE-ID-COM-BRL" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <h2>BRL - Barley</h2>
-                  {% include: 'includes/review-adjustments__two-up.html' %}
+                  {% include: 'includes/review-adjustments__two-up.njk' %}
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@
               </span>
             </p>
             <div id="UNIQUE-ID-CHANGE-TARGET_ldp">
-              {% include: 'includes/table_review-ldp-change.html' %}
+              {% include: 'includes/table_review-ldp-change.njk' %}
             </div>
           </div>
           <div id="UNIQUE-ID-6274679" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
@@ -152,23 +152,23 @@
               <div class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION">
                 <div id="UNIQUE-ID-commodities" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM--ACTIVE">
                   <!-- <h2>Commodities</h2> -->
-                  {% include: 'includes/table_review-differential__commodities.html' %}
+                  {% include: 'includes/table_review-differential__commodities.njk' %}
                 </div>
                 <div id="UNIQUE-ID-oilseeds" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <!-- <h2>Minor Oilseeds</h2> -->
-                  {% include: 'includes/table_review-differential__oilseeds.html' %}
+                  {% include: 'includes/table_review-differential__oilseeds.njk' %}
                 </div>
                 <div id="UNIQUE-ID-pulses" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <!-- <h2>Pulses</h2> -->
-                  {% include: 'includes/table_review-differential__pulses.html' %}
+                  {% include: 'includes/table_review-differential__pulses.njk' %}
                 </div>
                 <div id="UNIQUE-ID-cotton" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <!-- <h2>Cotton</h2> -->
-                  {% include: 'includes/table_review-differential__cotton.html' %}
+                  {% include: 'includes/table_review-differential__cotton.njk' %}
                 </div>
                 <div id="UNIQUE-ID-rice" class="PCP-TAB-CONTENT-DONT-USE-THESE-STYLES-IN-PRODUCTION__ITEM">
                   <!-- <h2>Rice</h2> -->
-                  {% include: 'includes/table_review-differential__rice.html' %}
+                  {% include: 'includes/table_review-differential__rice.njk' %}
                 </div>
               </div>
             </div>
@@ -177,7 +177,7 @@
           </div>
         </div>
 
-        {% include: 'includes/fsa-stepped-control__complete-review.html' @CLASS:'fsa-stepped-control--sticky' @message:'Almost done' @action:'Complete Review' @link:'workflow_publish.html' @button_state:' ' %}
+        {% include: 'includes/fsa-stepped-control__complete-review.njk' @CLASS:'fsa-stepped-control--sticky' @message:'Almost done' @action:'Complete Review' @link:'workflow_publish.njk' @button_state:' ' %}
 
       </div>
 
@@ -186,24 +186,24 @@
   </main>
 
   <footer>
-    {% include: 'includes/fsa-footer.html' %}
+    {% include: 'includes/fsa-footer.njk' %}
   </footer>
 
-  {% include: 'includes/pcp-modal__edit-workflow.html' %}
-  {% include: 'includes/pcp-modal__differential-footnotes.html' %}
-  {% include: 'includes/pcp-modal__print-review.html' %}
+  {% include: 'includes/pcp-modal__edit-workflow.njk' %}
+  {% include: 'includes/pcp-modal__differential-footnotes.njk' %}
+  {% include: 'includes/pcp-modal__print-review.njk' %}
 
-  {% include: 'includes/whiteout.html' @HIDDEN:'true' %}
+  {% include: 'includes/whiteout.njk' @HIDDEN:'true' %}
 
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
-    {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
+    {% include: 'includes/growl_map-reset-confirm.njk' @ID:'unique-id-55sssss55om' %}
+    {% include: 'includes/growl_map-save.njk' @ID:'unique-id-55s55h55from' %}
   </div>
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_review-complete.html' @ID:'unique-id-sghj4ppp' %}
+    {% include: 'includes/growl_review-complete.njk' @ID:'unique-id-sghj4ppp' %}
   </div>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

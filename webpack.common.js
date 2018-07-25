@@ -53,6 +53,10 @@ module.exports = {
         ]
       },
       {
+        test: /\.(njk|nunjucks)$/,
+        loader: 'nunjucks-loader'
+      },
+      {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           {
@@ -89,8 +93,8 @@ module.exports = {
       chunkFilename: "[name].css"
     }),
     new HTMLWebpackPlugin({
-      template: 'src/index.html',
-      filename: 'index.html',
+      template: 'src/index.njk',
+      filename: 'index.njk',
       options:{
         title: 'PCP II'
       }

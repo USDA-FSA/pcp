@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -26,12 +26,12 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="workflow_discovery.html">Daily Process > Discovery</a></li>
-              <li><a href="workflow_discovery__complete.html">Daily Process > Discovery</a> (currently on Adjustments)</li>
-              <li><a href="workflow_closing.html">Daily Process > Closing</a></li>
-              <li><a href="workflow_mapping.html">Daily Process > Adjustments</a></li>
-              <li><a href="workflow_review.html">Daily Process > Review</a></li>
-              <li><a href="workflow_publish.html">Daily Process > Publish</a></li>
+              <li><a href="workflow_discovery.njk">Daily Process > Discovery</a></li>
+              <li><a href="workflow_discovery__complete.njk">Daily Process > Discovery</a> (currently on Adjustments)</li>
+              <li><a href="workflow_closing.njk">Daily Process > Closing</a></li>
+              <li><a href="workflow_mapping.njk">Daily Process > Adjustments</a></li>
+              <li><a href="workflow_review.njk">Daily Process > Review</a></li>
+              <li><a href="workflow_publish.njk">Daily Process > Publish</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -47,36 +47,36 @@
 
         <h3>Default</h3>
 
-        {% include: 'includes/pcp-stepped-tabs.html' %}
+        {% include: 'includes/pcp-stepped-tabs.njk' %}
 
         <h3>Buttons</h3>
 
         <p>Actionable steps can be <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code>, depending on how your system is set up.</p>
 
-        {% include: 'includes/pcp-stepped-tabs__button.html' %}
+        {% include: 'includes/pcp-stepped-tabs__button.njk' %}
 
         <h3>Justified</h3>
 
-        {% include: 'includes/pcp-stepped-tabs.html' @variation:'pcp-stepped-tabs--justified' %}
+        {% include: 'includes/pcp-stepped-tabs.njk' @variation:'pcp-stepped-tabs--justified' %}
 
         <h3>No icons</h3>
 
-        {% include: 'includes/pcp-stepped-tabs__no-icons.html' @variation:' ' %}
+        {% include: 'includes/pcp-stepped-tabs__no-icons.njk' @variation:' ' %}
 
         <h2 class="pcp-prototype-title">Samples</h2>
 
-        {% include: 'includes/pcp-stepped-tabs__step-1-of-4.html' %}
-        {% include: 'includes/pcp-stepped-tabs__step-2-of-4.html' %}
-        {% include: 'includes/pcp-stepped-tabs__step-3-of-4.html' %}
-        {% include: 'includes/pcp-stepped-tabs__step-4-of-4.html' %}
+        {% include: 'includes/pcp-stepped-tabs__step-1-of-4.njk' %}
+        {% include: 'includes/pcp-stepped-tabs__step-2-of-4.njk' %}
+        {% include: 'includes/pcp-stepped-tabs__step-3-of-4.njk' %}
+        {% include: 'includes/pcp-stepped-tabs__step-4-of-4.njk' %}
 
         <h3>Adjustments (on step 4 of 6)</h3>
 
-        {% include: 'includes/pcp-stepped-tabs__mapping.html' %}
+        {% include: 'includes/pcp-stepped-tabs__mapping.njk' %}
 
         <h3>Adjustments <em>in progress</em>, but currently viewing <em>completed</em> Discovery</h3>
 
-        {% include: 'includes/pcp-stepped-tabs__discovery--at-adjustments.html' %}
+        {% include: 'includes/pcp-stepped-tabs__discovery--at-adjustments.njk' %}
 
       </div>
 
@@ -85,10 +85,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

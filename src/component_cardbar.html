@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -26,7 +26,7 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="workflow_mapping.html">Daily Process > Mapping / Adjustment</a></li>
+              <li><a href="workflow_mapping.njk">Daily Process > Mapping / Adjustment</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -41,7 +41,7 @@
 
         <h2 class="pcp-prototype-title">Sample</h2>
 
-        {% include: 'includes/pcp-map-toolbar.html' %}
+        {% include: 'includes/pcp-map-toolbar.njk' %}
 
       </div>
 
@@ -50,10 +50,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

@@ -1,6 +1,6 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Posted County Prices: Adjustments' %}
+{% include: 'includes/head.njk' @title:'Posted County Prices: Adjustments' %}
 
 <body>
 
@@ -17,7 +17,7 @@
       <div class="pcp-print__segment">
         <header>
           <div class="pcp-print__segment-hd">
-            {% include: 'includes/print-segment-header__mapping.html' %}
+            {% include: 'includes/print-segment-header__mapping.njk' %}
           </div>
         </header>
         <article>
@@ -55,15 +55,15 @@
           <div class="fsa-grid">
             <div class="fsa-grid__1 fsa-grid__1/3@m">
               <h2>Terminal Adjustments</h2>
-              {% include: 'includes/pcp-adjust__terminal___print.html' @title:'Terminal Adjustments' %}
+              {% include: 'includes/pcp-adjust__terminal___print.njk' @title:'Terminal Adjustments' %}
             </div>
             <div class="fsa-grid__1 fsa-grid__1/3@m">
               <h2>State Adjustments</h2>
-              {% include: 'includes/pcp-adjust__state___print.html' @title:'State Adjustments' %}
+              {% include: 'includes/pcp-adjust__state___print.njk' @title:'State Adjustments' %}
             </div>
             <div class="fsa-grid__1 fsa-grid__1/3@m">
               <h2>Premiums / Discount</h2>
-              {% include: 'includes/pcp-adjust__protein-discounts___print.html' @title:'Premiums/Discount' %}
+              {% include: 'includes/pcp-adjust__protein-discounts___print.njk' @title:'Premiums/Discount' %}
             </div>
           </div>
 
@@ -78,7 +78,7 @@
 
   </section>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
   <script>
     pcpCustomPrint();

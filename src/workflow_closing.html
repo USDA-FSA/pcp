@@ -1,18 +1,18 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Closing' %}
+{% include: 'includes/head.njk' @title:'Closing' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
+  {% include: 'includes/fsa-disclaimer.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header__profile-only.html' %}
-    {% include: 'includes/pcp-nav-global__workflow.html' %}
+    {% include: 'includes/pcp-header__profile-only.njk' %}
+    {% include: 'includes/pcp-nav-global__workflow.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -21,11 +21,11 @@
 
       <div class="pcp-section__bd">
 
-        {% include: 'includes/pcp-info-bar.html' %}
+        {% include: 'includes/pcp-info-bar.njk' %}
 
-        {% include: 'includes/pcp-stepped-tabs__closing.html' %}
+        {% include: 'includes/pcp-stepped-tabs__closing.njk' %}
 
-        <!-- include: 'includes/pcp-title-action-bar.html' @title:'Closing' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:'disabled' -->
+        <!-- include: 'includes/pcp-title-action-bar.njk' @title:'Closing' @action:'Complete Closing' @link:'workflow_mapping.njk' @button_state:'disabled' -->
 
         <div class="pcp-title-action-bar">
           <div class="pcp-title-action-bar__hd">
@@ -59,7 +59,7 @@
           </div>
         </div>
 
-        {% include: 'includes/fsa-stepped-control__closing.html' @CLASS:'fsa-stepped-control--sticky' @message:'Ready for Adjustments' @action:'Complete Closing' @link:'workflow_mapping.html' @button_state:' ' @target:'unique-id-close-end' %}
+        {% include: 'includes/fsa-stepped-control__closing.njk' @CLASS:'fsa-stepped-control--sticky' @message:'Ready for Adjustments' @action:'Complete Closing' @link:'workflow_mapping.njk' @button_state:' ' @target:'unique-id-close-end' %}
 
         <!-- data-behavior="growl-show whiteout-show" -->
 
@@ -70,25 +70,25 @@
   </main>
 
   <footer>
-    {% include: 'includes/fsa-footer.html' %}
+    {% include: 'includes/fsa-footer.njk' %}
   </footer>
-  {% include: 'includes/pcp-modal__edit-workflow.html' %}
+  {% include: 'includes/pcp-modal__edit-workflow.njk' %}
 
-  {% include: 'includes/whiteout.html' @HIDDEN:'true' %}
+  {% include: 'includes/whiteout.njk' @HIDDEN:'true' %}
 
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
-    {% include: 'includes/growl_closing-save.html' @ID:'unique-id-asdfgwbhq33' %}
+    {% include: 'includes/growl_map-reset-confirm.njk' @ID:'unique-id-55sssss55om' %}
+    {% include: 'includes/growl_closing-save.njk' @ID:'unique-id-asdfgwbhq33' %}
   </div>
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+    {% include: 'includes/growl_map-reset.njk' @ID:'unique-id-556847000om' %}
   </div>
 
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_close-end.html' @ID:'unique-id-close-end' %}
+    {% include: 'includes/growl_close-end.njk' @ID:'unique-id-close-end' %}
   </div>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

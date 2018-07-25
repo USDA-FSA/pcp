@@ -1,6 +1,6 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Posted County Prices: Review' %}
+{% include: 'includes/head.njk' @title:'Posted County Prices: Review' %}
 
 <body>
 
@@ -15,64 +15,64 @@
       <div class="pcp-print__segment">
         <header>
           <div class="pcp-print__segment-hd">
-            {% include: 'includes/print-segment-header__review.html' %}
+            {% include: 'includes/print-segment-header__review.njk' %}
           </div>
         </header>
         <article>
           <h1>Commodities</h1>
           <h2>YC - Corn</h2>
-          {% include: 'includes/review-adjustments__two-up.html' %}
+          {% include: 'includes/review-adjustments__two-up.njk' %}
           <h2>YSB - Soybean</h2>
-          {% include: 'includes/review-adjustments__three-up.html' %}
+          {% include: 'includes/review-adjustments__three-up.njk' %}
           <h2>SOR - Sorghum</h2>
-          {% include: 'includes/review-adjustments__two-up.html' %}
+          {% include: 'includes/review-adjustments__two-up.njk' %}
           <h2>HRW - Hard Red Winter Wheat</h2>
-          {% include: 'includes/review-adjustments__three-up.html' %}
+          {% include: 'includes/review-adjustments__three-up.njk' %}
           <h2>SRW - Soft Red Winter Wheat</h2>
-          {% include: 'includes/review-adjustments__two-up.html' %}
+          {% include: 'includes/review-adjustments__two-up.njk' %}
           <h2>WHI - Soft White Wheat</h2>
-          {% include: 'includes/review-adjustments__two-up.html' %}
+          {% include: 'includes/review-adjustments__two-up.njk' %}
           <h2>HRS - Hard Red Spring Wheat</h2>
-          {% include: 'includes/review-adjustments__three-up.html' %}
+          {% include: 'includes/review-adjustments__three-up.njk' %}
           <h2>HAD - Hard Amber Durum</h2>
-          {% include: 'includes/review-adjustments__two-up.html' %}
+          {% include: 'includes/review-adjustments__two-up.njk' %}
           <h2>OAT - Oats</h2>
-          {% include: 'includes/review-adjustments__two-up.html' %}
+          {% include: 'includes/review-adjustments__two-up.njk' %}
           <h2>BRL - Barley</h2>
-          {% include: 'includes/review-adjustments__two-up.html' %}
+          {% include: 'includes/review-adjustments__two-up.njk' %}
         </article>
       </div>
 
       <div class="pcp-print__segment">
         <header>
           <div class="pcp-print__segment-hd">
-            {% include: 'includes/print-segment-header__review.html' %}
+            {% include: 'includes/print-segment-header__review.njk' %}
           </div>
         </header>
         <article>
           <h1>LDP</h1>
-          {% include: 'includes/table_review-ldp-change__print.html' %}
+          {% include: 'includes/table_review-ldp-change__print.njk' %}
         </article>
       </div>
 
       <div class="pcp-print__segment">
         <header>
           <div class="pcp-print__segment-hd">
-            {% include: 'includes/print-segment-header__review.html' %}
+            {% include: 'includes/print-segment-header__review.njk' %}
           </div>
         </header>
         <article>
           <h1>Differential</h1>
           <h2>Commodities</h2>
-          {% include: 'includes/table_review-differential__commodities___print.html' %}
+          {% include: 'includes/table_review-differential__commodities___print.njk' %}
           <h2>Minor Oilseeds</h2>
-          {% include: 'includes/table_review-differential__oilseeds.html' %}
+          {% include: 'includes/table_review-differential__oilseeds.njk' %}
           <h2>Pulses</h2>
-          {% include: 'includes/table_review-differential__pulses.html' %}
+          {% include: 'includes/table_review-differential__pulses.njk' %}
           <h2>Cotton</h2>
-          <pre>{% include: 'includes/table_review-differential__cotton__RAW.html' %}</pre>
+          <pre>{% include: 'includes/table_review-differential__cotton__RAW.njk' %}</pre>
           <h2>Rice</h2>
-          <pre>{% include: 'includes/table_review-differential__rice__RAW.html' %}</pre>
+          <pre>{% include: 'includes/table_review-differential__rice__RAW.njk' %}</pre>
         </article>
       </div>
 
@@ -84,7 +84,7 @@
 
   </section>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
   <script>
     pcpCustomPrint();

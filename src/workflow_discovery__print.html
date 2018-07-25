@@ -1,6 +1,6 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Posted County Prices: Discovery' %}
+{% include: 'includes/head.njk' @title:'Posted County Prices: Discovery' %}
 
 <body>
 
@@ -17,7 +17,7 @@
       <div class="pcp-print__segment">
         <header>
           <div class="pcp-print__segment-hd">
-            {% include: 'includes/print-segment-header__discovery.html' %}
+            {% include: 'includes/print-segment-header__discovery.njk' %}
           </div>
         </header>
         <article>
@@ -32,14 +32,14 @@
               <span>Woody Boyd</span>
             </li>
           </ul>
-          {% include: 'includes/program-entry__glf___print.html' %}
+          {% include: 'includes/program-entry__glf___print.njk' %}
         </article>
       </div>
 
       <div class="pcp-print__segment">
         <header>
           <div class="pcp-print__segment-hd">
-            {% include: 'includes/print-segment-header__discovery.html' %}
+            {% include: 'includes/print-segment-header__discovery.njk' %}
           </div>
         </header>
         <article>
@@ -55,16 +55,16 @@
             </li>
           </ul>
           <h2>Markets</h2>
-          {% include: 'includes/program-entry__pnw___print.html' %}
+          {% include: 'includes/program-entry__pnw___print.njk' %}
           <h2>Proteins</h2>
-          {% include: 'includes/program-entry__pnw-proteins___print.html' %}
+          {% include: 'includes/program-entry__pnw-proteins___print.njk' %}
         </article>
       </div>
 
       <div class="pcp-print__segment">
         <header>
           <div class="pcp-print__segment-hd">
-            {% include: 'includes/print-segment-header__discovery.html' %}
+            {% include: 'includes/print-segment-header__discovery.njk' %}
           </div>
         </header>
         <article>
@@ -94,7 +94,7 @@
 
   </section>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
   <script>
     pcpCustomPrint();

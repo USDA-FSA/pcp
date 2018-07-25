@@ -11,6 +11,7 @@
 
 'use strict';
 
+var NUN = require('nunjucks');
 var ColorDocs = require('./components/docs-color');
 var DocsNav = require('./components/docs-nav');
 var GrowlComponent = require('./components/fsa-growl');

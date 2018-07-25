@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -29,7 +29,7 @@
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
               <li>Profile link (name) of <code>.fsa-header-app</code></li>
-              <li><a href="workflow_mapping.html">Adjustments:</a> Map Tools</li>
+              <li><a href="workflow_mapping.njk">Adjustments:</a> Map Tools</li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -73,7 +73,7 @@
         <div class="pcp-prototype-popover-demo">
           <div style="position: relative;">
             <button style="height:144px; font-size: " class="fsa-btn fsa-btn--large fsa-btn--secondary fsa-btn--block fsa-text-size--7" type="button" data-behavior="toggle-popover" data-target="popover-demo">Click me!</button>
-            {% include: 'includes/pcp-popover.demo.html' %}
+            {% include: 'includes/pcp-popover.demo.njk' %}
           </div>
         </div>
       </div>
@@ -83,10 +83,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

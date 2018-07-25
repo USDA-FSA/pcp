@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -27,7 +27,7 @@
 
         <p>May be a link (though probably isn't)</p>
 
-        <pre class="pcp-code-block"><code>&lt;a class="pcp-marker <strong style="color:black">pcp-marker--[variation]</strong>" href="link.html"&gt;
+        <pre class="pcp-code-block"><code>&lt;a class="pcp-marker <strong style="color:black">pcp-marker--[variation]</strong>" href="link.njk"&gt;
   &lt;span class="pcp-marker__value"&gt;[#.##]&lt;/span&gt;
   &lt;span class="pcp-marker__pinpoint"&gt;&lt;/span&gt;
 &lt;/a&gt;</code></pre>
@@ -193,10 +193,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

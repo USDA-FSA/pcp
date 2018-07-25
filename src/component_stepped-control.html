@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -20,7 +20,7 @@
 
         <h1>Component: Stepped Control</h1>
 
-        <p class="fsa-text--lead">Typically paired with <strong><a href="component_stepped-tabs.html">Stepped Tabs</a></strong>, this component acts in two parts: surface associated <strong>actions</strong>, and optionally provide <strong>Status</strong> of current step.</p>
+        <p class="fsa-text--lead">Typically paired with <strong><a href="component_stepped-tabs.njk">Stepped Tabs</a></strong>, this component acts in two parts: surface associated <strong>actions</strong>, and optionally provide <strong>Status</strong> of current step.</p>
 
         <pre class="pcp-code-block"><code>class="<strong>pcp-stepped-control</strong>"</code></pre>
 
@@ -28,12 +28,12 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="workflow_discovery.html">Daily Process &gt; Discovery</a></li>
-              <li><a href="workflow_discovery__complete.html">Daily Process &gt; Discovery</a> (currently on Adjustments)</li>
-              <li><a href="workflow_closing.html">Daily Process &gt; Closing</a></li>
-              <li><a href="workflow_mapping.html">Daily Process &gt; Adjustments</a></li>
-              <li><a href="workflow_review.html">Daily Process &gt; Review</a></li>
-              <li><a href="workflow_publish.html">Daily Process &gt; Publish</a></li>
+              <li><a href="workflow_discovery.njk">Daily Process &gt; Discovery</a></li>
+              <li><a href="workflow_discovery__complete.njk">Daily Process &gt; Discovery</a> (currently on Adjustments)</li>
+              <li><a href="workflow_closing.njk">Daily Process &gt; Closing</a></li>
+              <li><a href="workflow_mapping.njk">Daily Process &gt; Adjustments</a></li>
+              <li><a href="workflow_review.njk">Daily Process &gt; Review</a></li>
+              <li><a href="workflow_publish.njk">Daily Process &gt; Publish</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        {% include: 'includes/fsa-stepped-control__variations.html'  %}
+        {% include: 'includes/fsa-stepped-control__variations.njk'  %}
 
       </div>
 
@@ -53,13 +53,13 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/pcp-modal__stepped-control-variation.html' %}
-  {% include: 'includes/pcp-modal__stepped-control-variation-2.html' %}
+  {% include: 'includes/pcp-modal__stepped-control-variation.njk' %}
+  {% include: 'includes/pcp-modal__stepped-control-variation-2.njk' %}
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

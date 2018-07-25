@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -36,7 +36,7 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="settings_commodities.html">Settings</a> (Click "Add" or "California Central Coast")</li>
+              <li><a href="settings_commodities.njk">Settings</a> (Click "Add" or "California Central Coast")</li>
             </ul>
           </div>
         </div>
@@ -48,16 +48,16 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/pcp-modal_doc__default.html' %}
-  {% include: 'includes/pcp-modal_doc__top.html' %}
-  {% include: 'includes/pcp-modal_doc__small.html' %}
-  {% include: 'includes/pcp-modal_doc__large.html' %}
-  {% include: 'includes/pcp-modal_doc__fullscreen.html' %}
+  {% include: 'includes/pcp-modal_doc__default.njk' %}
+  {% include: 'includes/pcp-modal_doc__top.njk' %}
+  {% include: 'includes/pcp-modal_doc__small.njk' %}
+  {% include: 'includes/pcp-modal_doc__large.njk' %}
+  {% include: 'includes/pcp-modal_doc__fullscreen.njk' %}
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -26,7 +26,7 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="workflow_discovery.html">Daily Process</a> (Click Start for Rice)</li>
+              <li><a href="workflow_discovery.njk">Daily Process</a> (Click Start for Rice)</li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -42,13 +42,13 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">Default</h2>
             <p>
-              {% include: 'includes/pcp-file-upload.html' @TARGET:'QWERqwer' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER1234' @ATTACHMENT:' ' %}
+              {% include: 'includes/pcp-file-upload.njk' @TARGET:'QWERqwer' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER1234' @ATTACHMENT:' ' %}
             </p>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">State: File Selected</h2>
             <p>
-              {% include: 'includes/pcp-file-upload.html' @TARGET:'WERTwert' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER6637' @ATTACHMENT:'file-name.ext' %}
+              {% include: 'includes/pcp-file-upload.njk' @TARGET:'WERTwert' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER6637' @ATTACHMENT:'file-name.ext' %}
             </p>
           </div>
         </div>
@@ -56,13 +56,13 @@
         <h2 class="pcp-prototype-title">Small</h2>
 
         <p>
-          {% include: 'includes/pcp-file-upload.html' @TARGET:'QWERqwerQWER' @STYLE_VARIATION:'fsa-btn--small' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER4567' @ATTACHMENT:' ' %}
+          {% include: 'includes/pcp-file-upload.njk' @TARGET:'QWERqwerQWER' @STYLE_VARIATION:'fsa-btn--small' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER4567' @ATTACHMENT:' ' %}
         </p>
 
         <h2 class="pcp-prototype-title">Large</h2>
 
         <p>
-          {% include: 'includes/pcp-file-upload.html' @TARGET:'qwerQWERqwerQWER' @STYLE_VARIATION:'fsa-btn--large' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER8751' @ATTACHMENT:' ' %}
+          {% include: 'includes/pcp-file-upload.njk' @TARGET:'qwerQWERqwerQWER' @STYLE_VARIATION:'fsa-btn--large' @UPLOAD_ID:'UNIQUE_ID_ASdfqwER8751' @ATTACHMENT:' ' %}
         </p>
 
       </div>
@@ -74,13 +74,13 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/pcp-modal__edit-workflow.html' %}
-  {% include: 'includes/pcp-modal__edit-workflow__readonly.html' %}
+  {% include: 'includes/pcp-modal__edit-workflow.njk' %}
+  {% include: 'includes/pcp-modal__edit-workflow__readonly.njk' %}
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

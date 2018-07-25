@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -20,7 +20,7 @@
 
         <h1>Component: Table Header</h1>
 
-        <p class="fsa-text--lead">Paired with <a href="component_table.html">Component: PCP Table</a></p>
+        <p class="fsa-text--lead">Paired with <a href="component_table.njk">Component: PCP Table</a></p>
 
         <pre class="pcp-code-block"><code>class="<strong style="color:black">pcp-table-header</strong>"</code></pre>
 
@@ -28,8 +28,8 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="settings_commodities.html">settings_commodities.html</a></li>
-              <li><a href="settings_roles.html">settings_roles.html</a></li>
+              <li><a href="settings_commodities.njk">settings_commodities.njk</a></li>
+              <li><a href="settings_roles.njk">settings_roles.njk</a></li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -47,11 +47,11 @@
 
         <h3>Default</h3>
 
-        {% include: 'includes/table-header.html' %}
+        {% include: 'includes/table-header.njk' %}
 
         <h3>No title</h3>
 
-        {% include: 'includes/table-header_no-header.html' %}
+        {% include: 'includes/table-header_no-header.njk' %}
 
       </div>
 
@@ -60,10 +60,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

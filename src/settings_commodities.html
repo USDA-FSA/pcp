@@ -1,18 +1,18 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Settings' %}
+{% include: 'includes/head.njk' @title:'Settings' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
+  {% include: 'includes/fsa-disclaimer.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header__profile-only.html' %}
-    {% include: 'includes/pcp-nav-global__settings.html' %}
+    {% include: 'includes/pcp-header__profile-only.njk' %}
+    {% include: 'includes/pcp-nav-global__settings.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -23,9 +23,9 @@
 
         <h1>Settings</h1>
 
-        {% include: 'includes/pcp-content-tabs__settings__commodities.html' %}
-        {% include: 'includes/table-header_no-header.html' @title:'Markets' @link:'settings_thing__add.html' @modal_target:'12555485' @STATE:' ' @CLASS:'HINT' %}
-        {% include: 'includes/table_commodities.html' %}
+        {% include: 'includes/pcp-content-tabs__settings__commodities.njk' %}
+        {% include: 'includes/table-header_no-header.njk' @title:'Markets' @link:'settings_thing__add.njk' @modal_target:'12555485' @STATE:' ' @CLASS:'HINT' %}
+        {% include: 'includes/table_commodities.njk' %}
 
       </div>
 
@@ -34,7 +34,7 @@
   </main>
 
   <footer>
-    {% include: 'includes/fsa-footer.html' %}
+    {% include: 'includes/fsa-footer.njk' %}
   </footer>
 
   <div tabindex="0" id="UNIQUE-ID-12555485" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
@@ -42,7 +42,7 @@
       <div class="fsa-modal__content">
         <button class="fsa-modal__close" data-behavior="close-modal"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
         <h1 class="fsa-modal__title">Add Commodity</h1>
-        {% include: 'includes/settings__add-thing.html' %}
+        {% include: 'includes/settings__add-thing.njk' %}
       </div>
     </div>
   </div>
@@ -52,21 +52,21 @@
       <div class="fsa-modal__content">
         <button class="fsa-modal__close" data-behavior="close-modal"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
         <h1 class="fsa-modal__title">Edit Commodity</h1>
-        {% include: 'includes/settings__edit-thing.html' %}
+        {% include: 'includes/settings__edit-thing.njk' %}
       </div>
     </div>
   </div>
 
-  {% include: 'includes/whiteout.html' @HIDDEN:'true' %}
+  {% include: 'includes/whiteout.njk' @HIDDEN:'true' %}
 
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_add-success.html' @ID:'unique-id-6367838372389' %}
+    {% include: 'includes/growl_add-success.njk' @ID:'unique-id-6367838372389' %}
   </div>
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden fsa-growl-container--centered">
-    {% include: 'includes/growl_edit-error.html' @ID:'unique-id-HSHHS73737732' %}
+    {% include: 'includes/growl_edit-error.njk' @ID:'unique-id-HSHHS73737732' %}
   </div>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

@@ -1,18 +1,18 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Reports' %}
+{% include: 'includes/head.njk' @title:'Reports' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
+  {% include: 'includes/fsa-disclaimer.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header__profile-only.html' %}
-    {% include: 'includes/pcp-nav-global__reports.html' %}
+    {% include: 'includes/pcp-header__profile-only.njk' %}
+    {% include: 'includes/pcp-nav-global__reports.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -23,7 +23,7 @@
 
         <h1>[title]</h1>
 
-        {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
+        {% include: 'includes/_TBD.njk' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
 
       </div>
 
@@ -32,20 +32,20 @@
   </main>
 
   <footer>
-    {% include: 'includes/fsa-footer.html' %}
+    {% include: 'includes/fsa-footer.njk' %}
   </footer>
 
-  {% include: 'includes/whiteout.html' @HIDDEN:'true' %}
+  {% include: 'includes/whiteout.njk' @HIDDEN:'true' %}
 
   <div class="fsa-growl-container fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
-    {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
+    {% include: 'includes/growl_map-reset-confirm.njk' @ID:'unique-id-55sssss55om' %}
+    {% include: 'includes/growl_map-save.njk' @ID:'unique-id-55s55h55from' %}
   </div>
   <div class="fsa-growl-container fsa-growl-container--centered fsa-growl-container--USED-TO-BE--hidden">
-    {% include: 'includes/growl_map-reset.html' @ID:'unique-id-556847000om' %}
+    {% include: 'includes/growl_map-reset.njk' @ID:'unique-id-556847000om' %}
   </div>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

@@ -1,18 +1,18 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Posted County Prices' %}
+{% include: 'includes/head.njk' @title:'Posted County Prices' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
-  {% include: 'includes/fsa-disclaimer.html' %}
+  {% include: 'includes/fsa-disclaimer.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header__profile-only.html' %}
-    {% include: 'includes/pcp-nav-global.html' %}
+    {% include: 'includes/pcp-header__profile-only.njk' %}
+    {% include: 'includes/pcp-nav-global.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -23,7 +23,7 @@
 
         <h1>Preferences</h1>
 
-        {% include: 'includes/_TBD.html' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
+        {% include: 'includes/_TBD.njk' @text:'TBD' @style:'padding-top: 20vh; padding-bottom: 20vh;' %}
 
       </div>
 
@@ -32,10 +32,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/fsa-footer.html' %}
+    {% include: 'includes/fsa-footer.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 

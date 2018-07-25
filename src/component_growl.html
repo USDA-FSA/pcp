@@ -1,15 +1,15 @@
-{% include: 'includes/html.html' %}
+{% include: 'includes/html.njk' %}
 
-{% include: 'includes/head.html' @title:'Component' %}
+{% include: 'includes/head.njk' @title:'Component' %}
 
 <body class="pcp-app">
 
-  {% include: 'includes/fsa-browser-upgrade.html' %}
+  {% include: 'includes/fsa-browser-upgrade.njk' %}
 
-  {% include: 'includes/skipnav.html' %}
+  {% include: 'includes/skipnav.njk' %}
 
   <header>
-    {% include: 'includes/pcp-header-project.html' %}
+    {% include: 'includes/pcp-header-project.njk' %}
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -34,10 +34,10 @@
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">As seen on</h2>
             <ul>
-              <li><a href="settings_commodities.html">settings_commodities.html</a> (Click "Add", and then submit form "Save")</li>
-              <li><a href="settings_markets__add-success.html">settings_markets__add-success.html</a></li>
-              <li><a href="settings_markets__error.html">settings_markets__error.html</a></li>
-              <li><a href="workflow_mapping.html">workflow_mapping.html</a> (Click "Save" or "Reset")</li>
+              <li><a href="settings_commodities.njk">settings_commodities.njk</a> (Click "Add", and then submit form "Save")</li>
+              <li><a href="settings_markets__add-success.njk">settings_markets__add-success.njk</a></li>
+              <li><a href="settings_markets__error.njk">settings_markets__error.njk</a></li>
+              <li><a href="workflow_mapping.njk">workflow_mapping.njk</a> (Click "Save" or "Reset")</li>
             </ul>
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
@@ -51,15 +51,15 @@
         <div class="fsa-grid">
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">Variations</h2>
-            {% include: 'includes/growl.html' %}
+            {% include: 'includes/growl.njk' %}
           </div>
           <div class="fsa-grid__1/1 fsa-grid__1/2@m">
             <h2 class="pcp-prototype-title">Samples</h2>
-            {% include: 'includes/growl_map-reset-confirm.html' @ID:'unique-id-55sssss55om' %}
-            {% include: 'includes/growl_map-save.html' @ID:'unique-id-55s55h55from' %}
-            {% include: 'includes/growl_add-success.html %}
-            {% include: 'includes/growl_map-reset.html %}
-            {% include: 'includes/growl_edit-error.html @ID:'unique-id-ehje96s6x5' %}
+            {% include: 'includes/growl_map-reset-confirm.njk' @ID:'unique-id-55sssss55om' %}
+            {% include: 'includes/growl_map-save.njk' @ID:'unique-id-55s55h55from' %}
+            {% include: 'includes/growl_add-success.njk %}
+            {% include: 'includes/growl_map-reset.njk %}
+            {% include: 'includes/growl_edit-error.njk @ID:'unique-id-ehje96s6x5' %}
             <style>
             .fsa-growl[aria-hidden="true"] {
               display: block;
@@ -74,10 +74,10 @@
   </main>
 
   <footer>
-    {% include: 'includes/pcp-footer-project.html' %}
+    {% include: 'includes/pcp-footer-project.njk' %}
   </footer>
 
-  {% include: 'includes/scripts.html' %}
+  {% include: 'includes/scripts.njk' %}
 
 </body>
 
