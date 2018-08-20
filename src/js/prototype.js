@@ -307,6 +307,12 @@ $('body').on('click', '[data-behavior~="toggle-popover"]', function(event) {
 
 })
 
+$('body').on('mouseover mouseout focus blur', '[data-behavior~="hover-popover"]', function(event) {
+
+  $('#' + $(this).attr('data-hover-target')).toggleClass('pcp-popover--visible');
+
+})
+
 $('body').on('click', '[data-behavior~="DEMO-FAKING-TAB-CONTENT-SWAP"]', function(event) {
 
   var $self = $(this);

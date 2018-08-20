@@ -13,30 +13,38 @@
 
   // ---------------------------------------------------------------------------
 
-  display: none;
-  will-change: opacity;
-  background-color: $color-white;
-  position: fixed;
-  top: $size-default;
-  right: $size-default;
-  bottom: $size-large;
-  left: $size-default;
-  z-index: 50;
-  transition: width .23s ease-in-out;
-  text-align: left;
-  box-shadow: 0 0 $size-default $size-large rgba(0, 0, 0, .3), 0 0 $size-default rgba(0, 0, 0, .5);
+  &-wrap {
+    position: relative;
+  }
 
-  @include breakpoint(M) {
+  // ---------------------------------------------------------------------------
 
-    min-width: $size-base * 60;
-    position: absolute;
-    box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+  & {
+    display: none;
+    will-change: opacity;
+    background-color: $color-white;
+    position: fixed;
+    top: $size-default;
+    right: $size-default;
+    bottom: $size-large;
+    left: $size-default;
+    z-index: 50;
+    transition: width .23s ease-in-out;
+    text-align: left;
+    box-shadow: 0 0 $size-default $size-large rgba(0, 0, 0, .3), 0 0 $size-default rgba(0, 0, 0, .5);
 
-    @supports (filter: drop-shadow(0 0 0 black)) { // @supports won't let me do @supports (filter: drop-shadow(); so placed a foo value in drop-shadow(foo)
-      box-shadow: none;
-      filter: drop-shadow(0 0 $size-base rgba(0, 0, 0, .4));
+    @include breakpoint(M) {
+
+      min-width: $size-base * 60;
+      position: absolute;
+      box-shadow: 0 0 $size-small rgba(0, 0, 0, .4);
+
+      @supports (filter: drop-shadow(0 0 0 black)) { // @supports won't let me do @supports (filter: drop-shadow(); so placed a foo value in drop-shadow(foo)
+        box-shadow: none;
+        filter: drop-shadow(0 0 $size-base rgba(0, 0, 0, .4));
+      }
+
     }
-
   }
 
   // ---------------------------------------------------------------------------
